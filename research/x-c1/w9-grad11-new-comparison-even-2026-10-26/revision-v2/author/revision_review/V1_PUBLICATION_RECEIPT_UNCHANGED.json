@@ -1,0 +1,51 @@
+{
+  "status": "PUBLIC_AUTHOR_PRERELEASE_DELIVERY_VERIFIED",
+  "release_url": "https://github.com/Waschtl904/objekt-x-programm/releases/tag/grad11-even-author-2026-10-26-v1",
+  "release_id": 423903483,
+  "published_at": "2026-10-26T06:11:35Z",
+  "prerelease": true,
+  "publication_commit": "20a4c6392fa17f6b1dc5527ae223b32415244190",
+  "publication_branch": "publication/grad11-even-author-2026-10-26",
+  "tag": "grad11-even-author-2026-10-26-v1",
+  "parent_commit": "9a9e0e554508d308e96f10983a307f980d5c3b04",
+  "observed_main_after_publication": "9a9e0e554508d308e96f10983a307f980d5c3b04",
+  "main_unchanged": true,
+  "reading_files_anonymously_downloaded_and_hash_verified": 48,
+  "archive": {
+    "name": "Objekt-X-Neuer-Vergleich-Grad11-GPT2-2026-10-26.zip",
+    "download_url": "https://github.com/Waschtl904/objekt-x-programm/releases/download/grad11-even-author-2026-10-26-v1/Objekt-X-Neuer-Vergleich-Grad11-GPT2-2026-10-26.zip",
+    "bytes": 360325509,
+    "sha256": "024f20f0c6086aefabb6e3d759f91aaa466906a864c673c0c0b467f3ee627946",
+    "anonymous_full_download": "PASS"
+  },
+  "sidecars": [
+    {
+      "name": "Objekt-X-Neuer-Vergleich-Grad11-GPT2-2026-10-26-Auslieferungscheck.json",
+      "bytes": 627,
+      "sha256": "e36cf375f80f58d046c944daf87d5fe69a2720f0f8830ca028921846ae6b627c",
+      "anonymous_download": "PASS"
+    },
+    {
+      "name": "Objekt-X-Neuer-Vergleich-Grad11-GPT2-2026-10-26-Beleg.json",
+      "bytes": 525,
+      "sha256": "543a0b51bba7a6a52f6619893c62cc5c2ab62948666cf681538b6123fadd9ac6",
+      "anonymous_download": "PASS"
+    },
+    {
+      "name": "Objekt-X-Neuer-Vergleich-Grad11-GPT2-2026-10-26-Pruefer.py",
+      "bytes": 3065,
+      "sha256": "fdc67b30df9172f3e679e676321c3bcd87efda970d482e5046f96bc4f9ccac4b",
+      "anonymous_download": "PASS"
+    },
+    {
+      "name": "Objekt-X-Neuer-Vergleich-Grad11-GPT2-2026-10-26.txt",
+      "bytes": 6856,
+      "sha256": "7cb2d249ecaa8a0835846a6e75ebaaedd43853622c73aac8fd64d12af780be8c",
+      "anonymous_download": "PASS"
+    }
+  ],
+  "qualification": "AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN; H1-H4; new GPT1 review pending; checklist 3/10, point 4 open.",
+  "new_research_calculations_in_publication": false,
+  "merge_performed": false,
+  "publication_check_seconds": 65.5479548999574
+}

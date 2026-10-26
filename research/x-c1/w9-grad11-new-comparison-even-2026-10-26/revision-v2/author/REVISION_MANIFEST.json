@@ -1,0 +1,273 @@
+{
+  "status": "LOCAL_ADDITIVE_AUTHOR_REVISION_UNRESOLVED_PENDING_REVIEW",
+  "base_archive_sha256": "024f20f0c6086aefabb6e3d759f91aaa466906a864c673c0c0b467f3ee627946",
+  "base_manifest_sha256": "3a388b3051f65b502db718b72c4e690c73c4fbf4a649360ca9afeb66b85389f2",
+  "original_files_preserved": 5263,
+  "files": [
+    {
+      "path": "revision_review/BERICHT_V2.txt",
+      "bytes": 13789,
+      "sha256": "aed4a52d0d77d850e0da603d7cb1a5ee0d63aed7339cec86bb591f63de42d62b"
+    },
+    {
+      "path": "revision_review/CHECKER_CONTROLS_V2.json",
+      "bytes": 33378,
+      "sha256": "e29f906256bc0c3e338a3f69d9093e1275c1b6a4319cbe6569e91bb101e41961"
+    },
+    {
+      "path": "revision_review/DIFF_V1_V2.txt",
+      "bytes": 20699,
+      "sha256": "3935a6daf28a9f0d525b2d7c3de4369d71942bcafa24898733f9a8a735715168"
+    },
+    {
+      "path": "revision_review/ERGEBNIS_V2.json",
+      "bytes": 27578,
+      "sha256": "86d010fc1a3d7f846f627e8fd205a0fa11dbde166fa63420d0585f09a4081662"
+    },
+    {
+      "path": "revision_review/INITIAL_AND_LEGACY_CONTROLS.json",
+      "bytes": 14884,
+      "sha256": "e21da72ddfc539e84e401adc8347cff616e4689e879f0cfeb5633fae1f311a53"
+    },
+    {
+      "path": "revision_review/invalid-miniarchive.zip",
+      "bytes": 436,
+      "sha256": "019438d74d624156d2e7c4dfdeb5a4ba539da9bc93dd0a734dc2b79689a6012f"
+    },
+    {
+      "path": "revision_review/RATIONAL_AUDIT_V2.json",
+      "bytes": 11889,
+      "sha256": "a8d693a8a4c3d9fc4533332c112bad81d7c194009640132e48dc494767420dfd"
+    },
+    {
+      "path": "revision_review/REUSE_AUDIT_V2.json",
+      "bytes": 5290,
+      "sha256": "37a221ac9e070b61c0a02620c3e445f7ca4d94ca51f6233cb39a69c93fb509db"
+    },
+    {
+      "path": "revision_review/test_checker_controls.py",
+      "bytes": 3050,
+      "sha256": "b1fde3014b0819c375bb66374560bf10789d2160fae0a81e00342ba96716abed"
+    },
+    {
+      "path": "revision_review/V1_PUBLICATION_RECEIPT_UNCHANGED.json",
+      "bytes": 2331,
+      "sha256": "91788ef1fe23661c485980bde53bb2038ad37b659a406f6038b5bbd695c6adaf"
+    },
+    {
+      "path": "verify_revision_v2.py",
+      "bytes": 11048,
+      "sha256": "639e8c189b3ea5c840752669c2d24f009f5253a78fe6f17adf5a00b1bc33850a"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/audit_closed_source_gap_v2.py",
+      "bytes": 3116,
+      "sha256": "aa9bc52851c20ddbc2d8d0414bb91fd348b56a8879b84076821e91a59c655947"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/batch_physical_errors_v2.py",
+      "bytes": 691,
+      "sha256": "32274a238772325a22b58a3026b750564f08ab8ee41e371760821ccb85fc005d"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/gram_enclosures_v2.py",
+      "bytes": 1789,
+      "sha256": "304b6e796d3426dd8a5dbde8723f6070603193e488084423832c7c1e8cf71e93"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/joint_rest_budget_v2.py",
+      "bytes": 7204,
+      "sha256": "20a498b52d933c9e91f775a7f7118ff7ed5695c92badd39b5035d82e0983d4a5"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/joint_tail_geometry_v2.py",
+      "bytes": 3398,
+      "sha256": "1ed51182dcaaf5731b0969ae4f784d5d8550005cf977b25ba2e43058fbbdae94"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/record_exact_gram_radii_v2.py",
+      "bytes": 5192,
+      "sha256": "22be07c319d0a28c0f5bb64b85d09240c9dde308a0a73a4f293e9df845bf00ae"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/revision_v2/EXACT_GRAM_RADIUS_AUDIT_V2.json",
+      "bytes": 25364410,
+      "sha256": "ead5480b453e248f22c548d283a2522ff5f6dfc0f3d751aa0b9080416f649df8"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/revision_v2/GRAM_ENCLOSURES_V2.json",
+      "bytes": 16663089,
+      "sha256": "16a1b4d69e73f7c2806ed2d48908a4d2c66dc374eb610b9f655ebd6d4077c4d1"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/revision_v2/JOINT_REST_BUDGET_V2.json",
+      "bytes": 54132,
+      "sha256": "a025b49d4e13919c67d74f5f2f8598d34cd74fe304f3e103bae6be907d0ffc6e"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/revision_v2/JOINT_TAIL_GEOMETRY_V2.json",
+      "bytes": 913640,
+      "sha256": "e78d20317e2ad6b5f30e7749dd86e13e8ddebe40ee81a9904fb1f5a8fa20b402"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/revision_v2/PHYSICAL_EXPANDED_T00.py",
+      "bytes": 5984,
+      "sha256": "ec77d989a8dd92fa7d5e5a4febc8fb028b3eecf662d0692a4f41c80b8e47143b"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/revision_v2/PHYSICAL_EXPANDED_T01.py",
+      "bytes": 5984,
+      "sha256": "ec77d989a8dd92fa7d5e5a4febc8fb028b3eecf662d0692a4f41c80b8e47143b"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/revision_v2/PHYSICAL_EXPANDED_T02.py",
+      "bytes": 5984,
+      "sha256": "ec77d989a8dd92fa7d5e5a4febc8fb028b3eecf662d0692a4f41c80b8e47143b"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/revision_v2/PHYSICAL_EXPANDED_T03.py",
+      "bytes": 5984,
+      "sha256": "ec77d989a8dd92fa7d5e5a4febc8fb028b3eecf662d0692a4f41c80b8e47143b"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/revision_v2/PHYSICAL_EXPANDED_T04.py",
+      "bytes": 6240,
+      "sha256": "4b166be7f65505056ad67d3aa40f6b1805c110e4ef7c63580def45876c704eff"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/revision_v2/PHYSICAL_EXPANDED_T05.py",
+      "bytes": 6240,
+      "sha256": "4b166be7f65505056ad67d3aa40f6b1805c110e4ef7c63580def45876c704eff"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/revision_v2/PHYSICAL_EXPANDED_T06.py",
+      "bytes": 6240,
+      "sha256": "4b166be7f65505056ad67d3aa40f6b1805c110e4ef7c63580def45876c704eff"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/revision_v2/PHYSICAL_EXPANDED_T07.py",
+      "bytes": 6240,
+      "sha256": "4b166be7f65505056ad67d3aa40f6b1805c110e4ef7c63580def45876c704eff"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/revision_v2/PHYSICAL_EXPANDED_T08.py",
+      "bytes": 6240,
+      "sha256": "4b166be7f65505056ad67d3aa40f6b1805c110e4ef7c63580def45876c704eff"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/revision_v2/PHYSICAL_EXPANDED_T09.py",
+      "bytes": 6240,
+      "sha256": "4b166be7f65505056ad67d3aa40f6b1805c110e4ef7c63580def45876c704eff"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/revision_v2/PHYSICAL_EXPANDED_T10.py",
+      "bytes": 6240,
+      "sha256": "4b166be7f65505056ad67d3aa40f6b1805c110e4ef7c63580def45876c704eff"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/revision_v2/PHYSICAL_EXPANDED_T11.py",
+      "bytes": 6240,
+      "sha256": "4b166be7f65505056ad67d3aa40f6b1805c110e4ef7c63580def45876c704eff"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/revision_v2/SOURCE_ARITHMETIC_CLOSURE_V2.json",
+      "bytes": 54043,
+      "sha256": "ef1b8f932533cc40e76eeee33a0b5f6f7f7406a1f234fe40e8db8668787105d5"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/revision_v2/SOURCE_BLOCK_LEDGER_V2.json",
+      "bytes": 8928236,
+      "sha256": "095003f6ee4472b891f362bae342bad7903a793918652a26672829c39c5788b1"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/revision_v2/SOURCE_CLOSED_GAP_EXACT_AUDIT_V2.json",
+      "bytes": 15773,
+      "sha256": "4f47448bf63c8b8367c2d26e3cf2766572825800a088a239ee1e89d7cb50dfe4"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/revision_v2/WHOLE_PHYSICAL_ERROR_V2_T00.json",
+      "bytes": 6596,
+      "sha256": "e134ac6fa19305b8777a9a064994b1bb7734145b30e612b85caa2c618f455183"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/revision_v2/WHOLE_PHYSICAL_ERROR_V2_T01.json",
+      "bytes": 6706,
+      "sha256": "e3eb92235d80f46f25ee22bdc5859cc3be68964411608002b20da93519a523b6"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/revision_v2/WHOLE_PHYSICAL_ERROR_V2_T02.json",
+      "bytes": 6711,
+      "sha256": "8683615364413f17b57c1fbacb3a85cdf6c839f34ae39633450637bf025bcb8f"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/revision_v2/WHOLE_PHYSICAL_ERROR_V2_T03.json",
+      "bytes": 6738,
+      "sha256": "6c2a39225e06b1ed71ecc58e6d84e22d58a25a5bafb3336083471013f2843bb9"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/revision_v2/WHOLE_PHYSICAL_ERROR_V2_T04.json",
+      "bytes": 7288,
+      "sha256": "e4ba9e31e7a67336ae2a36af5bce5271bf89b2e5bb8007a3698a48b0f4b290c5"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/revision_v2/WHOLE_PHYSICAL_ERROR_V2_T05.json",
+      "bytes": 7639,
+      "sha256": "a7615d783074b412d9aaf36365d0fb3269f89b55b4db9a8b87e64ba2f8435ad3"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/revision_v2/WHOLE_PHYSICAL_ERROR_V2_T06.json",
+      "bytes": 7646,
+      "sha256": "4fed3ea30d92228281b000ee24447c09eac472176c2cef6904cc8a0af76a41f0"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/revision_v2/WHOLE_PHYSICAL_ERROR_V2_T07.json",
+      "bytes": 7652,
+      "sha256": "4aab1c4c1d50a8980c5d6169613406fc0d45630a79eeeeca9c53a426237be309"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/revision_v2/WHOLE_PHYSICAL_ERROR_V2_T08.json",
+      "bytes": 7291,
+      "sha256": "bb4013ddcc2c59c3074db124de9e9d155ab04bcadec503deb066a2ccdb34b8be"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/revision_v2/WHOLE_PHYSICAL_ERROR_V2_T09.json",
+      "bytes": 7624,
+      "sha256": "7a046bb0d99264188090281101c58f51ac751201e19b01f610eb3c4a2e761c72"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/revision_v2/WHOLE_PHYSICAL_ERROR_V2_T10.json",
+      "bytes": 7630,
+      "sha256": "9ed07a7c68f1762e51e3d27b13117dfc9f22d498a18833d01e35f28779a72d10"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/revision_v2/WHOLE_PHYSICAL_ERROR_V2_T11.json",
+      "bytes": 7575,
+      "sha256": "f40d4965f1afb048daa3f690241db7856f9fd00463dfc3568dcdf37ff8c0558f"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/run_reproduction_v2.py",
+      "bytes": 1434,
+      "sha256": "b8c709da6bf2e4bdb44b15966a7edb6a52e0778991eca33e3e06c6e5d752dd93"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/source_arithmetic_closure_v2.py",
+      "bytes": 2573,
+      "sha256": "1126236474f71465c8a9c7a02a7560936c392da152b60d3bbf6b3091a0c81d78"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/source_block_ledger_v2.py",
+      "bytes": 8683,
+      "sha256": "6b10d7ebd3432077aa548ec0747a31fb39b5e0e895b4af68c02766b2d850b983"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/verify_handoff_v2.py",
+      "bytes": 3368,
+      "sha256": "999e91beb7393cf401a4f4d218d68dcccdef0fffd24dfa0a3eecaa95db708dcb"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/whole_physical_error_v2.py",
+      "bytes": 3409,
+      "sha256": "0ae2be650f6e9dbe21de74f376772ac3ac4e7c16fae594ae33169071437f4029"
+    }
+  ]
+}

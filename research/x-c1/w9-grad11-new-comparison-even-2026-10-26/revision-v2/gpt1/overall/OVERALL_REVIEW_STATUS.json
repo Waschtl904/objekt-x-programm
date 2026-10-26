@@ -1,0 +1,36 @@
+{
+  "status": "PASS_CONDITIONAL_H1_H4_NEW_COMPARISON_V2",
+  "scope": "All real combinations of the fixed 12-dimensional even input space; fixed outer response P0, new Q1, common exact test map",
+  "old_B1_Gram_radius_transport": "PASS",
+  "old_B2_checker": "PASS",
+  "new_form_order_and_domains": "PASS_UNDER_H1_H4",
+  "new_source_application": "PASS_UNDER_H1_H4",
+  "new_Fo_plus_T_residual_application": "PASS_UNDER_H1_H4",
+  "new_contour_endpoint_and_K_D_application": "PASS_UNDER_H1_H4",
+  "joint_trace_closure": "PASS",
+  "unresolved_new_mathematical_bridges_identified": [],
+  "separate_external_author_receipt": "NOT_PROVIDED_NOT_VERIFIED",
+  "required_assumptions_files": [
+    "HYPOTHESEN.txt",
+    "HYPOTHESEN_QUELLEN.json"
+  ],
+  "final_lower_bound": "3.99038487528413e-19",
+  "bound_relation": "rho_v2 > final_lower_bound > 0",
+  "new_integrations_in_this_overall_completion": 0,
+  "new_finite_repricing_replays_in_this_overall_completion": 0,
+  "previously_checked_original_files": 5263,
+  "reused_sections": 4704,
+  "residual_cross_weights": 144,
+  "new_exact_checks": [
+    "NEW_FORM_ORDER_ANCHORS.json",
+    "APPLICATION_BINDINGS.json"
+  ],
+  "external_review_open": true,
+  "checklist": "3/10",
+  "point4": "OPEN",
+  "full_A9_A11": "OPEN",
+  "github_writes": false,
+  "publication_performed": false,
+  "integration_performed": false,
+  "note": "The prior targeted report is unchanged. This addendum closes the analytical applications left outside that earlier limited verdict."
+}

@@ -1,0 +1,373 @@
+Objekt X — Gesamtvotum zur neuen geraden Grad-11-Vergleichsroute, Revision v2
+GPT 1, 26. Oktober 2026
+
+VOTUM: PASS UNTER H1–H4 für die unten genau bezeichnete gemeinsame
+Vergleichsaussage. Die beiden Beanstandungen B1/B2 sind geschlossen; die
+verbliebenen neuen analytischen Anwendungen sind gezielt nachvollzogen.
+Dies ist eine projektinterne Gegenprüfung, keine externe Begutachtung.
+AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN, Checkliste 3/10 und Punkt 4 offen.
+
+1. Prüfgegenstand, Bindungen und Reichweite
+
+Geprüft ist ausschließlich die Kombination aus den unveränderten v1-Bytes
+und der additiven lokalen Revision v2:
+
+Objekt-X-Neuer-Vergleich-Grad11-GPT2-2026-10-26.zip
+360.325.509 Byte
+SHA-256 024f20f0c6086aefabb6e3d759f91aaa466906a864c673c0c0b467f3ee627946
+MANIFEST.json: 1.067.839 Byte
+SHA-256 3a388b3051f65b502db718b72c4e690c73c4fbf4a649360ca9afeb66b85389f2
+
+Objekt-X-Grad11-Revision-v2-2026-10-26.zip
+11.873.565 Byte
+SHA-256 aa5d5df0a068991972ba7eb5f60de9106f865cc53a891330394847666251e4fa
+REVISION_MANIFEST.json: 11.333 Byte
+SHA-256 e8d2156c40691b4efb4b2eaad01c501865c2d596c202349f9fb2ce33e3a330a5
+
+JOINT_REST_BUDGET_V2.json: 54.132 Byte
+SHA-256 a025b49d4e13919c67d74f5f2f8598d34cd74fe304f3e103bae6be907d0ffc6e
+
+Diese Identitäten wurden an den tatsächlich vorliegenden Dateien gemessen.
+Der separat angekündigte Autorenbeleg
+Objekt-X-Grad11-Revision-v2-Beleg-2026-10-26.json lag hier NICHT als eigene
+Datei vor. Seine Identität und sein Inhalt sind nicht geprüft. Die eigene
+Archivfeststellung ersetzt keine behauptete Prüfung dieses externen Belegs.
+Das ist eine offene Auslieferungsbindung zu jenem separaten Dokument,
+kein offener mathematischer Schritt innerhalb der hier identifizierten Bytes.
+
+Dieses Votum ergänzt die unveränderte frühere gezielte v2-Gegenprüfung:
+Objekt-X-Grad11-Revision-v2-GPT1-Gegenpruefung-2026-10-26.zip
+123.141 Byte
+SHA-256 a225fba6d6f8a2cc40931ab138f6ca4e0299517c3596719fb8087db5ee4db734
+Sie ist als unverändertes ZIP beigefügt. Ihr damaliger engerer Prüfumfang
+wird nicht rückwirkend umgeschrieben. Erst dieser Nachtrag schließt die
+dort ausdrücklich noch nicht insgesamt freigegebene analytische Anwendung.
+
+Für sämtliche REELLEN c im festgelegten zwölfdimensionalen geraden
+Eingaberaum gilt unter den in Abschnitt 2 benannten Voraussetzungen:
+
+  K_P[c] - <h_c,Q1^-1 h_c> >= rho_v2 G_W[c],
+  rho_v2 = (1-theta_v2) * 4*10^-19
+         > 3.99038487528413*10^-19 > 0.
+
+P0 und die zugehörige physische Quelle/Budgetdefinition sind unverändert.
+G_W ist die physische Metrik, keine euklidische Ersatznorm. Die gemeinsame
+Schalentestabbildung ist y(c)=Y B^-1 c mit exakt rationalen B und Y.
+Die Kernantwort ist die exakte lineare Antwort U1(h_core,c-G y(c)); ihre
+numerischen Hilfsmodelle werden nicht mit dieser Antwort gleichgesetzt.
+
+Das Votum betrifft weder ungerade Parität noch das benötigte Komplement,
+eine vollständige neue A11-Inverse oder die vollständige Weil-Testklasse.
+Es schließt weder den gesamten A9→A11-Anschluss noch Objekt X ab. Der alte
+Routenausschluss bleibt gültig: Q1 ist eine andere Vergleichsunterform.
+
+2. Vollständig bezeichnete übernommene Voraussetzungen
+
+Der unveränderte Wortlaut und die Quellenanker sind als HYPOTHESEN.txt
+und HYPOTHESEN_QUELLEN.json beigefügt und im Manifest gebunden. Maßgeblich
+ist dieser Wortlaut mit seinen ursprünglichen Quellen, nicht eine Verkürzung.
+
+H1: Physische Q-Darstellung, Nullfortsetzungen, Symmetrie und zulässige
+Domänen/Paarungen der definierten Legendre-, Log- und Momentquellen;
+Momentadjungierte. Anker domain_proof, inverse_proof und nstar_proof aus
+INPUT_BINDINGS.json. Keine angenommene A11- oder Gesamtpositivität.
+
+H2: Historische GANZE Operator-/Grammajoranten für alle Koeffizienten der
+ursprünglich definierten Familien F=(z2,z4,z6,z8,Lambda Y1,...,Lambda Y8),
+J=Q_basis[D;I84], Y=Q_basis S und Phi=U^-1 M E. Gebundene Modelle cF,cJ,
+BhF,BhJ, hohe Grame, E_LF,e_LJ,E_F,E_J und Low/High-Kopplung aus
+REFINED_INPUT/REFINED_COMMON96. Ihre historischen analytischen Nachweise
+werden übernommen, nicht aus der Positivität gespeicherter Matrizen gefolgert.
+Die neue konkrete Anwendung auf die vorliegenden Koeffizienten ist Gegenstand
+dieser Prüfung und wird NICHT zu einer zusätzlichen pauschalen Hypothese.
+
+H3: Gebundene Form-, Invers-, Antwortgram- und Koerzivitätszertifikate U8,
+K,D,P, gemeinsame historische Kraftcap 10 und L>=21/5 W_X. Feste äußere
+Antwort Phi12 X_fix Fhat. Ganze D-Modellgrenze in Paritäts-L2 vor und nach
+exakter Projektion. Die historische Cap 10 wird nicht unverändert als Cap
+der neu veränderten niedrigen Kraftabbildung ausgegeben.
+
+H4: Historische Modellenergie-, Kernquadratur-, Brücken-, Quellenhüllen-,
+R2-, Cache- und Momentnachweise ausschließlich in ihrem dokumentierten
+Umfang. Die NEUEN Konturen, Hüllen und Anwendungen werden unten zugeordnet;
+es gibt keine pauschale Übertragung auf neue Konturen allein durch H4.
+
+Die historische Quellenkette, Koordinaten-/Domänenkonstruktion und ihre
+externe Gesamtbegutachtung werden hier nicht neu aufgebaut. Gerichtete
+Arb-Auswertung und rationale Zertifikatsprüfung sind die dokumentierte
+Rechenbasis; es wurde kein formal verifizierter Beweisassistent eingesetzt.
+
+3. Neue Formordnung und zulässige Inversordnung
+
+Geprüfte neue Texte: FULL_FORM_ORDER.txt, LOW_SCHUR_CERTIFICATE.json,
+GAMMA_RESERVE.json. Historischer Anschluss: Inversherleitung §§6a–6c,
+DOMAIN_HERLEITUNG §§2–3 und ursprünglicher niedriger Gamma-Abzug.
+
+In alten niedrigen/hohen Koordinaten ist B8 die TATSÄCHLICHE Kopplung.
+Mit delta0=1.8219, delta1=1.84298, r=10^-40,
+
+ F0=(1-rho)C^{-*}C^-1,
+ F1=F8+(HB0-HB1)/delta0,
+ L1=F1+rI+(1/delta0-1/delta1)HB1,
+
+lauten die beiden Kernformen
+
+ Aeff0=[[F0+B8 B8*/delta0,B8],[B8*,delta0 I]],
+ Aeff1=[[L1+B8 B8*/delta1,B8],[B8*,delta1 I]].
+
+Der neue eigene rationale Audit prüft alle Einträge der 191er-Matrizen,
+F1s Identität, Symmetrie, die vollständige Young-Hülle HB1, ihre Rundung
+und die negative inverse Young-Gewichtung. Der historische rohe Kopplungsgram
+liegt auf dem INTEGER-Raster 10^-100; diese Skalierung wird ausdrücklich
+verwendet. B8 B8*<=HB1 folgt aus der ganzen H2-Kopplungsfehlermajorante,
+nicht aus der Gleichsetzung mit einem endlichen Modellgram.
+
+Für dasselbe eingefrorene Gamma224-Polynom wurden die reellen rationalen
+Resthüllen bei Radius 26/25 unabhängig neu zusammengesetzt: formale
+reziproke Koeffizientenidentitäten, restliche endliche Faltung und ganze
+cosh-/sinhc-Reihenreste. Der ursprünglich bezahlte Abzug hat den Faktor
+4*(21/10)=42/5. Die zurückgewonnene niedrige Reserve ist strikt größer
+als r; zugleich r minus vollständigem Young-/Rundungsverlust strikt positiv.
+Das ist eine schärfere Schranke desselben Polynoms, keine neue Integralrechnung.
+Der ganze Hochboden delta1 einschließlich Momentpreisen bleibt an die
+bereits geprüfte historische Hochraumherleitung gebunden.
+
+Es folgen F1+rI>=F0 und A_low>=F1+rI+HB1/delta0. Die niedrige Differenz
+zur physischen Form ist ein nichtnegativer Zertifikatsrest plus
+(HB1-B8 B8*)/delta1. Die Differenz Aeff1-Aeff0 hat niedrigen Block
+
+ F1+rI-F0+(1/delta0-1/delta1)(HB1-B8 B8*)>=0,
+
+hohen Block (delta1-delta0)I und verschwindende Kreuzblöcke. Somit
+Aeff0<=Aeff1<=A8 und A8^-1<=U1<=U0.
+
+Die ursprüngliche vollständige Inversherleitung §6b schreibt A9-Qold
+beim AUSMULTIPLIZIEREN als die drei nichtnegativen Defekte
+A8-Aeff0, K_B-Knew und eta*q. Der historische Knew-Anschluss ersetzt
+nur die alte Zwölferuntergrenze; die tatsächlichen Kreuzblöcke bleiben.
+Q1 ersetzt Aeff0 durch Aeff1 und nimmt den tatsächlichen Fo-Block sowie
+eta*q wieder auf. Deshalb 0<Qold<=Q1<=A9.
+
+Die alte Koordinatenabbildung ist ein beschränkter Isomorphismus, keine
+unterstellte Isometrie. Die 96 festen Quellen sind operatorzulässig; die
+allgemeinen Restvektoren benötigen nur die geerbte Formdomäne. In den
+Kernkoordinaten ist die Vergleichsform beschränkt und koerziv. Die positive
+Wiederaufnahme von eta*q erhält die geschlossene Form auf der geerbten
+Schalendomäne, die beschränkten endlichen/Kernänderungen erhalten sie
+ebenfalls. Die physische A9-Formdomäne liegt in der Vergleichsdomäne.
+Eine Zugehörigkeit der exakten U1-Kernantwort zur stärkeren A9-Operatordomäne
+wird nicht gebraucht. Inversordnung gilt variational im Formdual:
+
+ A9^-1<=Q1^-1<=Qold^-1.
+
+4. Quellenbuchung, sieben Radiuspositionen und direkte Paarungen
+
+Die bereits abgeschlossene gezielte v2-Gegenprüfung wird mit ihrem genauen
+Archivhash übernommen; keine Wiederholung ihrer sieben Repricing-Läufe.
+Ihre vier angeforderten Kontrollen stehen auf PASS:
+
+ a) Exakte Gramintervalle: gemeinsame symmetrische Eintragsintervalle durch
+    Schnitt der transponierten Einschließungen; symmetrischer Mittelpunkt
+    und rationale Zeilenradiusdiagonalen. Die breiteren Dezimalanzeigen
+    wurden nicht als maßgebliche Rohintervalle eingesetzt.
+ b) Sämtliche sieben Zusatzpreise mit Einbettungen/Faktoren bezahlt:
+    lambda_old R_old96/delta; lambda_h R_h/delta;
+    2 lambda_F R_F/delta; 2 lambda_J R_J/delta;
+    eB^2 R_F/(delta^2 lambda_FoldB);
+    eB^2 R_J/(delta^2 lambda_JoldB);
+    11 tr(X)eB^2/delta^2 (embed R_F+embed R_J).
+    Der letzte Preis besitzt zwei getrennte rationale Formelzeilen.
+    Alle elf ursprünglichen Fehlerkomponenten bleiben enthalten. Ein neuer
+    Gramradius ist keine zusätzliche physische Fehlerquelle und rechtfertigt
+    weder Kürzung noch Änderung dieses Faktors elf.
+ c) Transport durch ganze 108er-Quellenmatrix, Inversrundung, direkte
+    D-/K-Paarungen, 96er-Elimination und rationale untere Gp-Matrix;
+    anschließend neue Fo-/T-Restpreise, C, C^-1 und alle Kreuzgewichte.
+ d) Ungültige Archive und optimierter Betrieb werden durch v2 abgewiesen.
+
+Die allgemeine Fehleridentität lautet bei G0 in Gm±R:
+ Gphys <= (1+lambda)Gm+(1+1/lambda)E+(1+lambda)R.
+Ein bereits bezahlter direkter Radius R enthält lambda R nicht. Für die
+andere Young-Seite entsteht entsprechend R/lambda. Beide ursprünglichen
+rationalen Gegenbeispiele werden von der Ergänzung exakt geschlossen.
+
+Neue Anwendungskette: SOURCE_INTERFACE_CHAIN.txt und zugehöriger Ledger.
+Die ganzen historischen F-/J-Fehlergrame gelten operatorwertig für beliebige
+gemeinsame Koeffizienten. J-Hochnormierung 91/50 bleibt unverändert; sie
+wird nicht durch delta1 ersetzt. Für die neue niedrige Quelle gilt exakt
+Delta v=Delta c-B8 Delta h/delta-(B8-B0)h0/delta. Das Produkt der beiden
+Fehler steckt in B8 Delta h und wird nicht weggelassen. Lineare Variationen
+verwenden die tatsächlichen Modellrichtungen; zweite Variationen werden
+mit den elf ursprünglichen Komponenten gemeinsam bezahlt.
+
+Die verfeinerten ersten vier h-Quellen bleiben dieselben Quellen und
+Potentialpolynome; ihre räumlich gewichtete Restmajorante behält den ganzen
+hohen Anteil und die ursprünglichen Faktoren zwei. Die aktualisierte
+Gramoberhülle wird auch bei den späteren Normquadratwurzeln benutzt.
+
+Für die inverse Modellmetrik wird die Störung vor der Inversion gebucht:
+eps ist eine Operatorobergrenze der Matrixradien, alpha=eps*tr(L_mid^-1)<1.
+Die Neumann-Abschätzung kontrolliert die nichtkommutierende Störung; sie
+ist keine unbegründete Gleichsetzung von Loewner- und Operatornormen.
+Die verbleibende inverse Arithmetik wird mit alpha/(1-alpha) und einer
+gemeinsamen oberen Quellenenergie gebucht, bevor eliminiert wird.
+
+DIRECT_D_APPLICATION: Die historische Konstruktion enthält ausdrücklich
+den symmetrischen z/Y-Preis eps*diag(M,I8,0) sowie 96e*I. Nur diese konkret
+identifizierten Konstruktionsterme werden ersetzt. Gewichtetes Cauchy-
+Schwarz liefert eps*diag(lambda M,I8/lambda,0); der z/J-Frobeniuspreis
+und der verbleibende 92er-Eintragspreis bleiben. Beide neuen Parameter sind
+exakt positiv. Keine unbekannte tatsächliche Fehlerenergie wird subtrahiert.
+
+NEAR_ZERO_PROOF: Für die stückweise H1-Funktion zerfällt die Translation
+in disjunkte Sprungrechtecke und einen Ableitungsanteil. Mit J als Summe
+der Sprungquadrate und A als Ableitungsenergie gilt
+ | ||tau_r u-u||^2-Jr | <=2 sqrt(AJ) r^(3/2)+A r^2.
+Die angegebene Kernelhülle liefert den neuen Nahnullpreis. Alle 78
+Polarisationsdatensätze sind an ei bzw. ei+ej und denselben Plan gebunden.
+Entfernt wird ausschließlich das vorher arithmetisch hinzugefügte Intervall
+[0,N] aus dem alten oberen Endpunkt; der neue physische Nahnullpreis wird
+separat gezahlt. Der untere Endpunkt wird nicht fiktiv verbessert. Die
+physische G_W-Einschließung bleibt erhalten. Keine neuen K-Quadraturen.
+
+5. Ganze Fo-plus-T-Restnorm und neue Kontur-/Endpunkthüllen
+
+WHOLE_SOURCE_APPLICATION: Die exakte Kernantwort macht den Kernrest null.
+Für den verbleibenden tatsächlichen Rest gilt aus der alten Blockinverse
+
+ ||r||_Qold*^2 = ||r_F||_Knew^-1^2
+              +||r_T-a_fin* Knew^-1 r_F||_L*^2.
+
+Die historische gemeinsame Kraftcap 10 erlaubt die Normmajorante
+ ||r||_Qold* <= ||r_T||_L*+sqrt(101)||r_F||_Knew^-1.
+Der Fo-Term wird also nicht mit einem alleinigen T-Preis bezahlt. Der
+physische T-Preis folgt aus L>=21/5 W_X, Projektion und Paritäts-L2-Hülle.
+Die veränderte niedrige Kraft besitzt eine gesondert hergeleitete Cap
+<11.415; die alte 10 wird dort nicht unverändert eingesetzt.
+
+Der Fo-Matrixfehler wird über einen zweiseitigen gemeinsamen ER bezahlt.
+Aus -ER<=DeltaM<=ER folgt mittels Kontraktion in der ER-Metrik
+ ||(DeltaM t)_F||_Knew^-1^2
+ <=tr(Knew^-1 ER_FF) * (t*ER t).
+Die Gültigkeit benutzt die ganze gemeinsame Matrix, nicht einzelne Spalten.
+Ein nur unterer K-Endpunkt wird dabei nicht zu einer zweiseitigen physischen
+K-Einschließung erklärt: relevant ist die bezahlte Fo-Zeile; der untere
+Budgetblock ist beim betreffenden Modellvergleich auf beiden Seiten gleich.
+
+NEW_CONTOUR_APPLICATION und zugehörige Auswertung:
+ - Derselbe gerade Kern und die korrekte Orientierungs-/Paritätskombination
+   bleiben erhalten. Der signierte konstante innere Streifen wird in der
+   Modellfunktion mit seinen Momenten und logarithmischen Cauchytermen
+   ausdrücklich mitgeführt; er ist kein nachträglich weggelassener Rest.
+ - Reelle Polynom-/Liftungsnormen liefern richtungsabhängige Quellenhüllen.
+   Die zwölf kleinen Koeffizientenbedingungen, Endpunktformeln, neuen
+   Kraftcaps und Moment-/Liftungsfehler wurden zusätzlich exakt rational
+   gegen die gespeicherten Eingänge rekombiniert. Die Gamma-Ganznormcap
+   deckt jede Richtung; CLOSED T00–T03 und DYNAMIC T04–T11 bleiben getrennt.
+ - Die innere Cauchyquelle wird auf ihren tatsächlichen Integrationsbereich
+   zerlegt. Die Nennerabstände und die Kontur des GANZEN Produkts werden
+   geprüft. Die zuvor eigenständig ausgeführte geometrische Kontrolle
+   umfasst 768 Panels, 33.280 Knoten und 3.540 aktive Primkonturen.
+ - Der vergrößerte Radius 23/8 auf den letzten 48 Panels bleibt innerhalb
+   der benötigten analytischen Domänen. Für die innere Radius-2-Rechteckhülle
+   wird der Polynomradius sqrt(8) benutzt. Kreis- und Rechteckhüllen werden
+   nicht miteinander verwechselt. Die geerbten Qm-Hüllen werden nur auf
+   ihrer tatsächlich geprüften Domäne angewandt.
+ - Gauss-Exaktheit bis Grad 2n-1 und positive Gewichte begründen die
+   geometrischen Taylorrestpreise; die verwendeten Faktoren sind obere
+   Hüllen. Cacheatom-Abweichungen werden innerhalb derselben glatten Zelle
+   mit Abstand zu Prim-/Log-Schnittstellen kontrolliert. Die Momentänderung
+   und der innere Streifen besitzen eigene bezahlte Hüllen.
+ - Die äußere Taylorfunktion enthält alle Modellterme. Der geometrische
+   Serienrest und der Fehler einer früher abgebrochenen Maßreihe werden
+   beide addiert. Der zweite Mittelpunktvergleich ist eine Konsistenzkontrolle,
+   keine Ersatzbegründung für den Taylorrest.
+ - Beide Enden jeder Richtung verwenden eine ganze logarithmische Hülle;
+   deren Integration wird durch rationale Logobergrenzen abgeschlossen.
+   Die Faktoren für beide Enden und gerade Fortsetzung bleiben enthalten.
+
+Diese Zuordnung wurde analytisch und im ausführenden Code geprüft. Sie ist
+keine Behauptung, alle 4.704 Integrationen oder alle Cachegeneratoren selbst
+neu ausgeführt zu haben. Die vorhandenen gerichteten Abschnittszertifikate
+werden mit ihren geprüften Funktionen, Eingängen und Hüllen weiterverwendet.
+
+6. Gemeinsamer Schluss und tatsächlicher Rechenumfang
+
+Für den physisch zulässigen Test v=(U1(h_core-Gy),y) ist
+ F_y=2<h,v>-Q1[v]=E_core+2<b c,y>-S[y].
+Die gemeinsame untere 108er-Matrix P liegt unter der tatsächlichen Matrix
+M=[[S,b],[b*,K_P-E_core]]. Ihr positiver 96er-Block und Schurabschluss
+geben für JEDES y den endlichen Abstand K_P-F_y>=Gp[c]. Eine Modellnähe
+zum Minimierer ist dafür nicht erforderlich. Exakt geprüft ist
+Gp>=4*10^-19 G_W.
+
+Die Formvariationsidentität ist
+ <h,Q1^-1 h>=F_y+||h-Q1v||_Q1*^2.
+Die Inversordnung erlaubt Qold* als obere Restmetrik. Für c=Bz seien
+C=B*GpB und H der tatsächliche Gram der zwölf Restbilder. Exakte rationale
+LDL-Pivots zeigen C>0 und C A=I für A=C^-1. Aus ||r_i||<=n_i folgt
+
+ |H_ij|<=n_i n_j,
+ tr(AH)<=sum_ij |A_ij| n_i n_j=theta,
+ H<=theta C.
+
+Die letzte Implikation benutzt Positivität des Restgrams und die Spur der
+positiven normierten Matrix. Sie benötigt keine Orthogonalität und keinen
+verschwindenden Kreuzterm. Alle 144 Gewichte gehen in die Schlussrechnung ein.
+
+Ergebnis der eigenständigen rationalen v2-Rekombination:
+ theta_v2 =0.002403781178965734069320387422806509041804016677516... <1,
+ rho_v2   =3.990384875284137063722718450308773963832783933289935...*10^-19.
+Die vollständigen Brüche stehen im gebundenen v2-Ergebnis und im rationalen
+Prüfprotokoll. Die Schlussreserve ist minimal KLEINER als die ungerundete
+v1-Reserve; der Vergleich mit v1s konservativer Dezimalanzeige ist kein Gewinn.
+
+Im gezielten v2-Block selbst ausgeführt und jetzt unverändert übernommen:
+ - sieben frische endliche/Repricing-Stufen, 19 mathematisch identische
+   JSON-Ergebnisse; Zeit-/daraus folgende Bindungsunterschiede separat erklärt;
+ - unabhängige rationale Gram-/Radiusprüfung, Gp-LDL, C-LDL, C A=I;
+ - alle 4.704 Abschnittsbindungen und Summen, 24 Randstücke, zwölf ganze
+   Normen und 144 Kreuzgewichte eigenständig rekombiniert;
+ - Positivfall, ursprüngliches ungültiges Miniarchiv, drei intern neu
+   gehashte fehlerhafte Revisionen und optimierte Betriebsarten getestet.
+   Python -O, -OO und PYTHONOPTIMIZE=1/2 enden vor einer Erfolgsmeldung
+   mit Exit 1 und Schutzdiagnose. Der unveränderte unsichere v1-Prüfer ist
+   nicht der maßgebliche v2-Einstieg.
+
+Im jetzigen analytischen Abschluss zusätzlich selbst ausgeführt:
+ - check_new_form_order_anchors.py: rationale 191er-Kopplungs-/Gammaanker;
+ - check_application_bindings.py: zwölf konkrete Hüllenanwendungen,
+   78 K-Eingabebindungen und positive direkte D-Young-Parameter.
+Beide Ergebnisse sind beigefügt. Keine Ganzrestintegration, kein erneuter
+endlicher v2-Replay, keine Kandidatenrechnung oder Suche in diesem Abschluss.
+
+7. Wiederverwendung und verbleibende Grenzen
+
+Alle 5.263 Originaldateien und 4.704 Abschnittsbelege sind bytegleich.
+Die Revision ändert Fehlerpreise und nachfolgende Rechnungen, nicht die
+integrierten Modellfunktionen, rationalen Testbilder, Caches, Konturen oder
+Abschnittseingänge. Deshalb sind ALLE 4.704 Abschnitte wiederverwendbar;
+ihre neue Erzeugung wäre für diese Änderung nicht erforderlich. Die neuen
+Quellen-/Radiuspreise sind vor den betroffenen Folgerungen bezahlt.
+
+Für den hier bezeichneten Zwölfervergleich verbleibt nach dieser gezielten
+Prüfung keine einzeln identifizierte offene neue analytische Brücke. Das
+Gesamtvotum ist daher PASS unter den vollständig gebundenen H1–H4 und
+innerhalb des ausdrücklich dokumentierten rechnergestützten Prüfumfangs.
+Eine stärkere Aussage über unabhängige Neuerzeugung sämtlicher Integrale,
+historische Grundlagen oder externe Gesamtbegutachtung wird nicht abgeleitet.
+
+Offen bleiben: externe Begutachtung, die historischen Voraussetzungen als
+solche, der vollständige A9→A11-Anschluss und Objekt X. Separat unbestätigt
+bleibt der nicht vorliegende externe Autorenbeleg aus Abschnitt 1. Vor einer
+späteren Veröffentlichung darf dessen Identität nicht erfunden werden.
+
+GitHub wurde ausschließlich lesend abgeglichen: Main
+9a9e0e554508d308e96f10983a307f980d5c3b04. Die eingesehene öffentliche
+v1-Vorabveröffentlichung grad11-even-author-2026-10-26-v1 verweist auf
+20a4c6392fa17f6b1dc5527ae223b32415244190. Ihre ZIP-Metadaten stimmen mit
+dem oben geprüften v1-Archiv überein. Daraus folgt keine Veröffentlichung
+von v2. Keine Dateien auf GitHub geändert, keine CI gestartet, kein Merge.
+
+Dieser Bericht ist ein neuer Prüftext. Originalarchive, Autorenberichte,
+historische PENDING-Vermerke und frühere GPT1-Voten bleiben unverändert.

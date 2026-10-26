@@ -1,0 +1,70 @@
+[
+  {
+    "stage": [
+      "run_reproduction_v2.py",
+      "source_block_ledger_v2.py",
+      "--gamma-reserve"
+    ],
+    "exit_code": 0,
+    "seconds": 27.222763640998892,
+    "stdout": "{\n  \"details\": {\n    \"relative_common_error_trace\": 0.2690912240450809,\n    \"positive_remaining_gap\": true,\n    \"remaining_gap_pivots\": 12,\n    \"minimum_remaining_gap_pivot\": 1.6277793464242658e-06,\n    \"directed_model_gap_W_floor\": 6.963629927914324e-19,\n    \"source_paid_W_floor\": 5.093893868093268e-19\n  },\n  \"costs\": {\n    \"old96_high_linear\": 7.983592624647141e-10,\n    \"old96_high_linear_GRAM_RADIUS_V2\": 4.2997098757606916e-69,\n    \"old96_high_square\": 1.8602619570284692e-37,\n    \"h_high_linear\": 8.38692961414549e-15,\n    \"h_high_linear_GRAM_RADIUS_V2\": 3.438248944400027e-39,\n    \"h_high_square\": 4.599841110074949e-44,\n    \"F_h_raw_high\": 3.4065054949149936e-12,\n    \"F_h_low_projection\": 2.947858224722566e-13,\n    \"F_h_physical\": 5.613560814236229e-13,\n    \"F_h_physical_GRAM_RADIUS_V2\": 3.024111571033247e-72,\n    \"J_h_raw_high\": 1.6485728843043928e-20,\n    \"J_h_low_projection\": 1.0450905331610879e-19,\n    \"J_h_physical\": 6.125187904802789e-15,\n    \"J_h_physical_GRAM_RADIUS_V2\": 1.9811770443309724e-93,\n    \"F_low_source\": 0.009314002697967559,\n    \"F_high_source_in_B\": 5.643729308322176e-10,\n    \"F_old_B\": 0.1960882977875482,\n    \"F_old_B_GRAM_RADIUS_V2\": 1.0563578268889193e-60,\n    \"J_low_source\": 3.3020502695304583e-09,\n    \"J_high_source_in_B\": 1.062113267015231e-18,\n    \"J_old_B\": 0.0021396003528378524,\n    \"J_old_B_GRAM_RADIUS_V2\": 6.920485002200567e-82,\n    \"h_low_source\": 0.0012329447945159885,\n    \"h_high_source_in_B\": 3.968857774242543e-13,\n    \"h_B_pairing\": 0.05749542298208842,\n    \"c_quadrature\": 6.012591998790891e-05,\n    \"Bh_quadrature\": 0.0026875816527938776,\n    \"high_Gram_quadrature\": 4.7721755081407616e-05,\n    \"source_second_variation\": 3.782419175287757e-09,\n    \"source_second_variation_GRAM_RADIUS_V2\": 1.9817322879061424e-71,\n    \"bare_pairing_quadrature\": 2.4303635604807912e-05,\n    \"F_bare_coordinate_error\": 4.6093340927667105e-43,\n    \"F_bare_physical_h\": 1.2140147733084986e-06,\n    \"J_bare_coordinate_error\": 1.2771099156087316e-48,\n    \"J_bare_physical_h\": 5.8752050727905185e-15\n  },\n  \"seconds\": 26.84251664200201\n}\n",
+    "stderr": ""
+  },
+  {
+    "stage": [
+      "run_reproduction_v2.py",
+      "source_arithmetic_closure_v2.py"
+    ],
+    "exit_code": 0,
+    "seconds": 25.40517225700023,
+    "stdout": "{\n  \"L_midpoint_relative_price\": 5e-81,\n  \"inverse_energy_rounding_scalar\": 5e-81,\n  \"finite_matrix_radius_max\": 2.919472410470382e-31,\n  \"remaining_W_floor\": 5.093724745790459e-19\n}\n",
+    "stderr": ""
+  },
+  {
+    "stage": [
+      "run_reproduction_v2.py",
+      "record_exact_gram_radii_v2.py"
+    ],
+    "exit_code": 0,
+    "seconds": 16.464773976997094,
+    "stdout": "EXACT_GRAM_RADII_AND_ADDED_FORMULA_AUDIT_PASS: 4 blocks, 108 paid coordinates, unchanged lambdas\n",
+    "stderr": ""
+  },
+  {
+    "stage": [
+      "audit_closed_source_gap_v2.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.18552780599929974,
+    "stdout": "V2 exact corrected W floor 1/2500000000000000000 12 positive pivots, reconstructed LDL\n",
+    "stderr": ""
+  },
+  {
+    "stage": [
+      "joint_tail_geometry_v2.py"
+    ],
+    "exit_code": 0,
+    "seconds": 4.049102108001534,
+    "stdout": "Exact positive frame pivots 12 seconds 4.0\nInverse diagonal weights [1.9631966402289114e+18, 3269677824063.3604, 7446678354.442866, 8439364.090178076, 27586.020241949034, 798.6741597634747, 20.795083952305397, 0.7884757127849084, 0.38077835429741164, 0.3129878557731876, 0.32459686876474236, 0.24647718464618265]\n",
+    "stderr": ""
+  },
+  {
+    "stage": [
+      "run_reproduction_v2.py",
+      "batch_physical_errors_v2.py"
+    ],
+    "exit_code": 0,
+    "seconds": 70.11121828800242,
+    "stdout": "T00 V2 physical error 3.978834328093904e-12\nT01 V2 physical error 5.925963726906323e-11\nT02 V2 physical error 3.875806547883719e-10\nT03 V2 physical error 1.4682841336004414e-09\nT04 V2 physical error 8.428206230147445e-09\nT05 V2 physical error 6.660853681356036e-08\nT06 V2 physical error 1.4976903644949216e-07\nT07 V2 physical error 1.710049705337121e-07\nT08 V2 physical error 1.932017345302268e-08\nT09 V2 physical error 3.992305904395565e-08\nT10 V2 physical error 3.3353047531652504e-08\nT11 V2 physical error 4.5757491333815587e-10\nALL_TWELVE_FIXED_RESIDUAL_PRICES_RECOMPUTED 69.7698261459991\n",
+    "stderr": ""
+  },
+  {
+    "stage": [
+      "joint_rest_budget_v2.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.527920415999688,
+    "stdout": "Whole directions complete 12 /12; missing component sets []\nKnown error-only budget expression 0.0009586931364978693\nWhole relative budget 0.002403781178965734 pass True\n",
+    "stderr": ""
+  }
+]

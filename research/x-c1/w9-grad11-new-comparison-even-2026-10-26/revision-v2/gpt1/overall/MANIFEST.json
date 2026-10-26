@@ -1,0 +1,70 @@
+{
+  "status": "GPT1_OVERALL_REVIEW_ADDENDUM",
+  "files": [
+    {
+      "path": "ANALYTIC_SOURCE_BINDINGS.json",
+      "bytes": 18468,
+      "sha256": "74a1d55fbbc851b92c3a916edcc28f84b87e85044a2de94a76fe3705f41feba6"
+    },
+    {
+      "path": "APPLICATION_BINDINGS.json",
+      "bytes": 27166,
+      "sha256": "dcc246d752234e36162401ed72f95f73000120f50966bc7fcbd8111fd681c5f4"
+    },
+    {
+      "path": "GITHUB_READ_ONLY_EVIDENCE.json",
+      "bytes": 74929,
+      "sha256": "e6a971e4fc5e53aba70b65b7996f888916b7eaa5b652397127dc6fd58c0e200c"
+    },
+    {
+      "path": "GPT1-GESAMTVOTUM.txt",
+      "bytes": 20774,
+      "sha256": "4423c33c8774e8ab91c25fe38e4c50e5e9c8d9cabdf181969c992c5dc093148e"
+    },
+    {
+      "path": "HYPOTHESEN.txt",
+      "bytes": 2501,
+      "sha256": "2f4ca612ba610dacdf56e0b5954e73fa0ba6b2c65a3ab63cbe2f584457da0ae1"
+    },
+    {
+      "path": "HYPOTHESEN_QUELLEN.json",
+      "bytes": 11127,
+      "sha256": "9c88e4a543376a7e9506e70c04e513a397ee70b264d412802e3063abd2cedc0b"
+    },
+    {
+      "path": "NEW_FORM_ORDER_ANCHORS.json",
+      "bytes": 8478,
+      "sha256": "e68b9eab2bdf767390d6adb92f3d85b3b1957f2322958e378cd0c9007a1a2bbd"
+    },
+    {
+      "path": "OVERALL_REVIEW_STATUS.json",
+      "bytes": 1496,
+      "sha256": "6f6ee9c21fe6285c31d3cf28083d4c33075afb371119670dccb027696757376e"
+    },
+    {
+      "path": "REPRODUCE.txt",
+      "bytes": 1810,
+      "sha256": "d3dd1af01a95297de82f3b4600402b3471c346178d42f165aef073bf5b89a3ba"
+    },
+    {
+      "path": "REVIEW_IDENTITIES.json",
+      "bytes": 1142,
+      "sha256": "ce174389fc6bb9e5fd187089b1fe45f371bd5e464dbac3bd557b69b3cc5497a4"
+    },
+    {
+      "path": "check_application_bindings.py",
+      "bytes": 4150,
+      "sha256": "761d3e1a7b7554e97b8768f98acab46cff7e99220d4240d845b5aa555f59f79c"
+    },
+    {
+      "path": "check_new_form_order_anchors.py",
+      "bytes": 5065,
+      "sha256": "6f93cdb93e8ac2b8d1eb323b01c9c3a4118e0760f15cbb8b74ffe55f0bb9b7a7"
+    },
+    {
+      "path": "prior/Objekt-X-Grad11-Revision-v2-GPT1-Gegenpruefung-2026-10-26.zip",
+      "bytes": 123141,
+      "sha256": "a225fba6d6f8a2cc40931ab138f6ca4e0299517c3596719fb8087db5ee4db734"
+    }
+  ]
+}

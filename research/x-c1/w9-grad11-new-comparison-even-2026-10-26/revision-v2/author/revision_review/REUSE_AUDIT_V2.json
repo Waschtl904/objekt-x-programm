@@ -1,0 +1,140 @@
+{
+  "status": "V1_BASE_AND_ALL_4704_CELLS_UNCHANGED",
+  "base": {
+    "archive": "Objekt-X-Neuer-Vergleich-Grad11-GPT2-2026-10-26.zip",
+    "bytes": 360325509,
+    "sha256": "024f20f0c6086aefabb6e3d759f91aaa466906a864c673c0c0b467f3ee627946",
+    "manifest_sha256": "3a388b3051f65b502db718b72c4e690c73c4fbf4a649360ca9afeb66b85389f2",
+    "original_members_verified": 5263,
+    "scope": "Local additive revision B1 Gram-radius prices and B2 optimized verifier guard; no publication, no new integration."
+  },
+  "manifest_files_verified": 5263,
+  "sections": [
+    {
+      "direction": "T00",
+      "count": 411,
+      "concatenated_file_sha256_digest": "d27630ac46055dfa1e152674523eaf54e5fdaec4eec2fcd895b6f7892f006de0"
+    },
+    {
+      "direction": "T01",
+      "count": 413,
+      "concatenated_file_sha256_digest": "58051710f0d9e32e013cea34cad294fc1a95eb8c3c0f16362505af7ea942bcae"
+    },
+    {
+      "direction": "T02",
+      "count": 409,
+      "concatenated_file_sha256_digest": "6ba595db531dbec5bedf31fc752722090fc67058919df9f253211f61f38e34bb"
+    },
+    {
+      "direction": "T03",
+      "count": 399,
+      "concatenated_file_sha256_digest": "d2bf3c324e7ef4d5d905d937cecd4030fa0d051ac41335e5d1728c52ba2d5133"
+    },
+    {
+      "direction": "T04",
+      "count": 395,
+      "concatenated_file_sha256_digest": "ddb8586835fba91bdd0aac49562acdafb2e5d9606bccf230777ce23fc6d0a0f4"
+    },
+    {
+      "direction": "T05",
+      "count": 397,
+      "concatenated_file_sha256_digest": "b0c6676cb69ebda362e2d7c551d989efcdcc135686b353090ffec10fb66ba1e6"
+    },
+    {
+      "direction": "T06",
+      "count": 391,
+      "concatenated_file_sha256_digest": "4b393b14c6967d1cf73ef930779006a8c80c7e2225cfb4ddfe301437bd86c1de"
+    },
+    {
+      "direction": "T07",
+      "count": 383,
+      "concatenated_file_sha256_digest": "60db0af8413f21155bbf3422913d54358ddb2f6200a78388079e03bd022513fe"
+    },
+    {
+      "direction": "T08",
+      "count": 367,
+      "concatenated_file_sha256_digest": "838194b5b1ffb1ee9ebb6fd1df1bfe3214fde2c6eace7f58fe26cc8ca1ce0b64"
+    },
+    {
+      "direction": "T09",
+      "count": 379,
+      "concatenated_file_sha256_digest": "556acf837e980afbaa2cda5723f3e9113b75abdc5f425d1ed3f63890d56c83fc"
+    },
+    {
+      "direction": "T10",
+      "count": 383,
+      "concatenated_file_sha256_digest": "6adb8b28b06a26505e4d4f8b1b54ca9fea4791920bd8b88d538f8d28d2c8e78c"
+    },
+    {
+      "direction": "T11",
+      "count": 377,
+      "concatenated_file_sha256_digest": "9ef1653f8fc754eb38b1b6037fdf51c6cbf7db7abf2b76dfd17f9e680b44e19b"
+    }
+  ],
+  "model_caches_unchanged": [
+    {
+      "label": "T00",
+      "cache": "whole-model-358daedad00a-n128.json.gz",
+      "sha256": "21ecc2d8642ce7a975d03442cd1767c65905fa5a544180890556fdbd0fbde518"
+    },
+    {
+      "label": "T01",
+      "cache": "whole-model-11d06f997fe3-n64.json.gz",
+      "sha256": "378b0943b7081dd8bb2f22a0ad8293c0f42f677aedc470911e6f485c1d2838e3"
+    },
+    {
+      "label": "T02",
+      "cache": "whole-model-8295add03423-n64.json.gz",
+      "sha256": "ce8550d4ca7864fbb074507767d0a0da7b23f544e934b38b0c121b922cff3f08"
+    },
+    {
+      "label": "T03",
+      "cache": "whole-model-88efc6b532f9-n64.json.gz",
+      "sha256": "ce1175a012951a81275950c4191e39516d9df2267f81c7d81c39d7aafeb9e345"
+    },
+    {
+      "label": "T04",
+      "cache": "whole-model-8c37a69de0bc-n64.json.gz",
+      "sha256": "21859d3e99d5d2569e49abccbf3992eccce51d7da99f19a53aa8e61352ac2e4b"
+    },
+    {
+      "label": "T05",
+      "cache": "whole-model-66fd1594d714-n64.json.gz",
+      "sha256": "a4c12633fcc7772b8d3c8fda97cd22423f0afb51cae632126493ae76692f0761"
+    },
+    {
+      "label": "T06",
+      "cache": "whole-model-c92f3b564032-n64.json.gz",
+      "sha256": "9fe811b108c8770fc40ae3e551f289a5dad48adccbee4a7b5fba61dee22ea964"
+    },
+    {
+      "label": "T07",
+      "cache": "whole-model-29591fcf3020-n64.json.gz",
+      "sha256": "9d932609a26eefb826cfaa25e82d93837bf3efd1743d4ef6fceeefcb722a2448"
+    },
+    {
+      "label": "T08",
+      "cache": "whole-model-f4c0bf7d1fc8-n64.json.gz",
+      "sha256": "cbd685c9f234c2a6fb0aec5e64a1b025cc78dee3181cbffb566826df8c1500fd"
+    },
+    {
+      "label": "T09",
+      "cache": "whole-model-7043ac90c74d-n64.json.gz",
+      "sha256": "c8d66905aaa19c2747de0d3a64acde13c5f6a425624d7eedaaa068da77b1cb73"
+    },
+    {
+      "label": "T10",
+      "cache": "whole-model-7b71ce395ac7-n64.json.gz",
+      "sha256": "5e7fd1e8d14e30990b1dec1ccf0e52453b5275a230b0df149af462544b535e57"
+    },
+    {
+      "label": "T11",
+      "cache": "whole-model-6755ef8ccd09-n64.json.gz",
+      "sha256": "9bc22fbb9ff3d0c71630458d1a44e0fbe6a89641f9c10fe30db9195232ad29d8"
+    }
+  ],
+  "common_basis_exactly_unchanged": true,
+  "all_original_sources_inputs_and_24_endpoint_components_unchanged": true,
+  "reason": "Only new error-pricing scripts/results were added. Every original source, model cache, input, section certificate and contour ingredient is covered by the original 5263-file manifest, freshly verified. New C, inverse weights and physical error norms are recombined with the same fixed functions and frame.",
+  "new_integrations_run": false
+}

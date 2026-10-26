@@ -1,0 +1,764 @@
+{
+  "status": "CHECKER_CONTROLS_PASS",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "archive_cases": [
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/verify_handoff_v2.py",
+        "--zip",
+        "/workspace/scratch/da84280488bf/upload/Objekt-X-Neuer-Vergleich-Grad11-GPT2-2026-10-26.zip"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"HANDOFF_BYTES_AND_STORED_RESULT_PASS\",\n  \"files\": 5263,\n  \"bytes\": 446401855,\n  \"rational_recombination_replayed\": false,\n  \"fresh_native_integrations_replayed\": false,\n  \"independent_analytic_review_complete\": false,\n  \"v1_total_mathematical_review\": \"UNRESOLVED_B1_GRAM_RADII\",\n  \"optimized_execution_supported\": false\n}\n",
+      "stderr": "",
+      "mode": "ordinary",
+      "input": "valid_v1"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/verify_handoff_v2.py",
+        "--zip",
+        "revision-v2-review-2026-10-26/author-controls-fresh/invalid-miniarchive.zip"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/verify_handoff_v2.py\", line 31, in <module>\n    assert set(names)==expected,'Unexpected or absent archive member'\n           ^^^^^^^^^^^^^^^^^^^^\nAssertionError: Unexpected or absent archive member\n",
+      "mode": "ordinary",
+      "input": "invalid_miniarchive"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-O",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/verify_handoff_v2.py",
+        "--zip",
+        "/workspace/scratch/da84280488bf/upload/Objekt-X-Neuer-Vergleich-Grad11-GPT2-2026-10-26.zip"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "-O",
+      "input": "valid_v1"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-O",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/verify_handoff_v2.py",
+        "--zip",
+        "revision-v2-review-2026-10-26/author-controls-fresh/invalid-miniarchive.zip"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "-O",
+      "input": "invalid_miniarchive"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-OO",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/verify_handoff_v2.py",
+        "--zip",
+        "/workspace/scratch/da84280488bf/upload/Objekt-X-Neuer-Vergleich-Grad11-GPT2-2026-10-26.zip"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "-OO",
+      "input": "valid_v1"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-OO",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/verify_handoff_v2.py",
+        "--zip",
+        "revision-v2-review-2026-10-26/author-controls-fresh/invalid-miniarchive.zip"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "-OO",
+      "input": "invalid_miniarchive"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/verify_handoff_v2.py",
+        "--zip",
+        "/workspace/scratch/da84280488bf/upload/Objekt-X-Neuer-Vergleich-Grad11-GPT2-2026-10-26.zip"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "PYTHONOPTIMIZE=1",
+      "input": "valid_v1"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/verify_handoff_v2.py",
+        "--zip",
+        "revision-v2-review-2026-10-26/author-controls-fresh/invalid-miniarchive.zip"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "PYTHONOPTIMIZE=1",
+      "input": "invalid_miniarchive"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/verify_handoff_v2.py",
+        "--zip",
+        "/workspace/scratch/da84280488bf/upload/Objekt-X-Neuer-Vergleich-Grad11-GPT2-2026-10-26.zip"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "PYTHONOPTIMIZE=2",
+      "input": "valid_v1"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/verify_handoff_v2.py",
+        "--zip",
+        "revision-v2-review-2026-10-26/author-controls-fresh/invalid-miniarchive.zip"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "PYTHONOPTIMIZE=2",
+      "input": "invalid_miniarchive"
+    }
+  ],
+  "entrypoint_rejections": [
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-O",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/audit_closed_source_gap_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "-O",
+      "file": "audit_closed_source_gap_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-OO",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/audit_closed_source_gap_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "-OO",
+      "file": "audit_closed_source_gap_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/audit_closed_source_gap_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "PYTHONOPTIMIZE=1",
+      "file": "audit_closed_source_gap_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/audit_closed_source_gap_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "PYTHONOPTIMIZE=2",
+      "file": "audit_closed_source_gap_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-O",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/batch_physical_errors_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "-O",
+      "file": "batch_physical_errors_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-OO",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/batch_physical_errors_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "-OO",
+      "file": "batch_physical_errors_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/batch_physical_errors_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "PYTHONOPTIMIZE=1",
+      "file": "batch_physical_errors_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/batch_physical_errors_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "PYTHONOPTIMIZE=2",
+      "file": "batch_physical_errors_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-O",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/gram_enclosures_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "-O",
+      "file": "gram_enclosures_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-OO",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/gram_enclosures_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "-OO",
+      "file": "gram_enclosures_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/gram_enclosures_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "PYTHONOPTIMIZE=1",
+      "file": "gram_enclosures_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/gram_enclosures_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "PYTHONOPTIMIZE=2",
+      "file": "gram_enclosures_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-O",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/joint_rest_budget_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "-O",
+      "file": "joint_rest_budget_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-OO",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/joint_rest_budget_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "-OO",
+      "file": "joint_rest_budget_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/joint_rest_budget_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "PYTHONOPTIMIZE=1",
+      "file": "joint_rest_budget_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/joint_rest_budget_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "PYTHONOPTIMIZE=2",
+      "file": "joint_rest_budget_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-O",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/joint_tail_geometry_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "-O",
+      "file": "joint_tail_geometry_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-OO",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/joint_tail_geometry_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "-OO",
+      "file": "joint_tail_geometry_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/joint_tail_geometry_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "PYTHONOPTIMIZE=1",
+      "file": "joint_tail_geometry_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/joint_tail_geometry_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "PYTHONOPTIMIZE=2",
+      "file": "joint_tail_geometry_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-O",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/record_exact_gram_radii_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "-O",
+      "file": "record_exact_gram_radii_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-OO",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/record_exact_gram_radii_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "-OO",
+      "file": "record_exact_gram_radii_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/record_exact_gram_radii_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "PYTHONOPTIMIZE=1",
+      "file": "record_exact_gram_radii_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/record_exact_gram_radii_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "PYTHONOPTIMIZE=2",
+      "file": "record_exact_gram_radii_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-O",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/run_reproduction_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "-O",
+      "file": "run_reproduction_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-OO",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/run_reproduction_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "-OO",
+      "file": "run_reproduction_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/run_reproduction_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "PYTHONOPTIMIZE=1",
+      "file": "run_reproduction_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/run_reproduction_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "PYTHONOPTIMIZE=2",
+      "file": "run_reproduction_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-O",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/source_arithmetic_closure_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "-O",
+      "file": "source_arithmetic_closure_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-OO",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/source_arithmetic_closure_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "-OO",
+      "file": "source_arithmetic_closure_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/source_arithmetic_closure_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "PYTHONOPTIMIZE=1",
+      "file": "source_arithmetic_closure_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/source_arithmetic_closure_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "PYTHONOPTIMIZE=2",
+      "file": "source_arithmetic_closure_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-O",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/source_block_ledger_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "-O",
+      "file": "source_block_ledger_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-OO",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/source_block_ledger_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "-OO",
+      "file": "source_block_ledger_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/source_block_ledger_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "PYTHONOPTIMIZE=1",
+      "file": "source_block_ledger_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/source_block_ledger_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "PYTHONOPTIMIZE=2",
+      "file": "source_block_ledger_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-O",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/verify_handoff_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "-O",
+      "file": "verify_handoff_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-OO",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/verify_handoff_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "-OO",
+      "file": "verify_handoff_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/verify_handoff_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "PYTHONOPTIMIZE=1",
+      "file": "verify_handoff_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/verify_handoff_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "PYTHONOPTIMIZE=2",
+      "file": "verify_handoff_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-O",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/whole_physical_error_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "-O",
+      "file": "whole_physical_error_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-OO",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/whole_physical_error_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "-OO",
+      "file": "whole_physical_error_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/whole_physical_error_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "PYTHONOPTIMIZE=1",
+      "file": "whole_physical_error_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/whole_physical_error_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "PYTHONOPTIMIZE=2",
+      "file": "whole_physical_error_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-O",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/verify_revision_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "-O",
+      "file": "verify_revision_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-OO",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/verify_revision_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "-OO",
+      "file": "verify_revision_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/verify_revision_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "PYTHONOPTIMIZE=1",
+      "file": "verify_revision_v2.py"
+    },
+    {
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/verify_revision_v2.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "mode": "PYTHONOPTIMIZE=2",
+      "file": "verify_revision_v2.py"
+    }
+  ],
+  "rational_counterexamples": {
+    "lambda_R": {
+      "actual": "1089/400",
+      "old": "1047/400",
+      "corrected": "1089/400"
+    },
+    "R_over_lambda": {
+      "actual": "4",
+      "old": "19/5",
+      "corrected": "4"
+    }
+  }
+}

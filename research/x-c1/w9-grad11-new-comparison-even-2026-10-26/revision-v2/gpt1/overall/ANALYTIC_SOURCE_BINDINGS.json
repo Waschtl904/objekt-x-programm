@@ -1,0 +1,498 @@
+{
+  "status": "BYTES_OF_REVIEWED_ANALYTICAL_SOURCES_AND_APPLICATION_INPUTS",
+  "files": [
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/FULL_FORM_ORDER.txt",
+      "bytes": 4976,
+      "sha256": "a9d6dbd2d2403e4885bf6581243e5d0d75fd816046ce17589f3b171e79060a43"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/SOURCE_INTERFACE_CHAIN.txt",
+      "bytes": 6186,
+      "sha256": "f1757bdab86699ba461846bb57b53f4ba0faf0888620a60dda720f3c053ef1b5"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/WHOLE_SOURCE_APPLICATION.txt",
+      "bytes": 8092,
+      "sha256": "e90e934837a8537a0c8de098862dfa38113e6ec08e8fb95ffe6ee33c9aea3cec"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/NEW_CONTOUR_APPLICATION.txt",
+      "bytes": 7616,
+      "sha256": "9b91563b983ac1aa35976c66edda573b903f1cd9a9b11678e3d8220eb445d15f"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/JOINT_REST_LEMMA.txt",
+      "bytes": 2774,
+      "sha256": "87e34c1b632d53d1946e27f5501f2ee78cc8fc4ce5c079d67534d260d951dd77"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/DIRECT_D_APPLICATION.txt",
+      "bytes": 3053,
+      "sha256": "e1df6a98b2790252660e7f1095c8c4c7a56a4f12745ad7ff636d8445344d1bff"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/NEAR_ZERO_PROOF.txt",
+      "bytes": 2761,
+      "sha256": "8c0bc971139559b687a9514050813ce36bda54c60ba2c77f813dd74e3463b6aa"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/COMPARISON_THEOREM.txt",
+      "bytes": 4967,
+      "sha256": "59935d5ede18d860b1e230c05ec5f39a09a90e8417d8de48cead9383e26447ea"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/joint_sources.py",
+      "bytes": 4135,
+      "sha256": "57ad8baf79a497d8f245404b56d461a4f55c61cf0a809a5d1f125aad26bffa8c"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/source_block_ledger.py",
+      "bytes": 6348,
+      "sha256": "117cd0ccd90d323799cd72c78c104caac5f26e70e24a5fe68b9e8ed0898c6251"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/source_arithmetic_closure.py",
+      "bytes": 2364,
+      "sha256": "67f59da53ffcafad12f9d13525d0b8b12291f7528fa9892481b211ece0d5524f"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/constant_core_tail.py",
+      "bytes": 1842,
+      "sha256": "332ed76903620d7e3b473dd1c8be51d6314435f1d21ee10465cfa23472217225"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/core_regular_fix.py",
+      "bytes": 1437,
+      "sha256": "64672a60e87f1f43e3bc5c5ea48eee52adcb54e85a16be4bdde962869d75e2b2"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/taylor_tail_adapter.py",
+      "bytes": 1962,
+      "sha256": "3f85e728567859b20d54fa194657d4446a480450b5c3149b70452d1ed74bdadb"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/inner_contour_bound.py",
+      "bytes": 1499,
+      "sha256": "cfff455506af5a1135fdd7b9afb4c76a47175c04816650a62ec07eeb68b9b5b5"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/retained_core_quadrature.py",
+      "bytes": 3113,
+      "sha256": "1c35025659ab7975b54749f0d1df8cc59c48ec13a0dc1e1fd20889bc474c8a1e"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/retained_core_quadrature_R2875.py",
+      "bytes": 1362,
+      "sha256": "6346dc17c7c611f7d1335a09e5e1702492cdbc9a0dfdaff25547c3df55ab9822"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/core_tail_variation.py",
+      "bytes": 2132,
+      "sha256": "7460fc76ee169dad8b77a8f7971b72a54094a3a1cd23ff34b87ceca898fcdf6b"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/new_endpoint_ingredients.py",
+      "bytes": 786,
+      "sha256": "9b54e5de395b38cbdf938cafa2f4286ec8c18cfc20e2f0cac8227a4c9877c9ee"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/derive_new_contour_caps.py",
+      "bytes": 1795,
+      "sha256": "cc7ccb3de1b7f3992b2a212eb5e83c602ab4d9e2362ce287d8c2e8b00dcc00e7"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/new_small_model_changes.py",
+      "bytes": 2228,
+      "sha256": "eabc134de1d657ed8096b5b6c4dcf32b69d6247a854373cf58052b6b54006d96"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/refine_near_zero.py",
+      "bytes": 3956,
+      "sha256": "e4bc2199719313c47d61a9fc44af7203612a894cc09831fec2a36f8230b7a402"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/directed_K_matrix.py",
+      "bytes": 4259,
+      "sha256": "e3e64dd9f82a72fc5b24e96f3b5442f82c72ba02a807527a52deda9231b1eb2e"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/audit_K_gate.py",
+      "bytes": 3580,
+      "sha256": "57c780b564b63acd6230a1daa23687c41097203f11803ce19aa6ef873a812bac"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/direct_D_transport.py",
+      "bytes": 3586,
+      "sha256": "beef34045267698c4a62d849b49f7bf4f802b31f1c20669bb01268fd74f4e97a"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/whole_physical_error_probe.py",
+      "bytes": 3883,
+      "sha256": "8d4f790affb96c6fd8c5c6db756ac7ad2d040395d1005b04cf138313fb36909e"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/whole_physical_error_closed.py",
+      "bytes": 2856,
+      "sha256": "b5ca504137b08640e915f6150f801e1ec94f667e138a6a3672ccbc26f7340d63"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/whole_physical_error_dynamic.py",
+      "bytes": 1380,
+      "sha256": "76cbab2923b804a0b7edc5267360a0c58d64981f4e2aa4927df043db70481228"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/LOW_SCHUR_CERTIFICATE.json",
+      "bytes": 10919441,
+      "sha256": "0eabf4ef1a1141db3b7bb0157ec6a4d14ac127b1e06c50df40e00bc24de85d4c"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/GAMMA_RESERVE.json",
+      "bytes": 2042,
+      "sha256": "aeab0cfeae35097aebd74cf604ce266847cf652eb2f2cc1116af9aed14beda73"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/inputs/CORRECTION_4096.json",
+      "bytes": 29618929,
+      "sha256": "a3e5aee7e589d4fcbf6e14cbe08b0bff791bc66cb1c9be14b9a7146bf2020966"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/K_MATRIX_PLAN.json",
+      "bytes": 572,
+      "sha256": "5119dac93fdad09a56f31e649b12fdb1ee6febf683c950d56eed198ad2d9f0ce"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/DIRECT_D_TRANSPORT.json",
+      "bytes": 587264,
+      "sha256": "230f239b7470550bbe7e0a46525b051547d2eb771831cbb2299b2335aa0d08eb"
+    },
+    {
+      "archive": "v1",
+      "path": "repository/research/x-c1/a9-inverse-renewal-2026-10-13/original/HERLEITUNG.txt",
+      "bytes": 22261,
+      "sha256": "d221c870fccf8e8ab4298e53c7beff35b63bd704f5a6d0782864b51e93ce83d7"
+    },
+    {
+      "archive": "v1",
+      "path": "repository/research/x-c1/a9-inverse-renewal-2026-10-13/original/sources/DOMAIN_HERLEITUNG.txt",
+      "bytes": 23771,
+      "sha256": "e6075606f6a26c354f1eb756b568f91cbb7a0b035022b44ef60a0120ae4ea819"
+    },
+    {
+      "archive": "v1",
+      "path": "repository/research/x-c1/a9-inverse-renewal-2026-10-13/original/sources/COMMON96_HERLEITUNG.txt",
+      "bytes": 8234,
+      "sha256": "60357475b7ae462aed1f4eed73d23662ec883608c7227e05509a618824c345bd"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/fo-response-reach-2026-10-25/frozen/HYPOTHESEN.txt",
+      "bytes": 2501,
+      "sha256": "2f4ca612ba610dacdf56e0b5954e73fa0ba6b2c65a3ab63cbe2f584457da0ae1"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/fo-response-reach-2026-10-25/frozen/HYPOTHESEN_QUELLEN.json",
+      "bytes": 11127,
+      "sha256": "9c88e4a543376a7e9506e70c04e513a397ee70b264d412802e3063abd2cedc0b"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/ENDPOINT_INGREDIENTS_T00.json",
+      "bytes": 8563,
+      "sha256": "025b292a2528948c8b6901fa4011b3a289a0126a88b3ab0bfd61111ed431fb54"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/CONTOUR_CAPS_T00.json",
+      "bytes": 1874,
+      "sha256": "e6788105ed475101fb9a74ccd676197c0d202756720f3e0769ac791b41f52bd0"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/SMALL_MODEL_CHANGES_T00.json",
+      "bytes": 3603,
+      "sha256": "54f664d2483012b62a0c455a62f2b0279baf87cd94f02808db1ae419303b7b4c"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/ENDPOINT_INGREDIENTS_T01.json",
+      "bytes": 8588,
+      "sha256": "70feb100912b9ecfae7fb40d88d457c919de5bef22b8e573768a4d90e8c57f86"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/CONTOUR_CAPS_T01.json",
+      "bytes": 1877,
+      "sha256": "76183c5000d23a84dfedc55ae480c2a2e42f986d30312c2988c6c9d4c272b2e1"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/SMALL_MODEL_CHANGES_T01.json",
+      "bytes": 3605,
+      "sha256": "6a2e64b56854957f1eb1fffd15f175a9a3b606dfecc1d71df593f344d9d4dec4"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/ENDPOINT_INGREDIENTS_T02.json",
+      "bytes": 8600,
+      "sha256": "237128762e341cb92b9aa9235a9fcb4abef1a4238ada23d33a4e684cf0310884"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/CONTOUR_CAPS_T02.json",
+      "bytes": 1889,
+      "sha256": "425862ed8afc408f42bea94af79680c4d86677bc59acc88f14fcc81564eb60db"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/SMALL_MODEL_CHANGES_T02.json",
+      "bytes": 3621,
+      "sha256": "ff6b0a93fa54570dbf78cc11e3645fada9cd10efb57ea44398849300db76ce0c"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/ENDPOINT_INGREDIENTS_T03.json",
+      "bytes": 8613,
+      "sha256": "aeee2b508282fbf03cd912acb6d32f73f09753b5c145e5abb69417b31121f976"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/CONTOUR_CAPS_T03.json",
+      "bytes": 1892,
+      "sha256": "32a50a6d03033217fc95d1a98651b6014a8539aa8d2bf056bfa52ca4336c5442"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/SMALL_MODEL_CHANGES_T03.json",
+      "bytes": 3625,
+      "sha256": "545fcae02744bbbfb32d61ec9f9037a658d216e9c698bb57cb1f196e10a8e8c8"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/ENDPOINT_INGREDIENTS_T04.json",
+      "bytes": 8624,
+      "sha256": "11722f79ba095e42f5bda36509411df8024f88802c9c670ff4e6070268f16387"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/CONTOUR_CAPS_T04.json",
+      "bytes": 1896,
+      "sha256": "9105d6a99ec9b6e6f8cb6fc9abb34b095dfbf2fdc5875fe284f97b2a8bb54782"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/SMALL_MODEL_CHANGES_T04.json",
+      "bytes": 4079,
+      "sha256": "b6a93e525aeb6c54595a85a2fc51d1c0d3572f7d538be117ae7fdf521df97c73"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/ENDPOINT_INGREDIENTS_T05.json",
+      "bytes": 8631,
+      "sha256": "b8e677b62649d239dff7fe5e3d0d11c6fd7197cac357c82af833603d9c8c2602"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/CONTOUR_CAPS_T05.json",
+      "bytes": 1901,
+      "sha256": "f11f33fed3de0e47feb43299151316169e10ca123c519ce3842c0ee039a3ec46"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/SMALL_MODEL_CHANGES_T05.json",
+      "bytes": 4104,
+      "sha256": "14865f0a346df6fa1710ae04d5df6ed0ae51afbd2d40b9f1cbc58e237c1815f1"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/ENDPOINT_INGREDIENTS_T06.json",
+      "bytes": 8648,
+      "sha256": "0768bfc3e586f9176244074e61f7e2bc8a19bbfc1e66de4549ecd7664ac19733"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/CONTOUR_CAPS_T06.json",
+      "bytes": 1888,
+      "sha256": "f338c18a18633ecc3eff585a26689ce2e7716090adf2c8984bd46083dabad783"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/SMALL_MODEL_CHANGES_T06.json",
+      "bytes": 4098,
+      "sha256": "c1ac59afbf6ff803a614e17698397afa739c9e6b0be6a5543af5d9100c56cd27"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/ENDPOINT_INGREDIENTS_T07.json",
+      "bytes": 8638,
+      "sha256": "33769d0f1905307f251386bbdcef72d01b620574bc947492b5d5d9872df3120c"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/CONTOUR_CAPS_T07.json",
+      "bytes": 1897,
+      "sha256": "d00a1c4ab2f026142e78937fd4f097987272c039b8f67ee0d96f72410593ce28"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/SMALL_MODEL_CHANGES_T07.json",
+      "bytes": 4111,
+      "sha256": "b54d34046aaff5e790eeb505c9c470df343dd7376fea1ae9b1613329f436a076"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/ENDPOINT_INGREDIENTS_T08.json",
+      "bytes": 8616,
+      "sha256": "0d820e8860960faf23e272d7bb830ede5643c3c54785dbe418e87c759a249245"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/CONTOUR_CAPS_T08.json",
+      "bytes": 1900,
+      "sha256": "07733e236115f22401879e9a0cac5d295020cf3a4d62eb694a20b477a83bf51f"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/SMALL_MODEL_CHANGES_T08.json",
+      "bytes": 4093,
+      "sha256": "fd36edce72930d7dfe3727cb59bbb3b845c53a5b53e38f1eaf3ec718d1e72063"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/ENDPOINT_INGREDIENTS_T09.json",
+      "bytes": 8628,
+      "sha256": "c08af68d78e23bf407ba173b46d0f993d86d9030729bf7d4427055766f8aa5fa"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/CONTOUR_CAPS_T09.json",
+      "bytes": 1898,
+      "sha256": "d3fc4ab2d64785d96f8f8a8d9ba93829e0821ed92318911c6acfef37fa6fe0e3"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/SMALL_MODEL_CHANGES_T09.json",
+      "bytes": 4093,
+      "sha256": "65da47e62ad412897ba99aec251099d4b1e6143963c026a5bd772e0dcf77eae4"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/ENDPOINT_INGREDIENTS_T10.json",
+      "bytes": 8623,
+      "sha256": "f2c329f84efb017a28f5e4538b9e099404e05d89c0cba56afa56a1b0a5b12f61"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/CONTOUR_CAPS_T10.json",
+      "bytes": 1897,
+      "sha256": "ebee6151b7c8b31b3961dff804f9979a575bc06d3d620afbe4f9c2493d89c702"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/SMALL_MODEL_CHANGES_T10.json",
+      "bytes": 4098,
+      "sha256": "031ecfe070c66d2becc885caa98ecc37d8f37ddf52610e6500fa7ab185b678e6"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/ENDPOINT_INGREDIENTS_T11.json",
+      "bytes": 8603,
+      "sha256": "99ab4f4a048c8463089fa214225cd6ac82d8dd886719d37eb990c30ce10c68b5"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/CONTOUR_CAPS_T11.json",
+      "bytes": 1891,
+      "sha256": "e1492ba218f053087d19195d7c49de106287696826b58073b9e8d4209a2d2ac5"
+    },
+    {
+      "archive": "v1",
+      "path": "workspace/work/breakthrough-2026-10-25/SMALL_MODEL_CHANGES_T11.json",
+      "bytes": 4090,
+      "sha256": "af8864952c3d6d3ccfb200b4257f5bcac491dd964d23cc8686633bab59d138e2"
+    },
+    {
+      "archive": "v2",
+      "path": "workspace/work/breakthrough-2026-10-25/source_block_ledger_v2.py",
+      "bytes": 8683,
+      "sha256": "6b10d7ebd3432077aa548ec0747a31fb39b5e0e895b4af68c02766b2d850b983"
+    },
+    {
+      "archive": "v2",
+      "path": "workspace/work/breakthrough-2026-10-25/source_arithmetic_closure_v2.py",
+      "bytes": 2573,
+      "sha256": "1126236474f71465c8a9c7a02a7560936c392da152b60d3bbf6b3091a0c81d78"
+    },
+    {
+      "archive": "v2",
+      "path": "workspace/work/breakthrough-2026-10-25/gram_enclosures_v2.py",
+      "bytes": 1789,
+      "sha256": "304b6e796d3426dd8a5dbde8723f6070603193e488084423832c7c1e8cf71e93"
+    },
+    {
+      "archive": "v2",
+      "path": "workspace/work/breakthrough-2026-10-25/whole_physical_error_v2.py",
+      "bytes": 3409,
+      "sha256": "0ae2be650f6e9dbe21de74f376772ac3ac4e7c16fae594ae33169071437f4029"
+    },
+    {
+      "archive": "v2",
+      "path": "workspace/work/breakthrough-2026-10-25/joint_rest_budget_v2.py",
+      "bytes": 7204,
+      "sha256": "20a498b52d933c9e91f775a7f7118ff7ed5695c92badd39b5035d82e0983d4a5"
+    },
+    {
+      "archive": "v2",
+      "path": "workspace/work/breakthrough-2026-10-25/revision_v2/JOINT_REST_BUDGET_V2.json",
+      "bytes": 54132,
+      "sha256": "a025b49d4e13919c67d74f5f2f8598d34cd74fe304f3e103bae6be907d0ffc6e"
+    },
+    {
+      "archive": "v2",
+      "path": "revision_review/BERICHT_V2.txt",
+      "bytes": 13789,
+      "sha256": "aed4a52d0d77d850e0da603d7cb1a5ee0d63aed7339cec86bb591f63de42d62b"
+    },
+    {
+      "archive": "v2",
+      "path": "verify_revision_v2.py",
+      "bytes": 11048,
+      "sha256": "639e8c189b3ea5c840752669c2d24f009f5253a78fe6f17adf5a00b1bc33850a"
+    }
+  ],
+  "note": "This selection supplements the full author manifests and the prior targeted audit. Not a claim of a new replay for every listed program."
+}

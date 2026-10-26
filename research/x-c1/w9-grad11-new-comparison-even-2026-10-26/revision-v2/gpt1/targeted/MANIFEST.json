@@ -1,0 +1,92 @@
+{
+  "status": "GPT1_TARGETED_V2_REVIEW",
+  "v1_sha256": "024f20f0c6086aefabb6e3d759f91aaa466906a864c673c0c0b467f3ee627946",
+  "v2_sha256": "aa5d5df0a068991972ba7eb5f60de9106f865cc53a891330394847666251e4fa",
+  "files": [
+    {
+      "path": "GPT1-REVISION-V2-GEGENPRUEFUNG.txt",
+      "bytes": 15609,
+      "sha256": "37c82ce528a231bdf5fe4667496644910d02649c0e4ce013957d59ecaf3eead7"
+    },
+    {
+      "path": "REVIEW_STATUS.json",
+      "bytes": 825,
+      "sha256": "2917192485b4eebc4f91415ccdc107130009f264a450ee73e6e64cc94aedf911"
+    },
+    {
+      "path": "REVIEW_IDENTITIES.json",
+      "bytes": 713,
+      "sha256": "1ea8b72b45cc4770fa556ec7251e1dd1431d943e739b0080ba9165656f180495"
+    },
+    {
+      "path": "AUTHOR_CHECKER_FRESH.json",
+      "bytes": 12426,
+      "sha256": "d08d596ddd3ff4f0ca7c1635c6c14b679b78b70465c1598d75a3d4b0b65ce02b"
+    },
+    {
+      "path": "INDEPENDENT_RADIUS_AUDIT.json",
+      "bytes": 203984,
+      "sha256": "25a48095828b68a79fc1b8b251c70243959f7874323033be6cceb60fa69b8a79"
+    },
+    {
+      "path": "INDEPENDENT_EXACT_AUDIT.json",
+      "bytes": 18759,
+      "sha256": "ac41a50da7f5a6afa95543e4da00f93d825b312f758c02819c47814748465c0c"
+    },
+    {
+      "path": "INDEPENDENT_REUSE_AUDIT.json",
+      "bytes": 3484,
+      "sha256": "92fe666602a64044eb9f011a9755df1dfa38d9d9b80c1d310edc599c3055a142"
+    },
+    {
+      "path": "RESULT_COMPARISON.json",
+      "bytes": 44456,
+      "sha256": "d3629d6fcf8e3cd91225159a55cdfbfe25b3b680113b545d583c2be14d38c730"
+    },
+    {
+      "path": "FINITE_REPLAY_EXECUTION.json",
+      "bytes": 4944,
+      "sha256": "f00b65b790fa15503a793fc76e5a7af2be38f9072a38a3a29ce567fe16cdd5b8"
+    },
+    {
+      "path": "REPLAY_DIFFERENCES.json",
+      "bytes": 15707,
+      "sha256": "c69ea4a223d28e1323dd0ba4ba7c9d4df8387a4c4d5dd966206ef85b77056eef"
+    },
+    {
+      "path": "INDEPENDENT_CHECKER_CONTROLS.json",
+      "bytes": 11749,
+      "sha256": "0706d12401c17e3d8b90cd1bc70b94942364a16ebd5bd9b4a487293b63e4c231"
+    },
+    {
+      "path": "independent_radius_audit.py",
+      "bytes": 5375,
+      "sha256": "e441d5c9cf146d86f66766e94a83f491b3748ff341970d422134ea355288d409"
+    },
+    {
+      "path": "independent_exact_audit_v2.py",
+      "bytes": 9223,
+      "sha256": "6aaa990d06ba07ec2574fd32bfed627cd8e457d6066e3224adbb9d91cc7b25c5"
+    },
+    {
+      "path": "independent_checker_controls.py",
+      "bytes": 4219,
+      "sha256": "05fdd12ad1ca4bdbc6b6256d9ed9827c3479c1b9fd72c96c94d228bb47b516ef"
+    },
+    {
+      "path": "run_finite_replays_gpt1.py",
+      "bytes": 1583,
+      "sha256": "47c2bf1f0a019c4b99b5b53cbe48ecdee0070d7c6f1b1395b193ea8547d5e165"
+    },
+    {
+      "path": "original_gpt1_invalid_miniarchive.zip",
+      "bytes": 436,
+      "sha256": "84e9562b825d32894198d4211ba6ce8a9f796dc493c1ba2b2d175689a459072f"
+    },
+    {
+      "path": "author-controls-fresh/CONTROLS.json",
+      "bytes": 30494,
+      "sha256": "33f4c1fc158b49690e54a5884cf448d2bd6c5d8e14c648e0ec9db718416bab5b"
+    }
+  ]
+}

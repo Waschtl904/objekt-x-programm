@@ -1,0 +1,114 @@
+OBJEKT X – LOKALE AUTORENREVISION V2, 26.10.2026
+
+Ergebnis und Prüfstatus
+
+Die beiden gemeldeten Beanstandungen sind in einer rein additiven lokalen Revision bearbeitet: zusätzliche Gramradiuspreise in den endlichen und Restabschätzungen sowie ausdrückliche Abweisung optimierten Python-Betriebs. Die Autorenrechnung bleibt positiv. Die gezielte Gegenprüfung dieser Revision durch GPT 1 steht aus; das Gesamtvotum bleibt UNRESOLVED. AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN, H1–H4, Checkliste 3/10 und Punkt 4 offen bleiben unverändert. Dies ist weder ein Grad-11-Gesamtabschluss noch ein Abschluss von Objekt X.
+
+Neue Ergebnisse
+
+Endliche Reserve: exakt neu geprüft Gp >= (1/2500000000000000000) G_W = 4e-19 G_W. Der alte Wert war nur eine vorgeschlagene Schwelle; der neue rationale LDL-Lauf hat sie mit zwölf positiven Pivots und exakter Rekonstruktion bestätigt. Die direkte konservative Anzeige aus der neuen Intervallrechnung liegt bei rund 5.093724745790459e-19.
+C = B^T Gp B wurde neu gebildet; zwölf positive rationale LDL-Pivots und C*C^(-1)=I exakt geprüft.
+theta_v2 = 0.00240378117896573406932038742280650904180402 ... < 1.
+W-Schlussreserve (1-theta_v2)*4e-19 = 3.99038487528413706372271845030877396383278E-19 ... > 3.99038487528413e-19.
+theta_v2 - theta_v1 = 4.24062211081242222597993656717E-42 ...
+W-Reserve_v2 - W-Reserve_v1 = -1.69624884432496889039197462687E-60 ...
+Die Dezimalanzeigen sind Zusammenfassungen. Verbindliche exakte Brüche stehen in revision_v2/JOINT_REST_BUDGET_V2.json und im beigefügten Ergebnisbeleg. Die alten Endwerte wurden nicht unverändert übernommen.
+
+1. Fehlertransport und genaue Eingänge
+
+Für einen tatsächlichen Modell-Gram G mit Mittelpunkt M und -R <= G-M <= R gilt für einen physischen Fehler mit Gram <= E und lambda>0:
+  G_actual_with_error <= (1+lambda) M + (1+1/lambda) E + (1+lambda) R.
+Wurde R bereits einmal direkt bezahlt, fehlt zusätzlich lambda R. Tritt der unsichere Gram auf der zweiten Seite einer Young-Abschätzung lambda A + B/lambda auf, ist sein Preis R/lambda. R ist kein neuer unabhängiger Fehlervektor; die Anzahl N der ursprünglichen Fehlerkomponenten bleibt 11.
+
+M bezeichnet in diesen Matrixungleichungen stets den symmetrischen Teil der gespeicherten Mittelpunktmatrix. Die quadratische Form bleibt dadurch exakt dieselbe. Bei h sind die rohen gerichteten Eintragsmittelpunkte nicht bitidentisch symmetrisch. EXACT_GRAM_RADIUS_AUDIT_V2.json bewahrt die exakten rohen Mittelpunkte und Radien, schneidet die beiden Intervalle für denselben symmetrischen Gram-Eintrag und weist rational nach, dass die verwendete Radiusdiagonale die Zeilensummen der Fehler um den symmetrischen Mittelpunkt überdeckt. Es wird keine Symmetrie der rohen Intervallrepräsentationen vorausgesetzt.
+
+GRAM_ENCLOSURES_V2.json enthält eine lesbare, nach außen gerundete Dezimalansicht. Deren Intervalle können breiter sein als die benutzten Arb-Bälle; R wird ausdrücklich NICHT als Majorante jeder Matrix in diesen vergrößerten Anzeigeintervallen behauptet. Für den exakten Nachweis gelten die rohen rationalen Bälle, symmetrischen Schnitte und Radien in EXACT_GRAM_RADIUS_AUDIT_V2.json.
+
+Tatsächliche Grams: F = high-Gram der 12 ursprünglichen F-Modellquellen; J = high-Gram der 84 J-Modellquellen einschließlich des übernommenen Faktors 91/50; h = high-Gram der 12 h-Modellquellen; old96 = gemeinsamer F/J-Gram mit vorhandenen Mischblöcken. Es sind dieselben Modellfunktionen wie in v1. Quellen: source_h_gram_model, H84_model, high_Gram, complete_source_high_cross_model und high_cross_models der eingefrorenen Eingänge. Alle exakten Mittelpunkte, Radiusdiagonalen, Eintragsradien, Koordinaten und lambda stehen maschinenlesbar in den beiden Gramdateien und im Ledger.
+
+Mit delta=92149/50000, e_B dem vorhandenen Kopplungsfehler und X der bisherigen inversen endlichen Metrik werden genau diese sieben Zusatzpositionen gebucht (Einbettung in dieselben 108 Koordinaten):
+ a) old96_high_linear: lambda_old96 * R_old96 / delta.
+ b) h_high_linear: lambda_h * R_h / delta.
+ c) F_h_physical: 2*lambda_Fphysical * R_F / delta.
+ d) J_h_physical: 2*lambda_Jphysical * R_J / delta.
+ e) F_old_B: e_B^2 * R_F / (delta^2*lambda_FoldB).
+ f) J_old_B: e_B^2 * R_J / (delta^2*lambda_JoldB).
+ g) source_second_variation: 11*tr(X)*e_B^2/delta^2 * (eingebettetes R_F + eingebettetes R_J).
+Die letzte Position wird in der rationalen Kontrollrechnung für F und J getrennt ausgewiesen und anschließend addiert. Kein Mischterm wird gestrichen.
+
+Parameter und relative Zusatzpreise tr(W E_extra), nur Dezimalanzeigen:
+old96_high_linear | lambda = 4.660212624791e-28 | relativer Zusatzpreis = 4.299709875770e-69
+h_high_linear | lambda = 1.096907049826e-29 | relativer Zusatzpreis = 3.438248944400e-39
+F_h_physical | lambda = 1.638831843920e-31 | relativer Zusatzpreis = 3.024111580000e-72
+J_h_physical | lambda = 1.501942856796e-29 | relativer Zusatzpreis = 1.000000000000e-80
+F_old_B | lambda = 2.187045720153e-38 | relativer Zusatzpreis = 1.056357826889e-60
+J_old_B | lambda = 2.386375855831e-40 | relativer Zusatzpreis = 1.000000000000e-80
+source_second_variation | N = 11 | relativer Zusatzpreis = 1.981732288000e-71
+
+Die Parameterwahl ist vollständig mit der ursprünglichen v1-Schedule identisch; dies wurde gegen sämtliche gespeicherten young_parameters geprüft. Die Zusatzpreise werden nach dieser Wahl addiert. In EXACT_GRAM_RADIUS_AUDIT_V2.json werden die Formeln mit rationalen oberen e_B- und tr(X)-Werten nochmals ausgewertet; das gespeicherte zusätzliche Fehlerobermaß deckt alle 108 rationalen Koordinatenpreise. Das Feld quadratic_radius_transport.extra_diagonal des Ledgers enthält die SUMME aller zusätzlichen Positionen; die isolierte quadratische Position steht in rational_formula_upper_diagonals unter F_second_variation und J_second_variation.
+
+Transportkette: Der Zusatz wird einmal in Etotal bezahlt. Die 96er Ecke, der Kreuzblock und die 12er Ecke werden daraus neu gebildet und die 96er Ecke erneut eliminiert. Die arithmetische Schließung übernimmt das neue Es, berechnet Ucap und alpha/(1-alpha)*Ucap neu, bezahlt die Radien der gemeinsamen endlichen Matrix und bildet den neuen Schurrest Gp. Danach erfolgen rationale Untereinschließung, LDL, die unveränderte Kongruenz B, C und C^(-1). Die vorhandenen H-, H9- und G-Matrizen aus assemble.py bleiben Intervallmatrizen; ihre nachfolgenden oberen Einschließungen werden nicht auf bloße Mittelpunkte reduziert.
+
+2. Ganze Restnormen, gemischte Terme und Wiederverwendung
+
+Auch in der physischen Restfehlerabschätzung wurde die bisherige Mittelpunktnorm ersetzt durch
+ sqrt(pv^T (M_F+R_F) pv) + sqrt(w^T (M_J+R_J) w).
+Die Richtungen pv,w und alle integrierten Modellfunktionen bleiben dieselben. Die Ausgaben WHOLE_PHYSICAL_ERROR_V2_T00 bis T11 enthalten alte/neue Normausdrücke und die gerichteten Radiuspreise einzeln. Die bereits in v1 angewendeten CLOSED-Regeln für T00–T03 und DYNAMIC-Gamma-Kappen für T04–T11 bleiben erhalten. Die neuen Ledger- und Closure-Bindungen sind in jedem Ergebnis enthalten.
+
+Neu berechnete obere physische Restfehlerausdrücke, ohne die gesonderten Kern-/Streifenpreise:
+T00 | 3.978834328094e-12
+T01 | 5.925963726906e-11
+T02 | 3.875806547884e-10
+T03 | 1.468284133600e-09
+T04 | 8.428206230147e-09
+T05 | 6.660853681356e-08
+T06 | 1.497690364495e-07
+T07 | 1.710049705337e-07
+T08 | 1.932017345302e-08
+T09 | 3.992305904396e-08
+T10 | 3.335304753165e-08
+T11 | 4.575749133382e-10
+
+Die Schlussrekombination bezahlt zusätzlich die unveränderten Kern-/Streifenfehler, 4.704 Abschnittsbelege und 24 analytischen Endstücke. Mit n_i als ganzen Restnormen und A=C^(-1) gilt theta=sum_(i,j) |A_ij| n_i n_j über alle 144 Einträge. Jede Gewichtung wurde aus der neuen C-Matrix neu berechnet.
+
+REUSE_AUDIT_V2.json dokumentiert den frischen Byteabgleich sämtlicher 5.263 ursprünglicher Manifestdateien, der 12 Modellcaches, der exakten gemeinsamen Basis und aller 4.704 Abschnittsdateien. Auch die ursprünglichen Quelltexte, Eingabedaten, Konturkappen und analytischen Anwendungen sind darunter unverändert. Deshalb sind genau diese 4.704 Belege für die gleichen Modellfunktionen und Eingänge wiederverwendbar. Es gab keine neuen Ganzrestintegrationen. Ihre analytische Gültigkeit wird durch einen Byteabgleich allein nicht neu bewiesen; sie bleibt Teil der benannten Voraussetzungen und Gegenprüfung.
+
+3. Prüfersicherheit und Kontrollen
+
+Alle neuen Einstiegsskripte weisen sys.flags.optimize>0 beziehungsweise nicht aktives __debug__ ausdrücklich ab, bevor sie Belege prüfen oder Erfolg melden. Unterstützt ist ausschließlich gewöhnliches Python. Die historischen Originalprüfer bleiben aus Integritätsgründen unverändert; für diese Revision gelten verify_revision_v2.py und verify_handoff_v2.py. Alte v1-PASS-Ausgaben bestätigen keine Abnahme der Revision.
+
+Frische Kontrollen: gültiges v1-Archiv und absichtlich ungültiges Miniarchiv jeweils unter normalem Python, -O, -OO, PYTHONOPTIMIZE=1 und =2 (10 Archivfälle). Normal gültig akzeptiert; normal ungültig zurückgewiesen; alle optimierten Fälle ausdrücklich abgewiesen. Zusätzlich 48 Abweisungen für sämtliche 12 neuen Recheneinstiegspunkte einschließlich des Revisionsprüfers unter vier Optimierungsvarianten. Exitcodes, Befehle, stdout und stderr stehen in CHECKER_CONTROLS_V2.json. INITIAL_AND_LEGACY_CONTROLS.json dokumentiert zusätzlich die reproduzierte ursprüngliche -O/-OO-Schwachstelle.
+
+GPT1s rationales Gegenbeispiel: tatsächlicher Wert 1089/400, alter Preis 1047/400, fehlender Preis lambda R = 21/200, korrigierter Preis exakt 1089/400. Zweite Kontrolle für inverse Parameter: tatsächlich 4, alter Preis 19/5, fehlender Preis R/lambda=1/5, korrigiert exakt 4. Das sind Gegenbeispiele zur allgemeinen alten Buchungsregel, keine negativen Objekt-X-Richtungen.
+
+4. Lieferumfang und Reproduktion
+
+Dies ist ein kleines Ergänzungsarchiv; das originale v1-ZIP wird zusätzlich benötigt:
+ Objekt-X-Neuer-Vergleich-Grad11-GPT2-2026-10-26.zip
+ 360325509 Byte
+ SHA-256 024f20f0c6086aefabb6e3d759f91aaa466906a864c673c0c0b467f3ee627946
+Originalmanifest SHA-256 3a388b3051f65b502db718b72c4e690c73c4fbf4a649360ca9afeb66b85389f2.
+Es wird keine Originaldatei überschrieben. REVISION_MANIFEST.json erfasst ausschließlich neue Dateien. Der externe Beleg nennt Größe und SHA-256 des Ergänzungs-ZIP sowie die Identitäten der Prüfer- und Berichtsdateien.
+
+Zuerst mit gewöhnlichem Python 3.13 den mitgelieferten Revisionsprüfer ausführen (Dateinamen und Hash aus dem externen Beleg):
+ python -B Objekt-X-Grad11-Revision-v2-Pruefer-2026-10-26.py --base ORIGINAL.zip --revision REVISION.zip --revision-sha256 SHA256 --destination NEUER_ORDNER --report NEUER_BERICHT.json
+Der Zielordner muss neu sein. Der Prüfer validiert beide Archive und alle Dateibindungen, extrahiert ausschließlich neue Dateien und prüft exakte Radiusformeln, rationale LDLs, C*C^(-1) sowie die 4.704 gespeicherten Abschnittsbelege und die gesamte Restrekombination. --directory BESTEHENDER_ORDNER kann statt --destination für eine unveränderte geprüfte Auspackung verwendet werden. Ein PASS bezeichnet Byte- und rationale Rechenprüfungen, keine unabhängige analytische Abnahme.
+
+Für einen frischen nativen Rechenlauf eine gesonderte Arbeitskopie verwenden, da Ergebniszeiten und Folgehashes neu entstehen. Python-FLINT 0.9.0 und die v1-Laufzeitvoraussetzungen werden benötigt. OBJX_FLINT_PATH kann auf die vorhandene FLINT-Installation zeigen. OBJX_REPOSITORY und das historische Archiv werden durch den v2-Launcher an die ausgepackte Paketstruktur gebunden. Im Unterordner workspace/work/breakthrough-2026-10-25 in dieser Reihenfolge:
+ python -B run_reproduction_v2.py source_block_ledger_v2.py --gamma-reserve
+ python -B run_reproduction_v2.py source_arithmetic_closure_v2.py
+ python -B run_reproduction_v2.py record_exact_gram_radii_v2.py
+ python -B audit_closed_source_gap_v2.py
+ python -B joint_tail_geometry_v2.py
+ python -B run_reproduction_v2.py batch_physical_errors_v2.py
+ python -B joint_rest_budget_v2.py
+Diese Befehle erneuern ausschließlich Fehlerpreise, endliche Rechnungen und rationale Rekombinationen. Keine Integrationsskripte werden aufgerufen. Die PHYSICAL_EXPANDED-Dateien sind Ausführungsprotokoll des Batch-Kontexts und keine selbständigen Einstiegspunkte. Zum Vergleich mathematische Felder verwenden; Laufzeiten und dadurch geänderte Folgehashes sind gesondert abzugleichen.
+
+Kontrollen separat wiederholen:
+ python -B revision_review/test_checker_controls.py --base ORIGINAL.zip --output-dir NEUER_KONTROLLORDNER
+
+5. Zuständigkeit und Veröffentlichung
+
+Für v1 liegt in diesem Chat die ausdrückliche Nutzerantwort „dann mach das“ auf die zuvor angebotene GitHub-Übermittlung vor. Die damalige Veröffentlichung erfolgte durch diese GPT-2-Sitzung: Commit 20a4c6392fa17f6b1dc5527ae223b32415244190, Prerelease grad11-even-author-2026-10-26-v1, Release-ID 423903483. Der unveränderte frühere Veröffentlichungsbeleg ist beigefügt. Das ist eine Klarstellung der dokumentierten Freigabe, keine neue Schreibfreigabe. In dieser Revision wurde GitHub nicht beschrieben, kein Tag verschoben und nichts gelöscht. Eine öffentliche Statusberichtigung ist nicht erfolgt.
+
+Gezielte Übergabe an GPT 1: Bitte die sieben Zusatzpositionen einschließlich der symmetrischen Gram-Einschließung und inversen lambda-Gewichte eigenständig nachvollziehen, die unveränderte Modell-/Belegbindung prüfen, endliche und Restrekombination sowie die Negativkontrollen ausführen. Bis zum Abschluss dieses Reviews bleibt das Votum UNRESOLVED; ein positives Autorenresultat ersetzt die Gegenprüfung nicht.

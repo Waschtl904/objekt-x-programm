@@ -1,0 +1,31 @@
+GPT1 Gesamtprüfung — Reproduktion und Prüfumfang
+
+Zuerst GPT1-GESAMTVOTUM.txt lesen. OVERALL_REVIEW_STATUS.json bezeichnet
+Aussage und Grenzen; REVIEW_IDENTITIES.json bindet die tatsächlich geprüften
+Archive. Der separat angekündigte externe Autorenbeleg lag nicht vor.
+
+Die bereits ausgeführten v2-Replays und Negativkontrollen sind vollständig
+im unveränderten prior/Objekt-X-Grad11-Revision-v2-GPT1-Gegenpruefung-2026-10-26.zip
+enthalten. Die dortigen Befehle gelten für den gezielten v2-Block; sie wurden
+für diesen analytischen Abschluss nicht nochmals ausgeführt.
+
+Die zwei hier zusätzlichen exakten Prüfungen erwarten diese lokale Anordnung:
+  global-comparison-review-2026-10-26/ (dieses Paket)
+  new-comparison-review-2026-10-26/author/ (unverändertes v1 entpackt)
+  revision-v2-review-2026-10-26/merged/ (v1 plus additive v2)
+Python 3.12 und die gebundenen Eingänge genügen für die zusätzlichen rationalen
+Prüfungen. Der erste Prüfer lädt den historischen hashprüfenden Inputs-Lader.
+Aus dem Paketverzeichnis:
+  python -B check_new_form_order_anchors.py
+  python -B check_application_bindings.py
+Beide weisen optimierten Python-Betrieb ab. Es erfolgen keine Quadraturen.
+Laufzeitfeld seconds im ersten Ergebnis ist keine mathematische Eingabe.
+
+Die analytischen Argumente stehen im Bericht mit ihren konkreten Quellen.
+Ein erfolgreicher Skriptlauf ersetzt die Form-/Domänen- und Hüllenableitung
+nicht. Insbesondere sind alle 4.704 Integrationen weiterhin wiederverwendete
+Autorenbelege mit eigener Rekombination, keine 4.704 neuen GPT1-Integrationen.
+
+MANIFEST.json bindet sämtliche Nutzdateien dieses neuen Prüfpakets. Die
+Autorenarchive werden nicht neu verpackt. Frühere GPT1-Berichte bleiben
+unverändert; das Gesamtvotum wird allein durch diesen Nachtrag erweitert.
