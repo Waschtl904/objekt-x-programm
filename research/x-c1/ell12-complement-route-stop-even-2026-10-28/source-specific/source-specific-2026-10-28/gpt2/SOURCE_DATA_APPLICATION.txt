@@ -1,0 +1,124 @@
+GPT2 – Quellenbezogene Anschlussprüfung, 2026-10-28
+
+Status: Der eine von GPT1 ausgewählte obere Ersatzpreis kann für dieselbe
+Quelle keine positive Reserve nachweisen. Dies folgt bereits aus gespeicherten
+gerichteten Daten und einer kleinen rationalen Fallunterscheidung. Keine neue
+Inversantwort und keine Integration wurden berechnet. Keine andere Darstellung
+wurde gesucht. Die früher eingefrorenen Berichte und Geometrien bleiben unverändert.
+
+1. Genau die ausgewählte Darstellung
+
+f = Z ell12, g9 = J* f, y = Qold(Knew)^(-1) g9,
+X = <g9,y>, eB = (r_v2 B)* y, Q = Cg^(-1), r12 = B^T k.
+Hier bezeichnet r_v2 = h - Q1 V den tatsächlichen unveränderten v2-Rest;
+r12 bezeichnet dagegen den zwölfdimensionalen Kopplungskovektor.
+
+Der von GPT1 analytisch zugeordnete obere Ersatzpreis lautet
+
+  A = X + (r12-eB)^T Q (r12-eB)/(1-theta).
+
+GPT1 bestätigt hierfür X >= U8[g8] durch Beschränkung der inversen
+Variationsformel auf die reine Kernunterdomäne sowie
+||eB||_Q^2 <= theta X aus der geerbten Restbilanz.
+Eine Untergrenze von A ist KEINE Untergrenze der tatsächlichen Inversenergie.
+
+2. Vorhandene Daten und ihre zulässige Verwendung
+
+Die Quelle und die Momentgeometrie sind dieselben wie im abgenommenen festen
+Skalartest und im späteren gemeinsamen endlichen Lauf.
+
+* DIRECT12_RESULT.json, Feld dB: gerichtete direkte Paarungen B^T L12* f,
+  einschließlich der gemeinsamen Nahnull-, Prim- und Quadraturbuchung. Hier
+  steht kein zusätzliches GW vor dem Kovektor.
+* FINITE_MODEL_FUNCTIONALS.json: raw_FJ, raw_hB, Phi_g, bare_FJ, P0_g.
+  Diese Funktionsintegrale enthalten die Quadratur-/Endstreifenbeiträge der
+  gespeicherten Modelle. Für Aussagen über die tatsächlichen Quellen gehören
+  die zugehörigen Raw-, Gamma-, Basis- und Rundungspreise dazu.
+* ALL12_STORED_RECOMBINATION.json: vollständiger r12-Modellvektor, Q-Modellenergie,
+  bezahlter gemeinsamer Q-Fehler und gerichtetes Energieintervall. Keine
+  erneuten zwölf Antwortpaarungen erforderlich.
+* FINITE_ENERGY_RESULT.json: a0, v, Jstar_nu und Teilenergien für den damaligen
+  Kold-Block. Die Kernfunktionale und v=fF-gF*U8g8 sind weiter verwendbar.
+* ENERGY_BRIDGE_RATIONAL.json: bereits akzeptierte schwächere Untergrenze
+  U8[g8] >= 0,7208462154... . Für den vorliegenden Test genügt U8[g8] > 18/25.
+* INVERSE_DATA.json: unveränderte B, Gp/Gp^-1, Kold/Kold^-1, Knew und theta.
+  Q=(B^T Gp B)^-1 ist in METRIC_APPLICATION.json gesondert zugeordnet.
+  Der aktuelle Test verwendet das gespeicherte exakte theta < 1/400.
+
+Die beiden ersten algebraisch verfügbaren Antwortpaarungen wären
+  B^T(L12* f-P0* g9) = dB-P0_g,
+  (V B)* g9 = dB-P0_g-r12,
+jeweils mit sämtlichen zugehörigen gerichteten Fehlern. Sie sind nicht eB:
+eB testet den tatsächlichen Rest r_v2 gegen die neue inverse Antwort y.
+
+3. Welche vollständigen neuen Quellenwerte nicht vorliegen
+
+Nicht vorhanden sind eine gerichtete ganze Antwort y=Qold(Knew)^(-1)g9,
+deren Energie X und die zwölf gemischten Restpaarungen eB. Der gemeinsame
+v2-Restpreis ist eine Normschranke, keine Berechnung dieser vorzeichenbehafteten
+Paarungen. U8 und die alten U1-Kernantworten ersetzen diesen globalen Inversen
+nicht. Die 84 Restkoordinaten ersetzen keine ganze Restantwort.
+
+Die von GPT1 bestätigte K-Umrechnung lautet zwar
+  znew = Knew^(-1) v,
+  J84*nu_new = J84*nu_old + a_fin[J84]^T (Kold^(-1)-Knew^(-1)) v,
+aber zugleich ändert sich der ganze T-Schurblock um
+  a_fin* (Kold^(-1)-Knew^(-1)) a_fin.
+Dabei ist Hnew >= Hold und somit Hnew^(-1) <= Hold^(-1). Der bisherige
+Tail-Operator aus R_L/P_upper bleibt deshalb als Operator-Oberhülle zulässig.
+Nicht zulässig ist dagegen, den bereits für nu_old ausgewerteten numerischen
+Preis unverändert als Preis für nu_new zu übernehmen: Quelle und K-abhängige
+Identität müssen in der Anwendung berücksichtigt werden. Die Umrechnung
+wurde hier nicht numerisch ausgeweitet: der nachfolgende günstige Test
+entscheidet bereits über die Tragfähigkeit des ausgewählten A und benötigt
+weder diese Operator-Oberhülle noch einen neuen ausgewerteten Restpreis.
+
+4. Unabhängiger rationaler Tragfähigkeitstest
+
+Aus den akzeptierten Belegen:
+  X > 18/25,
+  ||r12||_Q^2 >= 215033/50000 > (20738/10000)^2,
+  0 <= theta < 1/400,
+  ||eB||_Q^2 <= theta X.
+
+Fall X >= 9/2: Wegen Nichtnegativität des zweiten Summanden gilt A >= 9/2.
+
+Fall X < 9/2: Dann ||eB||_Q^2 < 9/800 < (107/1000)^2.
+Die umgekehrte Dreiecksungleichung und 1/(1-theta) >= 1 ergeben
+
+  A > 18/25 + (20738/10000-107/1000)^2
+    = 28676889/6250000 = 4,58830224 > 9/2.
+
+Damit in beiden Fällen:
+  A >= 9/2 > Dhi = 437284983429949477/10^17,
+  9/2-Dhi = 12715016570050523/10^17 > 0.
+
+check_selected_source_price.py bestätigt alle neun rationalen Vergleiche und
+bindet die drei verwendeten Datenbelege per SHA-256. Ergebnis und Eingangs-
+Hashes stehen in SELECTED_SOURCE_PRICE_RECHECK.json. Keine angenäherte Wurzel
+wird für die Entscheidung verwendet.
+
+5. Zeitliche und mathematische Abgrenzung
+
+Der frühere einzelne notwendige Skalartest bleibt gültig mit Nichtausschluss.
+Der danach abgeschlossene gemeinsame Zwölfer-Kopplungstest hat die damalige
+ausreichende 20/19-Majorantenroute am festen Zeugen ausgeschlossen. Diese
+spätere Aussage wird separat dokumentiert und schreibt den älteren Bericht
+nicht um.
+
+Das vorliegende neue Ergebnis betrifft ausschließlich den jetzt ausgewählten
+quellenbezogenen oberen Ersatzpreis A: Auch er liegt nachweislich über Dhi
+und kann daher keinen positiven ausreichenden Einzelrichtungsvergleich
+liefern. Die tatsächliche Inversenergie oder Schurform wird dadurch nicht
+nach unten eingeschlossen oder widerlegt. Die fehlenden X/eB werden für
+diese Tragfähigkeitsentscheidung nicht benötigt. Keine neue Variante,
+kein Nu-Lauf, keine neue Endstreifenrechnung, keine Veröffentlichung.
+
+Dateipfade in Abschnitt 2 relativ zum Projekt:
+  joint-energy-2026-10-28/gpt2/DIRECT12_RESULT.json
+  joint-energy-2026-10-28/gpt2/FINITE_MODEL_FUNCTIONALS.json
+  joint-energy-2026-10-28/gpt1-metric/ALL12_STORED_RECOMBINATION.json
+  joint-energy-2026-10-28/gpt1-metric/METRIC_APPLICATION.json
+  joint-energy-2026-10-28/gpt2/FINITE_ENERGY_RESULT.json
+  full-energy-execution-2026-10-27/ENERGY_BRIDGE_RATIONAL.json
+  full-energy-execution-2026-10-27/inputs/INVERSE_DATA.json

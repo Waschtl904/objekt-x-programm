@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "ELL12-FIXED-COMPLEMENT-MAJORANT-STOP",
+  "date": "2026-10-28",
+  "kind": "NO_GO",
+  "strategic": false,
+  "local_only": true,
+  "mathematical_status": "AUTHOR_DERIVED_NO_GO",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Unveränderte feste gerade Richtung ell12, ausreichende U_E-Komplementmajorante unter H1-H4; gesonderter einzelner quellenbezogener Ersatzpreis.",
+  "claim_polarity": "NEGATIVE_FOR_CANDIDATE_CLASS",
+  "negative_claim_boundary": "Nur diese ausreichende U_E-Route am festen Zeugen; keine Negativität der tatsächlichen Schurform oder Inversenergie. Der quellenbezogene Nachtrag begrenzt nur seinen oberen Ersatzpreis.",
+  "depends_on": [],
+  "closes": [],
+  "opens": [],
+  "supersedes": [],
+  "does_not_claim": [
+    "Tatsächliche negative Schurform oder Weil-Richtung.",
+    "Widerlegung des v2-Zwölfervergleichs oder der Inversmajorante auf E.",
+    "Abschluss des unendlichen Komplements, von Punkt 4 oder Objekt X; externe Begutachtung."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/ell12-complement-route-stop-even-2026-10-28/PROOF.md",
+    "sha256": "eacf6c215c41a640a2ed0358478de51b3c83b78f7b515c4b86b44a0a42f63cc7"
+  }
+}

@@ -1,0 +1,179 @@
+Objekt X — ein quellenbezogener Schärfungsansatz aus der Block-Inversherleitung
+GPT1, 28. Oktober 2026. Keine Integration, keine Änderung alter Belege.
+
+Ergebnis
+
+Der unten definierte eine Ansatz ist analytisch eine gültige, höchstens
+so große obere Inversenergiehülle wie die bisherige 20/19-W9-Hülle.
+Er kann für dieselbe feste Quelle Z ell12 dennoch keinen positiven
+Vergleich liefern: Sein eigener exakter oberer Ersatzpreis ist bereits
+mindestens 9/2 > D_hi. Dies ist keine Untergrenze der tatsächlichen
+Inversenergie. Es wird weder eine neue Richtung noch eine zweite
+Darstellung verfolgt. Insbesondere werden X und die zwölf neuen
+Restpaarungen nicht integriert, weil das den vorliegenden Ansatz nicht
+entscheidungsfähig machen kann.
+
+1. Unveränderte Quelle und genaue Räume
+
+Es gelten die übernommenen H1-H4, Domänen- und Quellenidentitäten aus
+ANSCHLUSSSATZ und FULL_FORM_ORDER. Auf E=J H9 orthogonal_plus ran(L12)
+sei f=Z ell12 durch seine wirklichen physischen Dualkoordinaten bestimmt:
+  g9=J* f=C_N ell12,
+  d12=L12* f.
+d12 ist der rohe Kovektor, nicht der GW-Riesz-Koeffizientenvektor.
+Sein B-Bild sind die gerade gemeinsam ausgewerteten direkten zwölf
+Paarungen. P0, V, H=P0+V und die Quelle bleiben unverändert. Setze
+  k=d12-H* g9, r12=B^T k, Q=(B^T Gp B)^-1.
+Die gespeicherten all12-Belege schließen r12 und seinen vollständigen
+Q-Normfehler ein. Die lokale Gradbezeichnung ell12 ändert keine globale
+Paritätsklasse.
+
+Setze Q0=Qold(Knew), U0=Q0^-1 und R=h-Q1 V. R ist hier die zwölfspaltige
+alte v2-RESTABBILDUNG und darf nicht mit dem neuen Vektor r12 verwechselt
+werden. R wird als stetige Formdualabbildung von Q0 verstanden; A9 V
+wird nirgends benötigt oder gebildet.
+
+Die geerbten gemeinsamen Aussagen lauten
+  0<Q0<=Q1<=A9,
+  F_V=Kp-h*V-V*h+V*Q1 V >= Gp>0,
+  R* U0 R <= theta Gp, 0<=theta<1/400.
+Die letzte Aussage ist eine ganze Formdual-Gramschranke einschließlich
+aller Kreuzgewichte, keine bloße endliche Projektion. Sie ist genau
+die schon geprüfte v2-Schnittstelle; sie wird hier neu angewandt und
+nicht neu global geprüft.
+
+2. Eine einzige ausgewählte obere Hülle
+
+Nach der festen Verschiebung mit H besitzt die Vergleichsform die
+Blöcke [[Q1,R],[R*,F_V]]. Wegen der obigen Ordnungen ist
+  B0=[[Q0,R],[R*,Gp]]
+eine zulässige Unterform. Ihr endlicher Schurblock ist
+  S0=Gp-R*U0 R >= (1-theta)Gp>0.
+Für die eine Quelle definiere
+  y=U0 g9,
+  X=<g9,y>,
+  e=R* y, eB=B^T e.
+Die exakte Blockinversformel und anschließend nur die angegebene
+Schuruntergrenze liefern
+  <f,A_E^-1 f>
+  <= X+(k-e)^T S0^-1(k-e)
+  <= A_src := X+(r12-eB)^T Q(r12-eB)/(1-theta).       (1)
+
+Formdomänen: Die feste H-Verschiebung ist ein beschränkter invertierbarer
+Koordinatenwechsel, keine angenommene Isometrie. Die transformierte
+physische Formdomäne liegt in D(Q1) x R12 und damit in D(Q0) x R12.
+Die ganze Q0-duale Restschranke erweitert R stetig auf D(Q0). Somit ist
+B0 durch Schurergänzung geschlossen und koerziv. Die inverse Variations-
+formel darf über diese größere Formdomäne genommen werden. y gehört
+zur Q0-Formdomäne; eine Zugehörigkeit zu D(A9) ist nicht erforderlich.
+Die Adjunkte in (1) sind die physischen bzw. formdualen Adjunkte.
+
+3. Was genau verbessert und was beibehalten wird
+
+Der Faktor 20/19 wurde nicht schlicht gestrichen. Er entstand früher
+aus der skalaren Abschätzung des Restkreuzterms. In (1) bleibt stattdessen
+die wirkliche gemeinsame Differenz r12-eB erhalten. Der Faktor
+1/(1-theta) stammt weiter aus derselben bewiesenen Schuruntergrenze.
+
+Ebenso wird X nicht aus W9 übernommen: X ist die Energie der tatsächlichen
+Vergleichsinverse Qold(Knew)^-1. U8, Kold und 84 alte Restfeatures sind
+keine vollständige Qold(Knew)-Inversantwort. Nur die bewiesene Ordnung
+  U0 <= Q_lower(Kold)^-1 <= W9
+darf benutzt werden. Aus der Restgramsituation folgt
+  ||eB||_Q <= sqrt(theta X).
+Mit z=||r12||_Q und x=sqrt(X) erhält man daher als Vergleich zur alten
+Hülle, nicht als Definition des neuen Preises,
+  A_src <= x^2+(z+sqrt(theta)x)^2/(1-theta)
+        <= (X+z^2)/(1-sqrt(theta))
+        <= (20/19)(W9[g9]+z^2).
+Somit ist (1) eine konkret hergeleitete Schärfung. Gp bleibt allerdings
+der bisherige endliche Unterblock; auch die ganze Restnorm wird weiterhin
+über theta und nicht über einen neu berechneten Schurblock bezahlt.
+
+4. Richtiger Kernunterpreis: kein Schluss aus einer W9-Oberhülle
+
+Die ausmultiplizierte Qold(Knew)-Form hat auf den reinen alten Kern-
+vektoren (w,0,0) genau den Block U8^-1. Das folgt aus HERLEITUNG 6b:
+  Q_lower(K)[w,z,t]
+  =||U8^-1/2(w+U8 G(z,t))||^2
+   +||K^1/2(z+K^-1 a_fin t)||^2+H_*,K[t].
+Beim Ersetzen von Kold durch Knew ändert sich ausmultipliziert nur der
+Fo-Block (Knew-Kold)[z]. Kern, tatsächliche Kopplungen und a_fin sind
+identisch. Insbesondere bleiben beim Setzen z=t=0 nur U8^-1 und die
+zugehörige inverse Formdomäne übrig.
+
+Beschränkt man die inverse Variationsformel für X auf diese Kernvektoren,
+folgt exakt
+  X=sup_u(2<g9,u>-Q0[u])
+   >=sup_w(2<g8,w>-||U8^-1/2 w||^2)
+   =<g8,U8 g8>.
+Hier braucht U8 keinen ungeprüften gleichmäßigen unteren Boden. Es ist
+die geerbte injektive positive Kernmajorante und U8^-1 eine inverse Form.
+Das ist der benötigte echte Block-/Domänenschluss. Aus der bloßen Aussage
+A9^-1<=W9 wäre dieser Unterpreis nicht ableitbar.
+
+5. Rein rationale Tragfähigkeitsprüfung vor jeder neuen Quadratur
+
+Bereits abgenommen und bytegebunden vorhanden sind
+  <g8,U8 g8> > 18/25,
+  ||r12||_Q^2 >= 215033/50000,
+  0<=theta<1/400,
+  D_hi <= 437284983429949477/10^17 <9/2.
+Zudem (20738/10000)^2 <215033/50000 und
+  (1/400)(9/2)=9/800 <(107/1000)^2.
+
+Fall X>=9/2: Aus der Positivität des quadratischen zweiten Summanden
+folgt A_src>=X>=9/2.
+
+Fall X<9/2: Die Restgramschranke gibt ||eB||_Q<107/1000. Die umgekehrte
+Dreiecksungleichung und 1/(1-theta)>=1 ergeben
+  A_src >18/25+(20738/10000-107/1000)^2
+        =28676889/6250000=4.58830224>9/2.
+
+Also in beiden Fällen
+  A_src>=9/2>D_hi,
+mit sicherer Differenz
+  9/2-D_hi >=12715016570050523/10^17=0.12715016570050523.
+Dies schließt eine positive Reserve aus genau der ausgewählten oberen
+Hülle (1) aus. Es zeigt nicht, dass die tatsächliche Inversenergie groß
+ist: Eine obere Hülle kann zu groß sein, obwohl die darunterliegende
+wahre Größe klein ist. Der bereits abgeschlossene frühere Routenausschluss
+wird weder wiederholt noch in eine stärkere Aussage umgedeutet.
+
+6. Datenbedarf und konkrete verbleibende Brücke
+
+Eine numerische Auswertung von (1) würde genau X und eB erfordern:
+eine vollständige Qold(Knew)-Inversantwort auf dieselbe Quelle mit
+ihrem Energiepreis und zwölf wirklichen formdualen Restpaarungen.
+Gemeinsam gespeicherte F/J-, Phi-, h8B- und Barepaarungen sowie die
+bereits geprüften k-Koordinaten sind dafür verwendbare endliche Eingänge,
+aber kein Ersatz für die ganze Antwort. Die gesamte fehlende T-Antwort
+einschließlich WX-Metrik, Momentprojektion und Endstreifen müsste bezahlt
+werden. Ein altes 84er-Feature ist keine ganze Norm-/Invershülle.
+
+Die K-Umrechnung dieses einen Vergleichsoperators ist exakt: v bleibt
+gleich, znew=Knew^-1 v und nu_new=vT-a_fin* znew. Zugleich gilt
+  H_new=H_old+a_fin*(Kold^-1-Knew^-1)a_fin >= H_old.
+Somit bleibt der alte R_L-/P_upper-Operator eine obere Invershülle auch
+für H_new. Dagegen ist ein schon ausgewerteter Skalarpreis für nu_old
+kein unveränderter Preis für die andere Funktion nu_new. Weder die
+Operatorordnung noch eine endliche Umrechnung berechnet X oder eB.
+
+Für eine zertifizierte Näherung yhat in D(Q0) wären konkret nötig:
+  tau^2 >= ||g9-Q0 yhat||^2_(Q0 dual),
+  Jhat=2<g9,yhat>-Q0[yhat],
+  ehatB=(R B)* yhat.
+Dann X<=Jhat_hi+tau^2 und ||eB-ehatB||_Q<=sqrt(theta)tau;
+alle zusätzlichen Quellen-/Quadraturfehler müssten separat addiert
+werden. Das sind Anforderungen an denselben Ansatz, keine ausgeführte
+zweite Rechnung. Der Test in Abschnitt 5 zeigt, warum sie jetzt nicht
+numerisch verfolgt werden.
+
+Die konkrete blockierende Information ist der weiterhin unveränderte
+Schurpreis (1-theta)Gp. Bloß genauere Werte von X oder eB können (1)
+nicht unter D_hi bringen. Eine darüber hinausgehende Brücke wäre ein
+geprüfter stärkerer, quellenwirksamer unterer Schurblock mit konsistenten
+Restpaarungen, etwa eine gerichtete Kontrolle von F_V-R*U0 R oberhalb
+der benutzten Gp-Substitution. Ein solcher Satz ist hier weder geliefert
+noch behauptet und wird im begrenzten Auftrag nicht durch eine andere
+Variante ersetzt. H1-H4 und externe Begutachtung bleiben offen.

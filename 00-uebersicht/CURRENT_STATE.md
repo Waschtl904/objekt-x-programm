@@ -3,7 +3,7 @@
 > GENERATED FILE — DO NOT EDIT
 > Quelle: [RESEARCH_STATE.yaml](RESEARCH_STATE.yaml). Navigation, keine Satzpromotion.
 
-Stand: 2026-10-25.
+Stand: 2026-10-28.
 
 ## Gemergte kanonische Basis
 
@@ -35,7 +35,7 @@ Historische Integrationsprovenienz des Registry-/Navigations-Syncs: PR #156 inte
 
 ## Zwei aktive Hauptfronten
 
-- **Konstruktive Fortsetzung der gemeinsamen Objekt-X-Geometrie** — `UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION`, OPEN. Stand 25. Oktober: L1 und der reelle Zweiraumnachweis bleiben lokal unter H1–H4 geschlossen. Der [integrierte Grad-11-Routenausschluss](../research/x-c1/w9-grad11-route-stop-even-2026-10-25/README.md) (#260) schließt den vollständigen Vergleich mit der festen äußeren Antwort und Q_new an einem zulässigen Zeugen bedingt aus: F_lo − K_hi > 1.0476e-6. Keine negative tatsächliche Weil-Richtung. Die anschließend lokal untersuchten Verstärkungen C1–C3 und genau eine äußere Rang-eins-Antwortfamilie werden nach ihren Modellgates nicht weiterverfolgt; dies sind keine neuen gerichteten Ausschlüsse. Die danach einmal berechnete gesamte F_o-Korrekturklasse endet laut GPT2 ebenfalls mit MODEL_FO_MAX_NEGATIVE_STOP am eingefrorenen Zeugen bei festem Q_new und innerem Test; ohne gerichteten Fehlertransport bleibt die tatsächliche Klasse UNRESOLVED. Die [Forschungsbilanz vom 25. Oktober](FORSCHUNGSBILANZ_2026-10-25.md) dokumentiert die getrennten Prüfleistungen, gemeldeten Paketidentitäten und offenen Archivbytebindungen. Die nächste begründete Methodenentscheidung ist offen; keine automatische weitere Rechnung. Checkliste 3/10, Punkt 4, A9→A11, externe Begutachtung und Objekt X bleiben offen.
+- **Konstruktive Fortsetzung der gemeinsamen Objekt-X-Geometrie** — `UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION`, OPEN. Stand 28. Oktober: Der [gemeinsame Zwölfer-Kopplungstest](../research/x-c1/ell12-complement-route-stop-even-2026-10-28/README.md) schließt unter H1–H4 die feste ausreichende U_E-Komplementroute an ell12 gerichtet aus: M_* > 215033/47500 > D_hi und S_suff < −0,154160692. Die ganze Restintegration entfällt. Der frühere Ein-Skalar-Nichtausschluss, der bestandene v2-Zwölfervergleich und die Gültigkeit der Inversmajorante auf E bleiben unberührt. Der [einzige quellenbezogene Nachtrag](../research/x-c1/ell12-complement-route-stop-even-2026-10-28/SOURCE_SPECIFIC_ADDENDUM.md) behält tatsächliche Restpaarungen, liefert aber für seinen oberen Ersatzpreis bereits A_src>=9/2>D_hi. Keine Untergrenze der tatsächlichen Inversenergie; keine neue Integration. Konkret fehlt eine stärkere quellenwirksame Schuruntergrenze jenseits der Gp-Substitution. Externe Begutachtung, Punkt 4, das unendliche Komplement und Objekt X bleiben offen; Checkliste 3/10.
 - **Globale Weil-Testklasse und fensterunabhängiger Readout** — `FULL-WEIL-TEST-CLASS`, OPEN. Testklasse, Normierung und exakte vollständige Gram-Identität gehören bereits zur Konstruktion von Objekt X. Zusammen mit einer kofinal kompatiblen positiven Geometrie ist ein globaler Readout zu begründen. Der mögliche Anschluss an RH wird erst nach erfolgreicher Konstruktion verfolgt.
 
 ## Verwendbare Bausteine
@@ -149,5 +149,6 @@ Dokumentierte Checkerläufe sind von externer Prüfung und Git-Integration getre
 - `W9-NEW-K-WHOLE-REST-FEASIBILITY`: PENDING_STATUS_REVIEW — `research/x-c1/w9-rest-feasibility-even-2026-10-20/META.yaml`.
 - `W9-RESIDUAL-CENTERED-EVEN-COMPARISON`: PENDING_STATUS_REVIEW — `research/x-c1/w9-residual-centered-control-even-2026-10-21/META.yaml`.
 - `W9-GAMMA-REPAIR-FIXED-EVEN`: PENDING_STATUS_REVIEW — `research/x-c1/w9-gamma-repair-even-2026-10-22/META.yaml`.
+- `ELL12-FIXED-COMPLEMENT-MAJORANT-STOP`: PENDING_STATUS_REVIEW — `research/x-c1/ell12-complement-route-stop-even-2026-10-28/META.yaml`.
 
 Einstieg: [NEXT_GATES](NEXT_GATES.md) · [Architektur](OBJEKT_X_ARCHITECTURE.md) · [Pflege und Prüfungen](RESEARCH_STATE_MAINTENANCE.md).

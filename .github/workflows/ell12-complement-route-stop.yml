@@ -1,0 +1,31 @@
+name: ell12 complement route exclusion
+
+on:
+  pull_request:
+    paths:
+      - 'research/x-c1/ell12-complement-route-stop-even-2026-10-28/**'
+      - '.github/workflows/ell12-complement-route-stop.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'research/x-c1/ell12-complement-route-stop-even-2026-10-28/**'
+      - '.github/workflows/ell12-complement-route-stop.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  bounded-decision:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13'
+      - name: Verify complete original archive and rational conclusion without integration
+        run: python -B research/x-c1/ell12-complement-route-stop-even-2026-10-28/verify_publication.py

@@ -1,0 +1,46 @@
+Objekt X — Schlussprüfung des neuen endlichen Blocks vom 2026-10-28
+
+Zuerst das äußere ARCHIVE_MANIFEST.json prüfen: bytes und SHA256 jedes
+Mitglieds. Die ursprünglichen Autorenmitglieder sind zusätzlich durch
+joint-energy-2026-10-28/gpt2/GPT2_MANIFEST.json gebunden.
+
+Nach Entpacken in ein leeres Verzeichnis, vom Archivwurzelverzeichnis:
+
+python3 joint-energy-2026-10-28/gpt1-metric/check_coupling_only_decision.py --output /tmp/objx-decision-check.json
+python3 joint-energy-2026-10-28/gpt1-metric/check_coupling_decision_controls.py
+
+Der erste Prüfer braucht ausschließlich die Python-Standardbibliothek.
+Er kontrolliert alle Panel- und Runbindungen und die exakte rationale
+Entscheidung. Er ist der letzte Schritt einer dokumentierten unabhängigen
+Rekombination, kein eigenständiger Ersatz für deren analytische Anwendung.
+Die Kontrolle schreibt ihr Ergebnis im GPT1-Verzeichnis; für unveränderte
+Archivprüfung eine getrennte Laufkopie verwenden.
+
+Der reine Fraction-Nachlauf der vier endlichen W9-Komponenten benötigt
+keine Quadratur und keine externen numerischen Pakete:
+python3 joint-energy-2026-10-28/check_finite_w9_rational.py
+Er schreibt FINITE_W9_RATIONAL_RECHECK.json und gehört ebenfalls in eine
+separate Laufkopie. Die dort verwendeten algebraischen Eingänge sind
+explizite Modelltabellen, deren Anwendungsprüfung separat dokumentiert ist.
+
+Die übrigen ursprünglichen Prüfprogramme verwenden python-flint 0.9.0
+und das bestehende Reproduktionslayout. Keine Integrationsprogramme starten.
+Der neue Lauf ist vollständig; für die Entscheidung ist keine weitere
+numerische Integration nötig.
+
+Geerbte Archive, hier nicht nochmals vollständig dupliziert:
+- v1: 360325509 Byte,
+  SHA256 024f20f0c6086aefabb6e3d759f91aaa466906a864c673c0c0b467f3ee627946,
+  Library libfile_0a66d0165e648191819e27b68133a4ed.
+- v2: 11873565 Byte,
+  SHA256 aa5d5df0a068991972ba7eb5f60de9106f865cc53a891330394847666251e4fa,
+  Library libfile_60252623c59c81919725938d75b46c57.
+- abgenommener Skalartest/GPT1-Paket: 12083032 Byte,
+  SHA256 dd85d1e6be2030c9ab81ccc71ca2ce374cb9ef566e071e288bfaa47887a82812,
+  Library libfile_d3b0138970548191a1323f290bddc3a3.
+- vorheriger voller Energiepreis mit grober Oberhülle: 1093095 Byte,
+  SHA256 e61e48d0bb484892f96b9b24c386c7f1cbd4ffe2bd1bcccb2274e92e6f2f94b9,
+  Library libfile_db728e11cc5c819184c58e45839ecf8d.
+
+Die hier enthaltenen neuen Originaldaten sind vollständig. Die Liste
+bezeichnet geerbte Voraussetzungen und Module, keine neue Übergabelücke.

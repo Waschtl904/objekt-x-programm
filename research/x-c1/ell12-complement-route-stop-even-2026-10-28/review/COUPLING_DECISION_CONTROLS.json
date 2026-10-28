@@ -1,0 +1,68 @@
+{
+  "status": "EXACT_COUPLING_DECISION_CONTROLS_PASS",
+  "script_sha256": "c38a42ab5d8e33fc0966c8218404f565c40c36b57ea8bc6bc21fab5e7c0a931b",
+  "independent_recombination_sha256": "9818416639d6bc80936b6f319506296127d98edfc5f7b25f03f482d867564e0a",
+  "controls": [
+    {
+      "name": "positive",
+      "expected_acceptance": true,
+      "actual_acceptance": true
+    },
+    {
+      "name": "wrong_status",
+      "expected_acceptance": false,
+      "actual_acceptance": false
+    },
+    {
+      "name": "missing_function_panel",
+      "expected_acceptance": false,
+      "actual_acceptance": false
+    },
+    {
+      "name": "old_direct_metadata_taken_as_count",
+      "expected_acceptance": false,
+      "actual_acceptance": false
+    },
+    {
+      "name": "unpaid_endstrip",
+      "expected_acceptance": false,
+      "actual_acceptance": false
+    },
+    {
+      "name": "incompatible_T00",
+      "expected_acceptance": false,
+      "actual_acceptance": false
+    },
+    {
+      "name": "missing_panel_hash",
+      "expected_acceptance": false,
+      "actual_acceptance": false
+    },
+    {
+      "name": "wrong_panel_hash",
+      "expected_acceptance": false,
+      "actual_acceptance": false
+    },
+    {
+      "name": "model_norm_lower_not_proved",
+      "expected_acceptance": false,
+      "actual_acceptance": false
+    },
+    {
+      "name": "error_cap_violated",
+      "expected_acceptance": false,
+      "actual_acceptance": false
+    },
+    {
+      "name": "-O",
+      "expected_acceptance": false,
+      "actual_acceptance": false
+    },
+    {
+      "name": "-OO",
+      "expected_acceptance": false,
+      "actual_acceptance": false
+    }
+  ],
+  "integration_performed": false
+}

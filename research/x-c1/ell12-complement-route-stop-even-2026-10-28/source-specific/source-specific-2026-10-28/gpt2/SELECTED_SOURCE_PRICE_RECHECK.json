@@ -1,0 +1,50 @@
+{
+  "status": "PASS_SELECTED_SOURCE_UPPER_PRICE_CANNOT_CERTIFY_POSITIVE_RESERVE",
+  "selected_price": "A=X+(r12-eB)^T Cg_inverse (r12-eB)/(1-theta)",
+  "source": "same Z ell12; g9=J*Z ell12, X=<g9,Qold(Knew)^-1 g9>",
+  "assumptions_used": [
+    "X>=U8[g8] from restriction to pure-core variational tests",
+    "||eB||_Cg_inverse^2<=theta X from inherited v2 residual dual bound",
+    "A bounds actual inverse energy from above; a lower bound on A does NOT bound actual inverse energy from below"
+  ],
+  "case_split_at_X": "9/2",
+  "core_lower_used": "18/25",
+  "coupling_norm_lower_used": "10369/5000",
+  "theta_upper_used": "1/400",
+  "rest_norm_upper_if_small_X": "107/1000",
+  "small_X_price_strict_lower": "28676889/6250000",
+  "universal_selected_price_lower": "9/2",
+  "direct_form_upper": "437284983429949477/100000000000000000",
+  "selected_price_gap_above_Dhi": "12715016570050523/100000000000000000",
+  "same_price_failure_only": true,
+  "actual_inverse_energy_lower_claimed": false,
+  "actual_Schur_sign_claimed": false,
+  "new_quadrature": false,
+  "new_inverse_response": false,
+  "frozen_previous_result_changed": false,
+  "checks_passed": [
+    "Accepted U8 energy lower exceeds 18/25; X>=U8 by pure-core variational restriction",
+    "Accepted complete coupling energy gives norm strictly above 20738/10000",
+    "Inherited exact theta lies below 1/400",
+    "For X<9/2, theta X<9/800",
+    "107/1000 strictly majorizes the possible rest norm in the small-X case",
+    "Reverse triangle lower is positive",
+    "Small-X source price lower equals 28676889/6250000",
+    "Small-X case also exceeds 9/2",
+    "Every case yields source upper price above the direct upper bound"
+  ],
+  "input_hashes": {
+    "old_U8_bound": {
+      "path": "full-energy-execution-2026-10-27/ENERGY_BRIDGE_RATIONAL.json",
+      "sha256": "d7642ab3b96fa10ff9aa75e784f934d81b62432c870c76da0567356bea4fb78e"
+    },
+    "coupling_decision": {
+      "path": "joint-energy-2026-10-28/gpt1-metric/COUPLING_ONLY_DECISION_RATIONAL.json",
+      "sha256": "7ceed06fdfe377a9cf32457887a0b8d3acbdcd42fd7bcebeb3622d815e40caef"
+    },
+    "inverse_data": {
+      "path": "full-energy-execution-2026-10-27/inputs/INVERSE_DATA.json",
+      "sha256": "41afad50d284b8bf2e170449384c33bb256743abee8c720904c95f2f64f8b90f"
+    }
+  }
+}
