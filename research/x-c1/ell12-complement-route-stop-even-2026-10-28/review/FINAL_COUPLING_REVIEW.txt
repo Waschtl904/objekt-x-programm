@@ -1,0 +1,99 @@
+Objekt X — unabhängiger GPT1-Abschluss des neuen All12-Kopplungsblocks
+28. Oktober 2026. Feste Richtung ell12, unveränderte Antwort und Majorante.
+
+VOTUM: Die ausreichende Majorantenroute ist an diesem festen Zeugen
+ausgeschlossen. Schon die vollständig bezahlte Zwölferkopplung liefert
+eine ausreichend große Energieuntergrenze. Eine ganze nu-Integration
+ist für diese Entscheidung nicht erforderlich und wurde nicht gestartet.
+
+Der unabhängige Nachlauf besteht ausschließlich aus gespeicherten
+Belegrekombinationen und algebraischen Prüfungen, nicht aus Integration.
+Alle 424 gemeinsamen Funktionspanels, beide Endstreifen und alle 71
+gemeinsamen direkten Panels sind erfasst. Die log-symbolische Partition
+wurde separat ohne Funktionsintegration rekonstruiert: Jeder gespeicherte
+Endpunkt enthält den zugehörigen unabhängig gerichteten exakten Wert;
+Core-/Cellzuordnung und die beiden ausgelassenen Endstreifen stimmen.
+Die Direktpartition deckt (b-a9)2^-64 bis 2b ohne innere Lücke ab; der
+Rest an null ist durch die gesonderten direkten Nahnullpreise bezahlt.
+
+Die gefrorenen Eingangs-, Code- und fünf wiederverwendeten Probehashes
+wurden geprüft. Die unabhängige all12-Rekombination ergibt diagnostisch
+  Modellenergie                 4.316263303631728...
+  vollständiger Q-Normfehler     0.003757953718505439...
+  bezahlte Kopplungsenergie      [4.300662661107035..., 4.331892190596215...].
+Die exakten nach außen gerundeten Endpunkte stehen in
+ALL12_STORED_RECOMBINATION.json. Auch die neue erste Koordinate ist mit
+dem früher abgenommenen T00-Skalarintervall verträglich. Der alte Skalar-
+oder Inversnachweis wurde dabei nicht erneut gerechnet.
+
+Die abschließende Entscheidung benötigt keine numerische Quadratwurzel:
+Der rein rationale Prüfer bestätigt aus dem unabhängig rekombinierten
+Modellintervall E und dem vollständigen Fehler epsilon_Q
+  E_lo > (10387809/5000000)^2,
+  epsilon_Q < 1879/500000.
+Mit der umgekehrten Dreiecksungleichung in der geprüften positiven
+Grammetrik folgt deshalb
+  k^T Gp^-1 k >= (10369019/5000000)^2 > 215033/50000 = 4.30066.
+Da W9 nichtnegativ ist, genügt bereits
+  M_* >= (20/19)(215033/50000) = 215033/47500
+      > 437284983429949477/10^17 = D_hi.
+Somit gilt exakt
+  S_suff[ell12] <= -292905314830959937/1900000000000000000
+                 = -0.1541606920162947... < 0.
+
+Dieser vereinfachte Schluss verwendet keinen zusätzlichen W9-Wert und
+ist unabhängig von der optionalen stärkeren endlichen W9-Unterbilanz.
+Die nichtnegative ganze Restenergie muss dafür nicht nach oben begrenzt
+werden. Der gerichtete direkte Formoberpreis bleibt der bereits
+abgenommene Wert; seine sichere rationale Aufrundung wird bytegebunden
+kontrolliert.
+
+Die analytische Fehlerzuordnung des neuen Quellenwegs ist vollständig:
+Q=(B^T Gp B)^-1=B^-1 Gp^-1 B^-T, T B=Y und die zwölf Originalcache-
+Spalten sind unabhängig zugeordnet. s=G96Y-h8B=-RB bestimmt die richtigen
+Vorzeichen der beiden U1-Beiträge. Die echten Raw-, Bare-, Low- und
+Highfehler sowie historische und aktuelle T-Freeze-Abweichungen bleiben
+getrennt. Gegen die neue Quelle werden die alten Preise neu transportiert;
+die neue ganze/Core-Quellenabweichung trägt eigene Preise. Eine Rawenergie
+wird nicht als Hilbertnorm umbenannt.
+
+Der historische gekoppelte Lowfehler eta_i wird mit eta_i ||a1(g)||
+bezahlt. Zusätzlich benötigt der gemeinsame modellierte Kraftvektor
+seinen eigenen Preis e_a sqrt(tr(Q L^T L)); dieser ist unabhängig aus
+Cpre und allen Original-ff-Balls rekombiniert. Er beträgt ungefähr
+0.0034570296351371446 und ist der dominante nichtquadratorische Beitrag.
+Die historische Gamma160-/A160-Anwendung ist genau diesem e_a zugeordnet.
+Die übrigen positiven Spaltenpreise ergeben ungefähr
+0.0003009240833682946; sie werden ohne unbelegte Korrelation mittels
+|Q_ij| transportiert. Sämtliche Modellquadratur- und Arithmetikradien
+bleiben zuvor im gemeinsamen r-Intervall erhalten.
+
+Phi wird tatsächlich als Legendre-/Mellin-Polynom ausgewertet; keine
+fiktive m160-Phi-Abweichung wird gebucht. Der geerbte m160-Rest ist als
+ganze Raw-Hilberthülle einschließlich Lipschitz-, Randlogarithmus-,
+Prime- und regulären Kernelbeiträgen in M160_RAW_ERROR_APPLICATION.txt
+zugeordnet und kleiner als die eingesetzte 1e-200-Reserve. Die reine
+P9-Momentkomponente wird nur unter den nachgewiesenen annihilierenden
+Funktionalen entfernt. Eine Antwort-/alpha-Modellquadratur wird in
+diesem neuen Quellenweg nicht verwendet.
+
+Metadatenkorrektur: FINITE_RUN_COMPLETE.json nennt irrtümlich 68 direkte
+Panels. Tatsächliche Schleife, DIRECT12_PREFLIGHT, DIRECT12_RESULT und
+Originalinventar enthalten 71. Alle 71 gehen in die unabhängige Summe
+ein. Die Originalbytes bleiben unverändert; das separate
+FINITE_RUN_METADATA_CORRIGENDUM.json ist hashgebunden geprüft. Dies
+betrifft ausschließlich das alte Completionliteral.
+
+Ausführbare Schlussbelege:
+  check_coupling_only_decision.py / COUPLING_ONLY_DECISION_RATIONAL.json
+  check_coupling_decision_controls.py / COUPLING_DECISION_CONTROLS.json
+Zwölf Kontrollen bestanden: positive Kontrolle, falscher Status, fehlende
+Funktions-/falsche Direktpanelzahl, unbezahlter Endstreifen, unvereinbarer
+T00, fehlender/falscher Panelhash, zu kleine Modellenergie, zu großer
+Fehler und ausdrückliche Ablehnung von -O und -OO. Kein Integrationslauf.
+
+Reichweite: Dies widerlegt die gewählte ausreichende Majorantenroute
+am festen Zeugen ell12. Es beweist keine Negativität der tatsächlichen
+Schurform und keinen Gegenbeweis gegen das Gesamtprojekt. H1-H4 bleiben
+geerbte Voraussetzungen; externe Begutachtung, Punkt 4 und die übrige
+Hauptcheckliste werden durch dieses Teilvotum nicht geschlossen.

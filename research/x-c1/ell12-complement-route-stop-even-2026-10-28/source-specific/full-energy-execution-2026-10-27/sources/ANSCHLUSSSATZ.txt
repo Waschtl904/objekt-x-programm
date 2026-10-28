@@ -1,0 +1,344 @@
+Objekt X — konstruktiver gerader Inversanschluss aus dem geprüften v2-Vergleich
+GPT 2, 26. Oktober 2026
+
+ERGEBNIS
+
+Der geprüfte v2-Vergleich liefert eine wiederverwendbare Inversmajorante
+für den vollständigen alten geraden A9-Raum zuzüglich der zwölf geprüften
+neuen Schalenrichtungen. Mit den unten exakt definierten Abbildungen gilt
+
+  A_E^{-1} <= U_E,
+  U_E = (20/19) [ J W9 J* + (L12-JH) Gp^{-1} (L12-JH)* ],
+  H=P0+V.                                                       (A)
+
+W9 ist die ursprüngliche vollständige A9-Majorante, Gp die gerichtete
+endliche v2-Reserve, P0 die unveränderte äußere Antwort und V die eine
+gemeinsame, schon für v2 verwendete exakte Testabbildung. Die zwölf neuen
+Schalenrichtungen sind kein vollständiger gerader Funktionsraum.
+
+Die neue analytische Ableitung wurde GPT 1 übermittelt. Dessen späteres
+Votum lautet: ANALYTISCHES PASS unter H1–H4 und den übernommenen v2-
+Schnittstellen, ausschließlich auf E. Das in diesem Paket enthaltene neue
+Datenmaterial wurde von GPT 2 exakt geprüft; GPT 1 hat seine ausgelieferten
+Bytes noch nicht gegengeprüft. Das exportierte GPT1-Votum dokumentiert
+diese Grenze ausdrücklich. Externe Begutachtung bleibt offen.
+
+1. Physischer Raum, Domäne und Operator
+
+Alle Räume und Koeffizienten sind reell. Für t>0 sei H_t der gerade,
+auf [-t,t] gestützte L2-Momentraum mit
+  integral_0^t cosh(x/2) f(x) dx=0.
+Nullfortsetzungen und die geerbte physische Prim-/Gamma-Form q_t werden
+mit genau den Domänen aus H1 und DOMAIN_HERLEITUNG verwendet. Insbesondere
+gehört die Gamma-Energie zur Formdomänenbedingung; wir ersetzen sie nicht
+durch die gesamte L2-Domäne.
+
+Hier a=log(3), b=log(11)/2, h=b-a, m(x)=cosh(x/2),
+X=L2((a,b),2 dx), mu=integral_0^a m(x)^2 dx,
+lambda(s)=integral_a^b m(x)s(x) dx.
+Die Momentliftung Lambda s ist s auf (a,b), -lambda(s)m/mu auf (0,a),
+gerade fortgesetzt und außerhalb [-b,b] null. Es gilt
+  ||Lambda s||² = W[s] = ||s||_X² + 2 lambda(s)²/mu.
+J:H_a -> H_b ist die Nullfortsetzung. J* Lambda=0.
+
+Für n=0,...,11 sei
+  ell_n(x)=sqrt((2n+1)/(2h)) P_n(2(x-a)/h-1).
+Diese zwölf lokalen Legendregrade werden alle gerade gespiegelt. Lokaler
+ungerader Polynomgrad bedeutet daher hier NICHT globale ungerade Parität.
+Setze L12 c=Lambda(sum_n ell_n c_n), GW=L12*L12. Explizit
+  GW=I12+(2/mu) lambda_vec lambda_vec^T,
+  lambda_vec,n=integral_a^b m(x) ell_n(x) dx.
+Es gilt GW>0; die ungewichtete Koeffizientennorm ist nicht die physische
+Norm. Die hier benötigten Momente sind die geerbten exakten Funktionen,
+nicht als neue Dezimalpunkte eingefrorene Integrale.
+
+Der abgedeckte geschlossene physische Hilbertraum ist
+  E=J H_a orthogonal_direct_sum ran(L12).
+Seine Formdomäne ist
+  D(q_E)=J D(q_a) + ran(L12)=D(q_b) intersection E.
+Die Gleichheit und die Zulässigkeit der endlich vielen stückweise glatten
+Momentquellen folgen aus der übernommenen Domänen-/Schnittkette H1.
+Die Kern-/Schalenkopplungen sind dort tatsächlich L2-beschränkt. A_E
+bezeichnet den selbstadjungierten Operator der restringierten Form q_E.
+E wird NICHT als unter A11 invarianter Raum behauptet. A_E ist daher
+nicht einfach die auf E eingeschränkte volle A11-Inverse.
+
+In den Koordinaten u=Jx+L12c lautet die tatsächliche Form
+  q_E[u]=a9[x]+2<x,Cc>+c^T D c,
+mit A=A9,even, C=J* A11 L12 im geerbten Paarungssinn und
+D_ij=q_b[L12 e_i,L12 e_j]. Die Kompatibilität q_b[Jx]=q_a[x]
+ist Bestandteil derselben physischen Quellenkette. A11-Positivität wird
+hier weder angenommen noch verwendet.
+
+2. Unveränderte äußere Antwort und geprüfte v2-Schnittstelle
+
+P0:R12 -> D(A) ist die feste Antwort Phi12 X_fix Fhat auf diesen
+Schalenrichtungen, mit der ursprünglichen Regel
+A9_A11_N12_MIDPOINT_INVERSE_60_V1. Fhat ist die gebundene ganze physische
+W-Riesz-Kraftabbildung; Phi12, ihre Momentkorrekturen und X_fix werden
+nicht ersetzt. INVERSE_DATA enthält die exakte rationale X_fix-Matrix.
+Die inneren alten Fo-Zwölferquellen sind eine andere Familie als Phi12
+und als die zwölf neuen ell_n; keine dieser Familien wird identifiziert.
+
+Setze
+  h=C-A P0,
+  Kp=D-C*P0-P0*C+P0*A P0.
+Die Verschiebung y=x+P0c liefert exakt den Block [[A,h],[h*,Kp]].
+
+Aus dem eingefrorenen, von GPT 1 insgesamt abgenommenen v2-Paket werden
+folgende gemeinsame Aussagen übernommen:
+  0<Qold<=Q1<=A;
+  F_V[c]:=Kp[c]-2<hc,Vc>+q1[Vc] >= Gp[c];
+  r_c:=hc-Q1 Vc,   ||r_c||²_(Qold dual) <= theta Gp[c];
+  Gp>=epsilon GW,  epsilon=4*10^-19;
+  0<=theta<1/400.
+Der Rest wird bei Bedarf als stetiges Formdualfunktional verstanden.
+V gehört zur Formdomäne von Q1. Eine Zugehörigkeit zu D(A9) wird für V
+weder benötigt noch behauptet. Q1 V ist in r daher zunächst eine
+Formdualwirkung; A9 V wird nirgends gebildet.
+
+Der endliche Vergleich gilt für JEDEN Schalentest. Er folgt aus dem
+unteren 108er-Block und dessen Schurabschluss, nicht aus der Behauptung,
+die eingefrorenen Testbilder seien exakte Minimierer. Der gemeinsame
+Restgram und sämtliche 144 Kreuzgewichte sind v2-Voraussetzungen dieses
+Anschlusses. Eine isolierte positive Endzahl würde diese stärker
+strukturierte Schnittstelle nicht allein rechtfertigen.
+
+theta ist als vollständiger rationaler Wert in INVERSE_DATA gebunden;
+die Anzeige beginnt mit 0.002403781178965734069320387422806509.
+Nur die exakte rationale Ungleichung theta<1/400 wird neu benutzt.
+Die v2-Schlussreserve (1-theta)*epsilon bleibt unverändert; der Faktor
+20/19 ist ein neuer Inverspreis, keine Verbesserung jener Reserve.
+
+3. Die zusätzliche Ordnungsbrücke zu W9
+
+Wir verwenden die ursprüngliche vollständige W9-Majorante aus
+a9-inverse-renewal-2026-10-13/original/HERLEITUNG.txt, Abschnitte 6b–6c.
+Mit Koordinaten (w,z,t) in alter Kern-, Fo- und T-Zerlegung ist dort
+  Q_lower(Kold)
+  =||U8^{-1/2}(w+U8 G(z,t))||²
+    +||Kold^{1/2}(z+Kold^{-1} a_fin t)||²+H_*,old[t].
+
+Ausmultipliziert unterscheiden sich diese Form und das in v2 benutzte
+Qold(Knew) ausschließlich durch (Knew-Kold)[z]. Die tatsächlichen
+Kreuzblöcke, der Kernblock U8^{-1}, der volle T-Block und eta=10^-10
+bleiben dieselben. Die K-abhängige Schurkorrektur im T-Block hebt sich
+beim Ausmultiplizieren auf. Insbesondere darf H_* nicht unabhängig
+von seinem K verändert oder als unveränderte Zahl behandelt werden.
+
+Die geerbte Ordnung ist Kold<Kstar<Knew; die neue kleine rationale
+Kontrolle bestätigt zusätzlich direkt zwölf positive LDL-Pivots von
+Knew-Kold. Damit gilt mit den geerbten Formdomänen
+  Q_lower(Kold)<=Qold(Knew)<=Q1<=A9.
+Die ursprüngliche Gleichung (6.4) majorisiert gerade Q_lower(Kold)^-1,
+also folgt die benötigte stärkere Aussage
+  Q1^-1<=Qold^-1<=Q_lower(Kold)^-1<=W9.                 (B)
+
+Aus A9^-1<=W9 allein dürfte (B) NICHT gefolgert werden. Ebenso wird
+die zuvor ausgeschlossene Ungleichung h*W9 h<Kp nicht erneut behauptet.
+Hier wird W9 nur für den alten Anteil einer beliebigen neuen Quelle
+benutzt; h wird durch den geprüften gemeinsamen Test V behandelt.
+
+4. Beweis der Inversmajorante
+
+Schreibe U=Q1^-1 und S=Kp-h*U h. Aus der v2-Variationsidentität folgt
+  S >= (1-theta)Gp>0.
+Der untere Blockvergleich [[Q1,h],[h*,Kp]] ist deshalb koerziv; durch
+die zulässige P0-Verschiebung folgt auch Koerzivität von q_E. Sein
+Inversvergleich ist auf dem ganzen E definiert.
+
+Für eine physische Hilbertquelle f in E seien
+  f9=J*f,   g=L12*f,   d=g-P0*f9.
+g ist ein ROHKOVEKTOR. Wenn stattdessen der W-Riesz-Koeffizientenvektor
+g_W vorliegt, ist g=GW g_W einzusetzen.
+Die Schurinversformel liefert
+  <f,A_E^-1 f> <= <f9,U f9> + (d-h*U f9)^T S^-1(d-h*U f9).
+Variational gilt h*U f9=V*f9+r*U f9. Der gemeinsame Restgram impliziert
+  ||r*U f9||_(Gp^-1) <= sqrt(theta) sqrt(<f9,U f9>).
+Mit H=P0+V, x²=<f9,U f9> und z²=(g-H*f9)^T Gp^-1(g-H*f9) folgt
+  <f,A_E^-1 f>
+  <=x²+(z+sqrt(theta)x)²/(1-theta)
+  =(x²+z²+2 sqrt(theta)xz)/(1-theta)
+  <=(x²+z²)/(1-sqrt(theta))
+  <=(20/19)(x²+z²).
+Nun (B) einsetzen. Das ergibt (A), einschließlich aller Mischterme.
+
+Unabhängig rational am sicheren Eckwert theta=1/400:
+  (20/19)(x²+z²)-[x²+(z+x/20)²/(1-1/400)]
+  =(20/399)(x-z)²>=0.
+Die Zwischenabschätzung wächst für x,z>=0 mit theta.
+
+Die physische Operatorform ist besonders knapp: Setze D0=L12-JH.
+Dann U_E=(20/19)[J W9 J*+D0 Gp^-1 D0*]. Eine Darstellung im
+Produktraum H9 x R12 lautet
+  (20/19) [[W9+H Gp^-1 H*, -H Gp^-1],
+            [-Gp^-1 H*,       Gp^-1]].
+Zur physischen Darstellung ist links die Synthese (J,L12) und rechts
+deren tatsächliches Adjunkt anzuwenden. Diese Synthese ist kein als
+isometrisch vorausgesetzter Koeffizientenwechsel.
+
+5. Explizite gemeinsame Testabbildung und endliche Daten
+
+JOINT_TAIL_GEOMETRY_V2 liefert B, Cg=B^T Gp B und Cg^-1.
+Die Spalten von B sind die zwölf exakt eingefrorenen Eingaberichtungen.
+Aus den zwölf gebundenen Modellcaches werden die Felder cc, pv und w als
+die eindeutigen enthaltenen Punkte des 10^-100-Rasters rekonstruiert.
+Jeder Radius ist kleiner als 10^-150 und jeder Punkt liegt im jeweiligen
+Intervall. Die ursprüngliche Quellenkonvention ist
+  Y[:,i]=(-pv_i,w_i),  mit 12+84 Zeilen;
+  T=Y B^-1,           Gp^-1=B Cg^-1 B^T.
+Die Minuszeichen werden aus whole_candidate_probe.py übernommen.
+
+INVERSE_DATA enthält Gp, Gp^-1, B, B^-1, Y, T, Kold, Kold^-1, Knew,
+X_fix und die benötigten skalaren Konstanten als rationale Zeichenketten.
+Neu exakt geprüft wurden Gp Gp^-1=I12, B^T Gp B=Cg, Cg Cg^-1=I12,
+T B=Y und alle 1.296 eingefrorenen Eingabe-/Testkoeffizienten. Es wird
+keine numerisch angenäherte Eigenbasis anstelle von B eingesetzt.
+
+Seien J8 die alte Kerninklusion und Psi96 die Synthese der ursprünglichen
+zwölf Fo- und 84 J-Schalenfunktionen in H9. G_shell ist die tatsächliche
+gemeinsame Kernkopplung dieser 96 Funktionen, h8(c)=J8*hc. Dann
+  Vc=J8 U1(h8(c)-G_shell T c)+Psi96 T c.               (C)
+Dies ist genau die in v2 verwendete lineare Abbildung. Insbesondere
+sind die gespeicherten ff-/low-Hilfsmodelle NICHT ihre exakte Kernantwort.
+
+U1 ist durch die geerbten niedrigen/hohen Dualkoordinaten festgelegt:
+  delta0=18219/10000, delta1=92149/50000, gamma=10^-40,
+  L1=F1+gamma I+(1/delta0-1/delta1)HB1,
+  xi=L1^-1(c8-B8 h8/delta1),
+  zeta=h8/delta1-B8*xi/delta1.
+Die physische Synthese von (xi,zeta) ist dieselbe wie in FULL_FORM_ORDER.
+B8 ist die tatsächliche ganze Low/High-Kopplung. F1, HB1 und ihre exakten
+Denominatoren sind in LOW_SCHUR_CERTIFICATE gebunden; diese 191er-Matrix
+wird für den neuen Anschluss weder neu optimiert noch neu gelöst.
+
+Für neue Quellen benötigt man nur die zwölf Paarungen mit V. Explizit
+  V*f9 = h8* U1 J8*f9
+          +T^T [Psi96*f9-G_shell* U1 J8*f9].           (D)
+Die Adjunkte in (C),(D) benutzen die tatsächlichen physischen Räume.
+Die gebundenen Modellfunktionen können für ihre Auswertung herangezogen
+werden, benötigen aber eigene gerichtete Fehler für die NEUEN Quellen.
+
+6. Vollständige W9-Auswertung, Normen und Fehlervertrag
+
+Um die geerbte W9-Schnittstelle ausdrücklich zu benennen, seien für eine
+beliebige alte Hilbertquelle f9 die physischen alten Dualkoordinaten
+  f8=J8*f9, fF=Fo*f9, fT=Lambda_T*f9.
+Mit den tatsächlichen alten Quelloperatoren g_F, g_T und a_fin gilt
+  vF=fF-g_F* U8 f8,
+  vT=fT-g_T* U8 f8,
+  nu=vT-a_fin* Kold^-1 vF,
+  W9[f9]=<f8,U8f8>+vF^T Kold^-1 vF
+     +(11/10)[beta^-1<nu,R_L nu>+(J84*nu)^T P_upper(J84*nu)],
+  beta=20209999981781/182190000000000.
+
+Hier sind U8, die ursprüngliche rationale 84er-Matrix P_upper und der
+volle inverse Operator R_L auf dem exakten alten T gemeint. T benutzt
+seine geerbte W_X-Metrik und seine exakten Nebenbedingungen. Alle
+Differenzen sind GEMEINSAME lineare Funktionen der Quelle. Der gesamte
+alte unendliche Hochanteil von U8 und der ganze L-Dualanteil bleiben
+enthalten. Sie dürfen nicht durch 191 bzw. 84 einzelne Zahlen ersetzt
+werden. INPUT_BINDINGS benennt die unveränderten Archivmitglieder und
+die tatsächlich benutzten Felder für P_upper, X_fix und Fhat.
+
+Auch U8 hat eine gemeinsame explizite Featureform: Mit den ursprünglichen
+191 niedrigen Vertretern Phi, dem vollständigen hohen Dualoperator T_h,
+der tatsächlichen Kopplung B8 und der gebundenen rationalen Kongruenz
+C_inv gilt gemäß HERLEITUNG §6a
+  V8=C_inv* (Phi*-B8 T_h/delta0),
+  U8[f8]=||T_h f8||²/delta0+||V8 f8||²/(1-rho).
+C_inv und rho sind die ursprünglichen Felder
+inverse_congruence_integer_matrix/inverse_congruence_denominator und rho
+in REFINED_COMMON96, gerade Parität. Der Zugang zu diesem Archivmitglied
+steht im gebundenen w9-partial-energy-2026-10-18/INPUT_BINDINGS.json,
+members.common; seine SHA256 ist
+306acbacf5f4089fe703f655bf4340087f0ae88aeaab416c0282e9e24c1638df.
+Dieser historische ganze Operator wird übernommen, nicht neu aus einer
+endlichen Liste erfolgreicher Quellen abgeleitet.
+
+Wenn der ganze L-Dualterm für eine nächste Quelle nicht direkt benötigt
+wird, steht eine sichere gröbere Auswertung zur Verfügung:
+  L>=21/5 I_T  =>  <nu,R_L nu> <= (5/21)||nu||²_(W_X).
+Der Koeffizient vor diesem ganzen Normquadrat in W9 ist dann exakt
+  (11/10)*(5/(21 beta))=334015000000000/141469999872467.
+Diese Norm muss weiterhin die GANZE Funktion erfassen. Die Vereinfachung
+ist eine zulässige Obermajorante, kein neues Integral und kein Weglassen
+von Komplementanteilen. Der strukturierte R_L-Ausdruck bleibt verfügbar.
+
+Alle Normen im neuen endlichen Zusatz sind Gp^-1-Normen. Als überprüfbare
+gröbere Obergrenze gilt aus Gp>=epsilon GW:
+  Gp^-1 <= epsilon^-1 GW^-1, epsilon^-1=2500000000000000000.
+Die exakte Gp^-1-Matrix bewahrt jedoch die Richtungsstruktur und wird
+in der bevorzugten Formel (A) verwendet.
+
+Auch eine globale physische Normmajorante ist, falls benötigt, bestimmt:
+  ||U_E|| <= (20/19)[||W9||+(1+||H GW^-1/2||²)/epsilon].
+Hier folgt ||(L12-JH) GW^-1/2||²=1+||H GW^-1/2||² aus J*L12=0.
+Dies ist eine Formel in gebundenen Operatoren, keine neu behauptete
+numerische Normzertifizierung. Für den Anschluss ist die gemeinsame
+Featureform (A) wesentlich genauer als dieser skalare Ersatz.
+
+Für gerichtete neue Auswertungen bilde zuerst die gemeinsame Featurekarte
+  F(f)=(W9^(1/2)J*f, Gp^-1/2(L12*-H*J*)f).
+Sie kann durch die obigen W9-Features ohne numerische Operatorswurzel
+realisiert werden. Ist ihre Modellenergie <=m und die ganze zusätzliche
+Featurenormabweichung <=e, so ist
+  <f,U_E f> <= (20/19)(sqrt(m)+e)^2.
+Für eine ganze Quellenfamilie sind m,e entsprechende gemeinsame
+Gram-/Operatorgrenzen; einzelne erfolgreiche Spalten reichen nicht.
+Rundung und neue Quellenfehler müssen hier ausdrücklich bezahlt werden.
+
+7. Konkrete Schnittstelle für einen nächsten Erweiterungsschritt
+
+Sei Z:N -> E eine künftig nachgewiesen beschränkte Hilbertquellenkarte.
+Dann gilt, ohne neue A11-Positivität vorauszusetzen,
+  Z* A_E^-1 Z <= (20/19)[(J*Z)* W9(J*Z)+K_Z* Gp^-1 K_Z],
+  K_Z=L12*Z-H*J*Z.                                    (E)
+Die rechte Seite enthält sämtliche gemeinsamen Kreuzterme. Für einen
+größeren Formblock [[A_E,Z],[Z*,D_N]] würde eine positive Unterform von
+  D_N-(20/19)[(J*Z)*W9(J*Z)+K_Z*Gp^-1K_Z]
+den nächsten Schuranschluss liefern. D_N, Z und diese Positivität sind
+keine Ergebnisse des jetzigen Pakets. Wenn Z nur formdualwertig statt
+Hilbertwertig ist, muss erst der entsprechende stetige Formdualanschluss
+gezeigt werden; (E) darf dann nicht ungeprüft als Hilbertform benutzt werden.
+
+Der neue gerade physische Schalenrest ist exakt Lambda(N_W), wobei
+  N_W={s in X: W(s,ell_n)=0 für alle n=0,...,11}.
+Es ist das W-orthogonale Komplement, nicht automatisch der rohe lokale
+Legendre-Tail n>=12. Seine Kopplungen an E und sein direkter Block sind
+noch nicht bezahlt. Eine weitere ungerade Parität wird hier überhaupt
+nicht übernommen.
+
+Bereits bezahlt sind für die zwölf Eingaberichtungen: der ganze alte
+A9-Kern einschließlich seiner unendlichen Anteile, Fo und alter T-Rest,
+die sieben zusätzlichen v2-Radiuspositionen mit inversen Young-Gewichten
+und alle 144 gemeinsamen Restkreuzgewichte. Diese Aussage gibt keine
+neuen Preiszahlen für andere Quellen oder neue Schalenrichtungen.
+
+8. Neue Kontrollen, Herkunft und Abschlussgrenzen
+
+build_and_check.py liest nur die tatsächlich verwendeten, gegen die
+eingefrorenen v1-/v2-Manifeste gebundenen Eingaben. Es führt keine
+Integration, keine erneute 191er-/287er-Großrechnung und keinen Replay
+der 4.704 Abschnitte aus. Alle neuen Matrixprüfungen sind exakt rational.
+Zusätzlich bestehen ein nichtkommutierendes 2+2-Blockmodell, die genaue
+Schurinversidentität und die physische Kongruenz mit nichtisometrischer
+Synthese. Negativkontrollen verwerfen ein falsches Kreuzvorzeichen,
+die ignorierte physische Synthese, den unzulässigen Schluss allein aus
+A9^-1<=W9, ungültige theta-Grenzen und nicht eingefrorene Koeffizienten.
+Optimiertes Python wird vor jeder Erfolgsmeldung ausdrücklich abgewiesen.
+
+Die vollständige Reproduktion setzt das unveränderte v1-Paket mit der
+additiven v2-Revision voraus; die Identitäten stehen in REPRODUKTION.txt.
+Die dort genannten historischen mathematischen Quellen werden übernommen,
+nicht durch die neuen kleinen Matrixprüfungen neu bewiesen. Der separat
+früher fehlende externe v2-Autorenbeleg wird hier nicht als geprüft ausgegeben.
+
+Die Auslieferung dieses neuen Anschlusses ist ausschließlich lokal.
+H1–H4 bleiben vollständig übernommen. AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN.
+Projektinterne analytische Gegenprüfung: GPT1-PASS im genannten Umfang.
+Neue ausgelieferte Datenbytes: GPT2 geprüft, GPT1-Byteprüfung noch offen.
+Checkliste 3/10, Punkt 4 und vollständiger A9->A11-Anschluss bleiben offen.
+Der nächste mathematische Entscheidungsgegenstand ist die gerichtete
+Auswertung neuer Quellen gegen (E) bzw. die Behandlung der ungeraden
+Parität; dieses Paket startet keinen dieser weiteren Forschungsblöcke.

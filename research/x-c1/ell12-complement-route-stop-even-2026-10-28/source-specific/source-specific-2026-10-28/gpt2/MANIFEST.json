@@ -1,0 +1,17 @@
+{
+  "scope": "one selected source-specific upper-price feasibility test; no quadrature; frozen previous results unchanged",
+  "files": {
+    "SELECTED_SOURCE_PRICE_RECHECK.json": {
+      "bytes": 2304,
+      "sha256": "82949d842496650f786d0e87801cbc044bf217e6777d557ef31b480d053e921d"
+    },
+    "SOURCE_DATA_APPLICATION.txt": {
+      "bytes": 6274,
+      "sha256": "8a0a8de73674739c8c43c8387702767ee5fcde50808f635daf024e8e0a803fac"
+    },
+    "check_selected_source_price.py": {
+      "bytes": 3321,
+      "sha256": "ccd44f7539ae9f856acc645e766783db4fe64fbaf73b91d691b0329928fac514"
+    }
+  }
+}

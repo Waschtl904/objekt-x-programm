@@ -1,0 +1,171 @@
+Objekt X — unabhängiger Abschluss des gemeinsamen endlichen Energieblocks
+28. Oktober 2026 — feste Richtung ell12, unveränderte Antwort und Majorante
+
+VOTUM
+Unter den geerbten Voraussetzungen einschließlich H1–H4 ist der neue
+endliche Energieuntertest gültig. Die gewählte ausreichende Majorantenroute
+scheitert am festen Zeugen ell12. Bereits die zwölf vollständigen Kopplungen
+reichen für den strikten Ausschluss. Eine ganze Restintegration ist dafür
+nicht erforderlich und wurde nicht gestartet.
+
+Dies ist keine Negativitätsaussage über die tatsächliche Schurform, kein
+Ausschluss anderer Majoranten und kein globaler Komplementnachweis.
+H1–H4, externe Begutachtung und Punkt 4 bleiben offen; die Hauptcheckliste
+bleibt bei 3/10. Es erfolgte keine GitHub-Schreibaktion oder Veröffentlichung.
+
+1. Einfacher exakter Schluss
+
+Setze K = k_N(ell12)^T Gp^-1 k_N(ell12). Die unabhängig rekombinierte
+Modellenergie liegt bei 4,316263303631728. Die ganze Fehlernorm in der
+inversen Grammetrik ist kleiner als 1879/500000 = 0,003758.
+
+Der Schlussprüfer verwendet ausschließlich rationale Ungleichungen:
+  E_model,lo > (10387809/5000000)^2,
+  epsilon_Q < 1879/500000,
+  (10387809/5000000 - 1879/500000)^2
+     = 107516555022361/25000000000000
+     > 215033/50000 = 4,30066.
+
+Die umgekehrte Dreiecksungleichung liefert somit K > 4,30066.
+Da W9[g] >= 0, gilt für die vollständige abzuziehende Majorantenenergie
+  M_* >= (20/19) K > 215033/47500
+                         = 4,527010526315789473...
+  D_N[ell12] <= 437284983429949477/100000000000000000
+                         = 4,37284983429949477.
+
+Insbesondere
+  S_suff[ell12] < -292905314830959937/1900000000000000000
+               = -0,154160692016294703...
+
+Das ist eine obere Schranke der ausreichenden Vergleichsform. Der Schluss
+benötigt weder eine Obergrenze der gesamten W9-Energie noch die ganze
+nu-Norm. Die vom Nutzer gesetzte frühe Stopplinie ist damit erreicht.
+
+2. Unabhängig geprüfte Eingänge, Identitäten und Fehleranwendung
+
+Die neue Koordinatenanwendung wurde exakt kontrolliert:
+  r = B^T k_N, Q = B^-1 Gp^-1 B^-T = (B^T Gp B)^-1 > 0.
+Der gesamte Zwölfervektor wird verwendet. Ein unzulässiger Hauptblocktest
+mit unbekannten übrigen Koordinaten ist nicht Teil der Rechnung.
+Alle zwölf Originalantwort-Caches sind ihren eingefrorenen B/Y-Spalten
+zugeordnet; Zeuge, äußere Antwort und Majorante wurden nicht geändert.
+
+Die tatsächliche gekoppelte Lowantwort gehört zur Quelle s=-RB.
+Ihre Synthese ist
+  r = dB - P0*g - Y^T bare + L^T a_hat + High(s,g)/delta1,
+  L = sqrt(1-rho) Cpre^-1 ff.
+Die Raw->High-Differenz wird gemeinsam gebildet, mit den tatsächlichen
+Momenten, Phi und B8. Alle Faktoren 2, der Kernmomentabzug und die
+Vorzeichen der beiden U1-Terme sind zugeordnet. Die 191 alten QPhi-
+Paarungen wurden über die bestätigte Kraft wiederverwendet.
+
+Die historischen Gamma160/A160-Fehler werden als Abweichung des einen
+Kraftvektors neu in der Grammetrik bezahlt:
+  e_a sqrt(tr(Q L^T L)) <= ungefähr 0,00345702963514.
+Die übrigen zwölf positiven Preise werden ohne angenommene günstige
+Korrelation über |Q_ij| transportiert; ihr gemeinsamer Preis ist ungefähr
+0,00030092408337. Beides zusammen liegt unter 0,003758.
+Der alte eta_i-Preis wird in seiner gekoppelten Lowmetrik angewendet und
+nicht als Hilbertnorm bezeichnet. Der tatsächliche B8-Fehler bleibt gebucht.
+
+Zusätzlich kontrolliert sind Gamma224-Raw- und Barebasisfehler, historische
+Low-/High-Fehlergramme, tatsächliche äußere Antwort- und T-Freeze-Fehler,
+Gamma360 der neuen Quelle, momentbezogene P0-/h8B-Fehler sowie die gesamten
+Matrixradien. rawX wird nicht zu einer Hilbertnorm erklärt.
+Die gesonderte m160-Reserve betrifft die ganze Raw-Hilbertfunktion,
+einschließlich Ableitung, Randlogarithmus, Prim- und regulärem Kernelrest.
+Die 1e-200-Allokation ist funktional hergeleitet; sie folgt nicht aus einem
+gerasterten Nullintervall. Phi selbst benutzt exakte gerichtete Mellin-
+und Legendregeometrie, keine m160-Ersetzung.
+
+Der direkte bilineare Block verwendet die exakte Identität C(0)=0, reale
+Primzahlpotenzgewichte, Nullfortsetzung, den Nahnullpreis und die
+gerichteten Gauss-Reste. Seine 71 Originalabschnitte wurden unabhängig
+summiert und die Primterme neu rekombiniert.
+
+3. Vollständigkeit und konkrete gespeicherte Belege
+
+Der einzige Hauptlauf dauerte 1028,29305191 Sekunden bei einer Grenze von
+5400 Sekunden. Er enthält 424 gemeinsame Funktionsabschnitte, beide
+Endstreifen und 71 gemeinsame Direktabschnitte. Die fünf übernommenen
+F/J-Vorlaufabschnitte 0,24,120,240,423 sind byte-, geometrie- und
+formelgebunden. Es erfolgte keine automatische Wiederholungsserie.
+
+Root hat alle 17 log-symbolischen Bruchpunkte und die daraus erzeugten
+424 kanonischen Intervalle unabhängig rekonstruiert. Jeder gespeicherte
+Endpunkt enthält seinen unabhängig gerichtet berechneten kanonischen
+Wert. Die vollständigen 180-stufigen dyadischen Unterteilungen und beide
+restlichen Endstreifen schließen das Gebiet. Alle erforderlichen
+Funktionale sind vorhanden: 244 Kernabschnitte für raw_FJ, Phi_g,
+bare_z und raw_hB; 180 Schalenabschnitte für bare_FJ; P0_g auf allen 424.
+Der weitere GPT1-Deckungscheck bestätigt auch sämtliche 71 Direktintervalle.
+
+Alle 424 Funktions- und 71 Direktoriginale wurden übernommen und gebunden,
+nicht nur eine abgeleitete Prüftabelle. Der Autorenmanifestabgleich aller
+534 aufgeführten Dateien ist byte- und SHA-256-identisch. Die neuen
+Rekombinationen erfolgen aus gespeicherten Intervallen, ohne neue
+Integration. Die erste Kopplungskoordinate ist mit dem zuvor abgenommenen
+Skalartest kompatibel. Dessen damaliger Nichtausschluss widerspricht dem
+jetzigen Ausschluss durch alle zwölf Kopplungen nicht.
+
+Der reine Metadatenfehler direct_panels=68 in der eingefrorenen
+FINITE_RUN_COMPLETE.json ist durch ein gesondertes hashgebundenes
+Corrigendum berichtigt. Tatsächliche Schleife, DIRECT12_RESULT und
+Originalinventar enthalten vollständig 71. Kein Integral wurde geändert.
+
+Zwölf gezielte Positiv-, Negativ- und Optimierungskontrollen des rationalen
+Schlussprüfers bestanden. Fehlender Abschnitt, falscher Hash, unbezahlter
+Endstreifen, falscher Status, unbewiesene Normuntergrenze, überschrittener
+Fehlerpreis sowie Python -O/-OO werden abgewiesen.
+
+4. Zusätzlicher endlicher W9-Untertest
+
+Root hat auch die vier endlichen Modellkomponenten mit unabhängiger
+Fraction-Intervallarithmetik aus den Originalabschnitten rekombiniert:
+  hoher U8-Anteil       ungefähr 0,34296778618815665,
+  niedriger U8-Anteil   ungefähr 0,40692293393465545,
+  v^T K_old^-1 v        ungefähr 0,0518473125221961,
+  (11/10) n84^T P n84   ungefähr 0,05445172792098275.
+Ihre Summe ist ungefähr 0,8561897605659909. Der nachgelieferte K-/ws-
+Unionblock entspricht dabei dem tatsächlich im Lauf benutzten Modell.
+
+Die exakte rationale Auswertungsreihenfolge liefert für den Featurefehler
+eine Oberhülle von ungefähr 2,3853360551e-5. Der Autor nimmt zuvor den
+oberen Endpunkt einer Gram-Auswertung und verwendet die konservativere
+Hülle 2,4052341144e-5. Fehleroberhüllen müssen nicht gleich sein oder
+überlappen: Die unabhängige Oberhülle liegt unter der Autorenkappe.
+Für den Abgleich wird ausdrücklich die größere Autorenkappe bezahlt.
+Damit liegen die vier bezahlten endlichen Beiträge in
+  [0,856145249630609... ; 0,856234272658403...].
+Dies stützt den stärkeren endlichen Untertest von ungefähr 5,42821885.
+Der oben ausgeführte Abschluss verwendet ausschließlich den einfacheren
+Kopplungsallein-Test; keine offene ganze Restnorm wird durch die 84er-
+Projektion ersetzt und keine Energie doppelt gezählt.
+
+5. Prüfumfang und Abhängigkeiten
+
+Die alten akzeptierten Archive werden nicht erneut abgenommen. Ihre
+geerbten Voraussetzungen bleiben erhalten. Dieses Archiv enthält alle
+neuen Originalabschnitte, Autorenprogramme und unabhängigen Prüfbelege
+sowie die direkten dateigebundenen Eingänge des rationalen Schlussprüfers.
+Es ersetzt nicht die bereits vorhandenen v1/v2- und Inversabhängigkeiten
+für eine vollständige Funktionsrekonstruktion. Es besteht keine neue
+Übergabe- oder Originalbytegrenze bei den hier entscheidenden Belegen.
+
+Die ganze nu/W_X-Rechenbrücke und ihre noch benötigten oberen Funktions-
+und Endhüllen sind im separaten NU_FUNCTION_CONTRACT.txt dokumentiert.
+Wegen des jetzt bewiesenen endlichen Ausschlusses wird dieser zusätzliche
+obere Restlauf nicht durchgeführt. Das ist die beauftragte frühe Entscheidung.
+
+Wichtige Prüfdateien im beigefügten Verzeichnis joint-energy-2026-10-28:
+  gpt1-metric/COUPLING_ONLY_DECISION_RATIONAL.json
+  gpt1-metric/check_coupling_only_decision.py
+  gpt1-metric/COUPLING_DECISION_CONTROLS.json
+  gpt1-metric/ALL12_STORED_RECOMBINATION.json
+  gpt1-metric/SAVED_PARTITION_RECHECK.json
+  COMMON_PARTITION_RECHECK.json
+  FINITE_W9_RATIONAL_RECHECK.json
+  DIRECT12_ANALYTIC_REVIEW.txt
+  gpt1-metric/FINITE_APPLICATION_REVIEW.txt
+  gpt1-metric/M160_RAW_ERROR_APPLICATION.txt
+  gpt2/GPT2_MANIFEST.json und sämtliche Originalpanels.

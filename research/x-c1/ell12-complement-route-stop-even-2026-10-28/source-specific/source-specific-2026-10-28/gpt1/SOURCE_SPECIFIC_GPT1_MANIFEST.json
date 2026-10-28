@@ -1,0 +1,28 @@
+{
+  "status": "FROZEN_ONE_SOURCE_SPECIFIC_APPROACH_GPT1",
+  "date": "2026-10-28",
+  "files": {
+    "SOURCE_SPECIFIC_CONTRACT.txt": {
+      "bytes": 8495,
+      "sha256": "9d0f89ac2fdbec01dc528b4471adcd487d6811fa72bc4312f05551f7a199296c"
+    },
+    "SOURCE_SPECIFIC_CONTROLS.json": {
+      "bytes": 1151,
+      "sha256": "58ab70bb8ee691790c9f71c01bdf09b79f635c2ef79fdb2c8657c3090d3645a9"
+    },
+    "SOURCE_SPECIFIC_RATIONAL.json": {
+      "bytes": 2176,
+      "sha256": "4057865ec81feaaccd52e4f6e23bc8ec034771f3e0540995884b689a6589e061"
+    },
+    "check_source_specific.py": {
+      "bytes": 4901,
+      "sha256": "0f650eca96fe21b08a8786337e70c1b772e27bde1f4a09d26074080c7e67775b"
+    },
+    "check_source_specific_controls.py": {
+      "bytes": 1981,
+      "sha256": "cb3adb03e61fa05531dbf9e1d6554f54a7d9eeecb0c94322ddf4f77b093e58ef"
+    }
+  },
+  "no_integration": true,
+  "no_previous_artifact_changed": true
+}

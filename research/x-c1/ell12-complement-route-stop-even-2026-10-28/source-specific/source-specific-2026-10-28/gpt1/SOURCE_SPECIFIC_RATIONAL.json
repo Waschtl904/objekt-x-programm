@@ -1,0 +1,33 @@
+{
+  "status": "ONE_SELECTED_SOURCE_SPECIFIC_UPPER_PRICE_INFEASIBLE_FOR_POSITIVE_COMPARISON",
+  "formula": "A_src = X + (r12-eB)^T Cg^-1 (r12-eB)/(1-theta)",
+  "X_definition": "<g9,Qold(Knew)^-1 g9>",
+  "eB_definition": "(R B)^* Qold(Knew)^-1 g9, R=h-Q1 V",
+  "source": "Z ell12, unchanged",
+  "proof": {
+    "core_energy_lower_used": "18/25",
+    "coupling_norm_lower_witness": "10369/5000",
+    "theta_upper_used": "1/400",
+    "large_X_case_threshold": "9/2",
+    "small_X_residual_norm_upper": "107/1000",
+    "small_X_price_lower": "28676889/6250000",
+    "global_selected_upper_price_lower": "9/2",
+    "direct_upper": "437284983429949477/100000000000000000",
+    "price_lower_minus_direct_upper": "12715016570050523/100000000000000000"
+  },
+  "source_sha256": {
+    "full-energy-execution-2026-10-27/ENERGY_BRIDGE_RATIONAL.json": "d7642ab3b96fa10ff9aa75e784f934d81b62432c870c76da0567356bea4fb78e",
+    "full-energy-execution-2026-10-27/inputs/INVERSE_DATA.json": "41afad50d284b8bf2e170449384c33bb256743abee8c720904c95f2f64f8b90f",
+    "full-energy-execution-2026-10-27/inputs/DIRECT_FORM.json": "8f9f1baa83a18f4045f949622e583e6a7e7eeb77b11283ae210d5525b7899cfd",
+    "joint-energy-2026-10-28/gpt1-metric/COUPLING_ONLY_DECISION_RATIONAL.json": "7ceed06fdfe377a9cf32457887a0b8d3acbdcd42fd7bcebeb3622d815e40caef",
+    "full-energy-execution-2026-10-27/sources/ANSCHLUSSSATZ.txt": "debe5b5552291d83e1bfcff954b8cc581b4e544a50eb954234428e261f3caf61",
+    "full-energy-execution-2026-10-27/sources/FULL_FORM_ORDER.txt": "a9d6dbd2d2403e4885bf6581243e5d0d75fd816046ce17589f3b171e79060a43",
+    "full-energy-execution-2026-10-27/sources/HERLEITUNG.txt": "d221c870fccf8e8ab4298e53c7beff35b63bd704f5a6d0782864b51e93ce83d7"
+  },
+  "contract_sha256": "9d0f89ac2fdbec01dc528b4471adcd487d6811fa72bc4312f05551f7a199296c",
+  "checker_sha256": "0f650eca96fe21b08a8786337e70c1b772e27bde1f4a09d26074080c7e67775b",
+  "new_integration": false,
+  "new_inverse_response": false,
+  "claim_about_true_inverse_energy": "NO LOWER BOUND asserted; only an upper replacement price is bounded from below.",
+  "inherited_assumptions": "H1-H4 and accepted v2 form/domain and joint rest Gram interfaces"
+}

@@ -1,0 +1,30 @@
+{
+  "original_filename": "Objekt-X-ell12-Finite-Energie-Abnahme-GPT1-2026-10-28.zip",
+  "bytes": 19944025,
+  "sha256": "cdde0859a0869feaea3e38ecb579d7e94d28e00339f665d876470ea0712266ce",
+  "members": 584,
+  "readable_originals": {
+    "review/GPT1_ABSCHLUSS.txt": "joint-energy-2026-10-28/GPT1_ABSCHLUSS.txt",
+    "review/REPRODUCTION_FINAL.txt": "joint-energy-2026-10-28/REPRODUCTION_FINAL.txt",
+    "review/COUPLING_DECISION_CONTROLS.json": "joint-energy-2026-10-28/gpt1-metric/COUPLING_DECISION_CONTROLS.json",
+    "review/COUPLING_ONLY_DECISION_RATIONAL.json": "joint-energy-2026-10-28/gpt1-metric/COUPLING_ONLY_DECISION_RATIONAL.json",
+    "review/FINAL_COUPLING_REVIEW.txt": "joint-energy-2026-10-28/gpt1-metric/FINAL_COUPLING_REVIEW.txt"
+  },
+  "transport_parts": [
+    {
+      "name": "Objekt-X-ell12-Finite-Energie-Abnahme-GPT1-2026-10-28.zip.part01",
+      "bytes": 8388606,
+      "sha256": "b5c0ba69cd1b4db9196146fbbb4045396ee4a51288ba1d6a676a384be8731c7e"
+    },
+    {
+      "name": "Objekt-X-ell12-Finite-Energie-Abnahme-GPT1-2026-10-28.zip.part02",
+      "bytes": 8388606,
+      "sha256": "ea6dc56df8073b84ede539a919cc730fb78044388fcbd3f59d3c48f186851848"
+    },
+    {
+      "name": "Objekt-X-ell12-Finite-Energie-Abnahme-GPT1-2026-10-28.zip.part03",
+      "bytes": 3166813,
+      "sha256": "548b22d0d248401c5d51bafe8f05f2f26ce12e1cecd3861f47184977469eb5f5"
+    }
+  ]
+}

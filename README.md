@@ -15,7 +15,30 @@ an X, einschließlich der vollständigen geeigneten Testklasse, bleiben erhalten
 Weil-Positivität und die vollständige Konstruktion von Objekt X bleiben offen.
 Die projektintern hergeleiteten Ergebnisse sind zur externen Prüfung offen.
 
-## Aktueller Stand vom 25. Oktober 2026
+## Aktueller Stand vom 28. Oktober 2026
+
+Der [gemeinsame Zwölfer-Kopplungstest](research/x-c1/ell12-complement-route-stop-even-2026-10-28/README.md)
+schließt unter H1–H4 die feste ausreichende U_E-Komplementroute an `ell12`
+gerichtet aus: `M_* > 215033/47500 > D_hi`, daher
+`S_suff[ell12] < −0,154160692`. Die geplante ganze Restintegration entfällt.
+Der frühere Ein-Skalar-Nichtausschluss bleibt richtig; jetzt sind alle zwölf
+Kopplungen gemeinsam mit ihren Fehlern bezahlt. Die tatsächliche Schurform
+und der [bestandene v2-Zwölfervergleich](research/x-c1/w9-grad11-new-comparison-even-2026-10-26/revision-v2/README.md)
+werden dadurch nicht widerlegt.
+
+Der [gesonderte quellenbezogene Nachtrag](research/x-c1/ell12-complement-route-stop-even-2026-10-28/SOURCE_SPECIFIC_ADDENDUM.md)
+prüft genau eine analytisch schärfere obere Inversenergiehülle. Schon vorhandene
+Daten ergeben für ihren Ersatzpreis `A_src>=9/2>D_hi`; auch dieser Ansatz kann
+keinen positiven Vergleich liefern. Das ist keine Untergrenze der tatsächlichen
+Inversenergie. Es fehlt eine stärkere quellenwirksame Schuruntergrenze über die
+beibehaltene Gp-Substitution hinaus. Keine neue Quadratur oder Variantenserie.
+
+Das vollständige Originalarchiv, seine 584 Mitglieder und die neuen rationalen
+Prüfer sind im Paket gebunden. Historische Berichte bleiben unverändert.
+**Externe Begutachtung, Punkt 4 und das unendliche Komplement bleiben offen;
+Checkliste 3/10.** Die folgenden datierten Abschnitte dokumentieren ältere Stände.
+
+## Rückblick vom 25. Oktober 2026
 
 **Checkliste 3/10 im dokumentierten bedingten Umfang. Punkt 4, der konstruktive
 A9→A11-Anschluss und Objekt X bleiben offen.** Die Checkliste misst keine

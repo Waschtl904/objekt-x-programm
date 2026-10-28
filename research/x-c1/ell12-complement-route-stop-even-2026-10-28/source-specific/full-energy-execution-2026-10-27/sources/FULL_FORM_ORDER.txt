@@ -1,0 +1,112 @@
+Objekt X — Formordnung des neuen gemeinsamen Vergleichs
+25. Oktober 2026. AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN.
+
+Dieser Text betrifft die Ordnung der Formen, nicht den noch fehlenden
+ganzen Grad-11-Restnachweis. H1–H4 und die darin gebundenen Domänen,
+Quellen, Momentkarten und tatsächlichen vollständigen Kopplungen bleiben
+Voraussetzungen. Insbesondere wird keine A11-Positivität vorausgesetzt.
+
+1. Alte und neue Kernformen
+
+In den alten niedrigen/hohen Koordinaten bezeichne B die tatsächliche
+vollständige Kopplung. F0=(1-rho) C^{-*} C^-1 ist die ursprüngliche untere
+Schurmatrix; F8 ist die stärkere gebundene gerichtete Matrix mit F8>=F0.
+Der alte inverse Vergleich ist der inverse Operator zur Form
+
+ Aeff0 = [[F0+BB*/delta0, B], [B*, delta0 I]].
+
+HB1 ist die neue ganze Kopplungsmajorante, also BB*<=HB1. Setze
+
+ F1=F8+(HB0-HB1)/delta0,
+ r=10^-40, delta1=1.84298, delta0=1.8219,
+ L1=F1+rI+(1/delta0-1/delta1) HB1, X1=L1^-1.
+
+Die gerichtete niedrige Gamma-Korrektur liefert
+ A_low >= F1+rI+HB1/delta0.
+Der ganze hohe Boden A_high>=delta1 I stammt aus der bereits früher
+hergeleiteten Verbesserung 1843/1000 unter vollständiger Buchung der
+Momentfehler. Das ist keine neue endliche Hochraumabschneidung.
+
+Die für die Quellenrechnung tatsächlich verwendete inverse Metrik
+
+ U1[c,h]=||h||²/delta1+(c-Bh/delta1)*X1(c-Bh/delta1)
+
+ist die Inverse der Form
+
+ Aeff1 = [[L1+BB*/delta1, B], [B*, delta1 I]].
+
+Damit ist ihr niedriger Abstand zur physischen Matrix
+
+ A_low-(L1+BB*/delta1)
+ = [A_low-(F1+rI+HB1/delta0)] +(HB1-BB*)/delta1 >=0.
+
+Alle Kreuzblöcke sind dieselbe tatsächliche Kopplung B. Also Aeff1<=A8.
+Insbesondere wird bei dieser Identität der Modellgram B0B0* nicht als
+tatsächlicher Gram BB* eingesetzt.
+
+2. Vergleich mit dem alten inversen Zertifikat
+
+GAMMA_RESERVE.json und die exakte Young-/Rundungsbilanz liefern
+ (HB0-HB1)/delta0+rI>=0. Zusammen mit F8>=F0 folgt F1+rI>=F0.
+Der niedrige Block der Differenz Aeff1-Aeff0 ist exakt
+
+ (F1+rI-F0)+(1/delta0-1/delta1)(HB1-BB*) >=0.
+
+Der hohe Block ist (delta1-delta0)I>=0, die Kreuzblöcke verschwinden.
+Somit gilt global Aeff0<=Aeff1<=A8 und A8^-1<=U1<=U0.
+Die Gamma-Polynome selbst sind unverändert; die neue Restschranke wird
+durch GAMMA_COEFFICIENT_EXACT_AUDIT.json an sämtliche 225 ursprünglichen
+rationalen Koeffizienten gebunden. Die engere reelle Radiuswahl enthält
+den gesamten tatsächlichen Kernbereich.
+
+3. Vollständige A9-Unterform
+
+Die geerbte Zerlegung schreibt A9-Qold als Summe aus
+ A8-Aeff0, dem tatsächlichen Fo-Defekt K_B-Knew und eta*q auf dem
+alten komplementären Schalenraum. Diese drei Summanden sind unter
+H1–H4 nichtnegativ. Die neue Form verwendet Aeff1 statt Aeff0 und
+restauriert den tatsächlichen Fo-Block sowie eta*q vollständig.
+Äquivalent hat sie den alten Kernblock Aeff1, dieselbe tatsächliche
+Kern-Schalen-Kopplung und den vollständigen direkten Schalenblock.
+
+Damit gilt auf der geerbten gemeinsamen Formdomäne
+
+ 0<Qold<=Q1<=A9.
+
+Koerzivität folgt aus Qold; die neue Form ist über die geerbte
+Block-/Domänenkonstruktion geschlossen. Die beschränkte Kernänderung
+und die Wiederaufnahme des bereits definierten positiven Schalenanteils
+erzeugen keine neue Operatordomänenannahme. Folglich
+
+ A9^-1<=Q1^-1<=Qold^-1.
+
+Hier ist die Ordnung als Formordnung mit der üblichen Domäneninklusion
+gemeint. Der Vergleichskern hat den beschränkten hohen Block delta1 I.
+Seine L2-Kernantwort muss deshalb nicht künstlich der stärkeren
+Operatordomäne von A9 zugeordnet werden. Der endliche Schalentest liegt
+in der geerbten gemeinsamen Formdomäne; seine Kernkopplungsquelle liegt
+in H8. Die Variationsidentität wird in der Formdomäne von Q1 angewandt.
+
+Dies rechtfertigt, alte Restinverse als obere Metriken zu verwenden.
+Es rechtfertigt NICHT, die alte feste Fehlerzahl oder eine nur auf T
+geltende Kraftcap unverändert auf neue Koeffizienten beziehungsweise
+auf die ganze Fo-plus-T-Quelle anzuwenden. Diese Anwendungen benötigen
+den eigenen gemeinsamen Quellen- und Resttransport.
+
+4. Endlicher Abschluss versus ganzer Abschluss
+
+Der gerichtete endliche 108er Block enthält die zwölf Fo-, 84 J- und
+zwölf neuen h-Quellen samt Mischtermen. Nach D-, K-, Quellen- und
+Arithmetikpreisen bleibt sein 12er Schurblock arithmetisch >=4e-19 G_W.
+SOURCE_CLOSED_GAP_EXACT_AUDIT.json prüft dies unabhängig rational.
+Die analytischen Voraussetzungen der Quellenmajoranten werden in der
+Quellenanwendung getrennt zugeordnet. Der unendliche Rest ist darin
+noch nicht bezahlt. Die Formordnung allein schließt diesen Rest nicht.
+
+Die ganze Restenergie kann für einen festgelegten gemeinsamen Test y
+aus der Variationsidentität
+ <h,Q1^-1 h>=2<h,y>-Q1[y]+<h-Q1 y,Q1^-1(h-Q1 y)>
+beschränkt werden. Im letzten Term darf Qold^-1 verwendet werden.
+Hier müssen sowohl der endliche Fo-Anteil als auch die vollständige
+T-Funktion samt gemeinsamen Fehlern enthalten sein. Eine bloße Summe
+von 84 Koordinaten ist keine obere Schranke dieses letzten Terms.

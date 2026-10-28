@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "files": {
+    ".gitattributes": {
+      "bytes": 41,
+      "sha256": "1d4b8afe84238eb733f6e2ae689de8ea07e37ac1f314d742bc08465476b42cda"
+    },
+    "ARCHIVE.json": {
+      "bytes": 1384,
+      "sha256": "0b5eef75e29b95bb8c6dd6bd8f3dab40e893c73d869269fde638fb34ddfc5b97"
+    },
+    "META.yaml": {
+      "bytes": 1256,
+      "sha256": "2b0112a3b4ef345e871cd60811d4e6fbb811f1c5635803d4b35799c345d3f548"
+    },
+    "PROOF.md": {
+      "bytes": 3654,
+      "sha256": "eacf6c215c41a640a2ed0358478de51b3c83b78f7b515c4b86b44a0a42f63cc7"
+    },
+    "README.md": {
+      "bytes": 3569,
+      "sha256": "3e0b4a420446063ba8afd5654c57d97056c24a8eea7594abb3d2f556ad68b66a"
+    },
+    "SOURCE_SPECIFIC_ADDENDUM.md": {
+      "bytes": 3194,
+      "sha256": "6b38aa25d1a746009e8f9eab2f1f4d4ba41c24beaefb2077b6d87c02d616cbce"
+    },
+    "archives/Objekt-X-ell12-Finite-Energie-Abnahme-GPT1-2026-10-28.zip.part01": {
+      "bytes": 8388606,
+      "sha256": "b5c0ba69cd1b4db9196146fbbb4045396ee4a51288ba1d6a676a384be8731c7e"
+    },
+    "archives/Objekt-X-ell12-Finite-Energie-Abnahme-GPT1-2026-10-28.zip.part02": {
+      "bytes": 8388606,
+      "sha256": "ea6dc56df8073b84ede539a919cc730fb78044388fcbd3f59d3c48f186851848"
+    },
+    "archives/Objekt-X-ell12-Finite-Energie-Abnahme-GPT1-2026-10-28.zip.part03": {
+      "bytes": 3166813,
+      "sha256": "548b22d0d248401c5d51bafe8f05f2f26ce12e1cecd3861f47184977469eb5f5"
+    },
+    "review/COUPLING_DECISION_CONTROLS.json": {
+      "bytes": 1692,
+      "sha256": "71b5cfa472d63595347bb28a960debff7b82964256e9531316f2812087face1d"
+    },
+    "review/COUPLING_ONLY_DECISION_RATIONAL.json": {
+      "bytes": 2516,
+      "sha256": "7ceed06fdfe377a9cf32457887a0b8d3acbdcd42fd7bcebeb3622d815e40caef"
+    },
+    "review/FINAL_COUPLING_REVIEW.txt": {
+      "bytes": 5685,
+      "sha256": "2918db22716b392f65a66f73c26c4d3a05a46c651bb6e3ebdb382114f3ac57bb"
+    },
+    "review/GPT1_ABSCHLUSS.txt": {
+      "bytes": 9051,
+      "sha256": "c8d90ee55ff9dd59fb3b9bdc9b38b98646a218a13ca263cc38289a8e73a74b68"
+    },
+    "review/REPRODUCTION_FINAL.txt": {
+      "bytes": 2513,
+      "sha256": "8bf86e5e618fcaa84f25ba02e3f1be693a9457696398b923f9bdd5086d017eb1"
+    },
+    "source-specific/full-energy-execution-2026-10-27/ENERGY_BRIDGE_RATIONAL.json": {
+      "bytes": 13173,
+      "sha256": "d7642ab3b96fa10ff9aa75e784f934d81b62432c870c76da0567356bea4fb78e"
+    },
+    "source-specific/full-energy-execution-2026-10-27/sources/ANSCHLUSSSATZ.txt": {
+      "bytes": 17657,
+      "sha256": "debe5b5552291d83e1bfcff954b8cc581b4e544a50eb954234428e261f3caf61"
+    },
+    "source-specific/full-energy-execution-2026-10-27/sources/FULL_FORM_ORDER.txt": {
+      "bytes": 4976,
+      "sha256": "a9d6dbd2d2403e4885bf6581243e5d0d75fd816046ce17589f3b171e79060a43"
+    },
+    "source-specific/full-energy-execution-2026-10-27/sources/HERLEITUNG.txt": {
+      "bytes": 22261,
+      "sha256": "d221c870fccf8e8ab4298e53c7beff35b63bd704f5a6d0782864b51e93ce83d7"
+    },
+    "source-specific/source-specific-2026-10-28/gpt1/SOURCE_SPECIFIC_CONTRACT.txt": {
+      "bytes": 8495,
+      "sha256": "9d0f89ac2fdbec01dc528b4471adcd487d6811fa72bc4312f05551f7a199296c"
+    },
+    "source-specific/source-specific-2026-10-28/gpt1/SOURCE_SPECIFIC_CONTROLS.json": {
+      "bytes": 1151,
+      "sha256": "58ab70bb8ee691790c9f71c01bdf09b79f635c2ef79fdb2c8657c3090d3645a9"
+    },
+    "source-specific/source-specific-2026-10-28/gpt1/SOURCE_SPECIFIC_GPT1_MANIFEST.json": {
+      "bytes": 914,
+      "sha256": "b7205d637c7102afdfcb6e42bcfe8281f57f7ccf1fa1ebb0eb03230895d30e9d"
+    },
+    "source-specific/source-specific-2026-10-28/gpt1/SOURCE_SPECIFIC_RATIONAL.json": {
+      "bytes": 2176,
+      "sha256": "4057865ec81feaaccd52e4f6e23bc8ec034771f3e0540995884b689a6589e061"
+    },
+    "source-specific/source-specific-2026-10-28/gpt1/check_source_specific.py": {
+      "bytes": 4901,
+      "sha256": "0f650eca96fe21b08a8786337e70c1b772e27bde1f4a09d26074080c7e67775b"
+    },
+    "source-specific/source-specific-2026-10-28/gpt1/check_source_specific_controls.py": {
+      "bytes": 1981,
+      "sha256": "cb3adb03e61fa05531dbf9e1d6554f54a7d9eeecb0c94322ddf4f77b093e58ef"
+    },
+    "source-specific/source-specific-2026-10-28/gpt2/MANIFEST.json": {
+      "bytes": 596,
+      "sha256": "6efb791047bf758dd8b69a88dc5e4894c84a0e2e4c8d7b871c9cffc9c041c5ae"
+    },
+    "source-specific/source-specific-2026-10-28/gpt2/SELECTED_SOURCE_PRICE_RECHECK.json": {
+      "bytes": 2304,
+      "sha256": "82949d842496650f786d0e87801cbc044bf217e6777d557ef31b480d053e921d"
+    },
+    "source-specific/source-specific-2026-10-28/gpt2/SOURCE_DATA_APPLICATION.txt": {
+      "bytes": 6274,
+      "sha256": "8a0a8de73674739c8c43c8387702767ee5fcde50808f635daf024e8e0a803fac"
+    },
+    "source-specific/source-specific-2026-10-28/gpt2/check_selected_source_price.py": {
+      "bytes": 3321,
+      "sha256": "ccd44f7539ae9f856acc645e766783db4fe64fbaf73b91d691b0329928fac514"
+    },
+    "verify_publication.py": {
+      "bytes": 4451,
+      "sha256": "a563e5e5f1c1b6a3ab37e9ce17de3055e361de7ce6d3fc9318fc7fca68097eea"
+    }
+  }
+}

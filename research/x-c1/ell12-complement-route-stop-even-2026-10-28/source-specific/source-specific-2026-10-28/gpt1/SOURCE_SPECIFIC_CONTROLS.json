@@ -1,0 +1,58 @@
+{
+  "status": "SOURCE_SPECIFIC_CONTROLS_PASS",
+  "count": 10,
+  "controls": [
+    {
+      "case": "positive",
+      "accepted": true,
+      "expected": true
+    },
+    {
+      "case": "core_lower_too_small",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "case": "core_strictness_lost",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "case": "coupling_lower_too_small",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "case": "theta_too_large",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "case": "theta_negative",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "case": "comparison_not_strict",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "case": "incorrect_source_hash",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "case": "-O",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "case": "-OO",
+      "accepted": false,
+      "expected": false
+    }
+  ],
+  "checker_sha256": "0f650eca96fe21b08a8786337e70c1b772e27bde1f4a09d26074080c7e67775b",
+  "integration_performed": false
+}
