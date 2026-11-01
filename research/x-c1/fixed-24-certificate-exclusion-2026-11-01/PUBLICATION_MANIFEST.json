@@ -62,8 +62,8 @@
       "sha256": "34e11c8e146bd7e11901fe42b5d650c23dc283a9d4fb9f74726084ea72863fcb"
     },
     "verify_publication.py": {
-      "bytes": 7725,
-      "sha256": "3a0470642d1598dbb567503e10a2d8ee622fc7d9285a8773419b26243157d948"
+      "bytes": 7841,
+      "sha256": "496b6e6fc7a48d76eacb126d8d561ca96e03cb0fb0c9972b36757b5cf02dde48"
     }
   }
 }

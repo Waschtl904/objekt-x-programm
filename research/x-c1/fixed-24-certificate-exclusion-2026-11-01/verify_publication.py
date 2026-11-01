@@ -7,7 +7,7 @@ import hashlib
 import io
 import json
 import struct
-import subprocess
+import runpy
 import sys
 import tempfile
 import zipfile
@@ -126,7 +126,9 @@ def verify(root=HERE, original_archive=None):
         with tempfile.TemporaryDirectory(prefix="objx-fixed24-") as temporary:
             z.extractall(temporary)
             checker = Path(temporary)/transport["root"]/"check_final_review.py"
-            subprocess.run([sys.executable, "-B", str(checker)], check=True, cwd=checker.parent)
+            # Execute only the unchanged checker bound by GPT1_MANIFEST_SHA.
+            # No shell, command construction, or external process is involved.
+            runpy.run_path(str(checker), run_name="__main__")
     print("PUBLICATION_PASS: all 151 GPT1 bindings, unchanged incomplete source transfer, complete reconstructed transport, corrected rational close; zero new integrals")
     if original_archive:
         print("FULL_ORIGINAL_PASS: 267597341 bytes, CRC and 226 GPT2 manifest bindings")
