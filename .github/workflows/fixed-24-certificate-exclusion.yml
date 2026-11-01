@@ -1,0 +1,33 @@
+name: Fixed 24 certificate exclusion corrected close
+
+on:
+  pull_request:
+    paths:
+      - 'research/x-c1/fixed-24-certificate-exclusion-2026-11-01/**'
+      - '.github/workflows/fixed-24-certificate-exclusion.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'research/x-c1/fixed-24-certificate-exclusion-2026-11-01/**'
+      - '.github/workflows/fixed-24-certificate-exclusion.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  corrected-close:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13'
+      - name: Verify separately bound correction and exact rational close
+        run: python -B research/x-c1/fixed-24-certificate-exclusion-2026-11-01/verify_publication.py
+      - name: Reject damaged bindings and false conclusions
+        run: python -B research/x-c1/fixed-24-certificate-exclusion-2026-11-01/test_controls.py

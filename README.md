@@ -15,7 +15,35 @@ an X, einschließlich der vollständigen geeigneten Testklasse, bleiben erhalten
 Weil-Positivität und die vollständige Konstruktion von Objekt X bleiben offen.
 Die projektintern hergeleiteten Ergebnisse sind zur externen Prüfung offen.
 
-## Aktueller Stand vom 28. Oktober 2026
+## Aktueller Stand vom 1. November 2026
+
+Der [korrigierte Gradiententest](research/x-c1/fixed-24-certificate-exclusion-2026-11-01/README.md)
+schließt unter H1–H4 und den übernommenen physischen Verträgen die **gesamte
+festgelegte 24er-Zertifikatsfamilie** aus. Nach GPT1s ausdrücklich bezahlter
+V-Transportkorrektur gilt gerichtet
+`r ≤ 0,058383477345103` und
+`gᵀ M_-⁻¹ g ≤ 0,000949781310484370 < E_*`, mit
+`E_* ≥ 0,000972717481018334` und positivem Abstand
+`≥ 0,000022936170533964`. Der vollständige Datenpreis
+`< 0,004356223514` ist genau einmal enthalten.
+
+GPT2s Original bleibt unverändert; GPT1s Korrektur und der reproduzierte
+rationale Schluss sind separat gebunden. Die Transportrekonstruktion nach
+zwei identisch unvollständigen Library-Abrufen ist ausdrücklich offengelegt;
+alle 151 Dateien stimmen mit GPT1s Manifest überein. Keine neue Quadratur.
+
+Dieser Arbeitsblock ist beendet. Als Nächstes begründet GPT1 genau eine
+engere zulässige Inversenergieabschätzung oder eine Antworterweiterung
+nachweislich außerhalb des ausgeschlossenen Raums, mit Erfolgsbedingung und
+Operator-/Domänenverträgen. Keine weitere Verfeinerung derselben Resthülle
+und keine Kandidatenserie innerhalb derselben Familie.
+
+**Keine Aussage über Negativität der tatsächlichen Komplement-Schurform.
+Externe Begutachtung, Punkt 4, der positive Anschluss und Objekt X bleiben
+offen; Checkliste weiterhin 3/10.** Git-Integration und mathematische Prüfung
+behalten getrennte Rollen. Die folgenden Abschnitte sind datierte Rückblicke.
+
+## Rückblick vom 28. Oktober 2026
 
 Der [gemeinsame Zwölfer-Kopplungstest](research/x-c1/ell12-complement-route-stop-even-2026-10-28/README.md)
 schließt unter H1–H4 die feste ausreichende U_E-Komplementroute an `ell12`

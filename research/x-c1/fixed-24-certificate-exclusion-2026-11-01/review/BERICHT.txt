@@ -1,0 +1,258 @@
+Objekt X — GPT1: gezielte Schlussabnahme des physischen hohen Rests
+Prüfdatum: 1. November 2026. Geprüfte GPT2-Lieferung: 31. Oktober 2026.
+
+ERGEBNIS
+
+Die ursprüngliche strikte Gradientenschwelle besteht nach einer ausdrücklich
+gebuchten Korrektur des neuen V-Transports. Unter H1–H4 und den übernommenen
+physischen Funktions-/Formverträgen folgt der bedingte Ausschluss des
+festgelegten vollständigen 24er-Zertifikatsraums. Komplementpositivität folgt
+daraus nicht. Externe Begutachtung und Punkt 4 bleiben offen; aus dieser
+gezielten Abnahme wird keine neue Checklistenwertung abgeleitet (weiter 3/10).
+
+Gerichtete, konservative Dezimalendpunkte dieser GPT1-Schlussrechnung:
+
+  vollständiger Datenpreis, einmal:       e_data < 0,004356223514
+  korrigierter physischer hoher Rest:     r <= 0,058383477345103
+  ganzer hoher Quellenpreis:              alpha0+r <= 0,100222665705103
+  ganze hohe Quellenenergie:             Gamma <= 0,010044582721036830
+  gesamter hoher Gradientenpreis:         <= 0,002916216407994673
+  Datenpreis + hoher Gradientenpreis:     <= 0,007272439921994673
+  gesamte Gradientenenergie:             <= 0,000949781310484370
+  ursprüngliche Zielschwelle:             >= 0,000972717481018334
+  strikt positiver Abstand:               >= 0,000022936170533964
+
+Der alte Teilpreis 0,000121160041 ist bereits im vollständigen Datenpreis
+enthalten. Er wird hier nicht nochmals addiert. Maßgeblich sind die ganzen
+rationalen Eingänge und Ergebnisse in GPT1_FINAL_REVIEW.json. Die Zahlen
+oben sind für Obergrenzen nach oben, für Untergrenzen nach unten gerundet.
+
+1. Prüfgegenstand, Herkunft und Grenze
+
+Original:
+  Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31.zip
+  267.597.341 Byte
+  SHA-256 0ae5879e0783a88d102def93c5cce3a768e42dbc3c09209bac703822a154515e
+  227 Archivmitglieder; CRC beim vollständigen Lesen bestanden.
+  Alle 226 Bindungen des Originalmanifests bestanden.
+
+Die beigefügten beiden GPT1-Originalarchive haben unverändert die Hashes
+  Datenabschluss: a20e163a581c67d3f109910a5dfb294d5b60ade25f2bb179472fdaf665fc4515
+  Referenzprüfung: b17ce84016e4b8cd3c5a1af4404d44a6898d09e97be53e3a242736da5482834b.
+Die für diese Abnahme ausgewählten Daten-/Referenzdateien wurden mit den
+vorliegenden GPT1-Dateien byteweise abgeglichen. Auch BOUNDARY_INPUTS.json
+ist gegenüber dem bereits angebundenen Quellenpaket unverändert.
+
+Der Originalchecker check_physical_rest.py wurde ohne Schreiboption
+ausgeführt: arithmetischer PASS mit exakt dem gespeicherten Autorenresultat.
+Dieser PASS allein war keine Abnahme der neuen analytischen Brücke.
+Die neue Quellenformel, Auswertungsskripte, analytischen Hüllen und ihre
+Fehlerzuordnung wurden anschließend gezielt gelesen und mathematisch geprüft.
+Die 135 Integrale wurden nicht erneut ausgewertet. Das neue GPT1-Skript
+summiert ihre gespeicherten gerichteten Belege und prüft die Schlussrechnung
+eigenständig mit Fraction-Arithmetik. Es braucht nur die Standardbibliothek.
+
+Die akzeptierte Ritz-Schur-Struktur, der gesamte S0-Referenzpreis und die
+drei abgeschlossenen Bankfehler bleiben übernommen. H1–H4 sowie historische
+Funktionsverträge wurden nicht erneut bewiesen. Dies ist eine projektinterne
+gezielte Gegenprüfung, keine externe Begutachtung und kein weitergehender Satz.
+
+2. Referenzkorrektur bereits erledigt
+
+In COMBINED_BOUNDARY_CORRECTED.json, missing_remainder.L0, ist die bereits
+mitgeteilte Berichtigung L0=-4*reference_B2_exact_rational übernommen.
+Der frühere Verweis auf L23 ist dort entfernt. Unverändert bleibt
+
+  S0(y)=B2^0 log^2(y-a8)+U1^0 log(a9-y).
+
+Die beiden exakten rationalen Referenzzeilen haben weiterhin die kanonische
+SHA-256 d1f852baf7598c2acdfbf98845b751a1030122d9677af8e842902ac4337f42e9.
+full_model.py subtrahiert diese Zeilen von der ganzen Funktion. Ein möglicher
+Unterschied des Modell-Randkoeffizienten bleibt damit tatsächlich im Rest.
+Die alte JSON-Berichtigung ist abgeschlossen; keine erneute Bearbeitung
+oder Nachricht an einen anderen Chat ist hierfür erforderlich.
+
+3. Zielgerichtete Abnahme der vollständigen Restdefinition
+
+Gegenstand ist genau
+
+  r=||K_H^(-1/2) B_H(Sigma_23^phys-S0)||_HS.
+
+Die 23 Spalten entstehen vor Normen aus derselben singulären Außenmetrik
+Gp=M_-^(-1)-xG*xG^T/m. Es gibt keine positive Diagonalzugabe. Die aus dieser
+Metrik gebildeten Quellen und die unveränderten C-, Ki-, T0-Banken bleiben
+gebunden. Es wird weder eine neue Antwort noch ein neuer Kandidat erzeugt.
+
+Gelesene und abgeglichene neue Kette:
+  full_source.py -> build_core.py -> build_banks.py -> full_model.py
+  -> norm_quadrature.py, endpoint_cauchy.py, structured_caps.py,
+     analytic_bounds.py, physical_transport.py und whole_size_guards.py.
+
+Die zugehörigen Identitäten erhalten insbesondere:
+  - s_shell-Q9Fz+(K_core+S_core)w plus den ganzen Momentlift;
+  - w=Phi c+Theta*Theta(s_core-Q9Fz-Q8Phi c)/delta;
+  - direkte/reflektierte Cauchyteile, reguläre Kernteile und alle aktiven
+    Primverschiebungen, jeweils vor der gemeinsamen Normbildung;
+  - Fz_core=Pfull+Vcore+Ac*m160: Cauchybank mit w+Ac*m160,
+    direkter Anteil -Q9Pfull+K_core Vcore und Primanteile w+Fz_core;
+  - zwölf vollständige Antwortfunktionen für den normalisierten v-Fehler
+    mit RK RK^T=Ki, einschließlich des direkten und rückgekoppelten Anteils.
+
+Das gespeicherte rationale P95 ist allein ein Hilfspolynom für den festen
+hohen Projektionsrest. Seine 192-Punkte-Konstruktion wird nicht als
+Integrations- oder Genauigkeitsbeleg verwendet. Sein roher hoher Anteil
+verschwindet; die verbleibende rohe Schurkorrektur wird positiv bezahlt.
+Der Faktor K_H^(-1/2) wird nur in den angenommenen hohen Schurkoordinaten
+mit K_H>=I benutzt. Die hohe Inverskonstante wird nicht auf eine unzerlegte
+Restfunktion übertragen.
+
+4. Ganze Normrechnung und analytische Brücke
+
+135 symbolisch angrenzende Abschnitte und 128 Knoten pro Abschnitt decken
+das offene Intervall bis zu den beiden positiven Streifen 2^(-200) ab.
+Die Teilung enthält die Quellen-/Primübergänge und die verschobenen
+Stückgrenzen der Kernmodelle. Die Streifen werden vollständig durch
+analytische logarithmische Hüllen integriert; es bleibt keine Randzone offen.
+
+Für die Norm in 2dy ist der gespeicherte Schätzer auf einem Abschnitt
+der Breite w tatsächlich w*sum omega_k*sum_j f_j(y_k)^2. Cauchy-, direkte,
+reflektierte, reguläre und Primteile werden davor mit Vorzeichen addiert.
+
+Die neue komplexe Hülle kehrt zu den wirklichen Kern- und Schalenteilen
+von F zurück. Die schmalen Y-Polynome werden für diese Hülle nicht künstlich
+über den gesamten Kern fortgesetzt. Legendre-Koeffizienten, gemeinsame
+Ableitungshüllen, explizite logarithmische Integrale und die tatsächlichen
+lokalen Kernhüllen begrenzen dieselbe analytische Funktion wie die
+vorzeichenbehaftete Auswertung. Für ein elliptisches |f|_2<=C auf rho=2
+gilt |sum f_j^2|<=C^2. Positive Gaussgewichte und Exaktheit bis Grad 255
+geben durch die Chebyshevrestsumme den konservativen Fehler
+  16*w*C^2*2^(-256).
+
+Die Kernquantisierung ist eine absolute Koeffizientensumme mit zusätzlichem
+Log-L2-Faktor, nicht lediglich eine beliebige L2-Zahl. Daher trägt sie auch
+die im Code verwendete komplexe Polynom-/Log-Hülle. Die Außenquantisierung
+wird auf dem ganzen benötigten Koeffizientenradius bezahlt. Die lokale
+Cauchy-Auswertung subtrahiert die log/log^2-Singularität analytisch und
+behält positive Kreisreste. Auch beide Kürzungen der lokalen Polynome
+geben ihre absoluten Restsummen in die Auswertungsintervalle zurück.
+
+Die ursprünglichen Summen sind:
+  Hauptschätzer <= 0,001425037070934901;
+  analytischer Hauptfehler <= 0,000000029870354330;
+  beide Modell-Endstreifen zusammen <= 1,32361868e-18 (Normquadrat).
+Auswertungsbreiten sind bereits im gerichteten Schätzer enthalten. Sie
+ersetzen keine physischen Funktionsfehler. Die unten beschriebene Korrektur
+vergrößert vorsorglich die gesamten analytischen Fehler und Endhüllen;
+die gespeicherten Knotenwerte werden nicht neu berechnet.
+
+5. Konkreter Belegfehler und seine abgeschlossene Nachbuchung
+
+Betroffene Stelle: GPT2 physical_transport.py, Zeile 21:
+  eV=gamma.sqrt()*eQC/(delta*(1-rho).sqrt()).
+
+Der übernommene Vertrag aus
+normpilot/errors/PHYSICAL_ERROR_DERIVATION.txt, Abschnitt 2, lautet jedoch
+  delta V=-Theta*Theta DeltaQ Phi C/[delta sqrt(1-rho)],
+  ||Theta*Theta||<=gamma.
+Daher ist hier gamma statt sqrt(gamma) erforderlich. Der positive Preis
+für die genaue C-Präconditionierung kommt wie bisher hinzu. Dieser Fehler
+liegt im neuen hohen Transport, nicht im abgeschlossenen GPT1-Datenpreis.
+
+Eine vollständig rationale, bewusst konservative Reparatur benutzt
+  g = obere rationale Grenze von gamma > 1,
+  eV_neu <= g*eV_alt.
+Das genügt, weil g>=sqrt(gamma), und lässt auch den bereits enthaltenen
+positiven C-Preis bezahlt. Entsprechend werden der feste V-Transportpreis
+und vorsorglich der gesamte physische Fehler der v-Antwort mit g multipliziert.
+
+Zusätzlich wird für D12 die schon bestätigte GPT1-Kappe 2,632e-50 benutzt,
+statt hier die stärkere GPT2-Angabe 1,573e-50 gesondert neu abzunehmen.
+Setze d=2632/1573. Die beiden positiven gemeinsamen D/C-Quellenpreise
+werden vorsorglich ganz mit d multipliziert. Das ist eine Vergrößerung
+des Ledgers, keine Verbesserung oder Veränderung des äußeren F-Vertrags.
+
+Auch die indirekt benutzte ganze Modellhülle W wird konsistent transportiert.
+Schreibe Pcore für den alten Preis 30*gamma/delta*ecore und W_minus für
+die positive untere rationale Grenze der gespeicherten W-Hülle. Dann
+
+  W_neu <= g*W_alt+(d-1)*Pcore/15,
+  chi = g+(d-1)*Pcore/(15*W_minus) > 1.
+
+Jede vorkommende positive ganze W-/L1-Hülle wird somit durch Multiplikation
+mit chi sicher vergrößert. Die vollständigen komplexen Hüllen und beide
+Endhüllen werden vorsorglich ebenfalls mit chi multipliziert, ihre
+quadrierten Preise also mit chi^2. Der feste Gamma224-Kreuzkernelpreis wird
+mit chi multipliziert. Dies erfasst die Abhängigkeiten der analytischen
+Normrechnung vom korrigierten Transport, statt nur eine einzelne Zahl im
+Endledger auszutauschen. Die physische Hauptfunktion bleibt unverändert.
+
+Die vier Reserven 1e-200 bleiben positiv. Sie betreffen Haupt-m160,
+v-Antwort-m160, hohen Momentlift und rohe Schurkorrektur. Die exakten
+c/z-Modellkoeffizienten und die hierfür verwendeten physischen Größenkappen
+werden durch obige Preisvergrößerung nicht geändert. Auch 1+1e-80 bleibt
+positiv enthalten. Es wird keine Operatorwirkung A9V vorausgesetzt.
+
+Die daraus neu gebuchten Grenzen lauten
+  r_mod <= 0,037750060046667,
+  Xi_mod <= 0,132060570120938,
+  r <= 0,058383477345103.
+
+Der original publizierte Autorenendpunkt 0,058383476123414 wird deshalb
+nicht unverändert als GPT1-Ergebnis ausgegeben. Die hier etwas größere
+Grenze enthält sowohl die konkrete Korrektur als auch die konservative
+Rückkehr zur bereits bestätigten D12-Kappe und alle genannten Folgepreise.
+
+6. Physische Fehlerabdeckung und einmalige Datenbuchung
+
+Die zehn festen hohen Positionen, die ganze v-Antwort und die vier positiven
+kleinen Preise bleiben erhalten. Sie bezahlen direkte und Kernquellen,
+T-Freeze, neue Taylorreste, a-/WF-Banken samt Modellhüllen, V/C-Abweichung,
+den ganzen Q9F-Unterschied samt physischer Y-Basis, den gesonderten
+Kern-Q9F-Unterschied, ganze reguläre Kernreste sowie beide rationalen
+Darstellungsfehler. Die Graphwirkung des Kernlift-/Reexpressionsfehlers
+geht in die tatsächlich betroffenen a- und v-Karten ein. Die direkte
+D/C-Funktion wird in diesem Paket selbst vollständig dargestellt.
+
+Die physische Quellenabweichung wird durch die ganze Kern-Schalen-Kappe
+<30 transportiert: direkter Carleman-Anteil, reflektierter Anteil, zwei
+reguläre Kernel und alle sechs aktiven injektiven Primtranslationen.
+Diese grobe Kappe wirkt auf die kleinen Defekte; die Hauptfunktion wird
+vorzeichenbehaftet gemeinsam ausgewertet. Der unbeschränkte Q-Operator
+wird nur auf den festgradigen Polynom-/Lift-Karten über deren Wert- und
+Ableitungshüllen transportiert. Ganze L2-Logmomente bezahlen dabei auch
+innere Sprünge und die beiden Enden.
+
+e_data bezahlt die endlichen Paarungs- und Ritzbilder. r bezahlt die hohen
+Bilder derselben primitiven Fehler sowie die neue Normrechnung. Weder die
+drei ganzen Bank-Gradientenpreise noch der alte Teilpreis werden nochmals
+addiert. Die enge D12-Kappe wird nur auf ihren bewiesenen inneren Bereich
+angewandt. Der geschlossene äußere F-Fehler wird unverändert übernommen.
+
+7. Ursprüngliche rationale Schlussentscheidung
+
+Unverändert alpha0=0,04183918836 und
+  C_H=kappa*mu_H*R_rho*(1+1e-80).
+Mit den ursprünglichen rationalen s_lo,s_hi,m,q_perp und E_star wird geprüft
+
+  E_upper = max(|s_lo|,|s_hi|)^2/m
+            + [q_perp + e_data + C_H*(alpha0+r_upper)]^2
+          < E_star.
+
+Die korrigierte Restkappe bleibt um mindestens 0,013435407854897 unter
+der hinreichenden Arbeitskappe 0,0718188852. Entscheidend ist aber die
+separat ausgeführte ursprüngliche Energieprüfung. Deren rationaler
+Abstand ist strikt positiv und größer als 0,000022936170533964.
+
+Die gemeinsame Schlussung lautet somit PASS unter den übernommenen
+Voraussetzungen, nach der ausdrücklich bezahlten Transportkorrektur.
+Keine Veröffentlichung, GitHub-Schreibaktion oder Kandidatenänderung wurde
+vorgenommen. Es wurde keine Nachricht an einen anderen Chat versandt.
+
+Nachrechnung nach dem Entpacken:
+  python check_final_review.py
+
+inputs/ enthält 144 unveränderte Originaldateien für diese rationale
+Nachrechnung. ORIGINAL_MANIFEST.json ist das unveränderte GPT2-Manifest.
+Das vollständige große GPT2-Archiv bleibt die Quelle für die übrigen
+numerischen Funktionsbanken und Skripte. SOURCES.json bindet beide Pakete
+und die hier besonders relevanten gelesenen Vertrags-/Codefundstellen.

@@ -1,0 +1,41 @@
+{
+  "GPT2_original_archive": {
+    "file": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31.zip",
+    "bytes": 267597341,
+    "sha256": "0ae5879e0783a88d102def93c5cce3a768e42dbc3c09209bac703822a154515e",
+    "url": "https://chatgpt.com/library?file_id=libfile_a4428e9598108191a03a573d00688d3e&account_id=personal"
+  },
+  "GPT1_data_archive_sha256": "a20e163a581c67d3f109910a5dfb294d5b60ade25f2bb179472fdaf665fc4515",
+  "GPT1_reference_archive_sha256": "b17ce84016e4b8cd3c5a1af4404d44a6898d09e97be53e3a242736da5482834b",
+  "reviewed_new_sources": {
+    "HERLEITUNG.txt": "b5ec529967071e2779b3410c297aeb7abc33a006d5b1651a2448ba5dab44d0a1",
+    "README.txt": "0a513be00a2f2dc5881b95d36bcef3bd5d7d8467aa78dac75bad2df7f8e6b47c",
+    "check_physical_rest.py": "129b4a1a80b9086719e21987ee26179d27234795eef67971446b8b1e2f627cda",
+    "full_source.py": "a83680e9cdcaabb63204e1886da92f613f2ca4696a292cde58ab1ad038d53938",
+    "build_core.py": "febd52b1b9ed457089b36444e2d8f16143fe9f3630283063743e92261277a854",
+    "build_banks.py": "f82ba3a67604e08076b8dbe8135460845eef478e13317d7c3b2675a8f8bf445d",
+    "full_model.py": "cbab55d171ded1631d7dd8ccc698fc367a35d067aadb6224a3a7debfd6996c0c",
+    "norm_quadrature.py": "58ca87517774cda99b1c6a843a6fd0f0d2dde7bae799b88cdb8b1a28bc20422d",
+    "partition.py": "1ee823f377a11d9ccb9711c0352191a75da75d2847fb20a9f01fe99f72c63c39",
+    "endpoint_cauchy.py": "4b1e8ba6b87473e2aa35cfa8ec28c3c1e64940d08fb05a038c19ca22c121fcb4",
+    "fast_cauchy.py": "89dca7a601a82ae9d93f41170f5aa152293349e257cfdc629c89e46c9b0a667f",
+    "physical_transport.py": "fd6a29a4de1dd1739dc42125ac12d916bdf0f26a63cce85c563bd58cd5db734e",
+    "structured_caps.py": "c203db46762b56c10c92f3488deaa6fa56b5133b713b946f79ca6e77eac7595c",
+    "analytic_bounds.py": "ed96dc227531351cbc5d58a90e5cd0a5d732927d02022b226812114cdaf26c35",
+    "cross_operator_guard.py": "b9fd8b89afff83ac3a28f15eefc9064ada2e632fc6d71d31cd8f8a03ae7e721b",
+    "whole_size_guards.py": "595f53b9864548ba4dc8385cebc6d4e8da83b7000b23135218f3b11ab9540047",
+    "vendor/old_fields.py": "e154b4642474813cfcfd6660acd0b5dbd5c80026590917bd94a8bfb74072a984",
+    "vendor/log_envelopes.py": "51a848cf93805d35c3de093611d392862d577a54efddd951c36379211a37c805",
+    "vendor/common.py": "91b03c5c722de36bdc453a5973e2a0342104330820f0c04d3acca692abc75f42",
+    "gpt1-data/HERLEITUNG.txt": "7e3cd07e26fe63f0c004f55b5f32cd1e75272681a3e44710526f75843fa4a581",
+    "gpt1-data/bank_errors.py": "7b347f696b31aa7d5ba8d003a49084de91310cbb0c82f205a154538f6964d90c"
+  },
+  "normpilot/errors/PHYSICAL_ERROR_DERIVATION.txt": {
+    "sha256": "a9883342363e757144f4494975297ff69c7e271c86dca4ce88c834f28d94dc4e",
+    "location": "section 2; deltaV=-Theta*Theta DeltaQ Phi C/(delta sqrt(1-rho))"
+  },
+  "original_manifest_sha256": "287d74b1b9ec6e76d8e812911117fb1ab996003856a1210964af3427a377a265",
+  "original_checker": "read-only PASS; no quadrature recomputed",
+  "independent_rational_checker": "check_final_review.py",
+  "scope": "targeted physical-rest and original gradient close; accepted data/reference/structure inherited"
+}
