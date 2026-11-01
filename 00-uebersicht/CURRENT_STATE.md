@@ -3,7 +3,7 @@
 > GENERATED FILE — DO NOT EDIT
 > Quelle: [RESEARCH_STATE.yaml](RESEARCH_STATE.yaml). Navigation, keine Satzpromotion.
 
-Stand: 2026-10-28.
+Stand: 2026-11-01.
 
 ## Gemergte kanonische Basis
 
@@ -35,7 +35,7 @@ Historische Integrationsprovenienz des Registry-/Navigations-Syncs: PR #156 inte
 
 ## Zwei aktive Hauptfronten
 
-- **Konstruktive Fortsetzung der gemeinsamen Objekt-X-Geometrie** — `UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION`, OPEN. Stand 28. Oktober: Der [gemeinsame Zwölfer-Kopplungstest](../research/x-c1/ell12-complement-route-stop-even-2026-10-28/README.md) schließt unter H1–H4 die feste ausreichende U_E-Komplementroute an ell12 gerichtet aus: M_* > 215033/47500 > D_hi und S_suff < −0,154160692. Die ganze Restintegration entfällt. Der frühere Ein-Skalar-Nichtausschluss, der bestandene v2-Zwölfervergleich und die Gültigkeit der Inversmajorante auf E bleiben unberührt. Der [einzige quellenbezogene Nachtrag](../research/x-c1/ell12-complement-route-stop-even-2026-10-28/SOURCE_SPECIFIC_ADDENDUM.md) behält tatsächliche Restpaarungen, liefert aber für seinen oberen Ersatzpreis bereits A_src>=9/2>D_hi. Keine Untergrenze der tatsächlichen Inversenergie; keine neue Integration. Konkret fehlt eine stärkere quellenwirksame Schuruntergrenze jenseits der Gp-Substitution. Externe Begutachtung, Punkt 4, das unendliche Komplement und Objekt X bleiben offen; Checkliste 3/10.
+- **Konstruktive Fortsetzung der gemeinsamen Objekt-X-Geometrie** — `UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION`, OPEN. Stand 1. November: Der [korrigierte vollständige 24er-Zertifikatsausschluss](../research/x-c1/fixed-24-certificate-exclusion-2026-11-01/README.md) ist unter H1–H4 und den übernommenen physischen Verträgen abgeschlossen. GPT1 hat den V-Transportfehler einschließlich Folgepreisen bezahlt und die bestätigte D12-Kappe übernommen: r<=0,058383477345103, vollständiger Datenpreis <0,004356223514 genau einmal, Gesamtgradientenenergie <=0,000949781310484370 < E_* mit E_*>=0,000972717481018334 und Abstand >=0,000022936170533964. Die gespeicherte rationale Schlusskontrolle ist reproduziert; keine neue Integration der Funktionen. Das GPT2-Original bleibt unverändert. Zwei identische unvollständige GPT1-Library-Abrufe sind offengelegt; sämtliche 151 Dateien der gesonderten Transportrekonstruktion stimmen mit GPT1s Manifest überein. Projektinterne Gegenprüfung ist keine externe Begutachtung. Keine negative tatsächliche Komplement-Schurform; Punkt 4, konstruktiver Anschluss, unendliches Komplement und Objekt X bleiben offen, Checkliste 3/10.
 - **Globale Weil-Testklasse und fensterunabhängiger Readout** — `FULL-WEIL-TEST-CLASS`, OPEN. Testklasse, Normierung und exakte vollständige Gram-Identität gehören bereits zur Konstruktion von Objekt X. Zusammen mit einer kofinal kompatiblen positiven Geometrie ist ein globaler Readout zu begründen. Der mögliche Anschluss an RH wird erst nach erfolgreicher Konstruktion verfolgt.
 
 ## Verwendbare Bausteine
@@ -150,5 +150,6 @@ Dokumentierte Checkerläufe sind von externer Prüfung und Git-Integration getre
 - `W9-RESIDUAL-CENTERED-EVEN-COMPARISON`: PENDING_STATUS_REVIEW — `research/x-c1/w9-residual-centered-control-even-2026-10-21/META.yaml`.
 - `W9-GAMMA-REPAIR-FIXED-EVEN`: PENDING_STATUS_REVIEW — `research/x-c1/w9-gamma-repair-even-2026-10-22/META.yaml`.
 - `ELL12-FIXED-COMPLEMENT-MAJORANT-STOP`: PENDING_STATUS_REVIEW — `research/x-c1/ell12-complement-route-stop-even-2026-10-28/META.yaml`.
+- `FIXED24-CERTIFICATE-CLASS-CORRECTED-STOP`: PENDING_STATUS_REVIEW — `research/x-c1/fixed-24-certificate-exclusion-2026-11-01/META.yaml`.
 
 Einstieg: [NEXT_GATES](NEXT_GATES.md) · [Architektur](OBJEKT_X_ARCHITECTURE.md) · [Pflege und Prüfungen](RESEARCH_STATE_MAINTENANCE.md).

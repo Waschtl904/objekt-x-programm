@@ -1,0 +1,652 @@
+{
+  "schema_version": 1,
+  "GPT2_original": {
+    "filename": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31.zip",
+    "bytes": 267597341,
+    "sha256": "0ae5879e0783a88d102def93c5cce3a768e42dbc3c09209bac703822a154515e",
+    "members": 227,
+    "manifest_entries": 226,
+    "manifest_sha256": "287d74b1b9ec6e76d8e812911117fb1ab996003856a1210964af3427a377a265",
+    "url": "https://github.com/Waschtl904/objekt-x-programm/releases/download/gpt2-physical-rest-2026-10-31/Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31.zip",
+    "local_verification": "entire archive SHA-256, CRC, coverage and all 226 manifest bindings passed",
+    "CI_scope": "full 267 MB original not fetched; correction inputs are checked against its bound manifest"
+  },
+  "GPT1_incomplete_download": {
+    "filename": "GPT1-Library-Abruf-unvollstaendig-2026-11-01.bin",
+    "bytes": 3225840,
+    "sha256": "904187291a9e55456468414172077c7a28eafcdd8e508371129270e79204b90c",
+    "source": "https://chatgpt.com/library?file_id=libfile_806e4a2660d881919d3c1b75ed9380f8&account_id=personal",
+    "independent_downloads_byte_identical": 2,
+    "valid_complete_zip": false,
+    "limitation": "No complete GPT1 original ZIP hash can be claimed. This is the unchanged truncated transfer, not the executable transport."
+  },
+  "GPT1_verified_transport": {
+    "filename": "Objekt-X-GPT1-Gezielte-Schlussabnahme-2026-11-01-Transportrekonstruktion.zip",
+    "bytes": 4287227,
+    "sha256": "fffbe431f10f7cf2c64c0de9bb135132db1b0d2d9dd9fef16ac0f39e6f74096b",
+    "root": "Objekt-X-GPT1-Gezielte-Schlussabnahme-2026-11-01",
+    "members": 152,
+    "manifest_entries": 151,
+    "manifest_sha256": "22ffd6c5f23e11963b7e40271d6ca5d14027714613f2c4815d925e560ae86fd6",
+    "role": "TRANSPORT_RECONSTRUCTION_ALL_MEMBER_BYTES_MATCH_GPT1_MANIFEST",
+    "all_reconstructed_member_origins": {
+      "BERICHT.txt": {
+        "archive": "incomplete_GPT1_download",
+        "member": "Objekt-X-GPT1-Gezielte-Schlussabnahme-2026-11-01/BERICHT.txt",
+        "local_member_CRC_verified": true
+      },
+      "GPT1_FINAL_REVIEW.json": {
+        "archive": "incomplete_GPT1_download",
+        "member": "Objekt-X-GPT1-Gezielte-Schlussabnahme-2026-11-01/GPT1_FINAL_REVIEW.json",
+        "local_member_CRC_verified": true
+      },
+      "SOURCES.json": {
+        "archive": "incomplete_GPT1_download",
+        "member": "Objekt-X-GPT1-Gezielte-Schlussabnahme-2026-11-01/SOURCES.json",
+        "local_member_CRC_verified": true
+      },
+      "check_final_review.py": {
+        "archive": "incomplete_GPT1_download",
+        "member": "Objekt-X-GPT1-Gezielte-Schlussabnahme-2026-11-01/check_final_review.py",
+        "local_member_CRC_verified": true
+      },
+      "inputs/ANALYTIC_ENDS.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/ANALYTIC_ENDS.json"
+      },
+      "inputs/BOUNDARY_INPUTS.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/BOUNDARY_INPUTS.json"
+      },
+      "inputs/FINAL_REST_RESULT.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/FINAL_REST_RESULT.json"
+      },
+      "inputs/NORM_PLAN.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/NORM_PLAN.json"
+      },
+      "inputs/ORIGINAL_MANIFEST.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/MANIFEST.json"
+      },
+      "inputs/PHYSICAL_REST_TRANSPORT.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/PHYSICAL_REST_TRANSPORT.json"
+      },
+      "inputs/STRUCTURED_GAUSS_CAPS.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/STRUCTURED_GAUSS_CAPS.json"
+      },
+      "inputs/gpt1-data/BANK_ERROR_RESULT.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/gpt1-data/BANK_ERROR_RESULT.json"
+      },
+      "inputs/gpt1-review/GPT1_BUDGET.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/gpt1-review/GPT1_BUDGET.json"
+      },
+      "inputs/gpt1-review/JOINT_REVIEW.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/gpt1-review/JOINT_REVIEW.json"
+      },
+      "inputs/norm-panels/000.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/000.json"
+      },
+      "inputs/norm-panels/001.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/001.json"
+      },
+      "inputs/norm-panels/002.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/002.json"
+      },
+      "inputs/norm-panels/003.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/003.json"
+      },
+      "inputs/norm-panels/004.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/004.json"
+      },
+      "inputs/norm-panels/005.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/005.json"
+      },
+      "inputs/norm-panels/006.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/006.json"
+      },
+      "inputs/norm-panels/007.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/007.json"
+      },
+      "inputs/norm-panels/008.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/008.json"
+      },
+      "inputs/norm-panels/009.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/009.json"
+      },
+      "inputs/norm-panels/010.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/010.json"
+      },
+      "inputs/norm-panels/011.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/011.json"
+      },
+      "inputs/norm-panels/012.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/012.json"
+      },
+      "inputs/norm-panels/013.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/013.json"
+      },
+      "inputs/norm-panels/014.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/014.json"
+      },
+      "inputs/norm-panels/015.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/015.json"
+      },
+      "inputs/norm-panels/016.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/016.json"
+      },
+      "inputs/norm-panels/017.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/017.json"
+      },
+      "inputs/norm-panels/018.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/018.json"
+      },
+      "inputs/norm-panels/019.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/019.json"
+      },
+      "inputs/norm-panels/020.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/020.json"
+      },
+      "inputs/norm-panels/021.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/021.json"
+      },
+      "inputs/norm-panels/022.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/022.json"
+      },
+      "inputs/norm-panels/023.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/023.json"
+      },
+      "inputs/norm-panels/024.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/024.json"
+      },
+      "inputs/norm-panels/025.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/025.json"
+      },
+      "inputs/norm-panels/026.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/026.json"
+      },
+      "inputs/norm-panels/027.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/027.json"
+      },
+      "inputs/norm-panels/028.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/028.json"
+      },
+      "inputs/norm-panels/029.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/029.json"
+      },
+      "inputs/norm-panels/030.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/030.json"
+      },
+      "inputs/norm-panels/031.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/031.json"
+      },
+      "inputs/norm-panels/032.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/032.json"
+      },
+      "inputs/norm-panels/033.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/033.json"
+      },
+      "inputs/norm-panels/034.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/034.json"
+      },
+      "inputs/norm-panels/035.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/035.json"
+      },
+      "inputs/norm-panels/036.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/036.json"
+      },
+      "inputs/norm-panels/037.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/037.json"
+      },
+      "inputs/norm-panels/038.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/038.json"
+      },
+      "inputs/norm-panels/039.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/039.json"
+      },
+      "inputs/norm-panels/040.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/040.json"
+      },
+      "inputs/norm-panels/041.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/041.json"
+      },
+      "inputs/norm-panels/042.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/042.json"
+      },
+      "inputs/norm-panels/043.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/043.json"
+      },
+      "inputs/norm-panels/044.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/044.json"
+      },
+      "inputs/norm-panels/045.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/045.json"
+      },
+      "inputs/norm-panels/046.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/046.json"
+      },
+      "inputs/norm-panels/047.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/047.json"
+      },
+      "inputs/norm-panels/048.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/048.json"
+      },
+      "inputs/norm-panels/049.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/049.json"
+      },
+      "inputs/norm-panels/050.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/050.json"
+      },
+      "inputs/norm-panels/051.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/051.json"
+      },
+      "inputs/norm-panels/052.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/052.json"
+      },
+      "inputs/norm-panels/053.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/053.json"
+      },
+      "inputs/norm-panels/054.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/054.json"
+      },
+      "inputs/norm-panels/055.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/055.json"
+      },
+      "inputs/norm-panels/056.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/056.json"
+      },
+      "inputs/norm-panels/057.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/057.json"
+      },
+      "inputs/norm-panels/058.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/058.json"
+      },
+      "inputs/norm-panels/059.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/059.json"
+      },
+      "inputs/norm-panels/060.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/060.json"
+      },
+      "inputs/norm-panels/061.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/061.json"
+      },
+      "inputs/norm-panels/062.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/062.json"
+      },
+      "inputs/norm-panels/063.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/063.json"
+      },
+      "inputs/norm-panels/064.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/064.json"
+      },
+      "inputs/norm-panels/065.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/065.json"
+      },
+      "inputs/norm-panels/066.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/066.json"
+      },
+      "inputs/norm-panels/067.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/067.json"
+      },
+      "inputs/norm-panels/068.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/068.json"
+      },
+      "inputs/norm-panels/069.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/069.json"
+      },
+      "inputs/norm-panels/070.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/070.json"
+      },
+      "inputs/norm-panels/071.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/071.json"
+      },
+      "inputs/norm-panels/072.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/072.json"
+      },
+      "inputs/norm-panels/073.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/073.json"
+      },
+      "inputs/norm-panels/074.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/074.json"
+      },
+      "inputs/norm-panels/075.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/075.json"
+      },
+      "inputs/norm-panels/076.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/076.json"
+      },
+      "inputs/norm-panels/077.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/077.json"
+      },
+      "inputs/norm-panels/078.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/078.json"
+      },
+      "inputs/norm-panels/079.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/079.json"
+      },
+      "inputs/norm-panels/080.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/080.json"
+      },
+      "inputs/norm-panels/081.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/081.json"
+      },
+      "inputs/norm-panels/082.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/082.json"
+      },
+      "inputs/norm-panels/083.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/083.json"
+      },
+      "inputs/norm-panels/084.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/084.json"
+      },
+      "inputs/norm-panels/085.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/085.json"
+      },
+      "inputs/norm-panels/086.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/086.json"
+      },
+      "inputs/norm-panels/087.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/087.json"
+      },
+      "inputs/norm-panels/088.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/088.json"
+      },
+      "inputs/norm-panels/089.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/089.json"
+      },
+      "inputs/norm-panels/090.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/090.json"
+      },
+      "inputs/norm-panels/091.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/091.json"
+      },
+      "inputs/norm-panels/092.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/092.json"
+      },
+      "inputs/norm-panels/093.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/093.json"
+      },
+      "inputs/norm-panels/094.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/094.json"
+      },
+      "inputs/norm-panels/095.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/095.json"
+      },
+      "inputs/norm-panels/096.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/096.json"
+      },
+      "inputs/norm-panels/097.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/097.json"
+      },
+      "inputs/norm-panels/098.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/098.json"
+      },
+      "inputs/norm-panels/099.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/099.json"
+      },
+      "inputs/norm-panels/100.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/100.json"
+      },
+      "inputs/norm-panels/101.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/101.json"
+      },
+      "inputs/norm-panels/102.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/102.json"
+      },
+      "inputs/norm-panels/103.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/103.json"
+      },
+      "inputs/norm-panels/104.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/104.json"
+      },
+      "inputs/norm-panels/105.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/105.json"
+      },
+      "inputs/norm-panels/106.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/106.json"
+      },
+      "inputs/norm-panels/107.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/107.json"
+      },
+      "inputs/norm-panels/108.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/108.json"
+      },
+      "inputs/norm-panels/109.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/109.json"
+      },
+      "inputs/norm-panels/110.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/110.json"
+      },
+      "inputs/norm-panels/111.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/111.json"
+      },
+      "inputs/norm-panels/112.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/112.json"
+      },
+      "inputs/norm-panels/113.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/113.json"
+      },
+      "inputs/norm-panels/114.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/114.json"
+      },
+      "inputs/norm-panels/115.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/115.json"
+      },
+      "inputs/norm-panels/116.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/116.json"
+      },
+      "inputs/norm-panels/117.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/117.json"
+      },
+      "inputs/norm-panels/118.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/118.json"
+      },
+      "inputs/norm-panels/119.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/119.json"
+      },
+      "inputs/norm-panels/120.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/120.json"
+      },
+      "inputs/norm-panels/121.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/121.json"
+      },
+      "inputs/norm-panels/122.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/122.json"
+      },
+      "inputs/norm-panels/123.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/123.json"
+      },
+      "inputs/norm-panels/124.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/124.json"
+      },
+      "inputs/norm-panels/125.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/125.json"
+      },
+      "inputs/norm-panels/126.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/126.json"
+      },
+      "inputs/norm-panels/127.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/127.json"
+      },
+      "inputs/norm-panels/128.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/128.json"
+      },
+      "inputs/norm-panels/129.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/129.json"
+      },
+      "inputs/norm-panels/130.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/130.json"
+      },
+      "inputs/norm-panels/131.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/131.json"
+      },
+      "inputs/norm-panels/132.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/132.json"
+      },
+      "inputs/norm-panels/133.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/133.json"
+      },
+      "inputs/norm-panels/134.json": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/norm-panels/134.json"
+      },
+      "reference/INHERITED_PHYSICAL_ERROR_DERIVATION.txt": {
+        "archive": "GPT1_data_inside_GPT2_original",
+        "member": "normpilot/errors/PHYSICAL_ERROR_DERIVATION.txt"
+      },
+      "reference/ORIGINAL_physical_transport.py": {
+        "archive": "GPT2_original",
+        "member": "Objekt-X-GPT2-Vollstaendiger-Physischer-Rest-2026-10-31/physical_transport.py"
+      }
+    }
+  },
+  "readable_originals": [
+    "BERICHT.txt",
+    "GPT1_FINAL_REVIEW.json",
+    "SOURCES.json",
+    "MANIFEST.json",
+    "check_final_review.py"
+  ],
+  "math_scope": "targeted corrected fixed-24 conditional exclusion only; external review and positive continuation open",
+  "new_quadrature_evaluations": 0
+}

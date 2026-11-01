@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "FIXED24-CERTIFICATE-CLASS-CORRECTED-STOP",
+  "date": "2026-11-01",
+  "kind": "NO_GO",
+  "strategic": false,
+  "local_only": true,
+  "mathematical_status": "AUTHOR_DERIVED_NO_GO",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Festgelegte vollständige 24er-Zertifikatsfamilie bei unverändertem Kandidaten, y_0, Antwort, singulärer Außenmetrik und Schurkorrektur; H1–H4 und übernommene physische Funktions-/Formverträge.",
+  "claim_polarity": "NEGATIVE_FOR_CANDIDATE_CLASS",
+  "negative_claim_boundary": "Nur die feste Zertifikatsfamilie; keine Negativität der tatsächlichen Komplement-Schurform, kein Ausschluss anderer Inversmajoranten oder Antworten außerhalb dieser Familie.",
+  "depends_on": [],
+  "closes": [],
+  "opens": [],
+  "supersedes": [],
+  "does_not_claim": [
+    "Positive Komplement-Schurform oder tatsächliche negative Weil-Richtung.",
+    "Positiver A9→A11-Anschluss, Abschluss von Punkt 4 oder Objekt X.",
+    "Neue externe Begutachtung oder erneuter Beweis von H1–H4.",
+    "Bytegleiche Wiederherstellung des vollständigen ursprünglichen GPT1-ZIP; nur alle 151 manifestgebundenen Dateien sind bytegeprüft."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/fixed-24-certificate-exclusion-2026-11-01/PROOF.md",
+    "sha256": "3f31521203b9f56b056e16622771821e3b0f529d27a555f36662941bfb87e1fc"
+  }
+}

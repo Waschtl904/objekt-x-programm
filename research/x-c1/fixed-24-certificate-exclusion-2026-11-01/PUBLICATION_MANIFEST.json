@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "files": {
+    ".gitattributes": {
+      "bytes": 25,
+      "sha256": "f45449061e08eaaf2336d057556c13d8c1428dbb3f9c239d11758eab32b665e6"
+    },
+    "ARCHIVE.json": {
+      "bytes": 29731,
+      "sha256": "0df7e7ffa28cf66f77129b5849579cbd95ffc4e784192f1777e611752836aa20"
+    },
+    "archives/GPT1-Library-Abruf-unvollstaendig-2026-11-01.bin": {
+      "bytes": 3225840,
+      "sha256": "904187291a9e55456468414172077c7a28eafcdd8e508371129270e79204b90c"
+    },
+    "archives/Objekt-X-GPT1-Gezielte-Schlussabnahme-2026-11-01-Transportrekonstruktion.zip": {
+      "bytes": 4287227,
+      "sha256": "fffbe431f10f7cf2c64c0de9bb135132db1b0d2d9dd9fef16ac0f39e6f74096b"
+    },
+    "DIAGNOSE.md": {
+      "bytes": 2740,
+      "sha256": "090cae45e1d7b982cf067304cced369edef899566b5ee3a94ef153f5e7a7b9ce"
+    },
+    "INTEGRATION.md": {
+      "bytes": 2351,
+      "sha256": "ef68e6cf0c3324dd631a91c91f7dac0fded0484b9ba2e901ffb8c0889bb39d25"
+    },
+    "META.yaml": {
+      "bytes": 1433,
+      "sha256": "dc9e790f8ce1b0a95b29b06befaef6ad6b75717d31b409bbce5cb5a60a58680a"
+    },
+    "PROOF.md": {
+      "bytes": 4154,
+      "sha256": "3f31521203b9f56b056e16622771821e3b0f529d27a555f36662941bfb87e1fc"
+    },
+    "README.md": {
+      "bytes": 4906,
+      "sha256": "32e01ca48c73b7a02cae7357b8bc655b8eb68f0a201c9526a162fb9caa973850"
+    },
+    "review/BERICHT.txt": {
+      "bytes": 13777,
+      "sha256": "8b541f8c17e2e066ad37c107cd8e912e0520b08beed6ae0f4fccc469ee1bc2bb"
+    },
+    "review/check_final_review.py": {
+      "bytes": 11333,
+      "sha256": "d94dbdba581214ed9fb9e483592c4df5c353dba94ae0ef62751020903c217efa"
+    },
+    "review/GPT1_FINAL_REVIEW.json": {
+      "bytes": 110068,
+      "sha256": "5ed6ebc10dafb77dcb19347f964859a84680ffda1a9899e685d377e5ee52e38e"
+    },
+    "review/MANIFEST.json": {
+      "bytes": 21331,
+      "sha256": "22ffd6c5f23e11963b7e40271d6ca5d14027714613f2c4815d925e560ae86fd6"
+    },
+    "review/SOURCES.json": {
+      "bytes": 3082,
+      "sha256": "dd628b0a3defa96adcfee7e96c9da0b00ea20f2952ddf0383ad5dcee75e72746"
+    },
+    "test_controls.py": {
+      "bytes": 3579,
+      "sha256": "34e11c8e146bd7e11901fe42b5d650c23dc283a9d4fb9f74726084ea72863fcb"
+    },
+    "verify_publication.py": {
+      "bytes": 7841,
+      "sha256": "496b6e6fc7a48d76eacb126d8d561ca96e03cb0fb0c9972b36757b5cf02dde48"
+    }
+  }
+}
