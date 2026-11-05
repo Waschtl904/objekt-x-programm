@@ -1,0 +1,100 @@
+{
+  "Fhat_raw_witness_first_coordinate_interval": [
+    "1209119185024150390335708640451576634502309972932976112560255678296647289525465785362561663662638549/2500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "2418238370048300780671417280903153269004619945865952225120511356593294579050931662477721237740367117/5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+  ],
+  "algebra_controls": {
+    "countermodels_are_Object_X_data": false,
+    "fixed_weight_countermodels": [
+      {
+        "A12": "1",
+        "C_norm_squared": "2",
+        "E0": "2",
+        "E_new": "3/2",
+        "F": "1",
+        "K0": "3/2",
+        "K_new": "7/4",
+        "beta": "2",
+        "gamma": "1",
+        "margin": "1/4",
+        "sign": "1",
+        "true_Schur": "1/2"
+      },
+      {
+        "A12": "1",
+        "C_norm_squared": "2",
+        "E0": "2",
+        "E_new": "7/2",
+        "F": "1",
+        "K0": "3/2",
+        "K_new": "7/4",
+        "beta": "2",
+        "gamma": "-1",
+        "margin": "-7/4",
+        "sign": "-1",
+        "true_Schur": "1/2"
+      }
+    ],
+    "joint_line_identities": true,
+    "nonzero_budget_slope_checked": true,
+    "symmetric_update_identity": true
+  },
+  "candidate_selected": false,
+  "checked_pair_shapes": {
+    "Fhat": [
+      12,
+      12
+    ],
+    "G_W": [
+      12,
+      12
+    ],
+    "Phi_star_h": [
+      191,
+      12
+    ],
+    "T": [
+      12,
+      12
+    ],
+    "bare_F_J_pairs": [
+      96,
+      12
+    ],
+    "high_Gram": [
+      12,
+      12
+    ],
+    "high_cross_models": [
+      287,
+      12
+    ]
+  },
+  "data_gap_scope": "stored old residual features; no impossibility from full source definitions claimed",
+  "decision": "NO_DATA_SUPPORTED_RESPONSE_CANDIDATE",
+  "general_response_class_excluded": false,
+  "inherited_frozen_response_exclusion_gap": "122238649724206895863662037647985710739630419944123622342807426677326725129/100000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "milestone_4_closed": false,
+  "new_RL": false,
+  "new_energy_data_for_one_fixed_line": [
+    "beta=<Dv,V Dv>",
+    "gamma=Re<Dv,V r0>"
+  ],
+  "new_operator_evaluations": false,
+  "new_quadrature": false,
+  "new_weighted_model_and_integration_error_control_required": true,
+  "old_certifiers_rerun": false,
+  "parity": "even",
+  "positive_transition_claimed": false,
+  "raw_physical_W_norm_squared_interval": [
+    "250000000000000001038676037891954465706132658738387320338786455362166593873862670905340278867404711967887510148979466487/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "3906250000000000016229313092061788526658322792787301880293538365033853029279104364435617221526753988868473913325826357/3906250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+  ],
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "same_residual_pairs_in_K_pilot": true,
+  "same_witness_and_budget_in_Schur_refinement": true,
+  "scaling_variants_99_100_and_101_100_remain_open": true,
+  "selection_checklist_item_completed": false,
+  "source_commit": "2e8e86770c0fde6ef5ea69b0178775eab34d5de4",
+  "status": "AUTHOR_DERIVED"
+}
