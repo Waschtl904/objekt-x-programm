@@ -1,0 +1,18 @@
+{
+  "bindings": "PASS",
+  "physical_replays": 0,
+  "run_status": {
+    "status": "LAUF_BEENDET",
+    "automatic_retry": false,
+    "elapsed_seconds": 518.11,
+    "last_stage": {
+      "stage": "RATIONALE_SCHLUSSKONTROLLE",
+      "new_source_passes": 1
+    }
+  },
+  "new_physical_source_passes": 1,
+  "external_GPT1_result_review": "OFFEN",
+  "rational_replay": "PASS",
+  "mathematical_decision": "EINSCHLIESSUNG_UNENTSCHIEDEN",
+  "actual_Schur_positivity": "OFFEN"
+}

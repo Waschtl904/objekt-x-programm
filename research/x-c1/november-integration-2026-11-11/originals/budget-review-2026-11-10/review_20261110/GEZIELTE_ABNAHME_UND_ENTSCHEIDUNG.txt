@@ -1,0 +1,310 @@
+Objekt X — gezielte Abnahme und korrelierte Budgetnachschärfung
+10. November 2026 · GPT1 mit paralleler GPT2-Datenprüfung
+Interne Autorenprüfung unter den gebundenen H1–H4; externe Prüfung offen.
+
+ERGEBNIS
+
+Die konkrete Restbrücke des Originalpakets vom 9. November ist im unten
+abgegrenzten Umfang bestätigt. Zugleich ist eine zusätzliche Verbesserung
+der alten Bankhülle tatsächlich ausgeführt: primitive direkte Paarungsfehler
+werden vor der alten Diagonalmajorisierung gemeinsam kontrahiert.
+Die übrigen 34 Fehlerpositionen bleiben unverändert.
+
+Damit ist jetzt H=D_k−J_K>0 uniform zertifiziert. Das zuvor eigenständige
+Budgethindernis ist für diesen Zweiraumvergleich beseitigt. Eine vollständig
+physische Restoberform ist weiterhin nicht zertifiziert.
+
+Aus derselben Schlussmatrix folgt die konkrete hinreichende Kapazität
+
+  0 <= Rhat <= diag(0.000006051814, 0.1)  =>  H−Rhat>0.
+
+Die Ungleichungen zwischen Matrizen sind Loewner-Ungleichungen. Die Aussage
+verlangt keine diagonale tatsächliche Restmatrix; auch ihre Mischterme sind
+zulässig, sofern die gemeinsame Formordnung gilt. Dies ist ein nachgewiesenes
+Budget, kein bereits erreichter Restpreis und kein Auftrag, eine Hilfskappe
+zu erzeugen. Andere gemeinsame Restformen können der direkten Schlussmatrix
+ebenfalls genügen.
+
+1. GELESENER ORIGINALSTAND
+
+Original: Objekt-X-Analytischer-Abschlussversuch-2026-11-09.zip
+Bytes: 1124781
+SHA256: bb969c4a364d8c44d1d5ac4d931636e1ca74c4da1fa4a93d198c8a7806424c90
+
+CRC und alle 30 Dateibindungen des internen Manifests sind bestätigt.
+Das Original wurde nicht geändert. ANALYTISCHE_BRUECKE.txt, die numerischen
+Ergebnisse, nativen Radien, Datenzuordnung und einschlägigen Domänen- und
+Metrikbelege wurden gezielt gelesen. Die allgemeine Projektionsalgebra wurde
+nicht erneut als eigener Arbeitsauftrag geprüft.
+
+Für die neue Direktfehlerkontraktion waren konkret gebundene Eingänge des
+Richtungsnachweises vom 1. November sowie die rationale erste 109er-Spalte
+nötig. Diese ausgewählten Originaldateien und ihre Hashbindungen liegen
+dem neuen Prüfpaket bei. Es wird kein vollständiges älteres Archiv verlangt.
+GitHub wurde in diesem Arbeitsblock weder abgefragt noch verändert; eine
+Integration des neuen Ergebnisses auf main wird nicht behauptet.
+
+2. GEZIELTE ABNAHME DER RESTBRÜCKE
+
+Es gelten die Definitionen des Originals: A=3log(2)/2, a=log(3), gerades
+Hilbertmaß 2dx, d=19/10, ganzer hoher Raum ab Grad384 und das GANZE B0-Modell.
+Insbesondere ist die hohe Antwort keine endliche Hochmodenabschneidung.
+
+Die gespeicherte niedrige Lösung und die ganzen gespeicherten Feldformeln
+liefern
+ k_i=S_H Theta g_i/d+D zeta_i,
+ D=(Phi−S_H B0*/d)C,
+ beziehungsweise
+ k_i=Phi x_i+M P_H M*(g_i−Q8,160 Phi x_i)/d.
+M und M* sind die schrägen Momentkarten des Originals. Die Halbintervall-
+Faktoren sind konsistent: M*r=r−m int(r)/j ist mittelwertfrei; die Formel
+für MM* folgt mit denselben Integralen. Es wird nicht M mit einer
+orthogonalen Projektion verwechselt.
+
+Der kritische Schalenübergang ist eine beschränkte schwache Schnittkarte.
+Sein direkter Gammaanteil wird durch den halben Carlemanoperator mit Norm
+pi/2 kontrolliert, die reflektierten und regulären Anteile sind beschränkt,
+die Primverschiebungen komprimierte Translationen. Im Momentterm steht
+die Paarung <Q8^np m,k_i> gegen eine feste L2-Funktion. Eine starke
+A9-Wirkung auf k_i wird weder vorausgesetzt noch nachträglich behauptet.
+
+Die ganze Schnittcap100 kann im hier geraden Fall aus den mitgelieferten
+Domänenbelegen konkret abgesichert werden. Dort gelten ||G_pure||<15,
+||Q8^np m||<300, mu>1 und nu=int_A^a m²<0.1. Daher
+ ||lambda/mu||_(X*)²=nu/(2mu²)<1/20,
+ ||G8||_(L2 -> W-dual)<15+300/sqrt(20)<83<100.
+W>=X und die exakte W-Projektion auf T vergrößern diese Dualnorm nicht.
+Die niedrige Kraftcap10 ist weiterhin der ausdrücklich übernommene uniforme
+H3-Vertrag. Sie wird nicht aus einem einzelnen Richtungstest gefolgert.
+Unter dieser Bindung bleibt der abgeleitete niedrige T-Transport <16 gültig.
+
+Für t_i=f_R,i−H* k_i sind die vier Karten des Originals anwendbar:
+
+ Karte   Bild                                           Ziel / Metrik
+ F       pF_i                                           R12 / Knew^-1
+ T       pT_i−a_mix* Knew^-1 pF_i                        T*  / R_L
+ P       pJ_i−a_J* Knew^-1 pF_i                          R84 / P
+ S       pB_i−Y_F* pF_i−Y_J* pJ_i                        R12 / Cg^-1
+
+pT_i=P_T^W W^-1(fT_raw,i−G8* k_i) ist eine ganze Schalenfunktion bzw.
+ein ganzer Kovektor. F und J verwenden die tatsächlichen alten gelifteten
+Funktionen mit ihren Kernanteilen. pB verwendet die rohen äußeren Kovektoren;
+ein zusätzlicher W-Faktor wäre falsch. Die Domäne ist die im Original
+genannte formzulässige Restklasse mit verschwindendem Kernrest und zusätzlicher
+L2-Darstellung der Schalenquelle. Für beliebige abstrakte Formdualquellen
+ohne diese Darstellung wird keine Erweiterung beansprucht.
+
+Die Wiederverwendung von sigma0 ist korrekt:
+ sigma0=t1−s0,
+ eta_i=t_i−lambda_i t1+lambda_i sigma0.
+Alle vier Karten verwenden dieselben drei Funktionale und dieselben
+Koeffizienten. Für feste rationale lambdabar gilt
+ W_j=[A_j t1,A_j t2,A_j sigma0],
+ Cbar=[[1−lambdabar1,−lambdabar2],[0,1],[lambdabar1,lambdabar2]],
+ H_j=W_j Cbar.
+Die physische Abweichung ist genau Delta H_j=Delta W_j Cbar. Wenn
+ Delta W_j* M_j Delta W_j<=E_Wj,
+dann gilt Delta H_j* M_j Delta H_j<=Cbar* E_Wj Cbar. Signierte Modellkreuz-
+terme bleiben vor einer Normmajorisierung erhalten. Nur Spaltennormen e_i
+berechtigen im Allgemeinen zu 3diag(e_i²), nicht zur Rang-eins-Matrix
+(e_i e_j). Das Original benennt diese Unterscheidung richtig.
+
+Rbar=R+tau(lambda−lambdabar)(lambda−lambdabar)*>=R ist ebenfalls korrekt.
+Der im Original bezahlte Projektionsüberpreis darf bei einer bereits direkt
+für Rbar erzeugten Oberform nicht nochmals addiert werden. Eine alternative
+affine Variationsform Vbar+Rbar ist möglich, wurde hier aber nicht als
+zweite numerische Methode eingesetzt.
+
+Fehlertransport: Der Quellfehler im hohen Anteil, 14e_v+r_zeta im niedrigen
+Anteil und separate Funktionssynthesefehler bleiben getrennte Positionen.
+Für F/P/S sind die im Original angegebenen gemeinsamen Gegenbilder V_Q,H_Q
+mit physischen Obergramen nötig. Die P-Kopplungsabweichung muss mit dem ganzen
+physischen F-Rest multipliziert werden; die S-Karte benutzt dieselben B/Y-
+Bindungen. Projektions-, Moment-, Gamma-, Bare-/P0-, Zweig-, Endstreifen-,
+Speicher- und Metrikfehler aus §5 des Originals dürfen nicht entfallen.
+Die lokalen R_L-Preise bleiben lokal. Für den Gesamtvergleich gelten die
+korrigierten Faktoren25/21,10 und11/10; die historischen20/19- bzw.
+globalen5/21-Schlüsse werden nicht übernommen.
+
+Abnahmegrenze: Dies bestätigt die expliziten Karten und ihren Fehlervertrag.
+Es bestätigt KEINE bereits numerisch eingeschlossene gemeinsame F/T/P/S-
+Oberform. Insbesondere decken die 17 nativen Kernstücke die anschließende
+alte Schale A<x<a noch nicht als gespeichertes, fehlerbezahltes Funktionsmodell
+ab. Die alten 618 Normzellen liefern keine neuen signierten Kreuzgrame.
+
+3. NEGATIVER BANKPUNKT — BESTÄTIGTER UND BEGRENZTER BEFUND
+
+Für die ALTE Exporthülle −E<=Delta M<=E ist Delta M=−E zulässig.
+Aus genau dieser einen Matrix werden b12=t^T M e, V0=−t^T M t,
+X11=−e^T M e und a=2b12−V0 gewonnen. Sie erfüllen die exportierten
+Skalarintervalle, tau>0 und X>0. Gemeinsame Variablen werden nicht kopiert.
+
+Der neue rationale Nachprüfer verstärkt den ursprünglichen Mittelpunktbefund:
+bei diesem festen Bankpunkt gilt über ALLE bisherigen b14/X12/X22-Intervalle
+ det H < −0.00001863719,
+und über b14 zusammen mit den nachgeschärften X12/X22-Intervallen
+ det H < −0.00001867066.
+Hierzu werden affine Grenzen für H12 und eine sichere Obergrenze für H22
+gebildet; die resultierende Determinantenobergrenze ist strikt negativ.
+
+Erfüllt sind die exportierte Loewner-Hülle und die ausdrücklich geprüften
+Skalar-/Gramidentitäten. NICHT bewiesen ist eine physische Realisierung
+dieses Punktes durch die tatsächlichen gemeinsamen Quellen, B0-Wirkungen,
+Paarungs- und Liftfehler. E ist eine Majorante, keine vollständige Darstellung
+dieser primitiven Fehlermenge. Der Punkt ist kein physischer Gegenzeuge.
+
+Die zusätzliche primitive Bindung aus Abschnitt4 schließt ihn jetzt aus.
+Dies ist ein konkretes Beispiel der vom Nutzer angesprochenen Möglichkeit:
+eine stärkere gemeinsame Hülle beseitigt den Bankpunkt ohne Viertelung
+sämtlicher alten Eintragsradien.
+
+4. GENAU EIN VERBESSERUNGSANSATZ — AUSGEFÜHRT
+
+Ansatz: Die gespeicherten direkten Modellpaarungsintervalle werden auf die
+benötigten gemeinsamen t/e-Koordinaten kontrahiert, BEVOR ihre Radien durch
+eine globale Diagonalform ersetzt werden. Weitere Young-Parameter oder
+physische Fehlerfamilien wurden nicht optimiert.
+
+Der alte Erzeuger verwendet E_D=diag(sum_j rad(D_ij)). Auf der festen
+Antwort kostet dieser Schritt 1.5720911846715464e−5, etwa57.06% von E[t,t].
+Es handelt sich um arithmetische Modellpaarungsradien; die zusätzlich
+bezahlten physischen direct_D/direct_K-/Barepreise bleiben stehen.
+
+Mit t=(w,−1), e=letzter Einheitsvektor und D_gg=0 exakt setze
+ alpha=w^T Delta D108 w, beta=w^T Delta d_g.
+Dann gilt
+ [t,e]^T Delta D [t,e]=[[alpha−2beta,beta],[beta,0]],
+ Delta a=alpha, Delta b12=beta, Delta V0=2beta−alpha, Delta X11=0.
+Aus den ORIGINALEN Eintragsradien folgt gerichtet
+ |alpha|<=4.402922107e−13,
+ |beta| <=3.802678498e−12.
+Es werden dieselben alpha/beta in allen vier Größen eingesetzt.
+
+Nur der alte direkte Charge wird aus dem alten exportierten E-Pullback
+herausgenommen. Der unveränderte gemeinsame übrige Block ist ungefähr
+ Erest=[[1.1831186274126711e−5,−6.004728086047126e−11],
+        [−6.004728086047126e−11,1.4011955707496322e−11]].
+Die Subtraktion ist durch die additive Originalbuchung begründet, nicht
+allein durch eine nachträgliche Positivitätsprüfung. Das Modellzentrum ist
+unverändert. Die übrigen34 Positionen und Exportrundung bleiben bezahlt.
+Die vollständige Herkunftstabelle einschließlich arithmetischer, physischer
+und gemischter Positionen steht in gpt2/LEDGER_PROVENANCE.json; die Erläuterung
+in gpt2/HERKUNFT_UND_NEUER_FEHLERBLOCK.txt.
+
+Die wichtige physische B/B0-Position≈8.951576905e−6 wird ausdrücklich
+nicht gestrichen. Aus fertigen Young-Summen allein könnten ihre primitiven
+Kreuzbeziehungen nicht zurückgewonnen werden. Dieser zusätzliche Ansatz
+wurde weder vorausgesetzt noch als weitere Diagnoserunde begonnen.
+
+5. ABHÄNGIGKEITSERHALTENDER BUDGETNACHWEIS
+
+Setze k=13619/125000, D_k=[[d,e0],[e0,f]], b=b12, c=b14, x=X11,
+y=X12,z=X22, V=V0 und
+ tau=2b−V−x, delta=V−b, bk=c−kb, z2=bk−y.
+Der benutzte affine symmetrische Block ist
+
+ B3(Rhat)=[[d−V−R11,e0−bk−R12,delta],
+           [e0−bk−R12,f−z−R22,z2],
+           [delta,z2,tau]].
+
+Sein Schurkomplement ist H−Rhat. Der neue gemeinsame Fehler wird als
+ alpha/beta-Block plus Delta Mrest eingeschlossen, −Erest<=Delta Mrest<=Erest.
+Für den letzten Teil genügen die konservativen Eintragsgrenzen
+ |Delta Mrest_ii|<=Erest_ii,
+ |Delta Mrest_12|<=sqrt(Erest_11 Erest_22).
+Der Übergang zur größeren Eintragsbox verliert Schärfe, ist aber für einen
+positiven Nachweis zulässig. Er löst die alpha/beta-Bindung nicht auf.
+Die neuen X12/X22-Intervalle und das ganze alte b14-Intervall bleiben stehen.
+
+Alle256 Ecken dieser primitiven Box wurden exakt rational geprüft. Bei R=0
+sind tau, der erste Schurhauptminor und det B3 an jeder Ecke strikt positiv.
+Kleinste Eckwerte, gerundete Anzeige:
+ tau_min =3.63870966836221421883…,
+ erster Schurzähler =0.000513247707445529259…,
+ det B3 =0.000132042236132401402… .
+Jeder innere Block ist eine konvexe Kombination positiver Eckblöcke.
+Damit ist B3>0 und folglich H>0 für die ganze eingeschlossene Fehlermenge.
+Das ist kein bloßer Mittelpunkt- oder Stichprobentest.
+
+Für den vom Nutzer genannten zweiten Diagonalbetrag R22=0.1 ist der
+(2,3)-Unterblock an allen Ecken positiv. Der exakte Schurquotient liefert
+aus DENSELBEN Ecken die kleinste zulässige erste Diagonale
+ rho11=0.00000605181435318536918762… .
+Die abgerundete rationale Grenze0.000006051814 liegt strikt darunter.
+So folgt die am Anfang angegebene uniforme tragbare Resthülle. Es gab
+keine Suche über Hilfskappen oder Genauigkeitsparameter.
+
+Die Nutzerkombination E/4 und diag(1e−5,0.1) ist separat als BEDINGTE
+Aussage bestätigt:64 Ecken einer sicheren Eintragsbox sind positiv.
+Eine Erreichbarkeit von E/4 wird daraus nicht gefolgert. Die tatsächlich
+abgeleitete neue Hülle ist keine E/4-Hülle. Für diag(1e−5,0.1) liefert
+unsere konservative neue Eintragsbox noch keinen positiven Nachweis.
+Ein negativer Eckwert dieser größeren Box beweist weder Unmöglichkeit
+unter der genaueren Loewner-Hülle noch physische Nichtpositivität.
+
+6. ZUORDNUNG DER BEIDEN q-RADIUSANGABEN
+
+Es handelt sich um dieselbe vorconditionierte q-Lösung und verschiedene
+Normen ihres arithmetischen Radiusvektors, nicht um widersprechende Revisionen:
+
+                       alt                       neu
+ Radius-L1             0.003885424773982876…      3.563248620382093…e−86 <1e−80
+ Radius-L2             0.003588290350437657…      5.699268531536063…e−87 <6e−87
+
+Die neue L2-Grenze folgt exakt rational aus der Summe der191 quadrierten
+nativen Radien. Es wurden keine Momente und keine q-Kräfte erneut erzeugt.
+Die physischen X-Fehler von ungefähr1.4e−15 bleiben davon unberührt.
+Diese arithmetischen Radien sind keine Normen des ganzen physischen Restes.
+
+7. ANSCHLUSS DER VOLLSTÄNDIGEN RESTOBERFORM UND ENTSCHEIDUNG
+
+Für G_j=H_j* M_j H_j der gemeinsamen festen Restspalten aus Abschnitt2 gilt
+unter der korrigierten ganzen Vergleichsmetrik
+ R <= Rbar <= (25/21)(G_F+10G_T+(11/10)G_P+G_S).
+Hier sind es die GANZEN physischen Grame, nicht bloße Modellmittelpunkte.
+Die gleiche primitive Quellen- und Fehlerdarstellung muss vor der
+Gram-/Young-Majorierung durch Cbar transportiert werden.
+
+Genau an diesem Anschluss fehlt noch der quantitative Nachweis: weder
+die ganzen gemeinsamen Modellgrame noch sämtliche E_Wj sind vorhanden.
+Insbesondere fehlen
+ - die alten Schalenabschnitte A<x<a beider neuen Quell-/Antwortkombinationen
+   mit ihren Prim-/Logzweigen und vollständigen End-/Liftpreisen;
+ - die signierten gemeinsamen Kreuzgrame mit dem alten ganzen sigma0;
+ - die direkten neuen q-Bare-/P0-/äußeren Paarungen und ihre physischen Preise;
+ - daraus die gemeinsamen F/T/P/S-Fehlerformen einschließlich Kopplungs-
+   und Metrikmodellfehlern.
+
+Vorhandene niedrige Momente, Kraftvektoren und die Cap16 kontrollieren
+konkrete Teiltransporte. Sie geben keine obere Schranke für die noch
+unbekannte ganze Modellrestnorm. Alte Normzellen ersetzen ebenfalls keine
+signierten Kreuzgrame. Deshalb ist weder die Aufnahme in die oben bewiesene
+Diagonalkapazität noch ein positiver allgemeiner B3(Rhat)-Abschluss aus
+den vorhandenen Daten gezeigt. Eine garantierte Gesamtfehlerschranke oder
+ein belastbarer begrenzter Erzeugungsaufwand wird nicht erfunden.
+
+Entscheidung: Der Budgetteil des Ansatzes ist erfolgreich abgeschlossen.
+Die Gesamtmachbarkeit bleibt an der VOLLSTÄNDIGEN gemeinsamen Restoberform
+unentschieden. Es wird kein physischer Erzeugungsauftrag vorgeschlagen und
+keine automatische Folgeauswertung begonnen. Für eine spätere Entscheidung
+ist genau die vorstehende ganze Gram-/Fehlerabschätzung nötig; eine weitere
+allgemeine Restbrücke oder bloße q-Nachschärfung ist nicht der offene Punkt.
+
+Die linearen Transportkarten und die primitive Direktkontraktion lassen
+sich spaltenweise verwenden. Dieser Zahlenbeweis betrifft aber nur die
+gebundene Antwort und Grad12/14. Gemeinsame Kreuzdaten und Fehlerformen
+für die übrigen Quellen sind damit nicht erzeugt; Punkt4 und die gesamte
+Zwölferfamilie bleiben offen.
+
+8. NACHPRÜFUNG
+
+check_scope.py: alte Gegenbelegung über beide Intervallstände, bedingtes
+E/4-Ziel und neue native L1/L2-Radien; ausschließlich rationale Arithmetik.
+gpt2/check_direct_block.py: unabhängige rationale Direktkontraktion.
+check_refined_budget.py: genau der neue korrelierte Schlussblock mit
+vollständig unveränderten übrigen Fehlerpreisen und abgeleiteter Restkapazität.
+gpt2/direct_block_recombine.py: gezielte Rekonstruktion des direkten Terms
+aus ausgewählten Originaleingängen, python-flint0.9.0 bei1024Bit.
+
+Neue physische Integrale:0. Neue Inversionen:0. Neue q-Rekombinationen:0.
+Neue Testräume/Antworten/Hilfskappenserien:0. Keine weitere Rechnung läuft.

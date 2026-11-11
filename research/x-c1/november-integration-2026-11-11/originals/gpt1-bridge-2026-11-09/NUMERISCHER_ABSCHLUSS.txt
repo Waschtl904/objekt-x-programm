@@ -1,0 +1,104 @@
+Objekt X — Ergebnis des analytischen Arbeitsblocks, 9. November 2026
+
+Die analytische Arbeit hat einen konkreten Einschließungsverlust beseitigt.
+Ein positiver Zweiraumvergleich ist weiterhin nicht zertifiziert.
+
+TATSÄCHLICH AUSGEFÜHRT
+
+191 Trägermomente wurden aus 22 bereits gespeicherten Primitivschlüsseln
+rekombiniert. Dabei blieben Präzision 3328 Bit, Gamma160-Modell, Quellen,
+Zellzweige und alle übrigen physischen Fehler unverändert. 185 Felder
+benutzen die neue engere Trägerhülle, sechs die alte günstigere Hülle.
+Es gab keine neue Integration, keine neue Primitiveerzeugung und keine
+erneute 191er-Inversion. Die vorhandene inverse Matrix wurde multipliziert.
+
+Die q-Lösung hatte zuvor Radius-L1
+  0.00388542477398287622314.
+Nach der Rekombination beträgt er ungefähr
+  3.56324862038209289478e-86 <1e-80.
+Die neue Feldnormschranke steht in ANALYTISCHE_BRUECKE.txt §6 und in
+budget/carrier_recombination/CARRIER_NORM_PROOF.txt.
+
+Die vollständigen rationalen neuen physischen X-Endpunkte stehen in
+budget/carrier_recombination/SHARP_X_INTERVALS.json. Gröber nach außen:
+  X12 in [0.0257384336665869, 0.0257384336665900],
+  X22 in [0.6989685604434308, 0.6989685604434338].
+X11 bleibt gebunden unverändert. Die gesamten physischen X-Fehlerpreise
+sind weiterhin etwa 1.43e-15 bzw. 1.39e-15; sie wurden nicht gestrichen.
+
+Der aus der gespeicherten inversen Matrix rational bewiesene Wert
+  ||L_inverse||_F^2 <190.050593
+liefert ||L_inverse||<14. Zusammen mit dem uniformen T-Kraftpreis <16
+ist der niedrige physische Kerntransport je neue Quellspalte jetzt
+  <224*(1.164e-15)+16*(1e-80) <2.608e-13.
+Das ist NUR diese Fehlerposition. Es ist weder die Modellrestnorm noch
+die vollständige gemeinsame F/T/P/S-Restmajorante.
+
+FESTE PROJEKTIONSKOEFFIZIENTEN
+
+Die einmal fixierte rationale Kombination im selben K+span(u) ist
+  lambda_bar1 = 0.9999999999999885948953...,
+  lambda_bar2 = -0.007073882045444179026687... .
+Ihre exakten Brüche stehen in FIXED_PROJECTION_PRICE.json. Die vollständige
+physische Abhängigkeit erlaubt die sicheren Koeffizientenabweichungen
+  e_lambda1 <7.578e-6, e_lambda2 <1.319e-5.
+Aus R_bar=R+tau*(lambda-lambda_bar)(lambda-lambda_bar)^T folgt die rationale
+Spektralobergrenze des zusätzlichen Projektionspreises
+  tau_hi*(e_lambda1^2+e_lambda2^2)
+  =8.41911113261811793513...e-10 <8.420e-10.
+Diese Zahl ist ein Vergleich der beiden Restgrame, KEINE zusätzliche
+pauschale Buchung auf einer bereits vollständig für R_bar erzeugten Hülle.
+Wer R_bar direkt bezahlt, darf sie nicht nochmals addieren.
+
+BUDGET: DER BLOCKNACHWEIS BLEIBT OFFEN
+
+Die gemeinsame 109er-Abweichung M_phys=M_model-E liefert nach der
+Nachschärfung weiterhin
+  det(D_k-J_K) = -2.079033284201655...e-5 <0.
+Dabei werden a,b12,V0 und X11 aus EINER Matrixabweichung gewonnen;
+a=2b12-V0, tau>0, X>0 und die exportierten Skalarintervalle gelten.
+X12,X22 sind hierbei auf den neuen Mittelpunkten eingesetzt.
+Dies ist eine Gegenbelegung der exportierten gemeinsamen Fehlerhülle,
+kein Gegenzeuge gegen die tatsächliche physische Form.
+
+Die Mittelpunktmatrix ist diagnostisch ungefähr
+  [[0.000152883351404250, 0.022197233330477868],
+   [0.022197233330477868, 3.765511482055515]].
+Für eine gemeinsame PSD-Restmatrix R wäre in genau dieser Mittelpunkt-
+diagnose die zulässige Region
+  R22 < B22,
+  R11 < B11-(B12-R12)^2/(B22-R22), R>=0.
+Die signierte Mischkopplung R12 bleibt erhalten. Diese Region ist kein
+bereits physisch verfügbares Restbudget.
+
+Nach der ausgeführten X-Nachschärfung liefert der direkte 3x3-Block für
+R=0 die hinreichende robuste Bedingung
+  V0 <4.372718418232729741808... .
+Die gegenwärtige obere V0-Grenze ist ungefähr 4.372724503046212.
+Für eine nichtverschwindende Resthülle wäre weitere Reserve nötig.
+Eine tatsächlich erreichbare Nachschärfung der alten gemeinsamen E-Hülle
+auf diesen erforderlichen Umfang wurde hier nicht nachgewiesen.
+
+MACHBARKEITSENTSCHEIDUNG
+
+Die Funktionssynthese, die vier Restkarten und ein scharfer uniformer
+niedriger T-Transport sind hergeleitet; der bekannte Trägermomentverlust
+ist durch vorhandene Daten tatsächlich geschlossen. Es fehlen weiterhin
+die gemeinsamen ganzen Restgrame einschließlich neuer q-Bare-/P0-Paarungen
+und eine ausreichend scharfe gemeinsame Budgetfehlerhülle.
+
+Deshalb kein neuer physischer Erzeugungslauf und keine automatische Folge
+von Diagnoserechnungen. Der erreichte Stand verlangt eine methodische
+Neuentscheidung an der gemeinsamen Fehler-/Restmajorante. Er beweist
+weder physische Zweiraumpositivität noch ihr Scheitern.
+
+Die Transportformeln sind spaltenweise auf weitere Quellen übertragbar;
+ihre gemeinsamen Quellen-/Kreuzdaten und der äußere Anschluss fehlen
+weiterhin. Punkt 4 erhält dadurch keinen Abschlussstatus.
+
+PRÜFUNG
+
+Die Budget- und Projektionsrechnung verwendet exakte rationale Arithmetik.
+Die neue Momentrekombination verwendet die gebundenen nativen Arb-Bälle.
+GPT2 hat die neuen Restidentitäten und Normierungen gezielt gegengelesen;
+dies ist eine interne Gegenprüfung, keine externe mathematische Begutachtung.

@@ -15,7 +15,25 @@ an X, einschließlich der vollständigen geeigneten Testklasse, bleiben erhalten
 Weil-Positivität und die vollständige Konstruktion von Objekt X bleiben offen.
 Die projektintern hergeleiteten Ergebnisse sind zur externen Prüfung offen.
 
-## Aktueller Stand vom 1. November 2026
+## Aktueller Teilstand vom 11. November 2026
+
+Der [gebundene Forschungsstand vom 5.–11. November](research/x-c1/november-integration-2026-11-11/README.md)
+dokumentiert ein projektintern reproduziertes positives Budget und die
+**vollständige erste feste Restspalte**, gezielt abgenommen unter H1–H4 und
+den übernommenen physischen Verträgen. Der Ganzkernlauf bleibt unentschieden.
+Die vorhandene GPT1-Vorprüfung betrifft seinen Start; das später berichtete
+Ergebnisabnahmeoriginal fehlt im hier vorliegenden Bestand.
+
+**Zweite Restenergie und gemeinsamer Zweiraumabschluss bleiben offen.**
+`Qq <= 0,03518` ist nur eine hinreichende Zielschranke. Drei native
+Herkunftsbindungen bleiben ungeklärt; davon abhängige X12-/C2- und gemeinsame
+Budgetaussagen bleiben ausdrücklich bedingt. Die erste Spalte wird nicht
+weiter optimiert. Punkt 4, externe Begutachtung und Objekt X bleiben offen;
+kein neuer physischer Hauptlauf ist begründet. Checkliste weiterhin 3/10.
+
+Die frühere Forschung bleibt in den folgenden datierten Rückblicken erhalten.
+
+## Rückblick vom 1. November 2026
 
 Der [korrigierte Gradiententest](research/x-c1/fixed-24-certificate-exclusion-2026-11-01/README.md)
 schließt unter H1–H4 und den übernommenen physischen Verträgen die **gesamte

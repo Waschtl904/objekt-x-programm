@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "NOVEMBER-5-11-BOUNDED-RESEARCH-INTEGRATION",
+  "date": "2026-11-11",
+  "kind": "REDUCTION",
+  "strategic": false,
+  "local_only": true,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "H1–H4 und übernommene physische Quellen-, Form-, Operator- und Fehlerverträge; dokumentierter Teilstand, keine neue Satzpromotion.",
+  "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+  "negative_claim_boundary": "Keine negative physische Richtung und kein Ausschluss weiterer Kontrollwege.",
+  "depends_on": [],
+  "closes": [],
+  "opens": [],
+  "supersedes": [],
+  "does_not_claim": [
+    "Ganze zweite Restenergie oder Zweiraumabschluss.",
+    "Erreichbarkeit von Qq<=0.03518.",
+    "Geschlossene native Herkunft oder vorhandenes GPT1-Ergebnisabnahmeoriginal.",
+    "Abschluss von Punkt 4, Objekt X, RH oder externer Begutachtung."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/november-integration-2026-11-11/PROOF.md",
+    "sha256": "686645aacc4931c3354d92c50d8437b5586a21818fefc999dc72bfecefc306de"
+  }
+}

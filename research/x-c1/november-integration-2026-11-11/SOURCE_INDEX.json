@@ -1,0 +1,330 @@
+{
+  "integration_base": "eff257c6853c41179dbb0e99adfb699208473869",
+  "source_policy": "Unchanged original archive bytes and exact readable archive members; new explanation separate.",
+  "archives": [
+    {
+      "id": "gpt2-run-2026-11-05",
+      "target_kind": "GITHUB_RELEASE_ASSET",
+      "target": "release-assets/Objekt-X-GPT2-Ganzkern-Einzelpass-2026-11-05.zip",
+      "filename": "Objekt-X-GPT2-Ganzkern-Einzelpass-2026-11-05.zip",
+      "bytes": 245913425,
+      "sha256": "501ed63430ad88dae24006791ea1eaf55936d387061600dd9c1927395e79b90e",
+      "original_root": "Objekt-X-GPT2-Ganzkern-Einzelpass-2026-11-05"
+    },
+    {
+      "id": "gpt1-start-review-2026-11-05",
+      "target_kind": "GIT_FILE",
+      "target": "archives/Objekt-X-GPT1-Ganzkern-Vorpruefung-2026-11-05.zip",
+      "filename": "Objekt-X-GPT1-Ganzkern-Vorpruefung-2026-11-05.zip",
+      "bytes": 8298,
+      "sha256": "cec71cb0f581bc3326230106f3209e74bbc69fa34cfd1f09814bb54a2e9be5bd",
+      "original_root": ""
+    },
+    {
+      "id": "gpt1-bridge-2026-11-09",
+      "target_kind": "GIT_FILE",
+      "target": "archives/Objekt-X-Analytischer-Abschlussversuch-2026-11-09.zip",
+      "filename": "Objekt-X-Analytischer-Abschlussversuch-2026-11-09.zip",
+      "bytes": 1124781,
+      "sha256": "bb969c4a364d8c44d1d5ac4d931636e1ca74c4da1fa4a93d198c8a7806424c90",
+      "original_root": ""
+    },
+    {
+      "id": "budget-review-2026-11-10",
+      "target_kind": "GIT_FILE",
+      "target": "archives/Objekt-X-Gezielte-Abnahme-und-Budgetnachschaerfung-2026-11-10.zip",
+      "filename": "Objekt-X-Gezielte-Abnahme-und-Budgetnachschaerfung-2026-11-10.zip",
+      "bytes": 30905746,
+      "sha256": "19769a8e1e66aa6fa80116022f813c3dde1965e5c54b18d374580ef7fb5bb056",
+      "original_root": ""
+    },
+    {
+      "id": "gpt1-first-column-2026-11-11",
+      "target_kind": "GIT_FILE",
+      "target": "archives/Objekt-X-GPT1-Erste-Restspalte-2026-11-11.zip",
+      "filename": "Objekt-X-GPT1-Erste-Restspalte-2026-11-11.zip",
+      "bytes": 14436,
+      "sha256": "36a20575ba76a32c744f826b7603468b9de1b5ec5ddd6331f57adc8a3b3cfe54",
+      "original_root": "Objekt-X-GPT1-Erste-Restspalte-2026-11-11"
+    },
+    {
+      "id": "gpt2-first-column-2026-11-11",
+      "target_kind": "GIT_FILE",
+      "target": "archives/Objekt-X-GPT2-Abnahme-Erste-Restspalte-2026-11-11.zip",
+      "filename": "Objekt-X-GPT2-Abnahme-Erste-Restspalte-2026-11-11.zip",
+      "bytes": 36203,
+      "sha256": "d8c0edc6c92f38d78e72d814165c29426bb7e6f8417d5978d9a61822182c1641",
+      "original_root": "Objekt-X-GPT2-Abnahme-Erste-Restspalte-2026-11-11"
+    },
+    {
+      "id": "gpt2-second-column-2026-11-11",
+      "target_kind": "GIT_FILE",
+      "target": "archives/Objekt-X-GPT2-Zweitspaltenanschluss-und-Herkunftsluecke-2026-11-11.zip",
+      "filename": "Objekt-X-GPT2-Zweitspaltenanschluss-und-Herkunftsluecke-2026-11-11.zip",
+      "bytes": 84200,
+      "sha256": "34b6dfb12bc759b7971c5bed296914e1b72a407879e6e57d210fadf208a5610c",
+      "original_root": "Objekt-X-GPT2-Zweitspaltenanschluss-und-Herkunftsluecke-2026-11-11"
+    },
+    {
+      "id": "gpt2-data-map-2026-11-10",
+      "target_kind": "GIT_FILE",
+      "target": "archives/Objekt-X-GPT2-Statische-Restdatenkarte-2026-11-10.zip",
+      "filename": "Objekt-X-GPT2-Statische-Restdatenkarte-2026-11-10.zip",
+      "bytes": 45356,
+      "sha256": "49dbdfb08418a66fa7d3815a2f26cd96f4694bf3ef131fe97630ecb3d8337e8c",
+      "original_root": ""
+    }
+  ],
+  "readable_originals": [
+    {
+      "target": "originals/gpt2-run-2026-11-05/BERICHT.txt",
+      "archive_id": "gpt2-run-2026-11-05",
+      "member": "Objekt-X-GPT2-Ganzkern-Einzelpass-2026-11-05/BERICHT.txt",
+      "bytes": 7259,
+      "sha256": "4c1d139b31483eebcf434606c986c1869d31459cb145e7f82255d70dd24c42e8"
+    },
+    {
+      "target": "originals/gpt2-run-2026-11-05/GERICHTETE_KURZFASSUNG.json",
+      "archive_id": "gpt2-run-2026-11-05",
+      "member": "Objekt-X-GPT2-Ganzkern-Einzelpass-2026-11-05/GERICHTETE_KURZFASSUNG.json",
+      "bytes": 1677,
+      "sha256": "576de43e6f9d0206f1c1637f5ab649bad07bca43744afc60949121696a9aabdc"
+    },
+    {
+      "target": "originals/gpt2-run-2026-11-05/ERGEBNISMANIFEST.json",
+      "archive_id": "gpt2-run-2026-11-05",
+      "member": "Objekt-X-GPT2-Ganzkern-Einzelpass-2026-11-05/ERGEBNISMANIFEST.json",
+      "bytes": 2133,
+      "sha256": "39712fc110a27a1b9de00ae280a172ec473c1d4684fca47a6946a5c7745d4ca0"
+    },
+    {
+      "target": "originals/gpt2-run-2026-11-05/ERGEBNISPRUEFUNG.json",
+      "archive_id": "gpt2-run-2026-11-05",
+      "member": "Objekt-X-GPT2-Ganzkern-Einzelpass-2026-11-05/ERGEBNISPRUEFUNG.json",
+      "bytes": 485,
+      "sha256": "3c0de2910c7570f1e9db6a76517a679d788ee206be94fd952ff431a556ed2c5c"
+    },
+    {
+      "target": "originals/gpt2-run-2026-11-05/STARTBINDUNG.json",
+      "archive_id": "gpt2-run-2026-11-05",
+      "member": "Objekt-X-GPT2-Ganzkern-Einzelpass-2026-11-05/STARTBINDUNG.json",
+      "bytes": 2505,
+      "sha256": "67b5fe6d440123e9a770fde536fcc4d50a62fd0a0ffdf9676556b85f62b16c70"
+    },
+    {
+      "target": "originals/gpt2-run-2026-11-05/lauf/X_INTERVALLE.json",
+      "archive_id": "gpt2-run-2026-11-05",
+      "member": "Objekt-X-GPT2-Ganzkern-Einzelpass-2026-11-05/lauf/X_INTERVALLE.json",
+      "bytes": 4711,
+      "sha256": "47a5f49ee44c32dd34f02799fb6ae7a6733d06255e06188e331e4fe52002bbbd"
+    },
+    {
+      "target": "originals/gpt2-run-2026-11-05/lauf/LAUFSTATUS.json",
+      "archive_id": "gpt2-run-2026-11-05",
+      "member": "Objekt-X-GPT2-Ganzkern-Einzelpass-2026-11-05/lauf/LAUFSTATUS.json",
+      "bytes": 190,
+      "sha256": "5291b6cb3b239c4ca8d9a2a55730b3ec49ff66546d3bf2696c9c021bc0f8c446"
+    },
+    {
+      "target": "originals/gpt2-run-2026-11-05/PRUEFE_ERGEBNIS.py",
+      "archive_id": "gpt2-run-2026-11-05",
+      "member": "Objekt-X-GPT2-Ganzkern-Einzelpass-2026-11-05/PRUEFE_ERGEBNIS.py",
+      "bytes": 4894,
+      "sha256": "47a13764d010fd25af6986c53a6516e6870fc9a3dd8a095c832c71fc97fd0bf0"
+    },
+    {
+      "target": "originals/gpt1-start-review-2026-11-05/GPT1_ABNAHME.txt",
+      "archive_id": "gpt1-start-review-2026-11-05",
+      "member": "GPT1_ABNAHME.txt",
+      "bytes": 8557,
+      "sha256": "d06085f341fb0b0ac39d5b964c2348267605b621adc09230a889337293c27841"
+    },
+    {
+      "target": "originals/gpt1-start-review-2026-11-05/PRUEFERGEBNIS.json",
+      "archive_id": "gpt1-start-review-2026-11-05",
+      "member": "PRUEFERGEBNIS.json",
+      "bytes": 1787,
+      "sha256": "b6be7c618e1a64db32f8120b7ddaf6ece26184896c2b27a46c2184f5d31b6047"
+    },
+    {
+      "target": "originals/gpt1-start-review-2026-11-05/MANIFEST.json",
+      "archive_id": "gpt1-start-review-2026-11-05",
+      "member": "MANIFEST.json",
+      "bytes": 273,
+      "sha256": "8cb3d3aee470c38acde33c0fcea32deb954937837499ac4001f211e6f65ffc35"
+    },
+    {
+      "target": "originals/gpt1-start-review-2026-11-05/pruefe_gpt1.py",
+      "archive_id": "gpt1-start-review-2026-11-05",
+      "member": "pruefe_gpt1.py",
+      "bytes": 6184,
+      "sha256": "5f29981353efccb8a3eca20ff1b2d846bb980960883107354266baa0ef6904be"
+    },
+    {
+      "target": "originals/gpt1-bridge-2026-11-09/ANALYTISCHE_BRUECKE.txt",
+      "archive_id": "gpt1-bridge-2026-11-09",
+      "member": "ANALYTISCHE_BRUECKE.txt",
+      "bytes": 22009,
+      "sha256": "9a35369b19b4f4b69f4cd07bcecd7e292e7b7b4c27807e321984dcc273bba574"
+    },
+    {
+      "target": "originals/gpt1-bridge-2026-11-09/NUMERISCHER_ABSCHLUSS.txt",
+      "archive_id": "gpt1-bridge-2026-11-09",
+      "member": "NUMERISCHER_ABSCHLUSS.txt",
+      "bytes": 5072,
+      "sha256": "bf59edd19cbf5b3b2a4c94642c4370975040edc01987d9069bd4ee752a3e8202"
+    },
+    {
+      "target": "originals/gpt1-bridge-2026-11-09/MANIFEST.json",
+      "archive_id": "gpt1-bridge-2026-11-09",
+      "member": "MANIFEST.json",
+      "bytes": 4541,
+      "sha256": "dca0bb43213f5464108cfd4451d6e6b700b10dfa6482882f109a678f41740819"
+    },
+    {
+      "target": "originals/gpt1-bridge-2026-11-09/budget/DATENZUORDNUNG_TRANSPORTE.txt",
+      "archive_id": "gpt1-bridge-2026-11-09",
+      "member": "budget/DATENZUORDNUNG_TRANSPORTE.txt",
+      "bytes": 4374,
+      "sha256": "7a0bdfa3128e2458160bbf02561a0bafafab97201d4b10504067aeb00c984edd"
+    },
+    {
+      "target": "originals/budget-review-2026-11-10/review_20261110/GEZIELTE_ABNAHME_UND_ENTSCHEIDUNG.txt",
+      "archive_id": "budget-review-2026-11-10",
+      "member": "review_20261110/GEZIELTE_ABNAHME_UND_ENTSCHEIDUNG.txt",
+      "bytes": 16619,
+      "sha256": "26742b82b94019531ad510de412c92088d06f97e04dc64d1037c4d5e888da906"
+    },
+    {
+      "target": "originals/budget-review-2026-11-10/review_20261110/REFINED_BUDGET_RESULT.json",
+      "archive_id": "budget-review-2026-11-10",
+      "member": "review_20261110/REFINED_BUDGET_RESULT.json",
+      "bytes": 82625,
+      "sha256": "d6d5dcc2d07c271266aafef310b9a8cb86c6fa6a6300e7ae4b61b9f64364831b"
+    },
+    {
+      "target": "originals/budget-review-2026-11-10/review_20261110/gpt2/DIRECT_BLOCK_RESULT.json",
+      "archive_id": "budget-review-2026-11-10",
+      "member": "review_20261110/gpt2/DIRECT_BLOCK_RESULT.json",
+      "bytes": 66016,
+      "sha256": "86359656e85e981167e68fd2a09bafefec9267e2811aa4ec7f2e0a4f75e4f3ae"
+    },
+    {
+      "target": "originals/budget-review-2026-11-10/review_20261110/gpt2/LEDGER_PROVENANCE.json",
+      "archive_id": "budget-review-2026-11-10",
+      "member": "review_20261110/gpt2/LEDGER_PROVENANCE.json",
+      "bytes": 206906,
+      "sha256": "b77943c59001b8d5fd39a9dfafe5a8e3be3aced9ed78cf25a26d9a2dd8bb154e"
+    },
+    {
+      "target": "originals/gpt1-first-column-2026-11-11/HERLEITUNG.txt",
+      "archive_id": "gpt1-first-column-2026-11-11",
+      "member": "Objekt-X-GPT1-Erste-Restspalte-2026-11-11/HERLEITUNG.txt",
+      "bytes": 11861,
+      "sha256": "155fda2627484ca8397210ccb12c1508f5969cf8ab8bdea5138f1a6c2e72bae9"
+    },
+    {
+      "target": "originals/gpt1-first-column-2026-11-11/INPUT_BINDINGS.json",
+      "archive_id": "gpt1-first-column-2026-11-11",
+      "member": "Objekt-X-GPT1-Erste-Restspalte-2026-11-11/INPUT_BINDINGS.json",
+      "bytes": 1561,
+      "sha256": "a528cf3b2b3ba5c626356f26f6546e20175a827fc6badae70a79a4bcb0d29f8d"
+    },
+    {
+      "target": "originals/gpt1-first-column-2026-11-11/RESULT.json",
+      "archive_id": "gpt1-first-column-2026-11-11",
+      "member": "Objekt-X-GPT1-Erste-Restspalte-2026-11-11/RESULT.json",
+      "bytes": 6485,
+      "sha256": "8fdaddefcf85f9f9873d3e3a089431ffd809c54ddc734a63fd70ce5117861164"
+    },
+    {
+      "target": "originals/gpt1-first-column-2026-11-11/MANIFEST.json",
+      "archive_id": "gpt1-first-column-2026-11-11",
+      "member": "Objekt-X-GPT1-Erste-Restspalte-2026-11-11/MANIFEST.json",
+      "bytes": 763,
+      "sha256": "645e9aeec96ad37186ef902ab69776bf04e0cfbec2416f8d64ac40dee966bc4d"
+    },
+    {
+      "target": "originals/gpt2-first-column-2026-11-11/Objekt-X-GPT2-Abnahme-Erste-Restspalte-2026-11-11.txt",
+      "archive_id": "gpt2-first-column-2026-11-11",
+      "member": "Objekt-X-GPT2-Abnahme-Erste-Restspalte-2026-11-11/Objekt-X-GPT2-Abnahme-Erste-Restspalte-2026-11-11.txt",
+      "bytes": 8746,
+      "sha256": "fbc66a2960d883711123beda17207130af96c0d779f3890ba4fc516c24fe0766"
+    },
+    {
+      "target": "originals/gpt2-first-column-2026-11-11/Objekt-X-GPT2-Abnahme-Erste-Restspalte-2026-11-11.json",
+      "archive_id": "gpt2-first-column-2026-11-11",
+      "member": "Objekt-X-GPT2-Abnahme-Erste-Restspalte-2026-11-11/Objekt-X-GPT2-Abnahme-Erste-Restspalte-2026-11-11.json",
+      "bytes": 4267,
+      "sha256": "cdd6d178f80dac367aba8f533d333dbf2c90d0308e5c780cf6669d480a819374"
+    },
+    {
+      "target": "originals/gpt2-first-column-2026-11-11/INDEPENDENT_RESULT.json",
+      "archive_id": "gpt2-first-column-2026-11-11",
+      "member": "Objekt-X-GPT2-Abnahme-Erste-Restspalte-2026-11-11/INDEPENDENT_RESULT.json",
+      "bytes": 17027,
+      "sha256": "2b0792653126c58568a778884f3bf100b46e29b6117b24c3269ef67efe7113aa"
+    },
+    {
+      "target": "originals/gpt2-first-column-2026-11-11/scope_checks.json",
+      "archive_id": "gpt2-first-column-2026-11-11",
+      "member": "Objekt-X-GPT2-Abnahme-Erste-Restspalte-2026-11-11/scope_checks.json",
+      "bytes": 1615,
+      "sha256": "5fadeca97f760381ad36e6f6f0bbdb5bd6711ced50434a39378f59713a40e05c"
+    },
+    {
+      "target": "originals/gpt2-second-column-2026-11-11/Objekt-X-GPT2-Zweitspaltenanschluss-und-Herkunftsluecke-2026-11-11.txt",
+      "archive_id": "gpt2-second-column-2026-11-11",
+      "member": "Objekt-X-GPT2-Zweitspaltenanschluss-und-Herkunftsluecke-2026-11-11/Objekt-X-GPT2-Zweitspaltenanschluss-und-Herkunftsluecke-2026-11-11.txt",
+      "bytes": 9962,
+      "sha256": "954d3e2eb5cd7bb27f81a9b7e34100133165c32220337d48fa440b53f658508b"
+    },
+    {
+      "target": "originals/gpt2-second-column-2026-11-11/Objekt-X-GPT2-Zweitspaltenanschluss-und-Herkunftsluecke-2026-11-11.json",
+      "archive_id": "gpt2-second-column-2026-11-11",
+      "member": "Objekt-X-GPT2-Zweitspaltenanschluss-und-Herkunftsluecke-2026-11-11/Objekt-X-GPT2-Zweitspaltenanschluss-und-Herkunftsluecke-2026-11-11.json",
+      "bytes": 6958,
+      "sha256": "f4e22e400d5a45d04c7974c5a641b9cf36d972a09d99b78a5d2348163e989e3c"
+    },
+    {
+      "target": "originals/gpt2-second-column-2026-11-11/SECOND_SCALAR_RESULT.json",
+      "archive_id": "gpt2-second-column-2026-11-11",
+      "member": "Objekt-X-GPT2-Zweitspaltenanschluss-und-Herkunftsluecke-2026-11-11/SECOND_SCALAR_RESULT.json",
+      "bytes": 16592,
+      "sha256": "61a9e27fd3c864c8c9ca6d54f535a7b0317148900978d30dd82d5ee0844f6dc4"
+    },
+    {
+      "target": "originals/gpt2-second-column-2026-11-11/NATIVE_BINDING_RESULT.json",
+      "archive_id": "gpt2-second-column-2026-11-11",
+      "member": "Objekt-X-GPT2-Zweitspaltenanschluss-und-Herkunftsluecke-2026-11-11/NATIVE_BINDING_RESULT.json",
+      "bytes": 11662,
+      "sha256": "74492c35eb92e7b469509621feb55aabc413a6e9ae97502e9ddb587fb56cd5fe"
+    },
+    {
+      "target": "originals/gpt2-data-map-2026-11-10/Objekt-X-GPT2-Statische-Restdatenkarte-2026-11-10.txt",
+      "archive_id": "gpt2-data-map-2026-11-10",
+      "member": "Objekt-X-GPT2-Statische-Restdatenkarte-2026-11-10.txt",
+      "bytes": 13708,
+      "sha256": "a26730c5d42725e37b6128b5b85cc2b7386b55bab5d9407cc8a37406921e394e"
+    },
+    {
+      "target": "originals/gpt2-data-map-2026-11-10/Objekt-X-GPT2-Restdaten-Pruefakte-2026-11-10.json",
+      "archive_id": "gpt2-data-map-2026-11-10",
+      "member": "Objekt-X-GPT2-Restdaten-Pruefakte-2026-11-10.json",
+      "bytes": 218299,
+      "sha256": "7df797ff3671439d82c74394aa702dca7718cc4843db254229601f9f30cf3bba"
+    }
+  ],
+  "missing_originals": [
+    {
+      "filename": "Objekt-X-GPT1-Ergebnisabnahme-GPT2-Ganzkern-2026-11-05.zip",
+      "reported_sha256": "52fd67cdaf5586b421fc32230b6f03f445e51705d492cba9b91ec788cedd59e7",
+      "status": "REPORTED_NOT_AVAILABLE_NOT_RECONSTRUCTED"
+    },
+    {
+      "filename": null,
+      "description": "Eigenständiger neuer GPT1-Nachtrag zur zweiten Spalte und quantitativ begründeter ganzer Qq-Weg",
+      "status": "NOT_SUPPLIED_NOT_RECONSTRUCTED"
+    }
+  ]
+}

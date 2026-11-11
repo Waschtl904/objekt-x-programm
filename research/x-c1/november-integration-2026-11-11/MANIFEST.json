@@ -1,0 +1,217 @@
+{
+  "package": "november-integration-2026-11-11",
+  "files": {
+    ".gitattributes": {
+      "bytes": 49,
+      "sha256": "577ed490d22b12ab4bcff11a7e07839c6d1559cfb729b7d07cc6c03a84c5e498"
+    },
+    "archives/Objekt-X-Analytischer-Abschlussversuch-2026-11-09.zip": {
+      "bytes": 1124781,
+      "sha256": "bb969c4a364d8c44d1d5ac4d931636e1ca74c4da1fa4a93d198c8a7806424c90"
+    },
+    "archives/Objekt-X-Gezielte-Abnahme-und-Budgetnachschaerfung-2026-11-10.zip": {
+      "bytes": 30905746,
+      "sha256": "19769a8e1e66aa6fa80116022f813c3dde1965e5c54b18d374580ef7fb5bb056"
+    },
+    "archives/Objekt-X-GPT1-Erste-Restspalte-2026-11-11.zip": {
+      "bytes": 14436,
+      "sha256": "36a20575ba76a32c744f826b7603468b9de1b5ec5ddd6331f57adc8a3b3cfe54"
+    },
+    "archives/Objekt-X-GPT1-Ganzkern-Vorpruefung-2026-11-05.zip": {
+      "bytes": 8298,
+      "sha256": "cec71cb0f581bc3326230106f3209e74bbc69fa34cfd1f09814bb54a2e9be5bd"
+    },
+    "archives/Objekt-X-GPT2-Abnahme-Erste-Restspalte-2026-11-11.zip": {
+      "bytes": 36203,
+      "sha256": "d8c0edc6c92f38d78e72d814165c29426bb7e6f8417d5978d9a61822182c1641"
+    },
+    "archives/Objekt-X-GPT2-Statische-Restdatenkarte-2026-11-10.zip": {
+      "bytes": 45356,
+      "sha256": "49dbdfb08418a66fa7d3815a2f26cd96f4694bf3ef131fe97630ecb3d8337e8c"
+    },
+    "archives/Objekt-X-GPT2-Zweitspaltenanschluss-und-Herkunftsluecke-2026-11-11.zip": {
+      "bytes": 84200,
+      "sha256": "34b6dfb12bc759b7971c5bed296914e1b72a407879e6e57d210fadf208a5610c"
+    },
+    "GPT1_REVIEW_REQUEST.md": {
+      "bytes": 995,
+      "sha256": "9284980452c7ae9da7d91541aa4ee2997a7b19c703f00213d9eb5ff8b1e06337"
+    },
+    "META.yaml": {
+      "bytes": 1140,
+      "sha256": "e06405d18b20f77146d88f87a8a10a05faac1e084b7bac1c6a579649e16fa641"
+    },
+    "NATIVE_PROVENANCE.md": {
+      "bytes": 2233,
+      "sha256": "9a915daa9046cfba2825b932fc275c637ff5021a9bc921e0eb21fa0fc8f95c44"
+    },
+    "originals/budget-review-2026-11-10/review_20261110/GEZIELTE_ABNAHME_UND_ENTSCHEIDUNG.txt": {
+      "bytes": 16619,
+      "sha256": "26742b82b94019531ad510de412c92088d06f97e04dc64d1037c4d5e888da906"
+    },
+    "originals/budget-review-2026-11-10/review_20261110/gpt2/DIRECT_BLOCK_RESULT.json": {
+      "bytes": 66016,
+      "sha256": "86359656e85e981167e68fd2a09bafefec9267e2811aa4ec7f2e0a4f75e4f3ae"
+    },
+    "originals/budget-review-2026-11-10/review_20261110/gpt2/LEDGER_PROVENANCE.json": {
+      "bytes": 206906,
+      "sha256": "b77943c59001b8d5fd39a9dfafe5a8e3be3aced9ed78cf25a26d9a2dd8bb154e"
+    },
+    "originals/budget-review-2026-11-10/review_20261110/REFINED_BUDGET_RESULT.json": {
+      "bytes": 82625,
+      "sha256": "d6d5dcc2d07c271266aafef310b9a8cb86c6fa6a6300e7ae4b61b9f64364831b"
+    },
+    "originals/gpt1-bridge-2026-11-09/ANALYTISCHE_BRUECKE.txt": {
+      "bytes": 22009,
+      "sha256": "9a35369b19b4f4b69f4cd07bcecd7e292e7b7b4c27807e321984dcc273bba574"
+    },
+    "originals/gpt1-bridge-2026-11-09/budget/DATENZUORDNUNG_TRANSPORTE.txt": {
+      "bytes": 4374,
+      "sha256": "7a0bdfa3128e2458160bbf02561a0bafafab97201d4b10504067aeb00c984edd"
+    },
+    "originals/gpt1-bridge-2026-11-09/MANIFEST.json": {
+      "bytes": 4541,
+      "sha256": "dca0bb43213f5464108cfd4451d6e6b700b10dfa6482882f109a678f41740819"
+    },
+    "originals/gpt1-bridge-2026-11-09/NUMERISCHER_ABSCHLUSS.txt": {
+      "bytes": 5072,
+      "sha256": "bf59edd19cbf5b3b2a4c94642c4370975040edc01987d9069bd4ee752a3e8202"
+    },
+    "originals/gpt1-first-column-2026-11-11/HERLEITUNG.txt": {
+      "bytes": 11861,
+      "sha256": "155fda2627484ca8397210ccb12c1508f5969cf8ab8bdea5138f1a6c2e72bae9"
+    },
+    "originals/gpt1-first-column-2026-11-11/INPUT_BINDINGS.json": {
+      "bytes": 1561,
+      "sha256": "a528cf3b2b3ba5c626356f26f6546e20175a827fc6badae70a79a4bcb0d29f8d"
+    },
+    "originals/gpt1-first-column-2026-11-11/MANIFEST.json": {
+      "bytes": 763,
+      "sha256": "645e9aeec96ad37186ef902ab69776bf04e0cfbec2416f8d64ac40dee966bc4d"
+    },
+    "originals/gpt1-first-column-2026-11-11/RESULT.json": {
+      "bytes": 6485,
+      "sha256": "8fdaddefcf85f9f9873d3e3a089431ffd809c54ddc734a63fd70ce5117861164"
+    },
+    "originals/gpt1-start-review-2026-11-05/GPT1_ABNAHME.txt": {
+      "bytes": 8557,
+      "sha256": "d06085f341fb0b0ac39d5b964c2348267605b621adc09230a889337293c27841"
+    },
+    "originals/gpt1-start-review-2026-11-05/MANIFEST.json": {
+      "bytes": 273,
+      "sha256": "8cb3d3aee470c38acde33c0fcea32deb954937837499ac4001f211e6f65ffc35"
+    },
+    "originals/gpt1-start-review-2026-11-05/pruefe_gpt1.py": {
+      "bytes": 6184,
+      "sha256": "5f29981353efccb8a3eca20ff1b2d846bb980960883107354266baa0ef6904be"
+    },
+    "originals/gpt1-start-review-2026-11-05/PRUEFERGEBNIS.json": {
+      "bytes": 1787,
+      "sha256": "b6be7c618e1a64db32f8120b7ddaf6ece26184896c2b27a46c2184f5d31b6047"
+    },
+    "originals/gpt2-data-map-2026-11-10/Objekt-X-GPT2-Restdaten-Pruefakte-2026-11-10.json": {
+      "bytes": 218299,
+      "sha256": "7df797ff3671439d82c74394aa702dca7718cc4843db254229601f9f30cf3bba"
+    },
+    "originals/gpt2-data-map-2026-11-10/Objekt-X-GPT2-Statische-Restdatenkarte-2026-11-10.txt": {
+      "bytes": 13708,
+      "sha256": "a26730c5d42725e37b6128b5b85cc2b7386b55bab5d9407cc8a37406921e394e"
+    },
+    "originals/gpt2-first-column-2026-11-11/INDEPENDENT_RESULT.json": {
+      "bytes": 17027,
+      "sha256": "2b0792653126c58568a778884f3bf100b46e29b6117b24c3269ef67efe7113aa"
+    },
+    "originals/gpt2-first-column-2026-11-11/Objekt-X-GPT2-Abnahme-Erste-Restspalte-2026-11-11.json": {
+      "bytes": 4267,
+      "sha256": "cdd6d178f80dac367aba8f533d333dbf2c90d0308e5c780cf6669d480a819374"
+    },
+    "originals/gpt2-first-column-2026-11-11/Objekt-X-GPT2-Abnahme-Erste-Restspalte-2026-11-11.txt": {
+      "bytes": 8746,
+      "sha256": "fbc66a2960d883711123beda17207130af96c0d779f3890ba4fc516c24fe0766"
+    },
+    "originals/gpt2-first-column-2026-11-11/scope_checks.json": {
+      "bytes": 1615,
+      "sha256": "5fadeca97f760381ad36e6f6f0bbdb5bd6711ced50434a39378f59713a40e05c"
+    },
+    "originals/gpt2-run-2026-11-05/BERICHT.txt": {
+      "bytes": 7259,
+      "sha256": "4c1d139b31483eebcf434606c986c1869d31459cb145e7f82255d70dd24c42e8"
+    },
+    "originals/gpt2-run-2026-11-05/ERGEBNISMANIFEST.json": {
+      "bytes": 2133,
+      "sha256": "39712fc110a27a1b9de00ae280a172ec473c1d4684fca47a6946a5c7745d4ca0"
+    },
+    "originals/gpt2-run-2026-11-05/ERGEBNISPRUEFUNG.json": {
+      "bytes": 485,
+      "sha256": "3c0de2910c7570f1e9db6a76517a679d788ee206be94fd952ff431a556ed2c5c"
+    },
+    "originals/gpt2-run-2026-11-05/GERICHTETE_KURZFASSUNG.json": {
+      "bytes": 1677,
+      "sha256": "576de43e6f9d0206f1c1637f5ab649bad07bca43744afc60949121696a9aabdc"
+    },
+    "originals/gpt2-run-2026-11-05/lauf/LAUFSTATUS.json": {
+      "bytes": 190,
+      "sha256": "5291b6cb3b239c4ca8d9a2a55730b3ec49ff66546d3bf2696c9c021bc0f8c446"
+    },
+    "originals/gpt2-run-2026-11-05/lauf/X_INTERVALLE.json": {
+      "bytes": 4711,
+      "sha256": "47a5f49ee44c32dd34f02799fb6ae7a6733d06255e06188e331e4fe52002bbbd"
+    },
+    "originals/gpt2-run-2026-11-05/PRUEFE_ERGEBNIS.py": {
+      "bytes": 4894,
+      "sha256": "47a13764d010fd25af6986c53a6516e6870fc9a3dd8a095c832c71fc97fd0bf0"
+    },
+    "originals/gpt2-run-2026-11-05/STARTBINDUNG.json": {
+      "bytes": 2505,
+      "sha256": "67b5fe6d440123e9a770fde536fcc4d50a62fd0a0ffdf9676556b85f62b16c70"
+    },
+    "originals/gpt2-second-column-2026-11-11/NATIVE_BINDING_RESULT.json": {
+      "bytes": 11662,
+      "sha256": "74492c35eb92e7b469509621feb55aabc413a6e9ae97502e9ddb587fb56cd5fe"
+    },
+    "originals/gpt2-second-column-2026-11-11/Objekt-X-GPT2-Zweitspaltenanschluss-und-Herkunftsluecke-2026-11-11.json": {
+      "bytes": 6958,
+      "sha256": "f4e22e400d5a45d04c7974c5a641b9cf36d972a09d99b78a5d2348163e989e3c"
+    },
+    "originals/gpt2-second-column-2026-11-11/Objekt-X-GPT2-Zweitspaltenanschluss-und-Herkunftsluecke-2026-11-11.txt": {
+      "bytes": 9962,
+      "sha256": "954d3e2eb5cd7bb27f81a9b7e34100133165c32220337d48fa440b53f658508b"
+    },
+    "originals/gpt2-second-column-2026-11-11/SECOND_SCALAR_RESULT.json": {
+      "bytes": 16592,
+      "sha256": "61a9e27fd3c864c8c9ca6d54f535a7b0317148900978d30dd82d5ee0844f6dc4"
+    },
+    "PROOF.md": {
+      "bytes": 1928,
+      "sha256": "686645aacc4931c3354d92c50d8437b5586a21818fefc999dc72bfecefc306de"
+    },
+    "README.md": {
+      "bytes": 3888,
+      "sha256": "56d35de7c583f27b3e8247757e8ca5f709a2405748361ff9eecc6b798bad6717"
+    },
+    "RELEASE_ASSETS.json": {
+      "bytes": 813,
+      "sha256": "cda8d376f2dfbde715f32065a5c9d1d1d9f1558c74db2f76a0262f129be9e8d6"
+    },
+    "SCOPE.json": {
+      "bytes": 1674,
+      "sha256": "87fa812ae0d8aafc4d4328d13dc46c81320d56c4c6887bd954a0a836721516a5"
+    },
+    "SOURCE_INDEX.json": {
+      "bytes": 15175,
+      "sha256": "8cc400c27498b3b77146a8bcbf1b2f0bd1905c8ad98abd4a6d5239a1e358cdfa"
+    },
+    "test_controls.py": {
+      "bytes": 2675,
+      "sha256": "6aa54be2576f5d8c2058f378442389c58fdac7658fb5b7e1a1e7d2d04d6f0f92"
+    },
+    "VALIDATION.md": {
+      "bytes": 2897,
+      "sha256": "7cad48de55aee1d26c06b311c45d3ae23e0f6769ba7fc12f3570f73fac686bd3"
+    },
+    "verify_integration.py": {
+      "bytes": 7070,
+      "sha256": "56f64a7c807f6b04a0bf4b924e043ef6d6589cdd07d856623e995542afc690a1"
+    }
+  }
+}

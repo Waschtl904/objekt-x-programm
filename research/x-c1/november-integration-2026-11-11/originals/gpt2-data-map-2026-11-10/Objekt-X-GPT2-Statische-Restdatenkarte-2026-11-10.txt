@@ -1,0 +1,239 @@
+OBJEKT X — GPT2: STATISCHE RESTDATENKARTE
+10. November 2026
+
+Ergebnis: Dateizugriff und Paketidentität geklärt; endliches Budget auf den
+gespeicherten Eingaben rational reproduziert. RESTMACHBARKEIT_OFFEN.
+Keine neue Quadratur, Inversion, Kernlaufwiederholung oder q-Optimierung.
+Keine Veröffentlichung. H1–H4 und die physischen Verträge bleiben geerbt.
+
+1. Tatsächlich geprüfter Umfang
+
+Geliefertes ZIP: Objekt-X-Gezielte-Abnahme-und-Budgetnachschaerfung-2026-11-10.zip
+Größe: 30.905.746 Byte.
+SHA256: 19769a8e1e66aa6fa80116022f813c3dde1965e5c54b18d374580ef7fb5bb056.
+Alle 63 äußeren Manifestbindungen und die exakte Dateiliste stimmen.
+
+Eingebettetes Original: Objekt-X-Analytischer-Abschlussversuch-2026-11-09.zip
+Größe: 1.124.781 Byte.
+SHA256: bb969c4a364d8c44d1d5ac4d931636e1ca74c4da1fa4a93d198c8a7806424c90.
+CRC, 30 innere Manifestbindungen einschließlich Größen und alle 31 entpackten
+Dateien geprüft. Die Lesekopien entsprechen den Archivmitgliedern bytegleich.
+Damit liegt genau dieses Original vollständig vor. Seine externen Abhängigkeiten
+sind dadurch nicht automatisch vollständig enthalten. Eine Gleichsetzung mit
+dem anderen Paketnamen „Analytischer-Abschluss“ wurde nicht vorgenommen.
+
+Ausgeführt, in einer getrennten Arbeitskopie:
+- check_direct_block.py: EXACT_DIRECT_BLOCK_PASS, rund 1,5 Sekunden.
+- check_refined_budget.py: positiver Budgetnachweis, 256 rationale Ecken,
+  rund 21,2 Sekunden; erzeugtes Ergebnis stimmt als JSON vollständig überein.
+- Eigener exakter Abgleich: M_on_t_e und E_on_t_e stimmen mit der Kontraktion
+  der gespeicherten 109er-Bank durch die gebundene erste Antwortspalte überein.
+
+Damit sind H>0 und die hinreichende Kapazität
+  0 <= Rhat <= diag(0.000006051814, 0.1) => H-Rhat>0
+im gespeicherten bedingten Datenvertrag reproduziert. Dies ist keine neue
+Herleitung sämtlicher physischer Eingaben. check_scope.py, der ursprüngliche
+Direktterm-Erzeuger direct_block_recombine.py und historische Erzeuger wurden
+nicht ausgeführt. Das erledigte alte Budgethindernis wurde nicht neu untersucht.
+
+2. Quellenbezeichnungen
+
+Alle folgenden Paketpfade sind relativ zum entpackten gelieferten ZIP.
+Vollständige SHA256 und externe Fundorte stehen in der beigefügten Prüfakte.
+
+O = review_20261110/original_20261109/
+D = direction/Objekt-X-GPT2-Richtungsnachweis-Neue-Inversmajorante-2026-11-01/
+
+[S1] O/ANALYTISCHE_BRUECKE.txt, besonders §§2–5.
+[S2] O/budget/DATENZUORDNUNG_TRANSPORTE.txt.
+[S3] O/budget/carrier_recombination/FIXED_PROJECTION_PRICE.json: lambda_bar.
+[S4] budget_work/vorabtest/eingang/COMMON_BANK_109.json.gz und
+     FIRST_COLUMN_COORDINATES.json.
+[S5] D/final-inputs/INVERSE_DATA.json; D/inputs/finite-source/
+     FINITE_MODEL_FUNCTIONALS.json und FINITE_RECOMBINATION_DATA.json;
+     D/inputs/PAIRS_even.json.gz und REFINED_COMMON96.json.gz.
+[S6] O/geerbte_belege/METRIKKORREKTUR.txt §§3–7 und FORMSCHNITTSTELLE.txt §§3–4.
+[S7] O/geerbte_belege/WHOLE_PHYSICAL_TRANSPORT.json,
+     COMMON_CORE_SOURCE_PRICE.json; D/COMMON_FULL_LEDGER.json.
+[S8] O/budget/carrier_recombination/SHARP_FORCE_SOLUTION_NATIVE.json.gz.
+[S9] review_20261110/GEZIELTE_ABNAHME_UND_ENTSCHEIDUNG.txt §§2,7.
+
+Zusätzlich tatsächlich lokal gelesen bzw. auf Bindung geprüft:
+[L1] PREPARED_CORE.json.gz: stimmt mit dem in [S8] gebundenen SHA256 überein;
+     enthält C, L_inverse, solution12_preconditioned und Fehlerdaten.
+[L2] analytic-whole-model-a3bec3a31ae6-n384.json.gz sowie 618 alte Modellzellen,
+     BINDING.json und PROGRESS.json: insgesamt 621 Dateien stimmen mit dem
+     mitgelieferten D/PACKAGE_SHA256.json überein. Keine Zellintegration wiederholt.
+     Zellen enthalten Normintegrale/Restpreise, keine neuen t1-sigma0-Kreuzgrame.
+[L3] Lokale Belege der Metrikkorrektur vom 2. November: insbesondere
+     GPT1_QOLD_METRIC_DIAGNOSIS.json, GPT1_COMMON12_METRIC_REPAIR.json,
+     GPT1_ORIGINAL_REPLAY.json und GPT1_COVER_AUDIT.json. Ihre Bindungen im
+     lokalen Manifest stimmen. HERLEITUNG.txt ist bytegleich mit [S6].
+     Die historischen mathematischen Prüfungen wurden nicht erneut ausgeführt.
+
+3. Datenkarte der ersten festen Restspalte
+
+eta_bar1 = (1-lambda_bar1)t1 + lambda_bar1 sigma0.
+Aus [S3]: 1-lambda_bar1 = ungefähr 1.1405104708148794e-14.
+Das ist ein Koeffizient, keine Energiekontrolle. Die erste Spalte enthält kein q.
+
+a = unmittelbar gespeicherter gebundener Bestand.
+b = aus diesen Daten algebraisch/gerichtet abzuleitender Beitrag; hier nicht
+    als bereits numerisch abgeschlossene physische Restoberform ausgegeben.
+c = fehlender vollständiger Beleg. Ob er durch eine neue analytische Schranke
+    oder durch neue physische Daten gewonnen werden kann, ist noch offen.
+    Aus „fehlt“ folgt insbesondere kein automatischer Quadraturauftrag.
+
+Beitrag | Status und konkreter Bestand | Noch offene Leistung
+
+Feste Antwort und Projektion | a: [S3,S4], dieselben rationalen Koeffizienten,
+alte B/Y-Karten [S5] | Kein neuer Antwort- oder Projektionsparameter erforderlich.
+
+Kernantwort k1 | a: [L1] enthält die gespeicherte niedrige Lösung und Inverse;
+[S1 §2] liefert die ganze Synthese mit dem unendlichen hohen B0-Anteil.
+b: Synthese aus gebundenen ganzen Quell-/QPhi-Feldern | Keine Gleichsetzung
+der 191 Koeffizienten mit der ganzen Funktion; native Quellenbindung siehe §6.
+
+Altes sigma0 | a: getrennte alte F/T/P/S-Kappen [S6], Transportpreise [S7],
+ganzes Modell und Normzellen [L2], feinere skalare Fehlerauflösung [L3].
+b: endliche signierte Bilder aus [S4] | Die Normzellen bestimmen nicht die
+neuen signierten Kreuzgrame mit t1. Sie liefern auch keine erreichte neue Kappe.
+
+Endliche Rohbilder pF1, pJ1, pB1 und entsprechende sigma0-Bilder | b: gemeinsam
+aus derselben 109er-Bank [S4]; Vorzeichen bleiben erhalten (Formel unten).
+F/S-Auswahlkarten sind über [S5] festgelegt | Gerichtete gemeinsame Grame und
+Restfehler noch zu bilden. Keine neuen physischen Paarungen für diese festen
+g12-Bankzeilen nötig. Die Budgetkontraktion auf (t,e) allein ersetzt diese
+neuen Auswahlen nicht.
+
+P-Bild | b: pJ-kappa* pF, kappa=Knew^-1 a_J; Rohbilder aus [S4]. [S6,L3]
+geben die physische Kopplungsbrücke und skalaren d_k-/Spurpreise an | Numerische
+P-/kappa-Arbeitsmatrizen sind im gelieferten ZIP nicht als fertiger neuer
+Zweispaltenblock identifiziert. Ihre Bindung und der gemeinsame P-Gram bleiben
+auszuweisen; skalare alte P-Preise ersetzen sie nicht. Hier keine Inversion.
+
+Ganzes Schalenbild pT1 auf A<x<a | c: die Formel steht in [S1 §3], einschließlich
+G8*, Momentlift und P_T^W W^-1. Die 17 nativen Kernstücke betreffen 0<x<A |
+Es fehlt ein vollständig eingeschlossenes Schalenmodell bzw. ein gleichwertiger
+ganzer analytischer Normbeleg für fT_raw,1-G8*k1 samt Zweigen, Endstreifen,
+Lift-, Quellen- und Synthesefehlern. Kernmomente ersetzen diesen Eingang nicht.
+
+Signierte t1-sigma0-Kreuzdaten | b für die endlichen bankgestützten Rohbilder;
+c für den neuen vollständigen T-Gram und die gemeinsame physische Preisbildung |
+Die Aussage „keine signierten Kreuzdaten vorhanden“ muss nach Karten getrennt
+werden. Endliche Daten sind zurückführbar; neue ganze T-Kreuzintegrale sind in
+den 618 alten skalaren Normzellen nicht gespeichert.
+
+Konkrete endliche Rückführung, ohne neue Rechnung:
+M ist die gemeinsame 109er-Formbank, e ihr letzter Einheitsvektor und
+t=Tans109_first_column=(w,-1). Wähle die alten Auswahlen L_F,L_J,L_B.
+Dann auf den ersten 108 Testkoordinaten:
+  p(t1)=M e,   p(sigma0)=-M t.
+Für F gilt L_F; für S gilt L_S=(-Y;I12;0).
+Für P gilt nach Bindung von kappa die Auswahl L_P=(-kappa;I84;0).
+Damit ist für j=F,S und entsprechend P
+  [A_j t1, A_j sigma0] = L_j* M [e,-t],
+  A_j eta_bar1 = L_j* M ((1-lambda_bar1)e-lambda_bar1 t).
+Dies sind Zuordnungsidentitäten, noch keine neuen scharfen Restpreise.
+
+4. Auflösung des alten sigma0-Preises
+
+[S6] liefert f<8.1e-8, den noch unverschobenen lokalen t-Preis t<0.000342,
+p<0.000107 und s<0.0071. Für die tatsächliche T-Karte wird t+10f bezahlt.
+Vor dem gemeinsamen Faktor 25/21 ergeben die übernommenen Kappen:
+  F:        f²                    = 6.561e-15;
+  10 T:     10(t+10f)²            = 1.175186961e-6;
+  (11/10)P: (11/10)p²             = 1.25939e-8;
+  S:        s²                    = 5.041e-5.
+Die Zahlen rechts sind exakte Arithmetik der gerundeten Kappen, keine Messwerte.
+Die dokumentierte zusammengefasste sichere Kappe ist
+  (25/21)(0.0000012+0.0071²)=5161/84000000
+  = ungefähr 0.0000614404761904762.
+Ihr Verhältnis zu 0.000006051814 ist ungefähr 10.15240656611.
+
+Der S-Posten dominiert diese alte Oberrechnung. Aus [S7] ist er auf Modellrest,
+gemeinsamen Bankfehler und Metriktransport zurückführbar; die T-Kappe trennt
+alten Modellnormpreis und physischen Transport. Die Zusammenfassung ist keine
+Untergrenze. Vor allem ist sie ohne t1-/Kreuzkontrolle noch keine vollständige
+Schranke der neuen eta_bar1. Eine erfolgreiche Schärfung wird hier nicht behauptet.
+
+5. Vollständiger gemeinsamer Fehlertransport und zweite Spalte
+
+F: hohe Quellenabweichung, niedriger Fehler 14 e_v+r_zeta, Syntheseradien und
+direkte F-Paarungs-/Projektions-/Liftpreise; Metrik Knew^-1. [S1 §§5.1–5.2]
+T: ganzer pT-Fehler plus a_mix* Knew^-1 Delta pF; bei Modellierung auch der
+Fehler von a_mix. Die Cap16 betrifft nur den niedrigen Transport. Hohe Quelle,
+Schalenfortsetzung, Gamma-, Prim-/Logzweige, Endstreifen und W-Rieszwechsel
+bleiben erforderlich. R_L ist nur die lokale Metrik. [S1,S6,S7]
+P: gemeinsame J/F-Differenz; zusätzlich d_k sqrt(tr Knew) mal die Norm des
+GANZEN physischen F-Restes. Alle Fehlerprodukte sind damit zu bezahlen. [S6]
+S: B*Delta outer-Y*Delta shell für dieselbe Quelle; Bare-/P0-/Momentpreise,
+ggf. B/Y-Modellfehler und Cg-Metrik. Exakt gebundene rationale B/Y erhalten
+keinen erfundenen Zusatzpreis. Der historische S-Preis ist keine neue S-Matrix.
+
+Für jede Karte ist W_j=[A_j t1,A_j t2,A_j sigma0] zu verwenden, dann
+  Cbar=[[1-lambda_bar1,-lambda_bar2],[0,1],[lambda_bar1,lambda_bar2]],
+  Delta H_j=Delta W_j Cbar,
+  Delta H_j* M_j Delta H_j <= Cbar* E_Wj Cbar.
+Vollständige E_Wj sind noch nicht geliefert. Modellkreuzterme bleiben signiert;
+Spaltennormen allein rechtfertigen keine Rang-eins-Fehlergrammatrix.
+F/T/P/S werden mit 25/21, 10 und 11/10 zusammengeführt. Der Projektionsüberpreis
+wird bei direkter Kontrolle von Rbar nicht nochmals addiert. [S1 §5.3,S9 §2]
+
+Zusätzliche Zweispaltendaten:
+a: [S8] speichert die 191 q-Kraft-/Lösungskoeffizienten samt nativen Radien,
+raw_QPhi, X12/X22 und getrennte Fehler. Keine weitere Präzisionsoptimierung.
+b: endliche Gegenbildkontraktionen, soweit die jeweiligen gespeicherten
+Quellen-/Metrikdaten und physischen Obergrame gebunden sind.
+c: neue q-Bare-/P0-/Außenpaarungen, das ganze q-Schalenbild, signierte gemeinsame
+T-Kreuzdaten und die zugehörigen vollständigen F/T/P/S-Fehlerformen fehlen.
+Die 109er-Bank bindet nur g12 als Komplementquelle. Alte g12-Preise sind keine
+q-Preise. Das historische Symbol q=g-Gy-hc in COMMON_CORE_SOURCE_PRICE meint
+zudem einen anderen Quellrest als das neue q=g14-k g12.
+
+6. Präzise Herkunftslücke außerhalb des vollständig geprüften neuen ZIPs
+
+Die ergänzend lokal gefundenen nativen Dateien stimmen mit Mitgliedern des
+ursprünglichen Ganzkern-ZIPs vom 5. November überein. Dessen hier berechneter
+SHA256 ist 501ed63430ad88dae24006791ea1eaf55936d387061600dd9c1927395e79b90e
+bei 245.913.425 Byte. Geprüft wurden gezielt die drei folgenden Mitglieder,
+nicht das vollständige alte Manifest oder der gesamte alte Lauf.
+
+Datei | November-9-Eingangsbindung [S8] | tatsächliches November-5-Original
+QUELLEN_NATIVE.json.gz
+  cac088af25f2f1fd3766b7a7517e3990e01c010f48e2e33c77bcfab8b7693a94
+  c583d6e6667baab0206c1682f640603b085d6f3b26584b716787363f3946ff2c
+KRAFT_UND_LOESUNG_NATIVE.json.gz
+  054d61c3a8e19d679e521de30c83c29c0903a7e4b6ae447b3af5a4a55500bd5b
+  956736390926af666053805e3bf889f664cee70d26501d664825fe750ac3a960
+VERWENDETE_PRIMITIVE_NATIVE.json.gz
+  1f2faaad525b2b9cdb06632acb9d784c336f6b4580eff9171b774e05fa6de56f
+  edd4f048c83b91c4af729d8ca0e5455b0358061fbc911374ac7f16c690df0123
+
+Alle drei lokalen internen Payload-Prüfsummen stimmen. Es fehlt jedoch der
+Vergleich mit den in [S8] bezeichneten Eingangsbytes bzw. deren Payloads.
+Ob nur Verpackung/Metadaten oder auch mathematische Inhalte abweichen, ist
+nicht festgestellt. Die Kopien werden nicht stillschweigend gleichgesetzt.
+PREPARED_CORE.json.gz stimmt dagegen auch mit der November-9-Bindung überein.
+Für eine spätere quellgenaue Weiterverwendung fehlt hier zuerst die gebundene
+QUELLEN_NATIVE-Datei oder ein überprüfbarer Transport-/Payload-Gleichheitsbeleg.
+Dafür ist kein vollständiges zweites Archiv und kein neuer Lauf erforderlich.
+
+7. Erste fehlende physische Aussage
+
+Für die vorgesehene gemeinsame Gram-Auswertung fehlt eine gerichtete Kontrolle
+der GANZEN Kombination
+  A_T eta_bar1 = (1-lambda_bar1) A_T t1 + lambda_bar1 A_T sigma0
+auf der alten Schale A<x<a, einschließlich physischer Fehler. Äquivalent für
+diesen Auswertungsweg fehlen geeignete gemeinsame Modell-/Fehlergrambelege
+für (A_T t1,A_T sigma0); eine genügend scharfe direkte analytische Oberform
+derselben Kombination könnte sie ersetzen.
+
+Parallel muss der alte, dominante S-Oberpreis für die neue feste Kombination
+ausreichend scharf gemeinsam kontrolliert werden. Die endliche Rückführung
+oben zeigt verfügbare Eingaben, beweist aber noch keinen erreichbaren Gewinn.
+Ein positiver erster Diagonaleintrag allein wäre zudem kein Zweiraumabschluss.
+
+Es liegt daher weiterhin kein quantitativ gerechtfertigter Erzeugungsauftrag
+vor. Diese Datenkarte beendet den statischen Arbeitsblock mit
+RESTMACHBARKEIT_OFFEN und benennt Herkunfts- und Nachweislücke getrennt.
