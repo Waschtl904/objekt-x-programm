@@ -34,8 +34,12 @@
       "sha256": "34b6dfb12bc759b7971c5bed296914e1b72a407879e6e57d210fadf208a5610c"
     },
     "GPT1_REVIEW_REQUEST.md": {
-      "bytes": 995,
-      "sha256": "9284980452c7ae9da7d91541aa4ee2997a7b19c703f00213d9eb5ff8b1e06337"
+      "bytes": 1455,
+      "sha256": "0745ed51f6d9c50a7bc1f67124454a2be686214f67c6b4b5284ad8122eec7415"
+    },
+    "INTEGRATION_2026-11-12.md": {
+      "bytes": 3218,
+      "sha256": "94427f6264626b728ea222b75fa989d6ee7859ecec083d0a6240fc87a653e2f6"
     },
     "META.yaml": {
       "bytes": 1140,
@@ -186,8 +190,8 @@
       "sha256": "686645aacc4931c3354d92c50d8437b5586a21818fefc999dc72bfecefc306de"
     },
     "README.md": {
-      "bytes": 3888,
-      "sha256": "56d35de7c583f27b3e8247757e8ca5f709a2405748361ff9eecc6b798bad6717"
+      "bytes": 4338,
+      "sha256": "e0e2880f400e2552d6b1789d402489defe12802919f70c995dcd7f216815a267"
     },
     "RELEASE_ASSETS.json": {
       "bytes": 813,
@@ -201,17 +205,21 @@
       "bytes": 15175,
       "sha256": "8cc400c27498b3b77146a8bcbf1b2f0bd1905c8ad98abd4a6d5239a1e358cdfa"
     },
+    "TECHNICAL_FOLLOWUP_2026-11-12.md": {
+      "bytes": 8447,
+      "sha256": "7fafa9d83e49c7759e8c5305c2fe85a23af1a1223b2be9e6707b540c76effe86"
+    },
     "test_controls.py": {
-      "bytes": 2675,
-      "sha256": "6aa54be2576f5d8c2058f378442389c58fdac7658fb5b7e1a1e7d2d04d6f0f92"
+      "bytes": 12089,
+      "sha256": "2fc304e20d55eb602eac420af605744320305c96ffb6fd25e5136708ad01fe06"
     },
     "VALIDATION.md": {
-      "bytes": 2897,
-      "sha256": "7cad48de55aee1d26c06b311c45d3ae23e0f6769ba7fc12f3570f73fac686bd3"
+      "bytes": 3241,
+      "sha256": "c6a1f9bd432126b5931b7c8f8ae693de46bd270ce4f6c297b905dd0744cb4e07"
     },
     "verify_integration.py": {
-      "bytes": 7070,
-      "sha256": "56f64a7c807f6b04a0bf4b924e043ef6d6589cdd07d856623e995542afc690a1"
+      "bytes": 10520,
+      "sha256": "a952beb802f43fe974d153b80a666d3f8a5b14e040fbd539f264ef79016419a1"
     }
   }
 }
