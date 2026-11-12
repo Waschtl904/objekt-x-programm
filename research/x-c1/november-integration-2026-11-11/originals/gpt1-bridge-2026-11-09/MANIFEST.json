@@ -1,0 +1,122 @@
+{
+  "ANALYTISCHE_BRUECKE.txt": {
+    "sha256": "9a35369b19b4f4b69f4cd07bcecd7e292e7b7b4c27807e321984dcc273bba574",
+    "bytes": 22009
+  },
+  "LESEN.txt": {
+    "sha256": "802c75129e430b72a055d7e1cbfc8774e8ca4873c7a7b1a3dbed9257bf2ee951",
+    "bytes": 2591
+  },
+  "NUMERISCHER_ABSCHLUSS.txt": {
+    "sha256": "bf59edd19cbf5b3b2a4c94642c4370975040edc01987d9069bd4ee752a3e8202",
+    "bytes": 5072
+  },
+  "PAKETPRUEFUNG.json": {
+    "sha256": "a1a3c82b1767c32db23dfb80a3f555c06c1b3cc7d2deb93625e9ffd2c9950e16",
+    "bytes": 353
+  },
+  "budget/BUDGET_BEFUND.txt": {
+    "sha256": "bb38250f37af58de71104bfbd28bf41d370568d82be6893f68ae4373b3c0500c",
+    "bytes": 7916
+  },
+  "budget/BUDGET_INPUTS.json": {
+    "sha256": "601d87000f8613a8b5590159daac06e15aaeddfae984f896ce674a59b887b233",
+    "bytes": 54389
+  },
+  "budget/BUDGET_RESULT.json": {
+    "sha256": "17c214f6dd9988a0be1f1b9c8f1deb6eea8e0d0254fb36cdf9e9ce9c1891eab6",
+    "bytes": 896327
+  },
+  "budget/DATENZUORDNUNG_TRANSPORTE.txt": {
+    "sha256": "7a0bdfa3128e2458160bbf02561a0bafafab97201d4b10504067aeb00c984edd",
+    "bytes": 4374
+  },
+  "budget/INVERSE_NORM_RECOMBINATION.json": {
+    "sha256": "dab8603adf230f03e21a1f6c7884a671cef479afdb970ebef2089f444bb4e904",
+    "bytes": 636
+  },
+  "budget/NATIVE_SOLUTION_RADII.json": {
+    "sha256": "8c596752f46f31255fd266389c0b1585c90c6aa4fa06dc075ad80177ea3ddd9c",
+    "bytes": 5506
+  },
+  "budget/carrier_recombination/CARRIER_NORM_PROOF.txt": {
+    "sha256": "6d24a25928b2a0912cdfdd8571bd8833faa0205b7547b2a9bb03f5e785b3cc34",
+    "bytes": 4938
+  },
+  "budget/carrier_recombination/CARRIER_RECOMBINATION_RESULT.json": {
+    "sha256": "16518bbe25f01c5cd62c681d5ca7894280f99e0995a43e189c1759f82922d5d2",
+    "bytes": 5218
+  },
+  "budget/carrier_recombination/FIXED_PROJECTION_PRICE.json": {
+    "sha256": "8cdd24511af234ae10b5646b5f9adbcf07f02b69f0c66381ec579716219e6f48",
+    "bytes": 7891
+  },
+  "budget/carrier_recombination/SHARP_BUDGET_INPUTS.json": {
+    "sha256": "99cc57b33748ffd568b995f4710421bdfcc18d893851d60c7b7bef5177e2de8c",
+    "bytes": 54488
+  },
+  "budget/carrier_recombination/SHARP_BUDGET_RESULT.json": {
+    "sha256": "5410c18aea4c21f83afacf4392ef315fbdac00354ceb07a4aa3c7055e772c9d4",
+    "bytes": 896421
+  },
+  "budget/carrier_recombination/SHARP_FORCE_SOLUTION_NATIVE.json.gz": {
+    "sha256": "8db1b5e9adad2320d3fe305641781207f5a7207c6fd39fc996cc3b3c776a07f6",
+    "bytes": 320642
+  },
+  "budget/carrier_recombination/SHARP_NATIVE_RADII.json": {
+    "sha256": "8f1bad79253ad8d288584c533cfbcbd38b1d8b66d5ab211e6f76234937afc192",
+    "bytes": 696
+  },
+  "budget/carrier_recombination/SHARP_X_INTERVALS.json": {
+    "sha256": "1918bad9f28e479d5f54cde9da2420d66635eff12cbac05894a093dccdd756da",
+    "bytes": 1607
+  },
+  "budget/check_native_bounds.py": {
+    "sha256": "91619e0747000bc19b4db961354a9baaf2f05e41e7ab2608c109c030d0cd8b21",
+    "bytes": 2260
+  },
+  "budget/projection_price.py": {
+    "sha256": "9486eecf8de5b1221c3732d1ab8d9ff8fb6d35b2ba19c6285533fe3a8110d031",
+    "bytes": 2548
+  },
+  "budget/recombine_budget.py": {
+    "sha256": "54694012b689bbfb19fba5b9891fc0fbe9d63a9fe06d418b6c7d96f9afca7b79",
+    "bytes": 10171
+  },
+  "budget/recombine_carrier.py": {
+    "sha256": "e3657b7424902f734ce9d7fcaea6bb889455f52b9d00807501b007953d44f751",
+    "bytes": 8453
+  },
+  "geerbte_belege/COMMON_CORE_SOURCE_PRICE.json": {
+    "sha256": "aa430d50548371fdae956c0e6695fc4674ed43bf098f546eee3e572769aaec55",
+    "bytes": 20589
+  },
+  "geerbte_belege/DOMAIN_HERLEITUNG.txt": {
+    "sha256": "e6075606f6a26c354f1eb756b568f91cbb7a0b035022b44ef60a0120ae4ea819",
+    "bytes": 23771
+  },
+  "geerbte_belege/FORMSCHNITTSTELLE.txt": {
+    "sha256": "e7835b9f55985bfeb2b35240759ba07fc580939ccd5e278285e4969910fd8c29",
+    "bytes": 11304
+  },
+  "geerbte_belege/METRIKKORREKTUR.txt": {
+    "sha256": "6ab8357dd54401566a33fb9b62726debe8491268145640af1ce6a458c10114a7",
+    "bytes": 9600
+  },
+  "geerbte_belege/MODEL_COUPLING_FORM.txt": {
+    "sha256": "7c50428e401788c81d8c18e6e10b5e71322fc0adccefa2c5da0a98376bbaec39",
+    "bytes": 2756
+  },
+  "geerbte_belege/PHYSICAL_APPLICATION_PROOF_HISTORISCH.txt": {
+    "sha256": "5e8c2acfbd7e4ba00e9c734977cfc62f07b02295fca7cd7ebd9101bbd28efc2f",
+    "bytes": 15173
+  },
+  "geerbte_belege/WHOLE_PHYSICAL_TRANSPORT.json": {
+    "sha256": "babfa10323f067a4b47cfe15680d7924a487c3e61ea9f58a583565ca483ba98e",
+    "bytes": 30016
+  },
+  "geerbte_belege/whole_physical_transport.py": {
+    "sha256": "da5b56f394bdccad8dc43865deef5feb09e3ce23f51a8ecdde42d038bc8ef477",
+    "bytes": 8209
+  }
+}

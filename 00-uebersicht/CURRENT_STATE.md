@@ -3,7 +3,7 @@
 > GENERATED FILE — DO NOT EDIT
 > Quelle: [RESEARCH_STATE.yaml](RESEARCH_STATE.yaml). Navigation, keine Satzpromotion.
 
-Stand: 2026-11-01.
+Stand: 2026-11-11.
 
 ## Gemergte kanonische Basis
 
@@ -35,7 +35,7 @@ Historische Integrationsprovenienz des Registry-/Navigations-Syncs: PR #156 inte
 
 ## Zwei aktive Hauptfronten
 
-- **Konstruktive Fortsetzung der gemeinsamen Objekt-X-Geometrie** — `UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION`, OPEN. Stand 1. November: Der [korrigierte vollständige 24er-Zertifikatsausschluss](../research/x-c1/fixed-24-certificate-exclusion-2026-11-01/README.md) ist unter H1–H4 und den übernommenen physischen Verträgen abgeschlossen. GPT1 hat den V-Transportfehler einschließlich Folgepreisen bezahlt und die bestätigte D12-Kappe übernommen: r<=0,058383477345103, vollständiger Datenpreis <0,004356223514 genau einmal, Gesamtgradientenenergie <=0,000949781310484370 < E_* mit E_*>=0,000972717481018334 und Abstand >=0,000022936170533964. Die gespeicherte rationale Schlusskontrolle ist reproduziert; keine neue Integration der Funktionen. Das GPT2-Original bleibt unverändert. Zwei identische unvollständige GPT1-Library-Abrufe sind offengelegt; sämtliche 151 Dateien der gesonderten Transportrekonstruktion stimmen mit GPT1s Manifest überein. Projektinterne Gegenprüfung ist keine externe Begutachtung. Keine negative tatsächliche Komplement-Schurform; Punkt 4, konstruktiver Anschluss, unendliches Komplement und Objekt X bleiben offen, Checkliste 3/10.
+- **Konstruktive Fortsetzung der gemeinsamen Objekt-X-Geometrie** — `UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION`, OPEN. Stand 11. November: Der [gebundene Forschungsstand vom 5.–11. November](../research/x-c1/november-integration-2026-11-11/README.md) sichert den unentschiedenen Ganzkernlauf, die analytische Restbrücke, das projektintern reproduzierte positive Budget und die gezielt abgenommene vollständige erste feste Restspalte unter H1–H4 und den übernommenen physischen Verträgen. Rbar11<0,000003522682288001101. Für die zweite Spalte ist nur der bedingte Schluss Qq<=0,03518 => Rbar22<0,0417 bestätigt; weder diese ganze Energie noch ihre Erreichbarkeit ist belegt. Drei native Eingangsbindungen bleiben offen, insbesondere für den übernommenen X12-/C2- und gemeinsamen Budgetanschluss. Die vorhandene GPT1-Abnahme zum Ganzkernlauf betrifft den Start; das später berichtete Ergebnisabnahmeoriginal fehlt. Erste Restspalte nicht weiter optimieren. Zweite Restenergie, gemeinsamer Zweiraumabschluss, Punkt 4 und externe Begutachtung bleiben offen; kein neuer physischer Hauptlauf begründet. Checkliste 3/10, Objekt X nicht konstruiert.
 - **Globale Weil-Testklasse und fensterunabhängiger Readout** — `FULL-WEIL-TEST-CLASS`, OPEN. Testklasse, Normierung und exakte vollständige Gram-Identität gehören bereits zur Konstruktion von Objekt X. Zusammen mit einer kofinal kompatiblen positiven Geometrie ist ein globaler Readout zu begründen. Der mögliche Anschluss an RH wird erst nach erfolgreicher Konstruktion verfolgt.
 
 ## Verwendbare Bausteine
@@ -151,5 +151,6 @@ Dokumentierte Checkerläufe sind von externer Prüfung und Git-Integration getre
 - `W9-GAMMA-REPAIR-FIXED-EVEN`: PENDING_STATUS_REVIEW — `research/x-c1/w9-gamma-repair-even-2026-10-22/META.yaml`.
 - `ELL12-FIXED-COMPLEMENT-MAJORANT-STOP`: PENDING_STATUS_REVIEW — `research/x-c1/ell12-complement-route-stop-even-2026-10-28/META.yaml`.
 - `FIXED24-CERTIFICATE-CLASS-CORRECTED-STOP`: PENDING_STATUS_REVIEW — `research/x-c1/fixed-24-certificate-exclusion-2026-11-01/META.yaml`.
+- `NOVEMBER-5-11-BOUNDED-RESEARCH-INTEGRATION`: PENDING_STATUS_REVIEW — `research/x-c1/november-integration-2026-11-11/META.yaml`.
 
 Einstieg: [NEXT_GATES](NEXT_GATES.md) · [Architektur](OBJEKT_X_ARCHITECTURE.md) · [Pflege und Prüfungen](RESEARCH_STATE_MAINTENANCE.md).

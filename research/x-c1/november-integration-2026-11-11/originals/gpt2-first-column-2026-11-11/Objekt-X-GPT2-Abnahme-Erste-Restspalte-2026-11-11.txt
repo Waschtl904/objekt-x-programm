@@ -1,0 +1,170 @@
+OBJEKT X — GPT2: GEZIELTE ABNAHME DER ERSTEN RESTSPALTE
+11. November 2026
+
+Votum: ERSTE_FESTE_RESTSPALTE_GEZIELT_ABGENOMMEN, unter H1–H4 und den
+übernommenen physischen Quellen-, Form-, Operator- und Fehlerverträgen.
+Gesamtstatus: RESTMACHBARKEIT_OFFEN. Kein vollständiger Zweiraumabschluss,
+keine externe Begutachtung und kein Abschluss von Punkt 4.
+
+1. Tatsächlicher Prüfumfang und Identität
+
+Gelesenes Autorenpaket:
+Objekt-X-GPT1-Erste-Restspalte-2026-11-11.zip
+14.436 Byte; selbst berechneter SHA256:
+36a20575ba76a32c744f826b7603468b9de1b5ec5ddd6331f57adc8a3b3cfe54.
+Alle fünf Manifestbindungen einschließlich Größen und die vollständige
+Dateiliste stimmen. Der separat übergebene TXT-Bericht ist bytegleich mit
+HERLEITUNG.txt. Alle elf Eingangsbindungen stimmen mit dem bereits geprüften
+Abnahmestand vom 10. November überein.
+
+Der unveränderte python-flint-Prüfer von GPT1 wurde nicht ausgeführt.
+Stattdessen wurde die neue Rechnung unabhängig mit exakten Ganzzahlmatrizen
+und Python-Fraction-Arithmetik implementiert und ausgeführt: keine
+Gleitkommarechnung, Inversion, Quadratur oder Funktionsauswertung. Alle 14
+verglichenen rationalen Ergebniswerte stimmen exakt mit RESULT.json überein.
+Der wiederverwendbare unabhängige Nachprüfer ist im GPT2-Prüfpaket enthalten.
+
+Zusätzlich geprüft: beidseitige Identitäten der gespeicherten B-/Gp-Inversen,
+Positivität von Gp durch exaktes LDL, Cg=B^T Gp B, unveränderte rationale
+Antwortkoordinaten und deren Originalbindung. Der entfernte Direkt-Charge
+stimmt sowohl auf der Antwort als auch in seiner S-Spur mit den ursprünglichen
+gespeicherten Ledgerintervallen überein.
+
+Die vollständigen historischen Quellen-, Integrations- und Domänenbeweise
+wurden nicht nochmals hergeleitet. Die additive gemeinsame Fehlerbuchung
+und die vollständigen alten F/T/P-Belege bleiben ausdrücklich übernommen.
+
+2. Restidentität und ganze Energie
+
+Aus sigma0=t1-s0 und epsilon=1-lambda_bar1 folgt exakt
+  eta_bar1 = sigma0 + epsilon s0.
+Mit s0=S_R[w,.] gilt im positiven alten Vergleichsraum
+  ||s0||²_(S_R^-1)=<w,S_R w>=tau.
+Die Formdual-/Rieszidentität verlangt keine neue starke Operatorwirkung auf
+eine inverse Kernantwort. S_R gehört zur bereits positiven Vergleichsform;
+die noch offene Zielpositivität wird nicht vorausgesetzt.
+
+Die Bankidentität tau=(t+e)^T M_phys(t+e) stimmt mit
+tau=2b12-V0-X11 überein. Die alte gültige gemeinsame Fehlerhülle liefert
+0<tau<3.638749077305945<4. Damit ist sqrt(tau)<2, und
+  ||eta_bar1|| <= ||sigma0|| + 2 epsilon,
+  epsilon=1.140510470814879429756688376...e-14.
+Der Mischterm wird durch die Dreiecksungleichung in EINER gemeinsamen
+Energiemetrik bezahlt. Ein neuer ganzer T-Gram von t1 ist hierfür nicht nötig.
+
+3. Reproduzierte S-Schärfung: Normen ausdrücklich getrennt von Energien
+
+Mit L_S=(-Y;I12;0), Q=Cg^-1 und der unveränderten Antwort t gilt
+  A_S sigma0=-L_S^T M_phys t.
+Die gespeicherten Inversen geben Q=B^-1 Gp^-1 B^-T durch Multiplikation.
+
+Aus E wird ausschließlich diag(old_row_majorant) des arithmetischen
+Direktintervallterms entfernt. Die Herleitung seiner additiven Buchung ist
+in source/common_full_ledger.py sichtbar; LEDGER_PROVENANCE.json weist genau
+35 Positionen aus. Die übrigen 34 Positionen sowie Exportrundung bleiben in
+E_rest. Insbesondere bleiben B/B0-, Quellen-, Bare-/P0- und physische
+direct_D/direct_K-Fehler erhalten. Die Subtraktion wird nicht aus einer bloßen
+Positivitätsprobe von E_rest gerechtfertigt.
+
+Die vollständigen beiden Fehlerwege sind gültig:
+  ||Q^(1/2)L_S^T Delta_rest t||²
+  <= tr(Q L_S^T E_rest L_S) (t^T E_rest t);
+für die symmetrisierten primitiven Direktintervallradien r gilt
+  |L_S^T Delta_D t| <= |L_S|^T r |t| komponentenweise.
+Der Q-Normpreis folgt daraus mit |Q|. Das behauptet weder unabhängige Fehler
+noch eine unzulässige Rang-eins-Loewnermajorante.
+
+Reproduzierte NORMobergrenzen:
+  Modell:                          2.570263376616817...e-15
+  übrige 34 Positionen/Rundung:     0.001326291509834142866604404322...
+  primitive Direktintervalle:      1.300193593681684510976480679...e-9
+  Summe:                          0.001326292810030306811665532115...
+Daher ||A_S sigma0||_(Cg^-1)<0.001326293.
+Der Beitrag zur ENERGIE ist das Quadrat dieser Normkappe, nicht die Kappe selbst.
+
+4. Vollständiger F/T/P/S-Schluss
+
+METRIKKORREKTUR.txt §§3–5 bindet für dasselbe ganze sigma0 unverändert
+  f<8.1e-8, t_raw<0.000342, p<0.000107.
+Der verschobene T-Preis ist t_raw+10f=0.00034281. Die physische kappa-Brücke
+mit dem bereits gestörten F-Rest bleibt im alten P-Preis enthalten. Die ganzen
+Schalen-, Endstreifen- und Transportpreise werden über den alten Beleg übernommen.
+
+Exakt rational:
+  f²+10(t_raw+10f)²+(11/10)p²
+  <0.000001187780867561<0.0000012.
+Damit ist die ganze QUADRIERTE Norm von sigma0 nach oben eingeschlossen durch
+  (25/21)(0.0000012+0.001326293²)
+  =2959053121849/840000000000000000
+  =0.000003522682287915476190476190476...
+
+Die anschließende Dreiecksungleichung ergibt mit gerichteter rationaler Wurzel
+  Rbar_11=||eta_bar1||²_(S_R^-1)
+  <0.000003522682288001101<0.000003523<0.000006051814.
+
+F/T/P/S sind vollständig vertreten. 5/21 bleibt lokal; die korrigierten
+Faktoren 25/21, 10 und 11/10 werden verwendet. Kein zusätzlicher alter
+Pauschalpreis wird addiert. Dasselbe primitive Fehlerobjekt darf in mehreren
+Restkomponenten wirken; deren jeweilige Normpreise sind legitime Obergrenzen
+der unterschiedlichen Komponenten. Die direkt kontrollierte feste Projektion
+Rbar enthält ihren Projektionsverlust bereits: kein zweiter Projektionspreis.
+Der Kernrest verschwindet exakt, sodass die verwendete ganze Dualenergie mit
+der benötigten Schur-Dualenergie übereinstimmt.
+
+5. Herkunftslücke der drei nativen Dateien
+
+QUELLEN_NATIVE.json.gz, KRAFT_UND_LOESUNG_NATIVE.json.gz und
+VERWENDETE_PRIMITIVE_NATIVE.json.gz werden in der neuen Rechnung nicht gelesen
+und ihre abweichenden November-5-/November-9-Hashes nicht gleichgesetzt.
+
+Die neue S-Kontraktion verwendet den alten g12-Bankbestand. Tau kommt aus
+derselben Bank. lambda_bar1 wird lediglich als festgelegte rationale Zahl
+verwendet: Für diesen Schluss muss sie keine nachgewiesen genaue Näherung
+des physisch optimalen Projektionskoeffizienten sein. Ihre Wahl erzeugt somit
+keine neue Abhängigkeit von den ungeklärten nativen Quelldateien.
+
+Die Herkunftslücke blockiert diesen Erstspaltennachweis nicht. Sie wird dadurch
+auch nicht repariert. Der gemeinsame Anschluss verwendet weiterhin das bereits
+reproduzierte November-10-Budget unter dessen geerbten Quellenverträgen; dessen
+physische Herkunft wird durch diesen Nachtrag nicht neu voraussetzungslos bewiesen.
+Für eine spätere q-Auswertung bleibt die dokumentierte native Bindung zu klären.
+
+6. Zweite Energie und sämtliche Mischterme
+
+Beide festen Restspalten gehören zu derselben S_R-Dualmetrik, derselben
+k-Quellenbasis mit k=13619/125000 und derselben festen lambda_bar-Karte.
+Die Budgetwerte c1=0.000006051814 und c2=0.1 stimmen exakt mit dem vorhandenen
+REFINED_BUDGET_RESULT.json überein; dessen Bindung wurde kontrolliert.
+
+Für den tatsächlichen gemeinsamen positiven Gram Rbar setze
+  A=Dcap^-1/2 Rbar Dcap^-1/2, Dcap=diag(c1,c2).
+Dann ist A>=0 und lambda_max(A)<=tr(A). Deshalb folgt aus
+  Rbar_11/c1 + Rbar_22/c2 <= 1
+die gemeinsame Loewnerordnung Rbar<=Dcap, unabhängig vom Vorzeichen des
+Mischterms. Es werden gerade nicht zwei Diagonalwerte ungeprüft als
+diagonale Oberform ausgegeben.
+
+Mit der ersten Kappe genügt
+  Rbar_22<=1264407/30259070=0.041786049604300462638... .
+Für das vorgeschlagene strengere Energieziel 0.0417 ist die normierte Spur
+höchstens 3023303219/3025907000=0.9991395039569953736...<1.
+Zusammen mit R<=Rbar und dem übernommenen H-Dcap>0 wäre der Zweiraumschluss
+damit vollständig positiv. 0.0417 bezeichnet eine QUADRIERTE Norm/Energie,
+keinen Normradius. Dieser zweite Energiepreis ist noch nicht nachgewiesen.
+
+7. Konsequenz für den bisherigen Arbeitsstand
+
+Kein Einwand gegen den geprüften bedingten Erstspaltennachweis.
+Die in GPT2s Datenkarte vom 10. November fehlende neue T-Auswertung war eine
+Lücke des dort vorgesehenen Auswertungswegs. Sie wird für die erste Spalte
+durch die nun energiekontrollierte Darstellung sigma0+epsilon s0 umgangen.
+Die historische Datenkarte bleibt erhalten; der vorliegende Nachtrag aktualisiert
+ihre Aussage zur Erstspaltenmachbarkeit.
+
+Die erste Spalte benötigt derzeit keine weitere Optimierung. Offen bleibt
+die vollständige zweite Energie im selben Restsystem oder ein anderweitig
+hinreichender gemeinsamer Restvergleich. Keine neue Quadratur, Inversion,
+Kernrechnung, q-Auswertung oder Parameterserie wurde durchgeführt.
+
+ERSTE_FESTE_RESTSPALTE_GEZIELT_ABGENOMMEN
+RESTMACHBARKEIT_OFFEN

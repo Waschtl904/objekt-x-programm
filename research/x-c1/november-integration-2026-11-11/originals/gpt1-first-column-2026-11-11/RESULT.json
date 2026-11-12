@@ -1,0 +1,119 @@
+{
+  "status": "FIRST_FIXED_RESIDUAL_COLUMN_BOUNDED_UNDER_INHERITED_CONTRACTS",
+  "joint_status": "RESTMACHBARKEIT_OFFEN",
+  "new_integrations": 0,
+  "new_inversions": 0,
+  "new_q_evaluations": 0,
+  "S_sigma0": {
+    "model_norm_upper": {
+      "rational": "5140526753233634159640919/2000000000000000000000000000000000000000",
+      "decimal_display": "2.5702633766168170798204595E-15"
+    },
+    "other_34_charges_and_export_norm_upper": {
+      "rational": "1326291509834142866604404321867292887/1000000000000000000000000000000000000000",
+      "decimal_display": "0.001326291509834142866604404322"
+    },
+    "primitive_direct_norm_upper": {
+      "rational": "650096796840842255488240339359/500000000000000000000000000000000000000",
+      "decimal_display": "1.300193593681684510976480679E-9"
+    },
+    "whole_norm_upper": {
+      "rational": "2652585620060613623331064230855584129/2000000000000000000000000000000000000000",
+      "decimal_display": "0.001326292810030306811665532115"
+    },
+    "rounded_norm_cap": {
+      "rational": "1326293/1000000000",
+      "decimal_display": "0.001326293"
+    },
+    "rest_trace_upper": {
+      "rational": "185848773772684311333163021980671494139/1250000000000000000000000000000000000000",
+      "decimal_display": "0.1486790190181474490665304176"
+    },
+    "rest_on_answer_upper": {
+      "rational": "11831186274126710736032824403690727/1000000000000000000000000000000000000000",
+      "decimal_display": "0.00001183118627412671073603282440"
+    }
+  },
+  "inherited_FTP_sigma0": {
+    "f_norm_cap": {
+      "rational": "81/1000000000",
+      "decimal_display": "8.1E-8"
+    },
+    "raw_t_norm_cap": {
+      "rational": "171/500000",
+      "decimal_display": "0.000342"
+    },
+    "shifted_t_norm_cap": {
+      "rational": "34281/100000000",
+      "decimal_display": "0.00034281"
+    },
+    "p_norm_cap": {
+      "rational": "107/1000000",
+      "decimal_display": "0.000107"
+    },
+    "weighted_energy_from_separate_caps": {
+      "rational": "1187780867561/1000000000000000000",
+      "decimal_display": "0.000001187780867561"
+    },
+    "whole_Qold_energy_cap_used": {
+      "rational": "3/2500000",
+      "decimal_display": "0.0000012"
+    }
+  },
+  "sigma0_whole_energy_cap": {
+    "rational": "2959053121849/840000000000000000",
+    "decimal_display": "0.000003522682287915476190476190476"
+  },
+  "tau_upper_from_original_bank": {
+    "rational": "36387490773059444747023119921945253445763/10000000000000000000000000000000000000000",
+    "decimal_display": "3.638749077305944474702311992"
+  },
+  "tau_norm_cap_used": "2",
+  "epsilon": {
+    "rational": "41500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000/3638721525313906744239547704366063197412488376358379273453373548464683505459612928801267736406061003018035670917324543134616572925704817016227702326502920121967714204492050508005119",
+    "decimal_display": "1.140510470814879429756688376E-14"
+  },
+  "eta1_whole_energy_upper": {
+    "rational": "291508439719695516475687323164040014359074347104272557973247064480862119308450174995165335579600438854431561273569318577614557028292660066841369361348583871539900726296363347187609702179727046213862883675632952863978117181727416770450906601722754259105710175469381881281806847412517902747585762003505789151961811086033311920235098790574981162785607525318960750894679155999952579192753577547762276775384676542151677694179005329674782889/82751839617392275495704758877258338048425784907488057926440228665552169431496602873376393258723351704063797397154072876527152035564019711991028540015114385866569433090671141862438262852172844702810141403237440563030325985288991785782428212002366923915437595634699094974069395962414096730064621536412693967282711265899342400233512373780315152804047981880813776006250000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "decimal_display": "0.000003522682288001100287792666938"
+  },
+  "eta1_energy_cap": {
+    "rational": "3523/1000000000",
+    "decimal_display": "0.000003523"
+  },
+  "certified_diagonal_capacity": [
+    {
+      "rational": "3025907/500000000000",
+      "decimal_display": "0.000006051814"
+    },
+    {
+      "rational": "1/10",
+      "decimal_display": "0.1"
+    }
+  ],
+  "sufficient_second_whole_energy_threshold": {
+    "rational": "1264407/30259070",
+    "decimal_display": "0.04178604960430046263814452989"
+  },
+  "second_energy_0_0417_sufficient": true,
+  "second_energy_achieved": false,
+  "physical_assumptions": [
+    "Inherited H1-H4, corrected form comparison and complete old F/T/P prices.",
+    "Additive common-bank provenance; -Erest <= DeltaMrest <= Erest.",
+    "Cg = B^T Gp B and the frozen exact rational B,Y maps.",
+    "sigma0=t1-S_R*w and tau=<w,S_R*w>; energy equals the kernel-zero Cs dual energy."
+  ],
+  "input_sha256": {
+    "budget_work/vorabtest/eingang/COMMON_BANK_109.json.gz": "db88793f46b055a6d09d5409328858392dab9e2a3baf99b7cb58798981e752d4",
+    "budget_work/vorabtest/eingang/FIRST_COLUMN_COORDINATES.json": "4c805141605daaadcf22c76fddc5ff78b178ae75a98d3bcd3f67e24e6ef4d0d1",
+    "review_20261110/gpt2/DIRECT_BLOCK_INPUTS.json": "fe608dd5aed1db4cb32622497e90833d82729763e3af4daff98da7f92528d3f1",
+    "direction/Objekt-X-GPT2-Richtungsnachweis-Neue-Inversmajorante-2026-11-01/final-inputs/INVERSE_DATA.json": "41afad50d284b8bf2e170449384c33bb256743abee8c720904c95f2f64f8b90f",
+    "review_20261110/original_20261109/budget/carrier_recombination/FIXED_PROJECTION_PRICE.json": "8cdd24511af234ae10b5646b5f9adbcf07f02b69f0c66381ec579716219e6f48",
+    "review_20261110/gpt2/LEDGER_PROVENANCE.json": "b77943c59001b8d5fd39a9dfafe5a8e3be3aced9ed78cf25a26d9a2dd8bb154e",
+    "direction/Objekt-X-GPT2-Richtungsnachweis-Neue-Inversmajorante-2026-11-01/source/common_full_ledger.py": "bfc56d7aeea405165492cd52638c978cec9e315aec87dff888413f8345b92913",
+    "review_20261110/original_20261109/geerbte_belege/METRIKKORREKTUR.txt": "6ab8357dd54401566a33fb9b62726debe8491268145640af1ce6a458c10114a7",
+    "review_20261110/original_20261109/geerbte_belege/FORMSCHNITTSTELLE.txt": "e7835b9f55985bfeb2b35240759ba07fc580939ccd5e278285e4969910fd8c29",
+    "review_20261110/original_20261109/ANALYTISCHE_BRUECKE.txt": "9a35369b19b4f4b69f4cd07bcecd7e292e7b7b4c27807e321984dcc273bba574",
+    "review_20261110/GEZIELTE_ABNAHME_UND_ENTSCHEIDUNG.txt": "26742b82b94019531ad510de412c92088d06f97e04dc64d1037c4d5e888da906"
+  }
+}

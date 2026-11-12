@@ -1,0 +1,36 @@
+{
+  "utc_before_launch": "2026-11-05T16:52:03.240903+00:00",
+  "original_archive_sha256": "6651b8b8f0092f91c4a7d4da75d32f9ec5c45720dc82af8e085589d414bad870",
+  "GPT1_acceptance_archive_sha256": "cec71cb0f581bc3326230106f3209e74bbc69fa34cfd1f09814bb54a2e9be5bd",
+  "GPT1_acceptance_members": {
+    "PRUEFERGEBNIS.json": "b6be7c618e1a64db32f8120b7ddaf6ece26184896c2b27a46c2184f5d31b6047",
+    "pruefe_gpt1.py": "5f29981353efccb8a3eca20ff1b2d846bb980960883107354266baa0ef6904be",
+    "GPT1_ABNAHME.txt": "d06085f341fb0b0ac39d5b964c2348267605b621adc09230a889337293c27841"
+  },
+  "original_manifest_sha256": "24841e89338161f43012a6994ef5e16ca2dfa93abc98ce1df69211ea4d080f2f",
+  "cache_sha256": "2fd7511c0682aafb0bf947a6ba0eccce99fd091886558841dcf7ba0dfd9bad30",
+  "JOB_SPEC_sha256": "8472423e6fc475a6ba25a5e5616fbcfff25ec46fa0eb04414e16910fba8206a0",
+  "worker_sha256": "c7d0f615b15170d74cb83733268f12d1d4aab0c6755cad3731e75f1b8b431611",
+  "launcher_sha256": "163aa4246f5670b066916b9f7dd98d147670c85dabff404f775ee35694f854f3",
+  "start_program_sha256": "0a4b8a9a319d691a121107139c696bbb9c28f243efa87318ba0823a3a8fb4d70",
+  "cache_exception": {
+    "source": "GPT1_ABNAHME.txt, Abschnitt 5; PRUEFERGEBNIS.json",
+    "accepted_replacement": "Gerichtete Einschliessung jeder frisch rekonstruierten Koordinate durch den unveraenderten gespeicherten Cache",
+    "exact_byte_identity": false,
+    "containment": "PASS laut gebundener GPT1-Abnahme",
+    "cache_hash_binding": "Originalpaket-SHA256 -> dessen unveraendertes MANIFEST -> PREPARED_CORE.json.gz",
+    "optional_reconstruction_assert_changed": false,
+    "cache_or_inputs_modified": false
+  },
+  "user_authorization": "Ein unveraenderter physischer Hauptlauf nach Vorlage der GPT1-Abnahme; maximal 1800 Sekunden einschliesslich Export und Schlusskontrolle; keine Wiederholung",
+  "python_version": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+  "working_root": "C:\\Users\\sebas\\Documents\\Codex\\2026-10-31\\files-pasted-by-the-user-wir\\work\\ganzkern-einzelpass-2026-11-05\\Objekt-X-GPT2-Ganzkern-Einzelpass-Vorbereitung-2026-11-05",
+  "source_passes_authorized": 1,
+  "seconds_limit": 1800,
+  "command": [
+    "C:\\Program Files\\Python313\\python.exe",
+    "-B",
+    "C:\\Users\\sebas\\Documents\\Codex\\2026-10-31\\files-pasted-by-the-user-wir\\work\\ganzkern-einzelpass-2026-11-05\\Objekt-X-GPT2-Ganzkern-Einzelpass-Vorbereitung-2026-11-05\\lauf.py",
+    "--execute"
+  ]
+}

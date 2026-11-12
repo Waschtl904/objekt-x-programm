@@ -1,0 +1,113 @@
+{
+  "project": "Objekt X",
+  "reviewer": "GPT2",
+  "date": "2026-11-11",
+  "verdict": "ERSTE_FESTE_RESTSPALTE_GEZIELT_ABGENOMMEN",
+  "overall_status": "RESTMACHBARKEIT_OFFEN",
+  "conditions": "H1–H4 und übernommene physische Quellen-, Form-, Operator- und Fehlerverträge",
+  "author_package": {
+    "name": "Objekt-X-GPT1-Erste-Restspalte-2026-11-11.zip",
+    "bytes": 14436,
+    "sha256": "36a20575ba76a32c744f826b7603468b9de1b5ec5ddd6331f57adc8a3b3cfe54"
+  },
+  "prior_source_package": {
+    "name": "Objekt-X-Gezielte-Abnahme-und-Budgetnachschaerfung-2026-11-10.zip",
+    "bytes": 30905746,
+    "sha256": "19769a8e1e66aa6fa80116022f813c3dde1965e5c54b18d374580ef7fb5bb056"
+  },
+  "identity": {
+    "manifest_bound_members": 5,
+    "all_package_files_accounted_for": true,
+    "input_bindings_verified": 11,
+    "separate_txt_equal": true
+  },
+  "actual_replay": {
+    "backend": "Python arbitrary-size integers and fractions.Fraction; python-flint author checker not executed",
+    "exact_author_values_matched": 14,
+    "author_input_bindings_verified": 11,
+    "extra_original_ledger_binding_verified": 1,
+    "original_author_checker_executed": false,
+    "independent_checker": {
+      "name": "independent_review.py",
+      "bytes": 8567,
+      "sha256": "41099a725e0dd057741e5328468f447cdcc9881eb3430d023ca2cd6f2f899f99"
+    }
+  },
+  "checks": {
+    "package_and_input_identity": "PASS",
+    "eta1_identity_and_full_s0_energy_tau_lt_4": "PASS",
+    "S_norm_refinement_and_full_first_energy": "PASS",
+    "inherited_full_FTP_and_physical_error_accounting": "PASS_UNDER_INHERITED_CONTRACTS",
+    "native_binding_issue": "NOT_A_DEPENDENCY_OF_THIS_FIRST_COLUMN_PROOF; NOT_REPAIRED",
+    "joint_two_column_sufficiency_including_cross_terms": "PASS_CONDITIONAL_ON_FULL_SECOND_ENERGY_LE_0.0417"
+  },
+  "norm_and_energy": {
+    "S_sigma0_norm_cap": "0.001326293",
+    "eta1_squared_norm_strict_cap": "0.000003523",
+    "first_capacity": "0.000006051814",
+    "second_capacity": "0.1",
+    "sufficient_second_squared_norm_target": "0.0417",
+    "second_target_achieved": false,
+    "normalized_joint_trace_upper": {
+      "rational": "3023303219/3025907000",
+      "decimal_display": "0.999139503956995373618554701119"
+    }
+  },
+  "source_scope": {
+    "same_original_answer_sha256": "9866e97a18f5f8a8929f1253473711dd19062f2e98be31c677f2179300cc4426",
+    "shell96_equal": true,
+    "outer12_raw_equal": true,
+    "same_budget_capacity": true,
+    "budget_result_sha256": "d6d5dcc2d07c271266aafef310b9a8cb86c6fa6a6300e7ae4b61b9f64364831b",
+    "source_coordinate_k": "13619/125000",
+    "remaining_ledger_charges": [
+      "old96_high_linear",
+      "old96_high_square",
+      "h_g_high_linear",
+      "h_g_high_square",
+      "h_g_frozen_T_reference_bridge",
+      "F_h_g_raw_high",
+      "F_h_g_low_projection",
+      "F_h_g_physical",
+      "J_h_g_raw_high",
+      "J_h_g_low_projection",
+      "J_h_g_physical",
+      "F_low_source",
+      "F_high_source_in_B0",
+      "J_low_source",
+      "J_high_source_in_B0",
+      "h_g_low_source",
+      "h_g_high_source_in_B0",
+      "h_g_actual_B_plus_B_minus_B0",
+      "c_quadrature",
+      "Bh_quadrature",
+      "g_force_saved_interval",
+      "g_force_interval_second_variation",
+      "low_source_second_variation",
+      "high_Gram_saved_interval",
+      "direct_D",
+      "direct_K",
+      "F_bare_h_coordinates",
+      "F_bare_h_physical",
+      "F_bare_g",
+      "J_bare_h_coordinates",
+      "J_bare_h_physical",
+      "J_bare_g",
+      "P0_g_physical_model_transport",
+      "finite_Arb_arithmetic"
+    ],
+    "disputed_native_files_directly_read": [],
+    "lambda_bar_role": "fixed rational coefficient; no requirement to be an accurate physical projection coefficient for this upper bound",
+    "joint_cap_scope": "Uses already reproduced November-10 budget under its inherited source contracts; no repair of native transport mismatch claimed."
+  },
+  "historical_physical_contracts_reproved": false,
+  "new_integrations": 0,
+  "new_inversions": 0,
+  "new_q_evaluations": 0,
+  "new_first_column_optimizations": 0,
+  "report": {
+    "name": "Objekt-X-GPT2-Abnahme-Erste-Restspalte-2026-11-11.txt",
+    "bytes": 8746,
+    "sha256": "fbc66a2960d883711123beda17207130af96c0d779f3890ba4fc516c24fe0766"
+  }
+}

@@ -1,0 +1,72 @@
+Objekt X — GPT2-Zuordnung zu GPT1s analytischer Brücke, 9. November 2026
+
+Kernquellen und Synthese (K)
+Vorhanden: QUELLEN_NATIVE mit zwei Modellquellen auf 0<x<A8, 17 Kern-
+Primstücken, Potenz-/Logmomenten, zwei niedrigen Quellenprojektionen,
+Mellinmomenten sowie getrennten Projektions-/Lift-/Gamma360-Quellpreisen.
+Vorhanden: ganze QPhi-Felddefinition in ganzkern.py/old_fields.py, gebundener
+Gamma160-Modellkernel, ganze B0-Definition und Bphys-B0-Operatorpreis.
+Vorhanden: gespeicherte C,L_inverse und Lösung12. Neu eng rekombiniert:
+q-Kraft und q-Lösung; SHARP_FORCE_SOLUTION_NATIVE bewahrt deren ganze
+191 Koeffizienten mit Radien. Keine neue inverse Matrix nötig.
+
+Der native Quell-Export enthält nicht bereits das ganze rohe r9-Feld auf
+der anschließenden alten Schale A8<x<a9. Die bekannte Quellformel ist dort
+mit richtigen Prim-/Logzweigen und physischen Preisen anzuwenden. Dieser
+noch auszuweisende Abschnitt gehört zum fehlenden gemeinsamen Funktionsmodell.
+
+Schnitt- und Liftwirkung (G)
+Vorhanden: expliziter Gamma-/Carleman-Kernel, Primverschiebungen, Momentlift
+und geerbter Domänenvertrag. Die neue Kernantwort ist damit zulässiger
+Hilberteingang der beschränkten Schnittkarte; keine starke Wirkung auf
+die inverse Kernantwort nötig. Die ganzen neuen Schalenbilder der beiden
+Kernantworten einschließlich ihrer gemeinsamen Modellradien wurden nicht
+numerisch erzeugt. Weder powersq noch die 191 niedrigen Zahlen ersetzen sie.
+
+Niedriger physischer T-Transport, §5.1
+Vorhanden: WHOLE_PHYSICAL_TRANSPORT und PHYSICAL_APPLICATION_PROOF §6,
+uniformer geerbter T-Kraftvertrag und neu angepasste B0-Formel. Die Dateien
+MODEL_COUPLING_CORE und COMMON_CORE_SOURCE_PRICE sind byteidentisch zur
+Ganzkernvorbereitung. Neu aus gespeicherter Matrix: ||L_inverse||<14.
+Neu aus analytischem Feldpreis plus gespeicherten Momenten: q-Lösungsradius
+<1e−80. Damit ist der reine neue niedrige physische T-Fehler <2.7e−13 pro
+Spalte, unter genau diesem uniformen alten T-Kraftvertrag. Das ist kein
+vollständiger T-Restpreis und keine bereits gebildete T-Oberform.
+
+Endliche F-/P-/S-Gegenbilder, Formel (F)
+Vorhanden: alte gemeinsame Quellenbank und physische Quellen-/B0-Fehler-
+verträge. source_c_model/source_Bh_model, old_low_c_model/old_low_Bh_model
+und die äußeren niedrigen/hohen h-Quellenfelder liefern die Modellkräfte
+V_Q=C*(Phi*Q−B0 Theta Q/d). Die rückwärts gerichteten Bildgrame können
+ohne neue inverse Matrix aus diesen alten Gegenbildern kontrahiert werden.
+Noch nicht neu ausgewertet: die hierzu ausgewählten gemeinsamen physischen
+Obergrame und die neuen direkten q-Bare-/P0-/äußeren Paarungen. Ein altes
+Modell oder alter g12-Preis wird nicht als q-Paarung ausgegeben.
+
+Vier Restkarten (M), Wiederverwendung (R), feste Kombination (P)
+Vorhanden: alte F_o/J84/B/Y-Geometrie, Knew,P,Cg, lokales R_L und alter
+vollständiger Rest sigma0 mit seinen Richtungsbelegen. Die alte 109er-Bank
+enthält nur g12 als Komplementquelle. Alte 618 Normzellen sind keine
+gemeinsamen q-Kreuzintegrale.
+Neu analytisch: jede Restkarte ist eine feste gemeinsame Kombination aus
+A_j t1,A_j t2,A_j sigma0; es braucht kein neues D_Rw oder S_Rw.
+Neu rational: lambda_bar und Projektionsüberpreis <8.420e−10 als Matrix-
+spektralobergrenze. Eine direkt berechnete Hülle für Rbar enthält diese
+Übermajorisierung bereits; zum Abschluss J_K+Rhat_bar wird sie NICHT ein
+zweites Mal addiert. In Vbar+Rbar gleicht der Variationswert sie algebraisch
+aus. Der Preis beziffert den Verlust gegenüber der exakten Restprojektion.
+
+Noch nicht erzeugt und nicht als vorhanden behauptet:
+ - F: gemeinsames physisches 12x2-Bild und dessen Knew^-1-Gram;
+ - T: zwei ganze verschobene Funktionen nu und vollständiger R_L-Gram,
+      mit allen inneren Zweigen/äußeren Endbereichen;
+ - P: gemeinsames 84x2-Bild und P-Gram samt physischer kappa-Brücke;
+ - S: gemeinsames 12x2-Liftbild und Cg^-1-Gram;
+ - jeweilige gemeinsame vollständige Fehlerform E_Wj und signierte
+   Modellkreuzterme mit dem alten Rest sigma0.
+
+Die exportierte V0-/Antwortfehlerhülle bleibt separat zu breit. Die genaue
+Gegenbelegung bezieht sich ausschließlich auf die exportierte gemeinsame
+±E-Hülle und die getesteten Skalar-/X-Identitäten. Eine physische Realisierung
+aller zulässigen Fehlerbelegungen oder eine Ausschöpfung jeder weiteren
+H1–H4-Struktur wird nicht behauptet.

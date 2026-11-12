@@ -1,0 +1,17 @@
+{
+  "repository": "Waschtl904/objekt-x-programm",
+  "proposed_tag": "objekt-x-research-2026-11-11",
+  "publication_state": "PREPARED_NOT_PUBLISHED",
+  "assets": [
+    {
+      "id": "gpt2-run-2026-11-05",
+      "target_kind": "GITHUB_RELEASE_ASSET",
+      "target": "release-assets/Objekt-X-GPT2-Ganzkern-Einzelpass-2026-11-05.zip",
+      "filename": "Objekt-X-GPT2-Ganzkern-Einzelpass-2026-11-05.zip",
+      "bytes": 245913425,
+      "sha256": "501ed63430ad88dae24006791ea1eaf55936d387061600dd9c1927395e79b90e",
+      "original_root": "Objekt-X-GPT2-Ganzkern-Einzelpass-2026-11-05"
+    }
+  ],
+  "reason": "Preserve the complete 245,913,425-byte original as a release asset; selected exact readable members and its manifest remain in Git. The preparation archive is already embedded in this unchanged original."
+}

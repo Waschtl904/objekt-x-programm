@@ -1,0 +1,244 @@
+{
+  "status": "NATIVE_BINDING_UNRESOLVED",
+  "sharp_file_sha256": "8db1b5e9adad2320d3fe305641781207f5a7207c6fd39fc996cc3b3c776a07f6",
+  "sharp_payload_sha256": "60d5c9278ff060d9914e1ddb5b13c057f11349084aee66727cff09e259166fdf",
+  "all_original_payloads_available": false,
+  "files": [
+    {
+      "file": "QUELLEN_NATIVE.json.gz",
+      "local_path": "C:\\Users\\sebas\\Documents\\Codex\\2026-10-31\\files-pasted-by-the-user-wir\\work\\ganzkern-einzelpass-2026-11-05\\Objekt-X-GPT2-Ganzkern-Einzelpass-Vorbereitung-2026-11-05\\lauf\\QUELLEN_NATIVE.json.gz",
+      "expected_path": "/workspace/scratch/d1f27bfb7db2/unpacked/Objekt-X-Ganzkern-Einzelpass-und-GPT1-Abnahme-2026-11-05/lauf/QUELLEN_NATIVE.json.gz",
+      "expected_sha256": "cac088af25f2f1fd3766b7a7517e3990e01c010f48e2e33c77bcfab8b7693a94",
+      "actual_sha256": "c583d6e6667baab0206c1682f640603b085d6f3b26584b716787363f3946ff2c",
+      "bytes": 9316739,
+      "matches_expected": false,
+      "actual_payload_sha256_verified": "66f9039f4093b28ad25ea58cc7d3b6b4a275c6ef29b3b61d16a570697ddf8f47",
+      "original_payload_available": false,
+      "source_and_input_manifest_match": true,
+      "consumed_fields_in_recombine_carrier": [
+        "roots",
+        "cell_moments.left/right",
+        "lowq",
+        "square_q",
+        "mc",
+        "mu",
+        "gamma",
+        "eh",
+        "cross_raw",
+        "low12",
+        "me",
+        "source_errors[1]"
+      ]
+    },
+    {
+      "file": "KRAFT_UND_LOESUNG_NATIVE.json.gz",
+      "local_path": "C:\\Users\\sebas\\Documents\\Codex\\2026-10-31\\files-pasted-by-the-user-wir\\work\\ganzkern-einzelpass-2026-11-05\\Objekt-X-GPT2-Ganzkern-Einzelpass-Vorbereitung-2026-11-05\\lauf\\KRAFT_UND_LOESUNG_NATIVE.json.gz",
+      "expected_path": "/workspace/scratch/d1f27bfb7db2/unpacked/Objekt-X-Ganzkern-Einzelpass-und-GPT1-Abnahme-2026-11-05/lauf/KRAFT_UND_LOESUNG_NATIVE.json.gz",
+      "expected_sha256": "054d61c3a8e19d679e521de30c83c29c0903a7e4b6ae447b3af5a4a55500bd5b",
+      "actual_sha256": "956736390926af666053805e3bf889f664cee70d26501d664825fe750ac3a960",
+      "bytes": 696299,
+      "matches_expected": false,
+      "actual_payload_sha256_verified": "a689cfe82b09be25ed2f8c7e8ceaaa6182f89b862d4fde088924dccc20eedc36",
+      "original_payload_available": false,
+      "source_and_input_manifest_match": true,
+      "consumed_fields_in_recombine_carrier": [
+        "raw_QPhi[:,0:3]",
+        "errors.high12",
+        "errors.high22",
+        "solutionq_preconditioned (diagnostic old radius only)"
+      ],
+      "unchanged_raw_columns_0_and_2_exactly_equal_sharp": [
+        false,
+        false
+      ],
+      "raw_row_count": 191,
+      "physical_error_field_names": [
+        "high12",
+        "high22",
+        "low12",
+        "low22",
+        "new_low_bridge",
+        "new_low_source",
+        "old_low_error"
+      ],
+      "exact_dyadic_interval_comparison_to_sharp": {
+        "0": {
+          "rows": 191,
+          "exact_centers_equal": 191,
+          "exact_radii_equal": 2,
+          "exact_intervals_equal": 2,
+          "overlapping": 191,
+          "sharp_contains_old": 191,
+          "old_contains_sharp": 2,
+          "first_mismatch": {
+            "zero_based_row": 0,
+            "old_ball": [
+              -185883206559565141651608592912679017500214913374548504211337634876424817593582933364169200864782993806080106872466076464190568368248918584358874563613737668101849310448042751845864111623679678579104437510122480839248478602579983691803046557620602744972109652556642054777817381834495697990032264839178990003798974116815267258529939371188989104571671261019039438940538336325113453065455077336240270150076933473342654624187539283027012206434630912166609042563459003285515533264373787468007551771943746986161026001851882513590064317394623085381227434339453573254479929393226820309725359296206456618507243704149999243749430986321804223588166032523012701744211514555310668783934285601594027942029193939522918739575473192318436504563565036110558524650252487473005971867188941129869369163357434615858191771234604890893417926475102495580738392109997118952245957021330223372789799992030520638154980634919085853042163618659464987784317540742133284007366124882885672324919022185425384504666621674305184156254521371,
+              -3333,
+              694232049,
+              -2733
+            ],
+            "sharp_ball": [
+              -185883206559565141651608592912679017500214913374548504211337634876424817593582933364169200864782993806080106872466076464190568368248918584358874563613737668101849310448042751845864111623679678579104437510122480839248478602579983691803046557620602744972109652556642054777817381834495697990032264839178990003798974116815267258529939371188989104571671261019039438940538336325113453065455077336240270150076933473342654624187539283027012206434630912166609042563459003285515533264373787468007551771943746986161026001851882513590064317394623085381227434339453573254479929393226820309725359296206456618507243704149999243749430986321804223588166032523012701744211514555310668783934285601594027942029193939522918739575473192318436504563565036110558524650252487473005971867188941129869369163357434615858191771234604890893417926475102495580738392109997118952245957021330223372789799992030520638154980634919085853042163618659464987784317540742133284007366124882885672324919022185425384504666621674305184156254521371,
+              -3333,
+              347116025,
+              -2732
+            ],
+            "old_midpoint_bits": 3327,
+            "sharp_midpoint_bits": 3327
+          }
+        },
+        "2": {
+          "rows": 191,
+          "exact_centers_equal": 191,
+          "exact_radii_equal": 2,
+          "exact_intervals_equal": 2,
+          "overlapping": 191,
+          "sharp_contains_old": 191,
+          "old_contains_sharp": 2,
+          "first_mismatch": {
+            "zero_based_row": 0,
+            "old_ball": [
+              23762058093128704490443485718888253247866627111081515456640996469403525828283148675108930246466785759586837160530834357729103762540358447973717447648611311940015152410348182288574668364109639546993624473901946698935901174894843058818540713944373318237703049965105775372289178723908059987019645838993412663647083183620273294836632954024833982030681807454073852418648605756290192423817632657092053139022762803790016780774951931111469788899256003601684064846146468508098411780359022586205782409611352143002966333613007092697157325108944758201101037633502779271098193421589621556911451022825519638790498587963754220956078680310822039621549355000480805477820869471168299729628344149852400317005223565739449075781148561773786413588864075630987660429651573433523977101884161328125361831105421912683579740485172275009980761304191104364630465770071809550538944066867122314944682367810272203160383877350578659878133004680846589141525607220449028571066153610090710035690961170071929155307660310086150120047775963,
+              -3327,
+              857834741,
+              -2725
+            ],
+            "sharp_ball": [
+              23762058093128704490443485718888253247866627111081515456640996469403525828283148675108930246466785759586837160530834357729103762540358447973717447648611311940015152410348182288574668364109639546993624473901946698935901174894843058818540713944373318237703049965105775372289178723908059987019645838993412663647083183620273294836632954024833982030681807454073852418648605756290192423817632657092053139022762803790016780774951931111469788899256003601684064846146468508098411780359022586205782409611352143002966333613007092697157325108944758201101037633502779271098193421589621556911451022825519638790498587963754220956078680310822039621549355000480805477820869471168299729628344149852400317005223565739449075781148561773786413588864075630987660429651573433523977101884161328125361831105421912683579740485172275009980761304191104364630465770071809550538944066867122314944682367810272203160383877350578659878133004680846589141525607220449028571066153610090710035690961170071929155307660310086150120047775963,
+              -3327,
+              428917371,
+              -2724
+            ],
+            "old_midpoint_bits": 3324,
+            "sharp_midpoint_bits": 3324
+          }
+        }
+      }
+    },
+    {
+      "file": "VERWENDETE_PRIMITIVE_NATIVE.json.gz",
+      "local_path": "C:\\Users\\sebas\\Documents\\Codex\\2026-10-31\\files-pasted-by-the-user-wir\\work\\ganzkern-einzelpass-2026-11-05\\Objekt-X-GPT2-Ganzkern-Einzelpass-Vorbereitung-2026-11-05\\lauf\\VERWENDETE_PRIMITIVE_NATIVE.json.gz",
+      "expected_path": "/workspace/scratch/d1f27bfb7db2/unpacked/Objekt-X-Ganzkern-Einzelpass-und-GPT1-Abnahme-2026-11-05/lauf/VERWENDETE_PRIMITIVE_NATIVE.json.gz",
+      "expected_sha256": "1f2faaad525b2b9cdb06632acb9d784c336f6b4580eff9171b774e05fa6de56f",
+      "actual_sha256": "edd4f048c83b91c4af729d8ca0e5455b0358061fbc911374ac7f16c690df0123",
+      "bytes": 161614617,
+      "matches_expected": false,
+      "actual_payload_sha256_verified": "0627fac0d6ed8659d5cec927959100b397111a2e64d26e0d657e89ddadf81904",
+      "original_payload_available": false,
+      "source_and_input_manifest_match": true,
+      "consumed_fields_in_recombine_carrier": [
+        "degree=1100",
+        "entries[(endpoint,logs)] selected by saved_primitive_keys_used"
+      ],
+      "selected_primitive_key_count": 22,
+      "selected_primitive_keys": [
+        [
+          "c0",
+          []
+        ],
+        [
+          "c1",
+          []
+        ],
+        [
+          "c10",
+          []
+        ],
+        [
+          "c11",
+          []
+        ],
+        [
+          "c12",
+          []
+        ],
+        [
+          "c13",
+          []
+        ],
+        [
+          "c14",
+          []
+        ],
+        [
+          "c15",
+          []
+        ],
+        [
+          "c2",
+          []
+        ],
+        [
+          "c3",
+          []
+        ],
+        [
+          "c4",
+          []
+        ],
+        [
+          "c5",
+          []
+        ],
+        [
+          "c6",
+          []
+        ],
+        [
+          "c7",
+          []
+        ],
+        [
+          "c8",
+          []
+        ],
+        [
+          "c9",
+          []
+        ],
+        [
+          "one",
+          []
+        ],
+        [
+          "one",
+          [
+            "minus_one"
+          ]
+        ],
+        [
+          "one",
+          [
+            "one"
+          ]
+        ],
+        [
+          "zero",
+          []
+        ],
+        [
+          "zero",
+          [
+            "minus_one"
+          ]
+        ],
+        [
+          "zero",
+          [
+            "one"
+          ]
+        ]
+      ],
+      "selected_payload_sha256": "9eba055163ba480b21c8dabb51439c17931fa37ff3db5f23027edc9169e5e6d6"
+    }
+  ],
+  "source_code_binding": "c7d0f615b15170d74cb83733268f12d1d4aab0c6755cad3731e75f1b8b431611",
+  "expected_origin": "Objekt-X-Ganzkern-Einzelpass-und-GPT1-Abnahme-2026-11-05/lauf/",
+  "new_source_evaluations": 0,
+  "new_integrations": 0,
+  "new_inversions": 0,
+  "stored_sharp_X12_inside_budget_interval": true,
+  "sharp_source_matches_recombination_code": true,
+  "meaning": "The sharp export is bound to the budget. Its three native ancestors remain unmatched. Unchanged raw columns from local November-5 force data are not byte-identical to the sharp export; exact dyadic interval comparison is recorded separately and does not identify the missing original payload."
+}

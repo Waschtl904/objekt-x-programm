@@ -1,0 +1,163 @@
+Objekt X — gezielte GPT1-Vorprüfung des Ganzkern-Einzelpasses
+5. November 2026
+
+Ergebnis
+
+Die mathematische Startvoraussetzung ist unter H1–H4 und den gebundenen
+physischen Form-, Quellen- und Modellverträgen erfüllt. Diese Abnahme
+betrifft ausschließlich den unten bezeichneten unveränderten Paketstand.
+Es wurde kein physischer Hauptlauf gestartet. X12 und X22 bleiben offen.
+Keine Veröffentlichung, kein Merge, keine Aussage zur Zweiraumpositivität.
+
+Originalpaket
+
+Objekt-X-GPT2-Ganzkern-Einzelpass-Vorbereitung-2026-11-05.zip
+Anhang im aktuellen Auftrag mit dem Dateinamenszusatz (1).
+Größe 66.446.337 Byte
+SHA-256 6651b8b8f0092f91c4a7d4da75d32f9ec5c45720dc82af8e085589d414bad870
+CRC aller ZIP-Mitglieder und alle 34 Manifestbindungen kontrolliert.
+Original-ZIP und entpackte manifestgebundene Eingänge unverändert.
+
+1. Uniformer Hochkernbefund
+
+BERICHT.txt §§1–2 und bestand.py des eingebetteten Bestandscheck-Pakets
+wurden gelesen und rational reproduziert. Die Metrik dI-cc*/a erhält
+die Energie-Kreuzterme. Die physischen Normkappen von c und w enthalten
+die jeweils unterschiedlichen Quellmodellpreise. Die rationalen
+Restgramkappen ergeben für alle zugelassenen Kreuzpaarungen
+  det(D-J_T) > 0.00001834319223869,
+mit positivem ersten Pivot.
+Dies ist ein Nichtausschluss durch genau diesen Testraumgram. Es ist
+kein Positivitätsnachweis nach Abzug des vollständigen Inversgrams.
+Damit ist der frühere Vorschlag, allein die Hochkern-Kreuzpaarung zur
+Ausschlusssuche genauer auszuwerten, überholt. Der Wechsel zum ganzen
+alten Kern ist durch diesen uniformen Befund begründet.
+
+2. Ganzkernidentität und Quelle
+
+Im Energieabschluss des festen C_s ist die Projektion von u auf den
+alten Kern gleich U_s g1, weil C_s[u,v]=<g1,v> auf jedem Kernvektor gilt.
+Für die Koordinaten (F12,F14-k F12), k=13619/125000, sind
+  Xij=<gi,U_s gj>, b_k=(b12,b14-k b12).
+Die Restantwort u_perp=u-U_s g1 hat Energie a-X11 und Quellenpaarung
+b_k-Xe1. Orthogonale Zerlegung des Testabschlusses liefert deshalb
+  J_K=X+(b_k-Xe1)(b_k-Xe1)^T/(a-X11).
+Dies ist die exakte Variationsunterform auf Kern+span(u). Die gleiche
+Formel gilt auch, wenn außerhalb dieses Testraums zusätzliche Richtungen
+vorhanden sind. Ein eigenes vierdimensionales rationales Beispiel mit
+einer ausdrücklich ungetesteten Koordinate bestätigt die Identität.
+
+Die Kongruenz S_k=[[1,-k],[0,1]] muss auf D und Quellen gleichzeitig
+wirken. schluss.py verwendet diese Koordinaten konsistent. Das alte
+Scherungsmaß 177 ist keine zusätzliche Quelle oder Normierung.
+Aus der gebundenen 109er-Bank und den Rang-eins-Intervallen folgt
+  a-X11 > 3.63869397329384.
+Der Nenner ist vor dem Hauptlauf positiv. Für X11 wird ausschließlich
+der gebundene letzte 109er-Eintrag samt ganzem Fehler übernommen.
+
+3. Niedrige Kraft und physische Fehler
+
+Die Blockinversion von A_s liefert mit T=C^T L_s C
+  vi=C^T(Phi*gi-B0 Theta gi/d),
+  Xij=<Theta gi,Theta gj>/d+vi^T T^-1 vj, d=19/10.
+Die ganze niedrige Differenz wird im Auswerter vor der Norm gebildet.
+Die neue Gamma160-Kraft wird aus den vollständigen QPhi-Feldern
+rekombiniert. Die Vorzeichen und die Transposition von A160 stimmen
+mit der gebundenen Raw-to-High-Identität überein.
+
+Die alte Kraft wird mittels
+  v1=(1.84298/d)*sqrt(1-rho)*a_model
+       +(1-1.84298/d)*C^T Phi_g_model
+übernommen. Der dazu passende Fehler sqrt(1-rho)*e_old ist derselbe
+Preis aus COMMON_CORE_SOURCE_PRICE. Die alte Berechnung bezahlt bereits
+Modellradien, Quelle und Bphys-B0; er wird einmal angesetzt.
+
+Für q werden die entfernte W-Schalenprojektion, der physische Quelllift
+und Gamma360 vollständig in der rohen Hilbertnorm bezahlt. Die Faktoren
+12 und 1000 bleiben übernommene physische Verträge. Die Gamma160-Brücke
+betrifft die Kopplungswirkung auf das neue Quellmodell und wird zusätzlich
+bezahlt. Der Übergang Bphys zu B0 kostet eB*||Theta g_model||. Der weitere
+Quellenfehler wird durch die feste B0-Wirkung transportiert, deren Preis
+über C^T Gup C gebunden ist. Es wird keine Operatorwirkung A9 V benötigt.
+
+Mit z_i=T^-1 vi und t>=||T^-1|| sind
+  |Delta X12_low| <= ||z1|| e2+||z2|| e1+t e1 e2,
+  |Delta X22_low| <= 2||z2|| e2+t e2^2
+korrekte gemeinsame bilineare Fehlerpreise. Die hohen Preise enthalten
+ebenfalls beide linearen Fehler und das Produkt. Der alte pauschale
+Gradientenpreis wird nicht erneut addiert. Der lokale Faktor 5/21 wird
+hier nicht als vollständige inverse Metrik verwendet.
+
+4. Geometrie, Momente und Export
+
+Die symbolische Partition kontrolliert die Schalen- und QPhi-Primgrenzen
+auf allen 17 Kernstücken. Die alten Kernkanäle enthalten 2,3,4,5,7,8;
+Kanal 9 hat im alten Kern keine innere Überlappung. Die Schalenquelle
+führt ihn getrennt mit. Die Spiegelvorzeichen werden vor der Integration
+zusammengeführt. Die logarithmischen Stammfunktionen enthalten die
+Endpunkte; es wird keine Randzone ausgespart.
+
+Die Momentkapazität 1100 deckt die verwendeten polynomialen Produkte.
+Die cosh-Trunkierung in Mc und den QPhi-Momenten erhält eigene Fehler;
+bei QPhi wird die vollständige L1-Kappe einschließlich Logarithmen und
+Primstücken benutzt. Die vorgesehenen Ausgaben enthalten die tatsächlich
+benutzten nativen Intervalle, die 191 Kräfte und Lösungen sowie ihre
+getrennten Fehler. Der native Roundtrip-Test besteht. Ob der neue
+physische Hauptlauf vollständig endet, ist damit nicht vorweggenommen.
+
+5. Gespeicherte 191er-Rekonstruktion — technische Abweichung
+
+lauf.py ohne --execute und vorpruefung.py bestehen unverändert.
+Die zusätzliche Ausführung von vorbereiten.prepare() reproduziert die
+191er-Unterform, positive LDL-Pivots, inverse Restkontrolle und alte Kraft.
+Ihr abschließender Test auf exakt gleiche serialisierte Cacheobjekte
+scheitert hier. Dieser Befund wird ausdrücklich nicht als PASS ausgegeben.
+
+Die unabhängige gerichtete Kontrolle ersetzt für diese Vorprüfung den
+Gleichheitstest durch eine stärkere inhaltliche Frage: Enthalten die
+unveränderten gespeicherten Intervalle die frisch rekonstruierten?
+Ergebnis PASS für sämtliche 36.481 Einträge der Unterform, 36.481 Einträge
+der Inverse, 191 LDL-Pivots, 191 Kraftkoordinaten, 191 Lösungskoordinaten
+und die inverse Normkappe. C, die drei gesonderten Norm-/Fehlerpreise und
+die skalaren Bindungen sind exakt gleich. Die Matrixabweichungen liegen
+unter 2e-590, die inverse Normkappenabweichung unter 8e-590.
+Es wurde keine Cachezahl ersetzt, kein Fehlerpreis vergrößert und keine
+Toleranz geändert. Die gespeicherten Hüllen bleiben damit gültig.
+
+Der Gleichheits-Assert in vorbereiten.py ist für portables Replay zu
+streng. Eine spätere Anpassung sollte gerichtete Inklusion prüfen und
+jede Verletzung ablehnen. Der eigentliche Hauptlauf lädt den bestehenden
+geprüften Cache und führt diesen optionalen Rekonstruktions-Assert nicht
+aus. Die Abweichung blockiert deshalb diesen konkreten Hauptlauf nicht.
+
+6. Schlussprüfung und Stopplinie
+
+schluss.py arbeitet rational mit vorzeichenrichtigen Intervallprodukten.
+Die symmetrische Zeilenradiusreserve ist eine gemeinsame Formfehlerhülle,
+keine eintragsweise Unterform. Der Nenner von J_K bleibt positiv.
+Ein Gegenzeuge wird nur bei nichtpositivem OBERENDPUNKT seiner
+quadratischen Form ausgegeben. Ein positives D_k-J_K bedeutet lediglich,
+dass dieser Unterseitentest keinen Ausschluss liefert. Es beweist weder
+die volle Vergleichspositivität noch die tatsächliche Schurpositivität.
+Die drei mathematischen Zustände wurden an synthetischen Daten geprüft.
+
+lauf.py begrenzt einen einzelnen Worker auf 1800 Sekunden einschließlich
+Export und Schlussprüfung. START.json verhindert eine automatische
+Wiederholung. Fehler, Zeitlimit und jeder mathematische Ausgang beenden
+den Auftrag. Kein weiterer Lauf, Retuning oder Folgerechnung ist mit
+dieser Abnahme verbunden. Bei Nichtausschluss ist zuerst der vollständige
+Plan für den oberen gemeinsamen Restnachweis vorzulegen.
+
+Diese Abnahme erfüllt die fachliche GPT1-Startvoraussetzung für genau
+obigen Paketstand. Sie ist keine Meldung eines ausgeführten Hauptlaufs.
+Der aktuelle Prüfauftrag hat den Hauptlauf nicht gestartet. X12, X22,
+der Ganzkern-Ausgang und die volle Zweiraum-Schurpositivität bleiben offen.
+
+Reproduktion dieser Vorprüfung
+
+python -B pruefe_gpt1.py ORIGINAL.zip
+
+Der Prüfer entpackt temporär, prüft Hashes, führt nur Vorprüfungen und
+gespeicherte Matrixrekombinationen aus und gibt JSON aus. Er startet
+weder ganzkern.py noch lauf.py --execute. Die analytische Prüfung in
+diesem Text ist von den arithmetischen Kontrollen getrennt zu verstehen.

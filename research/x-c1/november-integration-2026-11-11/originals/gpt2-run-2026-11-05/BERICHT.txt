@@ -1,0 +1,153 @@
+Objekt X – Ganzkern-Einzelpass vom 5. November 2026
+
+Ergebnis
+
+Der genau einmal gestartete unveränderte physische Hauptlauf hat nach
+518,110 Sekunden vollständig abgeschlossen. Das gebundene Limit betrug
+1800 Sekunden einschließlich nativer Exporte und rationaler Schlusskontrolle.
+Es gab keinen zweiten Hauptlauf, keine Parameteränderung und keine
+Fortsetzung in einen größeren Testraum.
+
+Der mathematische Ergebnisstatus lautet EINSCHLIESSUNG_UNENTSCHIEDEN.
+Die gerichtete Determinantenhülle enthält positive und negative Werte.
+Kein nichttrivialer Gegenzeuge mit belegtem nichtpositivem Oberendpunkt
+wurde zertifiziert. Positivität von D_k-J_K ist ebenfalls nicht bewiesen.
+Die tatsächliche Schurpositivität bleibt offen.
+
+Alle Zahlen unten sind nach außen gerundete Darstellungen der exakten
+rationalen Endpunkte in lauf/X_INTERVALLE.json und lauf/SCHLUSS.json.
+Die ursprünglichen Endpunkte wurden nicht durch diese Kurzfassung ersetzt.
+
+Eingänge und dokumentierte Cache-Ausnahme
+
+Original-Vorbereitung, 66.446.337 Byte:
+SHA256 6651b8b8f0092f91c4a7d4da75d32f9ec5c45720dc82af8e085589d414bad870
+
+GPT1-Vorprüfung:
+SHA256 cec71cb0f581bc3326230106f3209e74bbc69fa34cfd1f09814bb54a2e9be5bd
+
+Unveränderter Cache PREPARED_CORE.json.gz:
+SHA256 2fd7511c0682aafb0bf947a6ba0eccce99fd091886558841dcf7ba0dfd9bad30
+
+GPT1_ABNAHME.txt, Abschnitt 5, akzeptiert ausdrücklich die gerichtete
+Enthaltenseinsprüfung aller frisch rekonstruierten Koordinaten durch die
+gespeicherten Hüllen als Ersatz für die gescheiterte Byte-Identität.
+Die Abnahme bindet das exakte Originalarchiv; dessen geprüfte 34
+Manifestbindungen enthalten den Cachehash. STARTBINDUNG.json hält diese
+Kette ausdrücklich fest. Weder der Cache noch der optionale Gleichheits-
+Assert wurden verändert. Dieser Assert gehört nicht zum Hauptlaufpfad.
+Alle 34 gebundenen Eingangsdateien stimmen auch nach dem Lauf überein.
+
+Die GPT1-Abnahme betrifft die Startvoraussetzung. Die hier erstmals
+erzeugten physischen Ergebnisintervalle sind GPT2s Autorenrechnung.
+Eine externe GPT1-Ergebnisgegenprüfung ist noch offen.
+
+Gerichtete gemeinsame Inverspaarungen
+
+Quellenkoordinaten: g1=g8,12 und q=g8,14-k*g8,12,
+k=13619/125000=0.108952, d=19/10.
+
+Übernommenes X11:
+[0.733975425620254790, 0.733975425648278722]
+
+Neu berechnetes X12=<g1,U_s q>:
+[0.025312512289359178, 0.026164355047852328]
+
+Neu berechnetes X22=<q,U_s q>:
+[0.698659702294351842, 0.699277418589334372]
+
+Die Intervalle enthalten die übernommenen Modellradien, die gerichtete
+Rechenfortpflanzung und sämtliche im Laufvertrag gebundenen physischen
+Fehler. X11 behält ausschließlich seinen bereits bezahlten alten Preis.
+
+Getrennte Fehlerbuchung
+
+Für die neuen Quellen sind die entfernte W-Projektion, der physische
+Quelllift und Gamma360 getrennt in QUELLEN_NATIVE gespeichert. Für die
+niedrige Kraft kommen die Gamma160-Kopplungsbrücke, Bphys-B0 und der
+Transport des echten Quellenfehlers hinzu. Lineare Fehler und die
+bilinearen beziehungsweise quadratischen Fehlerprodukte bleiben enthalten.
+
+Gerichtete Obergrenzen der zusätzlich angesetzten Energiefehler:
+  hoher Anteil X12 <= 1e-24,
+  hoher Anteil X22 <= 1e-24,
+  niedriger Anteil X12 <= 1.433465223e-15,
+  niedriger Anteil X22 <= 1.387063533e-15.
+
+Gebundene niedrige Kraftfehler, keine zusätzlichen Energiepreise:
+  neue Modell-/Kopplungsbrücke <= 1.147125732e-15,
+  neuer Quellenfehlertransport <= 7.361892e-18,
+  übernommener alter Kraftfehler <= 1.163917838e-15.
+
+Diese Kraftfehler sind Eingänge der obigen Energiepreise und werden
+nicht nochmals als separate Energiekosten addiert. Auch der ältere
+pauschale Gradientenpreis wird nicht nochmals angesetzt.
+
+Die Modellintervalle VOR den zusätzlichen physischen Energiepreisen sind:
+  model12 in [0.025312512289813925, 0.026164355047397580],
+  model22 in [0.698659702294806589, 0.699277418588879624].
+Damit steckt die sichtbare Breite bereits weit überwiegend in den
+gerichteten Modellintervallen. Diese enthalten übernommene Eintragsradien
+und ihre Intervallfortpflanzung; sie werden nicht als bloße Mittelpunkt-
+oder Maschinenrundungsfehler ausgegeben. Das nachfolgende Aufweiten und
+der rationale Export sind zusätzlich nach außen gerichtet.
+
+Rationaler Zweiraumschluss
+
+J_K=X+(b_k-Xe1)(b_k-Xe1)^T/(a-X11), b_k=(b12,b14-k*b12).
+D_k=S_k^T D_JJ S_k, S_k=[[1,-k],[0,1]].
+Der unveränderte positive Nennervertrag bleibt erfüllt.
+
+Für A=D_k-J_K liefert der unveränderte Schlussprüfer:
+  A11 in [0.000125291783612413, 0.000180474501357301],
+  A12 in [0.021297401983380921, 0.023097071859542570],
+  A22 in [3.765195858749244234, 3.765826981918290336],
+  det(A) in [-0.000061726623692109, 0.000226056415517853].
+
+Die bloße Nullüberlappung wird nicht als Gegenzeuge behandelt.
+SCHLUSS.json enthält witness=null und witness_value=null.
+Der exakte Schluss wurde nach dem Lauf ausschließlich aus gespeicherten
+Eingängen und Ergebnisintervallen wiederholt: PASS, null physische Replays.
+Dies ist eine Reproduktionskontrolle und keine externe GPT1-Gegenprüfung.
+
+Konkreter Engpass dieser Einschließung
+
+Die Breite der berechneten Determinantenhülle beträgt rund 2.8778304e-4.
+Eine exakte algebraische Breitenzerlegung des gespeicherten Intervall-
+ausdrucks A11*A22-A12^2 ordnet rund 72,2041 Prozent der Breite dem ersten
+Pivot, 27,7624 Prozent dem quadrierten Mischterm und 0,03353 Prozent
+der zweiten Diagonalen zu. BREITENDIAGNOSE.json enthält die rationalen
+Werte. Die Prozentangaben sind ausdrücklich gerundete Diagnosen.
+
+Diese Zerlegung lokalisiert die Unentschiedenheit des ausgeführten
+Intervallvergleichs. Sie beweist weder eine erreichbare Verbesserung
+noch das Vorzeichen der tatsächlichen Determinante. Es wurde keine
+alternative Rekombination, Nachschärfung oder neue Rechnung gestartet.
+
+Wiederverwendbare Daten und Reproduktion
+
+Alle 17 Zellmomentdatensätze und 191 Kraftzeilen sind gespeichert.
+QUELLEN_NATIVE enthält die gemeinsamen Quellmomente und Modellquellen.
+KRAFT_UND_LOESUNG_NATIVE enthält die Kräfte, verwendeten Lösungen,
+signierten gemeinsamen Paarungen und getrennten Fehlerbeiträge.
+VERWENDETE_PRIMITIVE_NATIVE enthält die tatsächlich aufgerufenen
+Momentprimitive in nativer Mantissen-/Exponentenform. Die zusätzlich
+fortlaufend geschriebenen Dateien bleiben vollständig erhalten.
+
+Die Vorbereitung und GPT1-Abnahme liegen als unveränderte Original-ZIPs
+bei. STARTBINDUNG, START, LAUFSTATUS und ENDBINDUNG dokumentieren den
+einzigen Start, sein Zeitlimit, den Abschluss und die Eingangsidentität.
+STARTPROGRAMM.py ist die historische Startprovenienz; nicht erneut starten.
+
+Aus dem entpackten Ergebnispaket, Python-Standardbibliothek ausreichend:
+  python -B PRUEFE_ERGEBNIS.py
+
+Dieser Prüfer kontrolliert die Hashbindungen und wiederholt ausschließlich
+den rationalen Schluss. Er startet keinen physischen Hauptlauf. Für einen
+behaupteten Gegenzeugen verlangt er zusätzlich ausdrücklich einen
+nichttrivialen Vektor und einen nichtpositiven gerichteten Oberendpunkt.
+
+Der Einzelpass ist beendet. Nächster vorgesehener Schritt ist die gezielte
+GPT1-Gegenprüfung der exportierten Ergebnisse ohne zweiten Hauptlauf.
+Eine weitere physische Rechnung oder ein erweiterter Testraum ist durch
+diese Lieferung nicht freigegeben. Keine Veröffentlichung.

@@ -1,0 +1,51 @@
+{
+  "conditions": "H1–H4 und übernommene physische Quellen-, Form-, Operator- und Fehlerverträge",
+  "kernel_run": {
+    "result": "EINSCHLIESSUNG_UNENTSCHIEDEN",
+    "start_review_original_available": true,
+    "result_review_original_available": false,
+    "reported_result_review": "Original fehlt; keine eigene Ergebnisabnahme aus Berichtstext rekonstruiert"
+  },
+  "bridge": {
+    "status": "AUTHOR_DERIVED",
+    "full_physical_remainder_proved": false
+  },
+  "budget": {
+    "status": "PROJECT_INTERNAL_RATIONAL_REPRODUCTION",
+    "capacity_first": "0.000006051814",
+    "capacity_second": "0.1",
+    "native_X12_ancestry_unresolved": true
+  },
+  "first_column": {
+    "status": "PROJECT_INTERNAL_TARGETED_ACCEPTANCE",
+    "whole_energy_strict_upper": "0.000003522682288001101",
+    "independent_exact_matches": 14,
+    "original_python_flint_checker_executed_by_GPT2": false
+  },
+  "second_column": {
+    "status": "CONDITIONAL_SCALAR_SUFFICIENCY_ONLY",
+    "Qq_sufficient_target": "0.03518",
+    "R22_sufficient_target": "0.0417",
+    "Qq_bound_achieved": false,
+    "Qq_reachability_proved": false,
+    "native_X12_contract_conditional": true
+  },
+  "native_bindings": {
+    "status": "THREE_ORIGINAL_BINDINGS_UNRESOLVED",
+    "resolved": false
+  },
+  "overall": {
+    "status": "RESTMACHBARKEIT_OFFEN",
+    "two_space_closed": false,
+    "point4_closed": false,
+    "external_review": "OPEN",
+    "object_x": "NOT_CONSTRUCTED",
+    "new_physical_main_run_justified": false,
+    "historical_A11_positivity_used_as_input": false
+  },
+  "integration": {
+    "GPT1_scope_review": "PENDING",
+    "public_push_authorized": false,
+    "merge_authorized": false
+  }
+}

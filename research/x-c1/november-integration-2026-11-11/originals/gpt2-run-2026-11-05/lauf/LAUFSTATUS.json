@@ -1,0 +1,9 @@
+{
+  "status": "LAUF_BEENDET",
+  "automatic_retry": false,
+  "elapsed_seconds": 518.11,
+  "last_stage": {
+    "stage": "RATIONALE_SCHLUSSKONTROLLE",
+    "new_source_passes": 1
+  }
+}

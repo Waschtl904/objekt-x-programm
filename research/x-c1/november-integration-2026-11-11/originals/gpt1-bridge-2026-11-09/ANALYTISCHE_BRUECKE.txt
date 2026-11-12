@@ -1,0 +1,385 @@
+Objekt X — analytische Restkonstruktion und Budgetentscheidung
+GPT1 mit paralleler GPT2-Datenrekombination, 9. November 2026
+Autorenherleitung unter den unveränderten H1–H4; externe Prüfung offen.
+
+Dieser Bericht enthält neue Herleitungen. Die allgemeine Projektionsalgebra
+des Abschlussplans vom 5. November wird übernommen. Es gibt keinen neuen
+physischen Hauptlauf, keine Integration, keinen größeren Testraum und keine
+neue Hilfskappe. Die numerischen Rekombinationen sind getrennt dokumentiert.
+
+1. NEUE ERGEBNISSE UND GRENZE DES ABSCHLUSSES
+
+(a) Die beiden Kernantworten lassen sich aus den gespeicherten Quellen,
+    niedrigen Lösungen und den alten vollständigen QPhi-Feldern als ganze
+    Hilbertfunktionen rekonstruieren. Die anschließende Schalenwirkung
+    benötigt nur einen beschränkten Schnittoperator und einen Momentterm.
+    Eine starke Wirkung von A9 auf eine inverse Antwort wird nicht benutzt.
+(b) Der tatsächlich benötigte niedrige T-Transport hat eine uniforme Cap
+    kleiner 16. Zusammen mit der aus der gespeicherten Inversmatrix neu
+    geprüften Schranke ||L_inverse||<14 kostet der physische niedrige
+    Kraftfehler je neue Kernspalte weniger als 2.7e-13 im lokalen RL-Dualmaß.
+    Das ist kein Preis der ganzen Restfunktion.
+(c) Für den zu breiten cosh160-Trägerpreis wird eine neue, explizite
+    L2-Feldhülle bewiesen. Die zugehörige gespeicherte Momentrechnung kann
+    ohne neue Primitive kontrahiert werden. Status und Zahlen der tatsächlich
+    ausgeführten Rekombination stehen in NUMERISCHER_ABSCHLUSS.txt.
+(d) Die neue Restdarstellung verwendet den alten vollständigen Rest sigma0.
+    Weder D_R w noch S_R w muss als zusätzliches Feld neu erzeugt werden.
+(e) Rationale feste Projektionskoeffizienten erlauben eine gültige obere
+    Restform ohne Quotientenfehler. Der Unterschied zur exakten Projektion
+    ist ein ausdrücklich bekannter positiver Rang-eins-Preis, keine neue
+    willkürliche Restkappe.
+
+Nicht abgeschlossen sind eine gemeinsame physische Restoberform und ein
+positiver Budgetblock. Die vorhandene gemeinsame 109er-Fehlerform lässt
+bereits ohne Restabzug eine nichtpositive Budgetbelegung zu. GPT2 weist dies
+mit derselben Matrixabweichung nach, nicht durch freie Kopien von a,b,V0,X11.
+Eine neue gemeinsame Restauswertung allein kann diese Vertragslücke nicht
+beseitigen. Ein physischer negativer Zeuge wird damit NICHT behauptet.
+
+2. KOORDINATEN, FUNKTIONSSYNTHESE UND B0
+
+A=3 log(2)/2 ist der alte Kernrand, a=log(3) der alte Schalenrand,
+b=log(11)/2 der neue Rand. Auf dem geraden Kern ist das Maß 2 dx.
+m=cosh(x/2), j=int_0^A m, mu=int_0^A m^2. Die e_n sind die geraden
+normierten Legendrepolynome auf (-A,A). Der mittelwertfreie Koeffizientenraum
+zerfällt in L=span(e_2,...,e_382) und den GANZEN hohen Raum H ab Grad 384.
+
+Für mittelwertfreies f definiere M f=f-1*(int m f)/j. Sein Hilbertadjunkt,
+als Funktion im mittelwertfreien Raum dargestellt, ist
+    M* r = r-m*(int r)/j.
+Für beliebiges r gilt deshalb
+    M M* r = r-m I0/j-1*(Im/j-mu I0/j^2),
+    I0=int r, Im=int m r.
+Dies ist eine schräge Momentsynthese, keine orthogonale Projektion.
+Setze Phi=M I_L, S_H=M I_H und Theta=I_H* M*.
+Dann S_H Theta=M P_H M*, und ||M||^2=gamma=2mu/<e0,m>^2<4.
+Theta und Phi* tilgen den Momentträger m, weshalb rohe oder vorher exakt
+gegen m projizierte Quellvertreter dieselben Koeffizienten liefern.
+
+Schreibe B0 für die GANZE gebundene Gamma160-Kernkopplung, nicht für die
+äußere 12x12-Koordinatenmatrix B. Im ursprünglichen ganzen B0-Modell ist
+    B0* x = I_H* M* Q8,160(Phi x).
+Alle Primstücke und logarithmischen Endterme gehören zu Q8,160. Nur sein
+regulärer Gammaanteil wurde ersetzt. Eine endliche hohe Abschneidung wird
+hier nicht eingeführt. Modellträger/basisbedingte Näherungen einer späteren
+Auswertung bleiben gesonderte Fehler; die Definition selbst ist ganz.
+
+Es seien d=19/10, L=C* Ls C, v_i=C*(Phi* g_i-B0 Theta g_i/d),
+zeta_i=L^-1 v_i und x_i=C zeta_i. Die gespeicherten zeta_i und x_i sind
+Einschließungen der entsprechenden Modellantworten, keine neuen Lösungen.
+Die tatsächliche Kernantwort k_i=Us g_i hat die explizite Darstellung
+    k_i = S_H Theta g_i/d + D zeta_i,                       (K)
+    D   = (Phi-S_H B0*/d) C.
+Gleichwertig:
+    k_i=Phi x_i + M P_H M*(g_i-Q8,160 Phi x_i)/d.
+Hier bezeichnet Q8,160 genau das definierende B0-Modell. Ein Übergang zum
+physischen B wird für diese Identität nicht benötigt. Die bereits im
+Kraftpreis enthaltene B/B0-Brücke wird nicht noch einmal pauschal addiert.
+Wer stattdessen ein Modell der physischen B-Wirkung einsetzt, muss dessen
+gesonderten Übergang zu B0 weiterhin bezahlen.
+
+P_H M* r wird durch die ganze Funktion M* r und Abzug ihrer 191 niedrigen
+Legendrekoeffizienten gebildet. Die hochgradige Restfunktion wird also nicht
+durch 191 Zahlen ersetzt. QUELLEN_NATIVE liefert die beiden rohen Quellen
+als gemeinsame Polynom-/Logausdrücke und 17 Primstücke. Q8,160 Phi x ist eine
+Linearkombination der alten 191 Felder, deren Formel in ganzkern.py und
+old_fields.py gebunden ist. Das ist die konkrete Brücke zu ganzen Funktionen.
+
+3. SCHALENWIRKUNG, ENDLICHE PAARUNGEN UND DIE VIER KARTEN
+
+Verwende den übernommenen alten F_o/T-Wechsel. Ein Resttest besteht aus
+zwölf F_o-Koordinaten, einem t in T intersect D_X und zwölf äußeren rohen
+Koordinaten nach P0. Auf dem Kern verschwindet das Restfunktional exakt.
+Die Kernquellen dieser Tests sind G_F, G_T und h8. Für die J-Tests ist
+G_J=G_T J84. Alle diese Karten sind dieselben wie im alten Vergleich.
+Eine stillschweigende Ersetzung der F_o-Funktionen durch reine rohe
+Schalenpolynome wäre bei ihren Kernanteilen unzulässig.
+
+Die reine geliftete Schalenkopplung auf T hat einen expliziten L2-Adjunkten.
+Mit k(v)=exp(-v/2)/(1-exp(-2v)) und der geraden Nullfortsetzung u_e ist
+für A<x<a der rohe Vertreter vor der exakten T-Projektion
+    G8* u(x) = -int_0^A [k(x-y)+k(x+y)]u(y)dy
+               -sum_(n=p^r<=9) log(p)/sqrt(n)
+                    [u_e(x-log n)+u_e(x+log n)]
+               -m(x)/(2mu) * <Q8^np m,u>.                 (G)
+Der letzte Term ist eine Paarung gegen die FESTE L2-Funktion Q8^np m.
+Q8 wird nicht auf u angewandt. Die direkte Cauchy-Singularität hat Norm
+höchstens pi/2, die reflektierten/regulären Stücke sind beschränkt und jede
+komprimierte Translation hat Norm höchstens eins. Die geerbten ganzen
+T-Schnittpreise dürfen deshalb auf k_i aus (K) angewandt werden, auch wenn
+eine starke A9-Wirkung auf k_i nicht bekannt ist.
+
+Die exakte Riesz-/Projektionskarte vom rohen X-Kovektor auf T lautet
+P_T^W W^-1. Alle Normen sind danach in der gebundenen W-Geometrie zu lesen.
+Für die rohe äußere Quelle r9,i auf 0<x<a liefert die geliftete Paarung auf
+der alten Schale den Vertreter
+    fT_raw,i(x)=r9,i(x)-m(x)*int_0^A m(y)r9,i(y)dy/mu.
+r9,i ist die ganze Prim-/Gammawirkung von Lambda9 N ell12 bzw.
+Lambda9 N(ell14-k ell12), k=13619/125000. Die reine Schalenmodellquelle
+aus QUELLEN_NATIVE ist nur ihr Modell; Projektion, Momentlift und Gamma360-
+Abweichung bleiben physische Preise. In den äußeren rohen Koordinaten ist
+fB,i=B*(d_i-P0* g9,i), ohne zusätzlichen W-Faktor.
+Die 17 nativen Kernstücke decken nur 0<x<A ab. Die Fortführung derselben
+Quellformel auf A<x<a mit ihren dortigen Prim-/Logzweigen ist noch kein
+eingeschlossener neuer Funktionsabschnitt dieses Exports; sie gehört zum
+fehlenden gemeinsamen Restfunktionsmodell.
+
+Setze t_i=f_R,i-H* k_i. Seine benötigten endlichen und ganzen Bilder sind
+    pF_i=F_i[F_o]-G_F* k_i,             12 Koordinaten,
+    pJ_i=F_i[Lambda J84]-G_J* k_i,       84 Koordinaten,
+    pB_i=B*(d_i-P0* g9,i)-(h8 B)* k_i,  12 Koordinaten,
+    pT_i=P_T^W W^-1(fT_raw,i-G8* k_i),  ganze Funktion/ganzer T-Kovektor.
+Damit sind die vier Bilder eines t_i konkret
+    AF(t_i)=pF_i,
+    AT(t_i)=pT_i-a_mix* Knew^-1 pF_i,
+    AP(t_i)=pJ_i-a_J* Knew^-1 pF_i, a_J=a_mix J84,
+    AS(t_i)=pB_i-Y_F* pF_i-Y_J* pJ_i.                   (M)
+Y=(Y_F;Y_J) ist die ALTE feste 96x12-Karte. Keine neue Liftkarte wird gewählt.
+
+Definitionsbereiche und Metriken:
+ AF: formzulässige Restkovektoren mit Kernrest null -> R12; Metrik Knew^-1.
+ AT: dieselben, deren rohe Schalenvertreter in X* liegen -> T*; Metrik R_L.
+ AP: dieselben -> R84; Metrik P, identisch mit J84* AT.
+ AS: dieselben -> R12; Metrik Cg^-1, mit rohen äußeren Kovektoren.
+(G) und die feste Polynom-/Liftzulässigkeit beweisen diese Anwendbarkeit
+für die hier konstruierten Quellen. Für allgemeine Formdualquellen ohne
+die zusätzliche L2-Darstellung wird sie nicht behauptet.
+
+Gemeinsame Quellenabhängigkeit: Die beiden Spalten verwenden dieselben
+Operatoren, dieselbe Quellenkombination ell14-k ell12, dieselbe ganze
+Momentprojektion und dieselben körperlichen Fehlergrößen. Insbesondere
+werden die Mischterme der Gramformen aus (M) vor jedem Normpreis gebildet.
+
+4. WIEDERVERWENDUNG DES ALTEN RESTS UND FESTE PROJEKTION
+
+Sei sigma0=F1-Cs[u,.] der bereits gebundene vollständige alte Rest;
+sein Kernrest verschwindet. Mit s0=S_R[w,.] gilt genau
+    sigma0=t1-s0,
+    eta_i=t_i-lambda_i t1+lambda_i sigma0,                (R)
+    lambda_i=(b_k,i-X_i1)/(a-X11).
+Damit entfällt eine neue Auswertung von S_R w. Insbesondere
+eta1=(1-lambda1)t1+lambda1 sigma0. Diese kleine Differenz bleibt erhalten.
+
+Für jede der VIER Karten aus (M) ist die gemeinsame Zweispaltenmatrix
+    [A_j eta1,A_j eta2]=[A_j t1,A_j t2,A_j sigma0] C(lambda),
+    C(lambda)=[[1-lambda1,-lambda2],[0,1],[lambda1,lambda2]]. (C)
+Der alte Rest ist hier ein ganzes Funktional. Die alten 618 Normzellen
+allein liefern keine neuen Kreuzgrame mit t1 oder t2.
+
+Zur numerisch sauberen Fehlerfortpflanzung darf einmal ein rationaler
+Mittelpunkt lambda_bar derselben Projektionskoeffizienten fixiert werden.
+Es ist eine Darstellung im unveränderten K+span(u), keine Raumerweiterung
+oder Suche nach einer neuen Antwort. Definiere eta_bar=t-s0 lambda_bar*.
+Da eta[w]=0 und <s0,S_R^-1 s0>=tau, gilt als Matrixidentität
+    R_bar=eta_bar* S_R^-1 eta_bar
+         =R+tau(lambda-lambda_bar)(lambda-lambda_bar)* >=R. (P)
+Eine obere Form für R_bar ist folglich eine obere Form für R. Die vier
+Funktionsmodelle können mit den FESTEN rationalen Koeffizienten C(lambda_bar)
+gebildet werden; Quotienten-Modellfehler treten darin nicht auf.
+
+Wenn die exakte Projektion direkt modelliert wird, lautet die vollständige
+Fehleridentität stattdessen
+    Delta lambda=(Delta z-lambda_hat Delta tau)/tau,
+    Delta eta=Delta t-Delta s0 lambda_hat* -s0 Delta lambda*.
+Im letzten s0 steckt dessen eigene Abweichung. Das Produkt
+Delta s0 Delta lambda* wurde damit nicht weggelassen.
+
+Auch der Gesamtabschluss kann die Abhängigkeit ohne Quotienten erhalten:
+    J_K+R=V_bar+R_bar,
+    V_bar=X+z lambda_bar*+lambda_bar z* -tau lambda_bar lambda_bar*.
+V_bar ist affin in den GEMEINSAMEN primitiven X,b,a. Dies ist eine mögliche
+Schlussform, kein automatischer Schärfegewinn. Alternativ bleibt der
+gewünschte 3x3-Block mit Rhat_bar und tau>0 gültig. Sein zusätzlicher
+Projektionspreis ist durch (P) ausdrücklich beschrieben.
+
+5. VOLLSTÄNDIGER TRANSPORTVERTRAG — WAS JETZT BEZAHLT IST
+
+5.1 Kernquelle und niedrige Lösung
+
+Für eine Modellquelle ghat, eine feste Modelllösung zetahat und die EXAKTEN
+definierenden Operatoren in (K) gilt
+    k-khat=S_H Theta(g-ghat)/d +D(zeta-zetahat).
+Die physische niedrige Kraftabweichung sei e_v; sie enthält die im
+Ganzkernlauf dokumentierten Gamma160-/B/B0-/Quellbrücken einmal. Mit der
+gespeicherten inversen Matrix folgt
+    ||zeta-zetahat|| <= 14 e_v +r_zeta.
+r_zeta ist der vollständige native Radius gegenüber der gewählten festen
+Modelllösung, einschließlich gespeicherter Inversarithmetik. Es darf nicht
+als physischer Fehler ignoriert oder als bereits in e_v enthalten behandelt
+werden. Eine weitere numerische Funktionssynthese erhält eigene Feldradien.
+
+Die neue analytische Anwendung des geerbten ganzen T-Kraftvertrags ergibt
+    ||G_T* D z||_(R_L) <= c_T sqrt(1-rho) ||z|| <16||z||,
+    c_T=10+100 sqrt(5/21) [
+        (1/delta0-1/d) sqrt(tr(C*HB1 C)/(1-rho))
+        +eB ||C||_F/(d sqrt(1-rho)) ], delta0=1.8219.
+Dies ist ein Operatorpreis für ALLE niedrigen Koeffizienten, keine
+Übertragung eines skalaren Restwerts auf neue Quellen. Der gebundene Wert
+ist c_T=15.0843492274...<16. Die alte lokale Metrik R_L bleibt lokal.
+Voraussetzung bleibt ausdrücklich der geerbte UNIFORME T-Kraftvertrag 10
+und der ganze Schnittpreis 100. Ein Zahlenwert eines einzelnen alten
+Richtungstests allein würde diese neue operatorwertige Anwendung nicht tragen.
+Aus e_v,1<1.164e-15 und e_v,2<1.155e-15 folgt je Spalte
+    T-Transport allein des physischen niedrigen Kraftfehlers <2.7e-13.
+Der reine Quellenfehler im hohen Anteil kostet z.B.
+    ||G_T*S_H Theta(g-ghat)/d||_(R_L) <=100 gamma e_g/d.
+Die grobe Konstante 100 ist durch die übernommenen ganzen Schnitt-/Moment-
+preise gedeckt; sie wird NICHT mit dem ganzen inversen Cs-Preis verwechselt.
+
+Für eine endliche Kernquellenbank Q sind die nötigen Gegenbilder explizit:
+    V_Q=C*(Phi*Q-B0 Theta Q/d), H_Q=Theta Q,
+    Q*D=V_Q*, Q*S_H Theta=H_Q*Theta.
+Damit folgt für jede feste Auswahl L0 und Metrik W0 die auswertbare Schranke
+    ||W0^(1/2)L0*Q*(k-khat)||
+    <= sqrt(tr(W0 L0* V_Q*V_Q L0)) (14e_v+r_zeta)
+       +sqrt(gamma)/d sqrt(tr(W0 L0* H_Q*H_Q L0)) e_g.   (F)
+Bei modellierten V_Q,H_Q werden ihre gemeinsamen physischen Obergrame
+benötigt; reine Mittelpunkte dürfen sie nicht ersetzen. Alle Matrizen haben
+alte Quellen, nicht neu zu integrierende Kernantworten.
+
+Für F ist L0 die F-Auswahl. Für P wird V_J-V_F Knew^-1 a_J gebildet.
+Für S wird V_hB-V_F Y_F-V_J Y_J gebildet. Dieselben Kombinationen gelten
+für H_Q. Die signierten Differenzen werden VOR der Norm kontrahiert.
+Die vorhandenen source_c_model/source_Bh_model, old_low_c_model/
+old_low_Bh_model und Phi_star_h/high_cross_models liefern genau diese
+Modellkräfte. Ihre physischen Low-/High-/B0-Verträge stehen in der alten
+gemeinsamen Quellenbuchung. Keine neue 191er-Inversion ist dafür erforderlich.
+Die neuen q-PAARUNGEN selbst sind damit nicht schon berechnet.
+
+5.2 Direkte Quelle, Verschiebung, Lift und Metrik
+
+Zusätzlich zu (F) sind folgende Fehlerpositionen erforderlich, jeweils
+bezogen auf das tatsächlich verwendete gemeinsame Modell:
+ - f_R: N-Projektion, physischer Momentlift, ganze Gamma360-Abweichung,
+   direkte/bare F/J-Paarungen und äußerer d-P0*g-Kovektor. Der letzte benutzt
+   die rohe äußere Normierung. Die alten g12-Preise gelten nicht für q.
+ - AT: ganzer pT-Fehler plus a_mix* Knew^-1 Delta pF. Der letztere hat die
+   geerbte Cap 10||Delta pF||_(Knew^-1). Wird a_mix als Funktion modelliert,
+   kommt (a_mix-a_mix,model)* Knew^-1 pF_model hinzu. Seine äußeren Gamma-,
+   Basis-, Projektions- und Momentpreise bleiben erforderlich.
+ - AP: die ganze kombinierte J-P-Paarung. Bei kappa0 als Modell von
+   Knew^-1 a_J kostet die physische kappa-Brücke zusätzlich
+   d_k sqrt(tr Knew)||pF_phys||_(Knew^-1). Der bereits gestörte physische
+   F-Rest steht hier, damit alle Fehlerprodukte bezahlt sind.
+ - AS: die Kombination B*Delta outer-Y*Delta shell mit derselben Quelle;
+   P0-, B-, Y- und Basisabweichungen nur soweit diese Karten modelliert
+   werden. Exakt rationale gebundene B,Y brauchen keinen künstlichen Preis.
+ - ganze Funktion: äußere Endstreifen, innere Prim-/Logzweige, Cauchy- und
+   reguläre Fortsetzung sowie Modell-/Speicherradien. Normen alter Zellen
+   sind keine neuen signierten Kreuzintegrale.
+ - Metriken: Knew, P, Cg und R_L sind die gebundenen physischen Vergleichs-
+   metriken. Eine numerische Inverse muss durch gerichtete Arithmetik oder
+   eine separate Formmajorante abgedeckt sein; kein Mittelpunkt genügt.
+
+Diese Aufstellung enthält jeden Übergang der expliziten Modelle (K),(G),(M).
+Sie behauptet NICHT, dass die noch nicht erzeugten gemeinsamen Grame oder
+alle neuen direkten q-Preise bereits numerisch vorliegen.
+
+5.3 Gemeinsame Matrixfehler
+
+Für jede Karte schreibe W_j=[A_j t1,A_j t2,A_j sigma0]. Eine gemeinsame
+Fehlergrammajorante E_Wj muss Delta W_j* M_j Delta W_j<=E_Wj erfüllen.
+Mit festen lambda_bar ist der gesamte Fehler der beiden Restspalten genau
+    Delta H_j=Delta W_j C(lambda_bar),
+    Delta H_j* M_j Delta H_j <=C(lambda_bar)* E_Wj C(lambda_bar).
+Alle Modellmischterme bleiben in C* What_j* M_j What_j C erhalten.
+Falls nur drei sichere Spaltenfehler e_i verfügbar sind, ist
+3 diag(e_1^2,e_2^2,e_0^2) eine gültige, meist grobe Fehlergrammajorante.
+Der Rang-eins-Ausdruck (e_i e_j) allein wäre dafür im Allgemeinen FALSCH.
+Operator-/Metrikmodellfehler aus 5.2 müssen in E_Wj bereits enthalten sein.
+Ein anschließender Young- oder gemeinsamer Blockabschluss kann hieraus die
+vier Oberformen bilden. Eine bestimmte erfolgreiche Wahl wird nicht behauptet.
+
+6. NEUE ANALYTISCHE SCHÄRFUNG DES COSH160-PREISES
+
+Der alte Code benutzt in raw_QPhi[:,1] eine L1-Summe großer Monomial-
+koeffizienten. Diese ist eine gültige, aber unnötig breite Feldabschätzung.
+Für n<=382 lautet die tatsächlich verwendete Basis
+    Phi_n(x)=sqrt((2n+1)/(2A)) [P_n(x/A)-mellin(n,A)/mellin(0,A)].
+Der Quotient ist ein gewichtetes Mittel von P_n unter dem positiven
+cosh-Gewicht; sein Betrag ist <=1. Mit |P_n|<=1 und
+|P_n'|<=n(n+1)/2 folgt auf [-A,A], A>1,
+    |Phi_n|<40, |Phi_n'|<2.2e6.
+Für die Nullfortsetzung gilt R<2, J=2, ||Phi_n||_1<160,
+||Phi_n||_2<80. Die bereits bewiesene Operatorabschätzung
+    ||H_Gamma f|| <=(2L+20M)sqrt(2R+2)+4M sqrt(J)
+                    +2sqrt(2)||f||_1
+und der beschränkte Nichtpolzusatz <20 ergeben
+    ||Q8^np Phi_n||<14e6.
+Der gebundene Gamma160-Rest ist in dieser groben Skala <1. Daher ist
+    ||Q8,160 Phi_n||<3e7
+eine sichere einheitliche Hülle der ganzen Felder, inklusive Logs/Primstücke.
+Für eps_m=2/160! und das gerade Hilbertmaß liefert Cauchy-Schwarz
+    |int_0^A Q8,160 Phi_n (m-m160)|
+       <=3e7 eps_m sqrt(A/2)<1e-275.                    (Q)
+Alle übrigen Moment-/A160-/Kraftfehler bleiben unverändert.
+
+Ein gespeicherter Ball darf NICHT allein aufgrund (Q) nachträglich enger
+erklärt werden. Der unaufgepolsterte m160-Momentwert muss aus den tatsächlich
+gespeicherten primitiven Intervallen wieder kontrahiert werden; dann wird
+der neue Preis addiert. Für niedrige Grade kann der alte Monomialpreis
+kleiner sein. Die Schnittmenge beider gültiger Einschließungen ist zulässig,
+sofern sie nicht leer ist. Der gelieferte Rekombinationscode verweigert
+jeden nicht gespeicherten primitiven Eingang.
+
+7. VERBLEIBENDE LÜCKE UND MINIMALER UMFANG EINER MÖGLICHEN ERZEUGUNG
+
+Der niedrige physische T-Transport und der zu breite Trägermomentpreis sind
+jetzt konkret bearbeitet. Daraus folgt noch keine hinreichend kleine GANZE
+Restenergie. Insbesondere fehlen die gemeinsamen signierten Modellgrame
+der Funktionen in (C), ihre neuen q-Bare-/P0-Paarungen und die vollständige
+gemeinsame Preisbildung in F,T,P,S. Die vorhandene erste Restspalte liefert
+diese Kopplungen nicht.
+
+Zudem bleibt die alte gemeinsame Matrixfehlerform E auf der gebundenen
+Antwort ein eigenständiger Budgetengpass. Die zulässige Vertragsbelegung
+M_phys=M_model-E koppelt a,b12,V0,X11 korrekt und lässt bereits bei R=0
+einen negativen Budgetwert zu. Die neue Trägermomentschärfung löst diesen
+Engpass nicht. Es ist deshalb kein Erzeugungsauftrag positiv begründet.
+Dieser Nichtabschluss betrifft die exportierte gemeinsame +/-E-Hülle und
+die geprüften Skalaridentitäten. Es wird nicht behauptet, die Gegenbelegung
+sei physisch realisierbar oder erfülle jede zusätzliche, noch nicht gemeinsam
+exportierte Struktur aus H1–H4. Eine stärkere solche Bindung könnte die
+Fehlermenge verkleinern.
+
+Der sachliche Mindestumfang einer später gerechtfertigten Erzeugung wäre:
+ein gemeinsamer neuer q-Kreuz-/Bare-/P0-Block aus vorhandenen Momenten, soweit
+diese exakt abdecken; die zwei ganzen Restfunktionskombinationen aus (C)
+mit gemeinsamen F/T/P/S-Gramen; und gleichzeitig eine nachweisbar schärfere
+gemeinsame Fehlerhülle am alten V0/Antwortblock. Kein erneuter Kernhauptlauf,
+keine neue inverse Kernmatrix, keine neue Basis und keine zwölf Einzelaufträge.
+Für den letzten Fehlergewinn und die Modellrestgröße liegt in dieser
+Lieferung kein begründeter erfolgreicher Gesamtpreis vor. Daher wird dieser
+Umfang nicht als freigegebener Lauf oder als nächster Diagnosetest ausgegeben.
+
+Der Abschlusszustand ist: analytische Brücke teilweise geschlossen,
+Gesamtmachbarkeit nicht nachgewiesen; methodische Neuentscheidung an der
+gemeinsamen Fehler-/Restmajorante erforderlich. Eine physische Unmöglichkeit
+des Zweiraumvergleichs folgt daraus nicht.
+
+8. REICHWEITE FÜR DIE ÜBRIGEN QUELLEN
+
+(K),(G),(M),(R) sind linear in jeder Quellspalte. Die Operatoren, Cap16 und
+L_inverse<14 gelten unverändert für jede zusätzliche zulässige Quelle in
+diesem festen Vergleich. Damit ist der neue Transport KEINE Sonderidentität
+nur für Grad12/14. Quellenpreise, eigene Modellkräfte und die gemeinsamen
+Kreuzgrame müssen für weitere Spalten trotzdem vorliegen. Der besonders
+kleine Quellliftpreis der Kombination ell14-k ell12 wird nicht übertragen.
+Ein Zweiraumerfolg würde die weiteren zehn Quellen und ihre Kopplungen,
+den äußeren Komplementrest und die ungerade Parität nicht abschließen.
+
+9. EINGANGSBELEGE
+
+Abschlussplan: Objekt-X-GPT1-GPT2-Gemeinsamer-Abschlussplan-2026-11-05.txt.
+Ganzkern/Abnahme-Kombination: SHA256
+c151008f462d8ca4322387c80372147118ae104b95fc1fadf54243460c9c6dc6.
+Vorbereitung: SHA256
+6651b8b8f0092f91c4a7d4da75d32f9ec5c45720dc82af8e085589d414bad870.
+Zusätzlich gelesen: ursprünglicher Richtungsnachweis vom 1. November,
+MODEL_COUPLING_FORM.txt, PHYSICAL_APPLICATION_PROOF.txt §6,
+source/whole_physical_transport.py und WHOLE_PHYSICAL_TRANSPORT.json.
+Die alten dort fehlerhaften globalen 20/19- bzw. 5/21-Schlüsse werden NICHT
+übernommen; maßgeblich bleibt die gelesene Metrikkorrektur vom 2. November
+mit 25/21, der lokalen R_L-Metrik und dem zusätzlichen J-P-Preis.
+Die neue T-Kraftcap betrifft genau diese lokale Metrik.

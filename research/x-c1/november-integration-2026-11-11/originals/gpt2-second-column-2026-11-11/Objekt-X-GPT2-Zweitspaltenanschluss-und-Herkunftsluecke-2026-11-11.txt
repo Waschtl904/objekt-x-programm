@@ -1,0 +1,200 @@
+OBJEKT X — GPT2: ZWEITSPALTENANSCHLUSS UND NATIVE HERKUNFTSLÜCKE
+11. November 2026
+
+Ergebnis: BEDINGTER_ZWEITSPALTEN_SKALARSCHLUSS_BESTAETIGT.
+NATIVE_HERKUNFTSBINDUNG_OFFEN; RESTMACHBARKEIT_OFFEN.
+Alle mathematischen Aussagen unter H1–H4 und den übernommenen physischen
+Quellen-, Form-, Operator- und Fehlerverträgen. Erste Restspalte eingefroren.
+
+1. Tatsächlicher Auftrag und Prüfumfang
+
+Gelesen wurde der neue Koordinationsauftrag aus dem eingefügten Text. Ein
+eigenständiger neuer GPT1-Nachtrag zur zweiten Spalte mit Manifest, Prüfer
+und konkret begründetem Qq-Kontrollweg wurde nicht mitgeliefert und bei der
+gezielten lokalen Suche nicht gefunden. Daher ist dies keine Abnahme eines
+solchen Originalpakets.
+
+Unabhängig geprüft wurden die Zweitspaltenidentitäten aus der vorhandenen
+analytischen Brücke und eine neue, begrenzte exakte rationale C2-Rechnung
+aus genau drei bereits gebundenen Eingängen des Abnahmestands vom 10. November:
+SHARP_BUDGET_INPUTS.json, DIRECT_BLOCK_RESULT.json und FIXED_PROJECTION_PRICE.json.
+Die drei SHA256 wurden geprüft; sie stehen vollständig im Ergebnis-JSON.
+Es gab keinen erneuten Replay des Erstspaltenpakets oder des Budgetprüfers.
+
+Zusätzlich: gezielte Lektüre von recombine_carrier.py und model_cache.py,
+erneute Byte- und interne Payload-Prüfungen der drei vorhandenen nativen
+Dateien, Abgleich ihrer Code-/Manifestbindung, Prüfung der gespeicherten
+X12-Weitergabe sowie exakter Vergleich der unverändert übernommenen
+raw_QPhi-Spalten. Kein allgemeiner Archivreplay und keine physische Erzeugung.
+
+2. Restidentität und gemeinsame Paarung
+
+Im übernommenen Blockvergleich sei der Kernblock durch U_s invertiert,
+H die Kern-/Restkopplung und u=(u_K,w) die feste alte Antwort. Ihr exakt
+verschwindender Kernrest bedeutet
+  u_K=U_s(g1-Hw).
+Mit t2=f_R,2-H*U_s g2 folgt unter der Symmetrie des gebundenen U_s
+  b_k,2=f2[u]
+       =<g2,U_s g1>+f_R,2[w]-<g2,U_s Hw>
+       =X21+t2[w].
+Da s0=S_R[w,.], gilt in derselben Formdualmetrik
+  <t2,s0>_(S_R^-1)=t2[w]=b_k,2-X12=z2.
+Hier wird kein Operator auf eine nicht zugelassene inverse Kernantwort
+angewandt. Die alten Form-/Domänen- und Kernelrestidentitäten bleiben Voraussetzung.
+
+Für den tatsächlich festgelegten rationalen Koeffizienten lambda_bar2 gilt
+  eta_bar2=t2-lambda_bar2*s0,
+  Rbar22=||t2||²_(S_R^-1)+C2,
+  C2=lambda_bar2²*tau-2*lambda_bar2*z2.
+Die Paarung ist signiert. Ein zusätzlicher Dreiecks- oder Projektionspreis
+wird hier nicht aufgeschlagen. lambda_bar2 ist die vorhandene feste Zahl,
+nicht eine neu optimierte oder fehlerfrei mit dem exakten Quotienten
+gleichgesetzte Projektionskoordinate.
+
+3. Gerichteter C2-Preis mit denselben gemeinsamen Fehlerparametern
+
+Verwendet:
+  lambda_bar2=-0.0070738820454441790266868907355674...
+  k=13619/125000.
+
+In der schon verwendeten gemeinsamen Parameterhülle setze
+  mt=Mtt+alpha-2*beta+dt,
+  b =Mte+beta+db,
+  me=Mee+de,
+  tau=mt+2*b+me,
+  z2=b14-k*b-X12.
+Dasselbe b steht in tau und z2. Insbesondere werden keine unabhängigen
+Kopien dieses Fehlers eingeführt. Nach Einsetzen ist C2 affin:
+  Konstante = lambda²*(Mtt+2*Mte+Mee)+2*lambda*k*Mte;
+  Koeffizienten auf (alpha,beta,dt,db,de,b14,X12):
+  (lambda², 2*lambda*k, lambda²,
+   2*lambda²+2*lambda*k, lambda², -2*lambda, 2*lambda).
+
+Die alpha-/beta-Grenzen kommen aus dem primitiven Direktblock, die
+dt/db/de-Grenzen aus derselben konservativen Eintragshülle des übrigen
+gemeinsamen Fehlerblocks. b14 und X12 sind die bisherigen Vertragsintervalle.
+Das Maximum einer affinen Funktion wird durch die vorzeichengerechte
+Endpunktwahl exakt berechnet; die Parameterhülle ist eine Obermenge der
+zugelassenen gemeinsamen Fehler. Es wird keine Unabhängigkeit behauptet.
+
+Neue eigene rationale Nachrechnung:
+  C2 <= -0.00018140412057555275204181927982400...
+      < -0.0001814041205755.
+Die genannte Schranke ist damit reproduziert, bedingt auf den bisherigen
+X12-Vertrag und dessen noch ungeklärte native Herkunft. Die endliche Rechnung
+verwendet den bereits gespeicherten X12-Vertrag; sie erzeugt keinen neuen.
+
+4. Hinreichender Qq-Anschluss und genaue Bedeutung der vier Beiträge
+
+Benötigt wird derselbe ganze t2-Rest in derselben k-Quellenbasis und Metrik:
+  Fq=||A_F t2||²_(Knew^-1),
+  Tq=||A_T t2||²_(R_L),
+  Pq=||A_P t2||²_P,
+  Sq=||A_S t2||²_(Cg^-1).
+Eine numerische Obergrenze muss jeweils die ganze physische Größe samt
+Fehlern einschließen. Tq enthält bereits die F/T-Verschiebung; Pq den ganzen
+J/P-Anschluss und erforderlichen kappa-Transport. Eine rohe Quellnorm,
+unverschobene T-Teilnorm, Modellnorm oder reine niedrige Lösungsgenauigkeit
+ist kein Ersatz für diese Größen. Es werden keine vier neuen unabhängigen
+Pflichtbudgets verlangt.
+
+Unter der übernommenen vollständigen Vergleichsmetrik gilt
+  ||t2||²_(S_R^-1) <= (25/21)*Qq,
+  Qq=Fq+10*Tq+(11/10)*Pq+Sq.
+Deshalb folgt bei Qq<=0.03518 exakt
+  Rbar22 < (25/21)*0.03518 - 0.0001814041205755
+         = 0.041699548260376880952380952380952...
+         < 0.0417.
+Der Abstand zur letzten Schwelle ist
+  0.00000045173962311904761904761904761905...
+
+Dies bestätigt nur die hinreichende Schlussrechnung. Die Erreichbarkeit
+einer ganzen Qq-Obergrenze von 0.03518 ist damit nicht gezeigt. Der bereits
+abgenommene gemeinsame Gramspur-Anschluss wird übernommen; eine neue
+Kreuztermsuche wurde nicht eröffnet.
+
+5. Native Herkunft: erwartete und tatsächliche Hashes
+
+Die erwarteten Hashes stehen direkt in den inputs des gebundenen
+SHARP_FORCE_SOLUTION_NATIVE.json.gz, dessen SHA256 ist
+8db1b5e9adad2320d3fe305641781207f5a7207c6fd39fc996cc3b3c776a07f6.
+Die referenzierten Originale liegen dort unter
+Objekt-X-Ganzkern-Einzelpass-und-GPT1-Abnahme-2026-11-05/lauf/.
+Der entsprechende kombinierte Originalbestand wurde lokal nicht gefunden.
+
+QUELLEN_NATIVE.json.gz
+Erwartet: cac088af25f2f1fd3766b7a7517e3990e01c010f48e2e33c77bcfab8b7693a94
+Vorhanden: c583d6e6667baab0206c1682f640603b085d6f3b26584b716787363f3946ff2c
+Größe: 9.316.739 Byte.
+Für die X12-Rekombination verwendet: roots, cell_moments.left/right,
+lowq, square_q, mc, mu, gamma, eh, cross_raw, low12, me, source_errors[1].
+Für einen ganzen neuen q-Weg zusätzlich relevant: bases, prime_parts,
+Quell-/Momentdaten und ihre physischen Projektions-/Lift-/Gamma-Fehler.
+Die gespeicherten Kernstücke decken nicht automatisch die ganze alte Schale ab.
+
+KRAFT_UND_LOESUNG_NATIVE.json.gz
+Erwartet: 054d61c3a8e19d679e521de30c83c29c0903a7e4b6ae447b3af5a4a55500bd5b
+Vorhanden: 956736390926af666053805e3bf889f664cee70d26501d664825fe750ac3a960
+Größe: 696.299 Byte.
+Verwendet: raw_QPhi[:,0:3], insbesondere unveränderte Spalten 0 und 2,
+alte Spalte 1 für gültige Intervallschnitte sowie errors.high12/high22.
+solutionq_preconditioned wird im Rekombinationscode nur für den alten
+diagnostischen Lösungsradius gelesen; die neue scharfe Lösung steht im
+SHARP-Export. Dieser Export beseitigt seine eigene Eingangslücke nicht.
+
+VERWENDETE_PRIMITIVE_NATIVE.json.gz
+Erwartet: 1f2faaad525b2b9cdb06632acb9d784c336f6b4580eff9171b774e05fa6de56f
+Vorhanden: edd4f048c83b91c4af729d8ca0e5455b0358061fbc911374ac7f16c690df0123
+Größe: 161.614.617 Byte.
+Verwendet: degree=1100 und 22 ausgewählte (Endpunkt,Logtag)-Folgen in entries,
+deren genaue Schlüssel im beigefügten NATIVE_BINDING_RESULT.json stehen.
+Diese tragen die neue gerichtete Trägermoment-Rekombination, daraus die
+q-Kraft/-Lösung und schließlich model12, X12 sowie die q-Fehlertransporte.
+
+Alle drei vorhandenen internen Payload-Prüfsummen und ihre Bindungen an
+ganzkern.py/Manifest stimmen. Dies beweist ihre lokale Integrität, nicht ihre
+Gleichheit mit den drei anders gebundenen Originalen.
+
+6. Welche Teilbindungen tatsächlich geschlossen sind
+
+PREPARED_CORE.json.gz ist bereits exakt an den erwarteten Hash gebunden.
+Die gespeicherte native X12-Einschließung des SHARP-Exports liegt innerhalb
+des in SHARP_BUDGET_INPUTS.json verwendeten X12-Intervalls. Die Bindung vom
+Rekombinationscode an den SHARP-Export stimmt ebenfalls. Der Bruch liegt
+somit vor diesem Export, bei seinen drei nativen Eingängen.
+
+Gezielter Nutzdatenvergleich der raw_QPhi-Spalten 0 und 2:
+je 191 Mittelpunkte stimmen als exakte dyadische Zahlen überein. Je 191
+SHARP-Intervalle enthalten die lokalen alten Intervalle; je Spalte sind
+nur 2 Intervalle auch in ihren Radien exakt gleich. Dieser Teilbefund ist
+mit einer Aufweitung bei der Weiterverarbeitung vereinbar. Er beweist weder
+deren Ursache noch die Gleichheit aller tatsächlich verwendeten Nutzdaten,
+insbesondere nicht die der physischen high12/high22-Fehler oder der anderen
+beiden Eingangsdateien. Die drei Herkunftsbindungen bleiben offen.
+
+Abhängig bleiben: physische Gültigkeit des geschärften X12 und der davon
+getragenen z2-/C2-Schranke; außerdem Wiederverwendung der scharfen q-Kraft,
+q-Lösung und ihrer Fehler für einen neuen ganzen Qq-Weg. Die schon abgenommene
+erste Spalte wird dadurch nicht neu angegriffen oder nochmals geprüft.
+
+7. Genau fehlende Lieferung und Stopp
+
+Benötigt werden die drei oben benannten Dateien mit genau ihren ERWARTETEN
+Hashes aus dem kombinierten November-5-Bestand. Alternativ genügt ein
+reproduzierbarer, an diese Originale gebundener Gleichheitsbeleg sämtlicher
+tatsächlich verwendeter Nutzdaten. Eine ungebundene Behauptung gleicher
+Payloads oder die aktuellen lokalen Prüfsummen allein genügt nicht.
+Das vollständige alte Archiv wird nicht angefordert.
+
+Zusätzlich fehlt der im Auftrag erwähnte neue GPT1-Nachtrag zur zweiten
+Spalte samt Eingangsbindungen und konkret quantitativ begründetem Qq-Weg.
+Die mitgeteilte Zielformel allein erlaubt keine Prüfung seiner Daten- und
+Fehlerverträglichkeit. Bis zur Lieferung erfolgt keine weitere Rechnung
+auf den ungeklärten nativen Eingängen und keine neue q-Auswertung.
+
+Neue Quadraturen: 0. Neue Inversionen: 0. Neue q-Auswertungen: 0.
+Erstspaltenoptimierungen: 0. Hauptläufe: 0.
+
+BEDINGTER_ZWEITSPALTEN_SKALARSCHLUSS_BESTAETIGT
+NATIVE_HERKUNFTSBINDUNG_OFFEN
+RESTMACHBARKEIT_OFFEN

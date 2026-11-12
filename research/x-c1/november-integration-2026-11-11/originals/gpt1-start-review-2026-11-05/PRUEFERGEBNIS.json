@@ -1,0 +1,42 @@
+{
+  "status": "GEZIELTE_VORPRUEFUNG_PASS_UNTER_UEBERNOMMENEN_VERTRAEGEN",
+  "original_sha256": "6651b8b8f0092f91c4a7d4da75d32f9ec5c45720dc82af8e085589d414bad870",
+  "manifest_members": 34,
+  "uniform_high_core_determinant_lower": "1057645425075164823136106717033236760455667244320190102314315611783612574254231429127/57658743980457338828706111123446283906965091409637831209810468750000000000000000000000000",
+  "core_response_denominator_lower": "1819346986646921639347450607073451539435156297004818842510831691103484426589026625888481209687385902886616571753839644997438069122901151377337108887452577373073925786475478212073491/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "independent_rational_identity_and_congruence": "PASS",
+  "author_preflight": "PASS",
+  "symbolic_partition": "PASS",
+  "stored_matrix_recombination_byte_identity": false,
+  "stored_matrix_recombination_enclosure": "PASS",
+  "cache_fields": {
+    "C": "EXACT",
+    "L_preconditioned": {
+      "stored_contains_fresh": 36481
+    },
+    "L_inverse": {
+      "stored_contains_fresh": 36481
+    },
+    "LDL_pivots": {
+      "stored_contains_fresh": 191
+    },
+    "v12_preconditioned": {
+      "stored_contains_fresh": 191
+    },
+    "solution12_preconditioned": {
+      "stored_contains_fresh": 191
+    },
+    "v12_error": "EXACT",
+    "C_norm": "EXACT",
+    "B0_C_norm": "EXACT",
+    "inverse_norm_cap": {
+      "stored_contains_fresh": 1
+    },
+    "scalars": "EXACT"
+  },
+  "physical_source_passes": 0,
+  "main_started": false,
+  "X12": null,
+  "X22": null,
+  "scope": "Startvoraussetzung mathematisch gepr\u00fcft; keine Ergebnisabnahme und keine Ver\u00f6ffentlichung"
+}
