@@ -1,5 +1,11 @@
 # Tatsächlicher Integrationsprüfumfang — 11. November 2026
 
+> Historischer Prüfbericht vom 11. November. Die damaligen offenen
+> Integrationsschritte werden hier nicht rückwirkend umgeschrieben.
+> Für Votum, Merge und nachfolgende CI siehe den
+> [Integrationsnachweis vom 12. November](INTEGRATION_2026-11-12.md).
+> Tests des technischen Nachtrags stehen [separat](TECHNICAL_FOLLOWUP_2026-11-12.md).
+
 Die technischen Checks ändern keine mathematische Aussage und ersetzen
 GPT1s noch ausstehendes Integrationsvotum nicht.
 

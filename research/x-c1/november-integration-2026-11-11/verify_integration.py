@@ -1,9 +1,10 @@
 """Verify publication bytes and stated boundaries, not physical mathematics."""
 from pathlib import Path, PurePosixPath
 from fractions import Fraction as F
-import argparse, hashlib, json, subprocess, sys, tempfile, zipfile
+import argparse, hashlib, io, json, stat, subprocess, sys, tempfile, zipfile
 
-ROOT = Path(__file__).resolve().parent
+# Keep link components visible until check_path has rejected them.
+ROOT = Path(__file__).absolute().parent
 ARCHIVES = {
     'gpt2-run-2026-11-05': '501ed63430ad88dae24006791ea1eaf55936d387061600dd9c1927395e79b90e',
     'gpt1-start-review-2026-11-05': 'cec71cb0f581bc3326230106f3209e74bbc69fa34cfd1f09814bb54a2e9be5bd',
@@ -13,6 +14,25 @@ ARCHIVES = {
     'gpt2-first-column-2026-11-11': 'd8c0edc6c92f38d78e72d814165c29426bb7e6f8417d5978d9a61822182c1641',
     'gpt2-second-column-2026-11-11': '34b6dfb12bc759b7971c5bed296914e1b72a407879e6e57d210fadf208a5610c',
     'gpt2-data-map-2026-11-10': '49dbdfb08418a66fa7d3815a2f26cd96f4694bf3ef131fe97630ecb3d8337e8c',
+}
+SECOND_ROOT = 'Objekt-X-GPT2-Zweitspaltenanschluss-und-Herkunftsluecke-2026-11-11'
+# These are the frozen preparation records, not the current publication status.
+# A later provenance change requires an explicit reviewed revision of this guard.
+MISSING_ORIGINALS = [
+    {'filename': 'Objekt-X-GPT1-Ergebnisabnahme-GPT2-Ganzkern-2026-11-05.zip',
+     'reported_sha256': '52fd67cdaf5586b421fc32230b6f03f445e51705d492cba9b91ec788cedd59e7',
+     'status': 'REPORTED_NOT_AVAILABLE_NOT_RECONSTRUCTED'},
+    {'filename': None,
+     'description': 'Eigenständiger neuer GPT1-Nachtrag zur zweiten Spalte und quantitativ begründeter ganzer Qq-Weg',
+     'status': 'NOT_SUPPLIED_NOT_RECONSTRUCTED'},
+]
+NATIVE_RECORDS = {
+    'NATIVE_PROVENANCE.md': {
+        'bytes': 2233,
+        'sha256': '9a915daa9046cfba2825b932fc275c637ff5021a9bc921e0eb21fa0fc8f95c44'},
+    'originals/gpt2-second-column-2026-11-11/NATIVE_BINDING_RESULT.json': {
+        'bytes': 11662,
+        'sha256': '74492c35eb92e7b469509621feb55aabc413a6e9ae97502e9ddb587fb56cd5fe'},
 }
 
 def need(ok, message):
@@ -32,12 +52,30 @@ def safe(path):
          and all(part not in ('', '.', '..') for part in path.split('/')), 'Unsafe path')
     return path
 
-def identity(path, record):
-    need(path.is_file() and not path.is_symlink(), 'Missing regular file: ' + str(path))
+def check_path(path, root=None):
+    path = Path(path).absolute()
+    for component in (path, *path.parents):
+        info = component.lstat()
+        need(not stat.S_ISLNK(info.st_mode)
+             and not getattr(info, 'st_file_attributes', 0) & stat.FILE_ATTRIBUTE_REPARSE_POINT,
+             'Link/reparse point forbidden: ' + str(component))
+    if root is not None:
+        need(path.resolve().is_relative_to(Path(root).resolve()), 'Path escapes package root')
+
+
+def identity(path, record, root=None):
+    check_path(path, root)
+    need(stat.S_ISREG(path.stat().st_mode), 'Missing regular file: ' + str(path))
     need(path.stat().st_size == record['bytes'] and digest(path) == record['sha256'],
          'Byte identity failed: ' + str(path))
 
 def validate_scope(s):
+    integration = s.get('integration', {})
+    need(set(integration) == {'GPT1_scope_review', 'public_push_authorized', 'merge_authorized'}
+         and integration['GPT1_scope_review'] == 'PENDING'
+         and integration['public_push_authorized'] is False
+         and integration['merge_authorized'] is False,
+         'Historical integration review/authorization changed')
     need(s['kernel_run']['result'] == 'EINSCHLIESSUNG_UNENTSCHIEDEN', 'Kernel result promotion')
     need(s['kernel_run']['start_review_original_available'] is True
          and s['kernel_run']['result_review_original_available'] is False, 'Start/result review conflated')
@@ -64,14 +102,35 @@ def validate_scope(s):
 def verify(root=ROOT, asset_dir=None, replay=True):
     need(not sys.flags.optimize, 'Optimized Python is not an accepted verification mode')
     root = Path(root)
+    check_path(root)
+    check_path(root / 'MANIFEST.json', root)
+    need((root / 'MANIFEST.json').is_file(), 'Missing regular manifest')
     manifest = json.loads((root / 'MANIFEST.json').read_bytes())['files']
-    actual = {p.relative_to(root).as_posix() for p in root.rglob('*') if p.is_file()}
+    actual = set()
+    for path in root.rglob('*'):
+        check_path(path, root)
+        need(path.is_dir() or stat.S_ISREG(path.stat().st_mode), 'Nonregular package entry')
+        if path.is_file():
+            actual.add(path.relative_to(root).as_posix())
     need(actual == set(manifest) | {'MANIFEST.json'}, 'Manifest does not cover exact file set')
     for name, record in manifest.items():
-        identity(root / safe(name), record)
+        identity(root / safe(name), record, root)
     index = json.loads((root / 'SOURCE_INDEX.json').read_bytes())
+    need(index.get('missing_originals') == MISSING_ORIGINALS, 'Missing-original records changed')
+    native_name = 'originals/gpt2-second-column-2026-11-11/NATIVE_BINDING_RESULT.json'
+    native_entry = dict(NATIVE_RECORDS[native_name], target=native_name,
+                        archive_id='gpt2-second-column-2026-11-11',
+                        member=SECOND_ROOT + '/NATIVE_BINDING_RESULT.json')
+    need([r for r in index['readable_originals'] if r['target'] == native_name] == [native_entry],
+         'Native source-index record changed')
+    # Pin the complete three-source narrative and its original machine-readable
+    # evidence, including fields/statuses, rather than checking selected hashes.
+    for name, record in NATIVE_RECORDS.items():
+        identity(root / name, record, root)
     archives = {a['id']: a for a in index['archives']}
     need(set(archives) == set(ARCHIVES), 'Source archive set changed')
+    need(archives['gpt2-second-column-2026-11-11']['original_root'] == SECOND_ROOT,
+         'Scalar replay root changed')
     need(len(index['readable_originals']) == 34, 'Readable original set changed')
     available = {}
     for key, a in archives.items():
@@ -92,23 +151,27 @@ def verify(root=ROOT, asset_dir=None, replay=True):
         if copy['archive_id'] in available:
             with zipfile.ZipFile(available[copy['archive_id']]) as z:
                 need(z.read(safe(copy['member'])) == path.read_bytes(), 'Original member altered')
-    need(index['missing_originals'][0]['reported_sha256'] ==
-         '52fd67cdaf5586b421fc32230b6f03f445e51705d492cba9b91ec788cedd59e7', 'Missing original hidden')
     validate_scope(json.loads((root / 'SCOPE.json').read_bytes()))
     if replay:
         archive = available['gpt2-second-column-2026-11-11']
-        prefix = archives['gpt2-second-column-2026-11-11']['original_root']
+        # Execute only the reviewed script from the very bytes hashed here.
+        # Metadata cannot redirect execution to a different directory/script.
+        raw = archive.read_bytes()
+        need(hashlib.sha256(raw).hexdigest() == ARCHIVES['gpt2-second-column-2026-11-11'],
+             'Scalar replay archive changed')
         with tempfile.TemporaryDirectory(prefix='objx-november-') as temporary:
             target = Path(temporary)
-            with zipfile.ZipFile(archive) as z:
+            with zipfile.ZipFile(io.BytesIO(raw)) as z:
                 for item in z.infolist():
                     safe(item.filename)
                 z.extractall(target)
-            package = target / prefix
+            package = target / SECOND_ROOT
+            check_path(package / 'check_second_scalar.py', target)
             result = target / 'SECOND_REPLAY.json'
             p = subprocess.run([sys.executable, '-B', '-X', 'utf8',
                 str(package / 'check_second_scalar.py'), '--abnahme', str(package / 'inputs'),
-                '--output', str(result)], capture_output=True, text=True, encoding='utf-8')
+                '--output', str(result)], capture_output=True, text=True, encoding='utf-8',
+                shell=False, timeout=120)
             need(p.returncode == 0, 'Bounded scalar replay failed: ' + p.stderr)
             need(json.loads(result.read_bytes()) == json.loads((package / 'SECOND_SCALAR_RESULT.json').read_bytes()),
                  'Bounded scalar result changed')
