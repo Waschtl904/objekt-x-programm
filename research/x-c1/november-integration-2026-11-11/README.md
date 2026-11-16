@@ -1,5 +1,12 @@
 # Forschungsstand 5.–11. November 2026
 
+> Nachtrag vom 12. November 2026: PR #266 ist integriert. Die folgenden
+> Veröffentlichungs-/Reviewangaben sowie `SCOPE.json.integration` und
+> `VALIDATION.md` dokumentieren die Vorbereitung vom 11. November.
+> Den späteren Status belegt [INTEGRATION_2026-11-12.md](INTEGRATION_2026-11-12.md).
+> Der [technische Nachtrag](TECHNICAL_FOLLOWUP_2026-11-12.md) sichert diese
+> historischen Bindungen; mathematische Aussagegrenzen bleiben unverändert.
+
 **Erste feste Restspalte projektintern abgenommen. Zweite Restenergie und
 gemeinsamer Zweiraumabschluss offen. Punkt 4 und externe Begutachtung offen.
 Kein neuer physischer Hauptlauf begründet.** Alle Aussagen unter H1–H4 und den

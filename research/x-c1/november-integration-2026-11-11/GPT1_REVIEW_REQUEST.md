@@ -1,3 +1,10 @@
+> Einordnung vom 12. November 2026: Der folgende Prüfauftrag ist der
+> **historische Vorbereitungsstand vom 11. November 2026**. Sein damaliger
+> Wortlaut bleibt erhalten. Das später übermittelte begrenzt positive Votum
+> und der erfolgte Merge sind im [separaten Integrationsnachweis](INTEGRATION_2026-11-12.md)
+> mit Commit- und Manifestbindung verzeichnet. Dieser alte Auftrag bezeichnet
+> keine heute noch ausstehende Integrationsprüfung von PR #266.
+
 # Begrenzte Integrationsprüfung durch GPT1 — ausstehend
 
 Bitte ausschließlich Aussagegrenzen und Belegbindungen dieses exakten Bestands
