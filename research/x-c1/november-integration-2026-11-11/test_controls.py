@@ -100,6 +100,62 @@ class PackageControls(unittest.TestCase):
     def test_unchanged_package_passes(self):
         self.assertEqual(verify(root=self.root, replay=False)['status'], 'INTEGRATION_BINDINGS_PASS')
 
+    def test_complete_readable_provenance_is_pinned(self):
+        original = json.loads((self.root / 'SOURCE_INDEX.json').read_bytes())
+        # The first record belongs to the deliberately unavailable release asset.
+        for field, value in [('archive_id', 'unknown'),
+                             ('archive_id', 'gpt1-bridge-2026-11-09'),
+                             ('member', 'invented/member.txt')]:
+            with self.subTest(field=field, value=value):
+                altered = deepcopy(original)
+                altered['readable_originals'][0][field] = value
+                self.replace_json('SOURCE_INDEX.json', altered)
+                self.reject('Readable original records')
+        altered = deepcopy(original)
+        altered['readable_originals'][1] = deepcopy(altered['readable_originals'][0])
+        self.replace_json('SOURCE_INDEX.json', altered)
+        self.reject('Readable original records')
+        altered = deepcopy(original)
+        record = altered['readable_originals'][0]
+        raw = (self.root / record['target']).read_bytes() + b'altered provenance'
+        self.replace(record['target'], raw)
+        record.update(bytes=len(raw), sha256=hashlib.sha256(raw).hexdigest())
+        self.replace_json('SOURCE_INDEX.json', altered)
+        self.reject('Readable original records')
+
+    def test_readable_record_order_does_not_change_identity(self):
+        index = json.loads((self.root / 'SOURCE_INDEX.json').read_bytes())
+        index['readable_originals'].reverse()
+        self.replace_json('SOURCE_INDEX.json', index)
+        self.assertEqual(verify(root=self.root, replay=False)['status'], 'INTEGRATION_BINDINGS_PASS')
+
+    def test_duplicate_json_keys_are_rejected_before_replay(self):
+        for name, marker, replacement in [
+            ('SCOPE.json', '"merge_authorized": false',
+             '"merge_authorized": true, "merge_authorized": false'),
+            ('SOURCE_INDEX.json', '"missing_originals": [',
+             '"missing_originals": [], "missing_originals": ['),
+            ('SOURCE_INDEX.json', '"archive_id": "gpt2-run-2026-11-05"',
+             '"archive_id": "unknown", "archive_id": "gpt2-run-2026-11-05"'),
+        ]:
+            with self.subTest(name=name, marker=marker):
+                original = (ROOT / name).read_text(encoding='utf-8')
+                self.assertIn(marker, original)
+                self.replace(name, original.replace(marker, replacement, 1).encode('utf-8'))
+                self.reject('Duplicate JSON key', replay=True)
+                self.replace(name, (ROOT / name).read_bytes())
+        manifest_path = self.root / 'MANIFEST.json'
+        original = manifest_path.read_text(encoding='utf-8')
+        manifest_path.write_text(original.replace('"files":', '"files": {}, "files":', 1),
+                                 encoding='utf-8')
+        self.reject('Duplicate JSON key', replay=True)
+
+    def test_duplicate_archive_record_is_rejected(self):
+        index = json.loads((self.root / 'SOURCE_INDEX.json').read_bytes())
+        index['archives'].append(deepcopy(index['archives'][0]))
+        self.replace_json('SOURCE_INDEX.json', index)
+        self.reject('Source archive set')
+
     def test_expected_file_cannot_escape_package_root(self):
         outside = self.work / 'outside.txt'
         outside.write_bytes(b'outside')

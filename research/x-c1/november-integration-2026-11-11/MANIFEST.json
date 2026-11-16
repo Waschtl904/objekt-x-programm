@@ -206,20 +206,20 @@
       "sha256": "8cc400c27498b3b77146a8bcbf1b2f0bd1905c8ad98abd4a6d5239a1e358cdfa"
     },
     "TECHNICAL_FOLLOWUP_2026-11-12.md": {
-      "bytes": 8447,
-      "sha256": "7fafa9d83e49c7759e8c5305c2fe85a23af1a1223b2be9e6707b540c76effe86"
+      "bytes": 12523,
+      "sha256": "4b938f2eadb77dfdea5d3543ffec571f9980c2802615fbb6f5795cf2ff071c95"
     },
     "test_controls.py": {
-      "bytes": 12089,
-      "sha256": "2fc304e20d55eb602eac420af605744320305c96ffb6fd25e5136708ad01fe06"
+      "bytes": 15277,
+      "sha256": "56f68581710bb714be41dcbfbb8a8f1795398076031200c705aaa0f867c307f9"
     },
     "VALIDATION.md": {
       "bytes": 3241,
       "sha256": "c6a1f9bd432126b5931b7c8f8ae693de46bd270ce4f6c297b905dd0744cb4e07"
     },
     "verify_integration.py": {
-      "bytes": 10520,
-      "sha256": "a952beb802f43fe974d153b80a666d3f8a5b14e040fbd539f264ef79016419a1"
+      "bytes": 11485,
+      "sha256": "a88ef7d8e8b9d1594256f08e9912d8c9756a193fb77bf1297527ed44a0d9b968"
     }
   }
 }

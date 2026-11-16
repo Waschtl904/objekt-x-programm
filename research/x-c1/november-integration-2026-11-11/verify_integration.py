@@ -16,6 +16,9 @@ ARCHIVES = {
     'gpt2-data-map-2026-11-10': '49dbdfb08418a66fa7d3815a2f26cd96f4694bf3ef131fe97630ecb3d8337e8c',
 }
 SECOND_ROOT = 'Objekt-X-GPT2-Zweitspaltenanschluss-und-Herkunftsluecke-2026-11-11'
+# SHA256 of all 34 complete records, sorted by target, with sorted JSON keys,
+# UTF-8, ensure_ascii=False and separators=(',', ':'). Independent of MANIFEST.
+READABLE_RECORDS_SHA256 = 'a59bb74384b1da95d043a480935682dff2255ec8dc2ac5133774d77dbd2ff08a'
 # These are the frozen preparation records, not the current publication status.
 # A later provenance change requires an explicit reviewed revision of this guard.
 MISSING_ORIGINALS = [
@@ -38,6 +41,24 @@ NATIVE_RECORDS = {
 def need(ok, message):
     if not ok:
         raise ValueError(message)
+
+def unique_object(pairs):
+    result = {}
+    for key, value in pairs:
+        need(key not in result, 'Duplicate JSON key: ' + key)
+        result[key] = value
+    return result
+
+def read_json(path):
+    return json.loads(path.read_bytes(), object_pairs_hook=unique_object)
+
+def validate_readable_records(records):
+    targets = [record['target'] for record in records]
+    need(len(records) == len(set(targets)) == 34, 'Readable original records changed')
+    raw = json.dumps(sorted(records, key=lambda record: record['target']),
+                     sort_keys=True, ensure_ascii=False, separators=(',', ':')).encode('utf-8')
+    need(hashlib.sha256(raw).hexdigest() == READABLE_RECORDS_SHA256,
+         'Readable original records changed')
 
 def digest(path):
     h = hashlib.sha256()
@@ -105,7 +126,7 @@ def verify(root=ROOT, asset_dir=None, replay=True):
     check_path(root)
     check_path(root / 'MANIFEST.json', root)
     need((root / 'MANIFEST.json').is_file(), 'Missing regular manifest')
-    manifest = json.loads((root / 'MANIFEST.json').read_bytes())['files']
+    manifest = read_json(root / 'MANIFEST.json')['files']
     actual = set()
     for path in root.rglob('*'):
         check_path(path, root)
@@ -115,7 +136,7 @@ def verify(root=ROOT, asset_dir=None, replay=True):
     need(actual == set(manifest) | {'MANIFEST.json'}, 'Manifest does not cover exact file set')
     for name, record in manifest.items():
         identity(root / safe(name), record, root)
-    index = json.loads((root / 'SOURCE_INDEX.json').read_bytes())
+    index = read_json(root / 'SOURCE_INDEX.json')
     need(index.get('missing_originals') == MISSING_ORIGINALS, 'Missing-original records changed')
     native_name = 'originals/gpt2-second-column-2026-11-11/NATIVE_BINDING_RESULT.json'
     native_entry = dict(NATIVE_RECORDS[native_name], target=native_name,
@@ -128,10 +149,11 @@ def verify(root=ROOT, asset_dir=None, replay=True):
     for name, record in NATIVE_RECORDS.items():
         identity(root / name, record, root)
     archives = {a['id']: a for a in index['archives']}
-    need(set(archives) == set(ARCHIVES), 'Source archive set changed')
+    need(len(index['archives']) == len(archives) == len(ARCHIVES)
+         and set(archives) == set(ARCHIVES), 'Source archive set changed')
     need(archives['gpt2-second-column-2026-11-11']['original_root'] == SECOND_ROOT,
          'Scalar replay root changed')
-    need(len(index['readable_originals']) == 34, 'Readable original set changed')
+    validate_readable_records(index['readable_originals'])
     available = {}
     for key, a in archives.items():
         need(a['sha256'] == ARCHIVES[key], 'Original source hash changed')
@@ -151,7 +173,7 @@ def verify(root=ROOT, asset_dir=None, replay=True):
         if copy['archive_id'] in available:
             with zipfile.ZipFile(available[copy['archive_id']]) as z:
                 need(z.read(safe(copy['member'])) == path.read_bytes(), 'Original member altered')
-    validate_scope(json.loads((root / 'SCOPE.json').read_bytes()))
+    validate_scope(read_json(root / 'SCOPE.json'))
     if replay:
         archive = available['gpt2-second-column-2026-11-11']
         # Execute only the reviewed script from the very bytes hashed here.
@@ -173,7 +195,7 @@ def verify(root=ROOT, asset_dir=None, replay=True):
                 '--output', str(result)], capture_output=True, text=True, encoding='utf-8',
                 shell=False, timeout=120)
             need(p.returncode == 0, 'Bounded scalar replay failed: ' + p.stderr)
-            need(json.loads(result.read_bytes()) == json.loads((package / 'SECOND_SCALAR_RESULT.json').read_bytes()),
+            need(read_json(result) == read_json(package / 'SECOND_SCALAR_RESULT.json'),
                  'Bounded scalar result changed')
     return {'status': 'INTEGRATION_BINDINGS_PASS', 'git_archives_verified': 7,
             'release_asset_bytes_verified': asset_dir is not None, 'readable_originals': 34,
