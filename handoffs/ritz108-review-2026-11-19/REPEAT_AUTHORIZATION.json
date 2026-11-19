@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-19",
+  "authorized_runs": 1,
+  "old_script_sha256": "ac13be5d0a1f12aff383c1e3dcf2ef65dd459eff53cf9b49c03185efd72e741d",
+  "new_script_sha256": "fd94add7aca79b34a68a332e70223e1cf3985dff703a836641629a0532fbc768",
+  "only_change": "1800 -> 14400 seconds in guard, message and START metadata; lines 33 and 40",
+  "reverse_replacement_byte_identical": true,
+  "all_other_parameters_unchanged": true,
+  "interpretation": "Non-rigorous Ritz lower value, conditional on inherited contracts including open native provenance of q solution. No route stop or certificate. No value if controls fail. No automatic retry.",
+  "repository_changes": false
+}

@@ -1,0 +1,184 @@
+{
+  "files": [
+    {
+      "path": "C:\\Users\\sebas\\Documents\\Codex\\2026-11-10\\files-pasted-by-the-user-du\\work\\method_decision_20261118\\ASSET_BINDINGS.json",
+      "role": "unchanged original input or provenance",
+      "bytes": 7943,
+      "sha256": "c43915ccc5326a519f44ab02ae5b700fb5f07921453d79b05bcfaef19adc3847"
+    },
+    {
+      "path": "C:\\Users\\sebas\\Documents\\Codex\\2026-11-10\\files-pasted-by-the-user-du\\work\\method_decision_20261118\\INPUT_IDENTITIES.json",
+      "role": "unchanged original input or provenance",
+      "bytes": 446,
+      "sha256": "c65f7f7e976538e2ea56ecbddb40c59b64a029ef8009948beed5b5c12bc64bf7"
+    },
+    {
+      "path": "C:\\Users\\sebas\\Documents\\Codex\\2026-11-10\\files-pasted-by-the-user-du\\work\\method_decision_20261119_repeat\\assets\\historical_pairs.raw",
+      "role": "unchanged original input or provenance",
+      "bytes": 963155,
+      "sha256": "044d52d8a00f45f36f0591b9d3b51b8468fc94513c24b4fc2b04b797a6969bb8"
+    },
+    {
+      "path": "C:\\Users\\sebas\\Documents\\Codex\\2026-11-10\\files-pasted-by-the-user-du\\work\\method_decision_20261119_repeat\\assets\\historical_pairs.binding.json",
+      "role": "unchanged original input or provenance",
+      "bytes": 169,
+      "sha256": "3151300f11de2aa0c0ecd05445b520147892179b088c812859715364a668a983"
+    },
+    {
+      "path": "C:\\Users\\sebas\\Documents\\Codex\\2026-11-10\\files-pasted-by-the-user-du\\work\\abnahme_20261110\\budget_work\\vorabtest\\eingang\\COMMON_BANK_109.json.gz",
+      "role": "unchanged original input or provenance",
+      "bytes": 1962870,
+      "sha256": "db88793f46b055a6d09d5409328858392dab9e2a3baf99b7cb58798981e752d4"
+    },
+    {
+      "path": "C:\\Users\\sebas\\Documents\\Codex\\2026-11-10\\files-pasted-by-the-user-du\\work\\abnahme_20261110\\budget_work\\vorabtest\\eingang\\FIRST_COLUMN_COORDINATES.json",
+      "role": "unchanged original input or provenance",
+      "bytes": 90488,
+      "sha256": "4c805141605daaadcf22c76fddc5ff78b178ae75a98d3bcd3f67e24e6ef4d0d1"
+    },
+    {
+      "path": "C:\\Users\\sebas\\Documents\\Codex\\2026-11-10\\files-pasted-by-the-user-du\\work\\zweite_restspalte_20261111\\SECOND_SCALAR_RESULT.json",
+      "role": "unchanged original input or provenance",
+      "bytes": 16592,
+      "sha256": "61a9e27fd3c864c8c9ca6d54f535a7b0317148900978d30dd82d5ee0844f6dc4"
+    },
+    {
+      "path": "C:\\Users\\sebas\\Documents\\Codex\\2026-11-10\\files-pasted-by-the-user-du\\work\\abnahme_20261110\\direction\\Objekt-X-GPT2-Richtungsnachweis-Neue-Inversmajorante-2026-11-01\\final-inputs\\INVERSE_DATA.json",
+      "role": "unchanged original input or provenance",
+      "bytes": 3380145,
+      "sha256": "41afad50d284b8bf2e170449384c33bb256743abee8c720904c95f2f64f8b90f"
+    },
+    {
+      "path": "C:\\Users\\sebas\\Documents\\Codex\\2026-11-10\\files-pasted-by-the-user-du\\work\\abnahme_20261110\\review_20261110\\original_20261109\\budget\\carrier_recombination\\SHARP_FORCE_SOLUTION_NATIVE.json.gz",
+      "role": "unchanged original input or provenance",
+      "bytes": 320642,
+      "sha256": "8db1b5e9adad2320d3fe305641781207f5a7207c6fd39fc996cc3b3c776a07f6"
+    },
+    {
+      "path": "C:\\Users\\sebas\\Documents\\Codex\\2026-11-10\\files-pasted-by-the-user-du\\work\\method_decision_20261118\\supplied\\method_reviewer_carbon\\run_exact_2modes.py",
+      "role": "unchanged original input or provenance",
+      "bytes": 23458,
+      "sha256": "723b907bf41c215d016d11738bf7a4bac65fb281ca74401a95be6c05f41b26a1"
+    },
+    {
+      "path": "C:\\Users\\sebas\\Documents\\Codex\\2026-11-10\\files-pasted-by-the-user-du\\work\\method_decision_20261119_repeat\\assets\\INPUT_BINDINGS.json",
+      "role": "unchanged original input or provenance",
+      "bytes": 21516,
+      "sha256": "829b4884c64d23d90efc6382abe20f449d6229af8ccf8db4b85d12e5b7e03e28"
+    },
+    {
+      "path": "C:\\Users\\sebas\\Documents\\Codex\\2026-11-10\\files-pasted-by-the-user-du\\work\\method_decision_20261119_repeat\\assets\\common.raw",
+      "role": "unchanged original input or provenance",
+      "bytes": 19087371,
+      "sha256": "306acbacf5f4089fe703f655bf4340087f0ae88aeaab416c0282e9e24c1638df"
+    },
+    {
+      "path": "C:\\Users\\sebas\\Documents\\Codex\\2026-11-10\\files-pasted-by-the-user-du\\work\\method_decision_20261119_repeat\\assets\\old_sources.raw",
+      "role": "unchanged original input or provenance",
+      "bytes": 17938363,
+      "sha256": "c67a44d7cc052bff32ed2768b81595367c710f9308f0f1716b213a74766b1e64"
+    },
+    {
+      "path": "C:\\Users\\sebas\\Documents\\Codex\\2026-11-10\\files-pasted-by-the-user-du\\work\\method_decision_20261119_repeat\\assets\\a8_model.raw",
+      "role": "unchanged original input or provenance",
+      "bytes": 4140240,
+      "sha256": "fb03cbc04183ce3c9032773de4ccde4969e706f835af99c7a6c680fd85e40a75"
+    },
+    {
+      "path": "C:\\Users\\sebas\\Documents\\Codex\\2026-11-10\\files-pasted-by-the-user-du\\work\\method_decision_20261119_repeat\\assets\\half.raw",
+      "role": "unchanged original input or provenance",
+      "bytes": 1913585,
+      "sha256": "d828be18959b85474419a5e435875c6569bcf6a26c9ea88b3db38820d95aeb46"
+    },
+    {
+      "path": "C:\\Users\\sebas\\Documents\\Codex\\2026-11-10\\files-pasted-by-the-user-du\\work\\method_decision_20261119_repeat\\assets\\basis_even.raw",
+      "role": "unchanged original input or provenance",
+      "bytes": 583784,
+      "sha256": "e223621b70fb4136e6653fae83d47789373c7fc2f883a1aa77f52235a0c667ab"
+    },
+    {
+      "path": "C:\\Users\\sebas\\Documents\\Codex\\2026-11-10\\files-pasted-by-the-user-du\\work\\method_decision_20261119_repeat\\assets\\frozen_Y_even.raw",
+      "role": "unchanged original input or provenance",
+      "bytes": 119271,
+      "sha256": "ca822ab0ddf8c30f997d4cd3d45f98551e999a4a2ce59de86cb0982559dd438c"
+    },
+    {
+      "path": "C:\\Users\\sebas\\Documents\\Codex\\2026-11-10\\files-pasted-by-the-user-du\\work\\method_decision_20261119_repeat\\assets\\frozen_J_even.raw",
+      "role": "unchanged original input or provenance",
+      "bytes": 8678999,
+      "sha256": "4ef3417e73b0080f2ce06a71ab85def2525ed1180f4016d4d20be682589fd6be"
+    },
+    {
+      "path": "C:\\Users\\sebas\\Documents\\Codex\\2026-11-10\\files-pasted-by-the-user-du\\work\\method_decision_20261119_repeat\\assets\\functions.raw",
+      "role": "unchanged original input or provenance",
+      "bytes": 2951484,
+      "sha256": "7c13f08ad85084379249c4a08b7c8bda0813eaea72939ba385cb3756b2801b3c"
+    },
+    {
+      "path": "C:\\Users\\sebas\\Documents\\Codex\\2026-11-10\\files-pasted-by-the-user-du\\work\\method_decision_20261119_repeat\\assets\\frozen_response.raw",
+      "role": "unchanged original input or provenance",
+      "bytes": 44840,
+      "sha256": "132959da5d34c0c89471ee15f7c34d8b4a42ad48c641b6c4db5181113d11426a"
+    },
+    {
+      "path": "C:\\Users\\sebas\\Documents\\Codex\\2026-11-10\\files-pasted-by-the-user-du\\work\\method_decision_20261119_repeat\\assets\\common.py",
+      "role": "unchanged original input or provenance",
+      "bytes": 5032,
+      "sha256": "037580c8edec75e42aa599e21ff2a073f1308f6ec5746c77f81695ed0169a8eb"
+    },
+    {
+      "path": "C:\\Users\\sebas\\Documents\\Codex\\2026-11-10\\files-pasted-by-the-user-du\\work\\method_decision_20261119_repeat\\assets\\residuals.py",
+      "role": "unchanged original input or provenance",
+      "bytes": 7324,
+      "sha256": "e4670f3f10ca3e358f82d206b572d4d8c426b04791917e03bf4f04abededd23a"
+    },
+    {
+      "path": "C:\\Users\\sebas\\Documents\\Codex\\2026-11-10\\files-pasted-by-the-user-du\\work\\method_decision_20261119_repeat\\assets\\old_fields.py",
+      "role": "unchanged original input or provenance",
+      "bytes": 11188,
+      "sha256": "e154b4642474813cfcfd6660acd0b5dbd5c80026590917bd94a8bfb74072a984"
+    },
+    {
+      "path": "C:\\Users\\sebas\\Documents\\Codex\\2026-11-10\\files-pasted-by-the-user-du\\work\\method_decision_20261119_repeat\\assets\\QUELLEN_NATIVE.json.gz",
+      "role": "unchanged original input or provenance",
+      "bytes": 9316739,
+      "sha256": "c583d6e6667baab0206c1682f640603b085d6f3b26584b716787363f3946ff2c"
+    },
+    {
+      "path": "C:\\Users\\sebas\\Documents\\Codex\\2026-11-10\\files-pasted-by-the-user-du\\work\\method_decision_20261119_repeat\\assets\\PREPARED_CORE.json.gz",
+      "role": "unchanged original input or provenance",
+      "bytes": 29120757,
+      "sha256": "2fd7511c0682aafb0bf947a6ba0eccce99fd091886558841dcf7ba0dfd9bad30"
+    },
+    {
+      "path": "C:\\Users\\sebas\\Documents\\Codex\\2026-11-10\\files-pasted-by-the-user-du\\work\\method_decision_20261119_repeat\\assets\\model_cache.py",
+      "role": "unchanged original input or provenance",
+      "bytes": 1874,
+      "sha256": "ec22013fc8f87015b412f2482350a2091a78d412e5d95267c6bbe75cb1af7cd0"
+    },
+    {
+      "path": "C:\\Users\\sebas\\Documents\\Codex\\2026-11-10\\files-pasted-by-the-user-du\\work\\method_decision_20261119_repeat\\assets\\ganzkern.py",
+      "role": "unchanged original input or provenance",
+      "bytes": 12705,
+      "sha256": "c7d0f615b15170d74cb83733268f12d1d4aab0c6755cad3731e75f1b8b431611"
+    },
+    {
+      "path": "C:\\Users\\sebas\\Documents\\Codex\\2026-11-10\\files-pasted-by-the-user-du\\work\\method_decision_20261119_repeat\\single_measurement.py",
+      "role": "only runtime limit changed",
+      "bytes": 20111,
+      "sha256": "fd94add7aca79b34a68a332e70223e1cf3985dff703a836641629a0532fbc768"
+    },
+    {
+      "path": "C:\\Users\\sebas\\Documents\\Codex\\2026-11-10\\files-pasted-by-the-user-du\\work\\method_decision_20261119_repeat\\START.json",
+      "role": "parameters fixed before launch",
+      "bytes": 363,
+      "sha256": "2c5331579d8f605621b4ef9b51da85cba6f0d97e824a038ce58e328f05654d5d"
+    },
+    {
+      "path": "C:\\Users\\sebas\\Documents\\Codex\\2026-11-10\\files-pasted-by-the-user-du\\work\\method_decision_20261119_repeat\\DEPENDENCIES_MANIFEST.json",
+      "role": "unchanged copied runtime dependencies",
+      "bytes": 61134,
+      "sha256": "52afa409ca2841cb91dd14f1f49b955c4868ea173aa557181495ba48ece7e250"
+    }
+  ]
+}

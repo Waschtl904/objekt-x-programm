@@ -1,0 +1,42 @@
+Objekt X – genau ein freigegebener Wiederholungslauf, 19. November 2026
+
+Status: CONDITIONAL_NONRIGOROUS_RITZ_LOWER_VALUE
+Nicht-rigoroser Ritz-Unterwert auf der 108er-Bank: 0.0887749361506717025282570
+Alle Akzeptanzbedingungen bestanden: True
+Verfehlte Bedingungen: keine
+Maximaler Komponentenfehler: 1.51864793233096444012196e-18 (streng < 1e-12)
+Abstand in der inversen Bankmetrik: 7.78683779010685808960017e-11 (streng < 1e-6)
+Kleinster LDL-Pivot: 6.04185769531730235002250e-17
+Linearer Gleichungsrest: 1.51114492289677727578577e-957
+Laufzeit: 2702.328 Sekunden
+Prozess-Exitcode: 0
+
+Unter den übernommenen Verträgen liegt der diagnostische Unterwert über 0,04196. Das Ziel 0,0417 ist mit der heutigen ersten Schranke diagnostisch nicht erreichbar. Sein Wert unter 0,2573 besagt nicht, dass die tatsächliche zweite Restenergie unter 0,2573 liegt, und bestätigt keine Machbarkeit. Kein Routenstopp.
+
+Aussagegrenzen
+Nicht-rigoroser Ritz-Unterwert, bedingt auf übernommene Verträge einschließlich der offenen nativen Herkunft der q-Lösung. Erstspaltenkontrolle ist kein q-Fehlernachweis. Keine obere Schranke der zweiten Restenergie. Kein Routenstopp, kein Zertifikat und keine Repository-Änderung.
+Die statische GPT1-Abnahme der q-Vektor-Definition wird nicht behauptet.
+Die im unveränderten Rohskript enthaltenen alten Statusnamen mit
+"ROUTE" oder "STOP" werden ausdrücklich nicht als Routenentscheidung
+übernommen. Bei gescheiterten Kontrollen sind etwaige interne Rohzahlen
+kein freigegebener Messwert. Das Rohprotokoll bleibt unverändert erhalten.
+
+Einzige Änderung gegenüber dem ersten Versuch
+Laufgrenze 1800 -> 14400 Sekunden, einschließlich Fehlermeldung und
+START-Metadaten. Rückersetzung stellt den alten Skripttext bytegleich her.
+Präzision 3328 Bit, Panels, Knoten, Toleranzen und lambda_bar2 unverändert.
+START.json wurde vor dem Prozessstart festgehalten; die vom Messskript
+vor Beginn seiner Rechnung geschriebene single_run/START.json stimmt überein.
+
+SHA256
+Skript: fd94add7aca79b34a68a332e70223e1cf3985dff703a836641629a0532fbc768
+Eingangsmanifest mit Einzelhashes: 4999538fe0a7fb0d2451254d1ece76132d49928119ec7976d051f2748fa88ba9
+Unverändertes Rohprotokoll: 0ffab320340dc44289c2541431bc18fb11082df62688ad74cdcc35d1966c815c
+
+Paketinhalt
+ERGEBNIS.json und diese Datei enthalten die geltende Einordnung.
+raw/ enthält unveränderte Rohdaten, soweit der Lauf sie tatsächlich erzeugt hat.
+RUN_BINDINGS.json enthält die absoluten Pfade und Hashes der Originaleingaben.
+Diese großen Originaleingaben werden nicht aus Berichten rekonstruiert.
+Die vollständigen Eingabedateien und installierten Bibliotheken verbleiben
+an den gebundenen lokalen Pfaden; das Übergabepaket enthält ihre Hashes.
