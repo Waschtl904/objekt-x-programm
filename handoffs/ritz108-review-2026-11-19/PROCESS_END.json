@@ -1,0 +1,9 @@
+{
+  "started_utc": "2026-11-19T14:26:46.456891+00:00",
+  "finished_utc": "2026-11-19T15:11:48.784310+00:00",
+  "elapsed_seconds": 2702.3280000002123,
+  "exit_code": 0,
+  "script_sha256": "fd94add7aca79b34a68a332e70223e1cf3985dff703a836641629a0532fbc768",
+  "log_sha256": "0ffab320340dc44289c2541431bc18fb11082df62688ad74cdcc35d1966c815c",
+  "result_written": true
+}

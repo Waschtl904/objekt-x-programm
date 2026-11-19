@@ -1,0 +1,14 @@
+{
+  "precision_bits": 3328,
+  "maximum_seconds": 14400,
+  "x_gauss_nodes": 192,
+  "regular_x_subpanels": 4,
+  "endpoint_dyadic_panels": 120,
+  "correlation_gauss_nodes": 96,
+  "gamma_degree": 360,
+  "bank_dimension": 108,
+  "control_max_component_difference": "1e-12",
+  "control_dual_error_norm": "1e-6",
+  "rigorous": false,
+  "new_precision_runs_allowed": 0
+}

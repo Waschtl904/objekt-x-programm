@@ -1,0 +1,156 @@
+[
+  {
+    "name": "INPUT_BINDINGS.json",
+    "bytes": 21516,
+    "sha256": "829b4884c64d23d90efc6382abe20f449d6229af8ccf8db4b85d12e5b7e03e28",
+    "origin": "fcb1a2509d325ff7d49431f52aea9dbb8927e7c1"
+  },
+  {
+    "name": "common.raw",
+    "bytes": 19087371,
+    "sha256": "306acbacf5f4089fe703f655bf4340087f0ae88aeaab416c0282e9e24c1638df",
+    "origin": {
+      "archive": "stage3_archive",
+      "member": "Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16/inputs/REFINED_COMMON96.json.gz",
+      "sha256": "306acbacf5f4089fe703f655bf4340087f0ae88aeaab416c0282e9e24c1638df",
+      "previous_inventory_used_fields": [
+        "cases.*.{delta,rho,inverse_congruence_integer_matrix,inverse_congruence_denominator,finite_cross_C84_new_model}"
+      ]
+    }
+  },
+  {
+    "name": "old_sources.raw",
+    "bytes": 17938363,
+    "sha256": "c67a44d7cc052bff32ed2768b81595367c710f9308f0f1716b213a74766b1e64",
+    "origin": {
+      "archive": "stage3_archive",
+      "member": "Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16/inputs/REFINED_INPUT.json.gz",
+      "sha256": "c67a44d7cc052bff32ed2768b81595367c710f9308f0f1716b213a74766b1e64",
+      "previous_inventory_used_fields": [
+        "cases.*.old_certificate.{source_c_model,source_Bh_model,source_h_gram_model,joint_high_source_error_gram}",
+        "cases.*.galerkin.{old_low_c_model,old_low_Bh_model,H84_model,complete_source_high_cross_model}"
+      ]
+    }
+  },
+  {
+    "name": "a8_model.raw",
+    "bytes": 4140240,
+    "sha256": "fb03cbc04183ce3c9032773de4ccde4969e706f835af99c7a6c680fd85e40a75",
+    "origin": {
+      "archive": "global_archive",
+      "member": "Objekt-X-Globaler-Gram-und-vollstaendige-Projektion-2026-10-13/snapshot/work/inherited/Objekt-X-Endlicher-Schuranschluss-2026-10-09/work/remainder-integration-check-v2/originals/weighted-response/inputs/a8_model.json.gz",
+      "sha256": "fb03cbc04183ce3c9032773de4ccde4969e706f835af99c7a6c680fd85e40a75",
+      "role": "Bound old function reconstruction"
+    }
+  },
+  {
+    "name": "half.raw",
+    "bytes": 1913585,
+    "sha256": "d828be18959b85474419a5e435875c6569bcf6a26c9ea88b3db38820d95aeb46",
+    "origin": {
+      "archive": "global_archive",
+      "member": "Objekt-X-Globaler-Gram-und-vollstaendige-Projektion-2026-10-13/snapshot/work/inherited/Objekt-X-Endlicher-Schuranschluss-2026-10-09/work/remainder-integration-check-v2/originals/half-inverse/expected/1536.json",
+      "sha256": "d828be18959b85474419a5e435875c6569bcf6a26c9ea88b3db38820d95aeb46",
+      "role": "Bound old function reconstruction"
+    }
+  },
+  {
+    "name": "basis_even.raw",
+    "bytes": 583784,
+    "sha256": "e223621b70fb4136e6653fae83d47789373c7fc2f883a1aa77f52235a0c667ab",
+    "origin": {
+      "archive": "global_archive",
+      "member": "Objekt-X-Globaler-Gram-und-vollstaendige-Projektion-2026-10-13/snapshot/work/basis-coverage-2026-10-10/BASIS_EVEN.json",
+      "sha256": "e223621b70fb4136e6653fae83d47789373c7fc2f883a1aa77f52235a0c667ab",
+      "role": "Bound old function reconstruction"
+    }
+  },
+  {
+    "name": "frozen_Y_even.raw",
+    "bytes": 119271,
+    "sha256": "ca822ab0ddf8c30f997d4cd3d45f98551e999a4a2ce59de86cb0982559dd438c",
+    "origin": {
+      "archive": "global_archive",
+      "member": "Objekt-X-Globaler-Gram-und-vollstaendige-Projektion-2026-10-13/snapshot/work/inherited/Objekt-X-Endlicher-Schuranschluss-2026-10-09/work/u00-2026-10-07/CENTRES_EVEN_4096.json",
+      "sha256": "ca822ab0ddf8c30f997d4cd3d45f98551e999a4a2ce59de86cb0982559dd438c",
+      "role": "Bound old function reconstruction"
+    }
+  },
+  {
+    "name": "frozen_J_even.raw",
+    "bytes": 8678999,
+    "sha256": "4ef3417e73b0080f2ce06a71ab85def2525ed1180f4016d4d20be682589fd6be",
+    "origin": {
+      "archive": "global_archive",
+      "member": "Objekt-X-Globaler-Gram-und-vollstaendige-Projektion-2026-10-13/snapshot/work/galerkin84-2026-10-10/MODEL_RAY_EVEN_3072.json",
+      "sha256": "4ef3417e73b0080f2ce06a71ab85def2525ed1180f4016d4d20be682589fd6be",
+      "role": "Bound old function reconstruction"
+    }
+  },
+  {
+    "name": "functions.raw",
+    "bytes": 2951484,
+    "sha256": "7c13f08ad85084379249c4a08b7c8bda0813eaea72939ba385cb3756b2801b3c",
+    "origin": {
+      "archive": "response_archive",
+      "member": "Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15/inputs/FUNCTIONS12.json",
+      "sha256": "7c13f08ad85084379249c4a08b7c8bda0813eaea72939ba385cb3756b2801b3c",
+      "previous_inventory_used_fields": [
+        "parities.*.whole_D12_operator_error_upper"
+      ]
+    }
+  },
+  {
+    "name": "frozen_response.raw",
+    "bytes": 44840,
+    "sha256": "132959da5d34c0c89471ee15f7c34d8b4a42ad48c641b6c4db5181113d11426a",
+    "origin": {
+      "archive": "response_archive",
+      "member": "Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15/inputs/FROZEN_RESPONSE12.json",
+      "sha256": "132959da5d34c0c89471ee15f7c34d8b4a42ad48c641b6c4db5181113d11426a",
+      "role": "Bound old function reconstruction"
+    }
+  },
+  {
+    "name": "common.py",
+    "bytes": 5032,
+    "sha256": "037580c8edec75e42aa599e21ff2a073f1308f6ec5746c77f81695ed0169a8eb",
+    "origin": "C:/Users/sebas/Downloads/Objekt-X-ell12-Finite-Energie-Abnahme-GPT1-2026-10-28.zip!full-energy-execution-2026-10-27/sources/w9-partial-energy/common.py"
+  },
+  {
+    "name": "residuals.py",
+    "bytes": 7324,
+    "sha256": "e4670f3f10ca3e358f82d206b572d4d8c426b04791917e03bf4f04abededd23a",
+    "origin": "C:/Users/sebas/Downloads/Objekt-X-ell12-Finite-Energie-Abnahme-GPT1-2026-10-28.zip!full-energy-execution-2026-10-27/sources/w9-partial-energy/residuals.py"
+  },
+  {
+    "name": "old_fields.py",
+    "bytes": 11188,
+    "sha256": "e154b4642474813cfcfd6660acd0b5dbd5c80026590917bd94a8bfb74072a984",
+    "origin": "C:/Users/sebas/Downloads/Objekt-X-ell12-Finite-Energie-Abnahme-GPT1-2026-10-28.zip!full-energy-execution-2026-10-27/sources/w9-partial-energy/old_fields.py"
+  },
+  {
+    "name": "QUELLEN_NATIVE.json.gz",
+    "bytes": 9316739,
+    "sha256": "c583d6e6667baab0206c1682f640603b085d6f3b26584b716787363f3946ff2c",
+    "origin": "C:\\Users\\sebas\\Documents\\Codex\\2026-11-10\\files-pasted-by-the-user-du\\work\\integration_20261111\\release-assets\\Objekt-X-GPT2-Ganzkern-Einzelpass-2026-11-05.zip!Objekt-X-GPT2-Ganzkern-Einzelpass-2026-11-05/lauf/QUELLEN_NATIVE.json.gz"
+  },
+  {
+    "name": "PREPARED_CORE.json.gz",
+    "bytes": 29120757,
+    "sha256": "2fd7511c0682aafb0bf947a6ba0eccce99fd091886558841dcf7ba0dfd9bad30",
+    "origin": "C:\\Users\\sebas\\Documents\\Codex\\2026-11-10\\files-pasted-by-the-user-du\\work\\integration_20261111\\release-assets\\Objekt-X-GPT2-Ganzkern-Einzelpass-2026-11-05.zip!Objekt-X-GPT2-Ganzkern-Einzelpass-2026-11-05/ORIGINAL_VORBEREITUNG.zip!Objekt-X-GPT2-Ganzkern-Einzelpass-Vorbereitung-2026-11-05/PREPARED_CORE.json.gz"
+  },
+  {
+    "name": "model_cache.py",
+    "bytes": 1874,
+    "sha256": "ec22013fc8f87015b412f2482350a2091a78d412e5d95267c6bbe75cb1af7cd0",
+    "origin": "C:\\Users\\sebas\\Documents\\Codex\\2026-11-10\\files-pasted-by-the-user-du\\work\\integration_20261111\\release-assets\\Objekt-X-GPT2-Ganzkern-Einzelpass-2026-11-05.zip!Objekt-X-GPT2-Ganzkern-Einzelpass-2026-11-05/ORIGINAL_VORBEREITUNG.zip!Objekt-X-GPT2-Ganzkern-Einzelpass-Vorbereitung-2026-11-05/belege/model_cache.py"
+  },
+  {
+    "name": "ganzkern.py",
+    "bytes": 12705,
+    "sha256": "c7d0f615b15170d74cb83733268f12d1d4aab0c6755cad3731e75f1b8b431611",
+    "origin": "C:\\Users\\sebas\\Documents\\Codex\\2026-11-10\\files-pasted-by-the-user-du\\work\\integration_20261111\\release-assets\\Objekt-X-GPT2-Ganzkern-Einzelpass-2026-11-05.zip!Objekt-X-GPT2-Ganzkern-Einzelpass-2026-11-05/ORIGINAL_VORBEREITUNG.zip!Objekt-X-GPT2-Ganzkern-Einzelpass-Vorbereitung-2026-11-05/ganzkern.py"
+  }
+]

@@ -1,0 +1,63 @@
+Building frozen function representations, fixed 3328 bits
+even old QPhi 0
+even old QPhi 48
+even old QPhi 96
+even old QPhi 144
+even old shell source 0
+even old shell source 24
+even old shell source 48
+even old shell source 72
+x panels 0 / 304
+x panels 16 / 304
+x panels 32 / 304
+x panels 48 / 304
+x panels 64 / 304
+x panels 80 / 304
+x panels 96 / 304
+x panels 112 / 304
+x panels 128 / 304
+x panels 144 / 304
+x panels 160 / 304
+x panels 176 / 304
+x panels 192 / 304
+x panels 208 / 304
+x panels 224 / 304
+x panels 240 / 304
+x panels 256 / 304
+x panels 272 / 304
+x panels 288 / 304
+[2] x-integration done in 1911.98s
+correlation panels 0 / 127
+correlation panels 16 / 127
+correlation panels 32 / 127
+correlation panels 48 / 127
+correlation panels 64 / 127
+correlation panels 80 / 127
+correlation panels 96 / 127
+correlation panels 112 / 127
+[3] Exact arb dB & D2 done in 681.77s
+{
+  "precision_bits": 3328,
+  "maximum_seconds": 14400,
+  "x_gauss_nodes": 192,
+  "regular_x_subpanels": 4,
+  "endpoint_dyadic_panels": 120,
+  "correlation_gauss_nodes": 96,
+  "gamma_degree": 360,
+  "bank_dimension": 108,
+  "control_max_component_difference": "1e-12",
+  "control_dual_error_norm": "1e-6",
+  "rigorous": false,
+  "new_precision_runs_allowed": 0,
+  "status": "DIAGNOSTIC_ROUTE_OPEN",
+  "elapsed_seconds": 2701.187000000151,
+  "energy_model_108": "0.0887749361506717025282570",
+  "arithmetic_radius_only": "5.3456531e-949",
+  "first_column_max_component_difference": "1.51864793233096444012196e-18",
+  "first_column_difference_dual_norm": "7.78683779010685808960017e-11",
+  "linear_solve_max_defect": "1.51114492289677727578577e-957",
+  "min_LDL_pivot": "6.04185769531730235002250e-17",
+  "controls_pass": true,
+  "projection_coefficient_lambda_bar2": "-0.00707388204544417902668689",
+  "interpretation": "Finite frozen model diagnostic only. Physical rest-form identification and full model/quadrature/error transport are not certified. No result for infinite complement. No automatic follow-up."
+}

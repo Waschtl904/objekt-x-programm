@@ -1,0 +1,16 @@
+{
+  "compressed_original": {
+    "path": "raw/ASSEMBLED_VECTORS.json.gz",
+    "bytes": 10905448,
+    "sha256": "ddf6de4b49f69759dc92947873563be6b4ad9ee7f62420801cea65c413251e35"
+  },
+  "exact_decompressed_bytes": {
+    "path": "raw/ASSEMBLED_VECTORS.json",
+    "bytes": 22037151,
+    "sha256": "e84733cdb9ad36e25a190b369d23b5391b5891c082d90c9cfdcbae1c131b1acc"
+  },
+  "payload_sha256": "d2a3a636678bf5d60a272513a395753acf7bba429bd6c13f82772c9b5b64e8f8",
+  "lossless_view_index": "readable/ASSEMBLED_VECTORS/INDEX.json",
+  "json_values_equal_after_reassembly": true,
+  "new_scientific_computations": 0
+}

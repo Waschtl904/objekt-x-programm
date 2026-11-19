@@ -1,0 +1,34 @@
+Building frozen function representations, fixed 3328 bits
+even old QPhi 0
+even old QPhi 48
+even old QPhi 96
+even old QPhi 144
+even old shell source 0
+even old shell source 24
+even old shell source 48
+even old shell source 72
+x panels 0 / 304
+x panels 16 / 304
+x panels 32 / 304
+x panels 48 / 304
+x panels 64 / 304
+x panels 80 / 304
+x panels 96 / 304
+x panels 112 / 304
+x panels 128 / 304
+x panels 144 / 304
+x panels 160 / 304
+x panels 176 / 304
+x panels 192 / 304
+x panels 208 / 304
+x panels 224 / 304
+x panels 240 / 304
+x panels 256 / 304
+x panels 272 / 304
+Traceback (most recent call last):
+  File "C:\Users\sebas\Documents\Codex\2026-11-10\files-pasted-by-the-user-du\work\method_decision_20261118\single_measurement.py", line 146, in <module>
+    deadline()
+  File "C:\Users\sebas\Documents\Codex\2026-11-10\files-pasted-by-the-user-du\work\method_decision_20261118\single_measurement.py", line 33, in deadline
+    if time.monotonic()-t0>1800:raise RuntimeError('Fixed 1800-second decision budget exhausted; no rerun')
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Fixed 1800-second decision budget exhausted; no rerun

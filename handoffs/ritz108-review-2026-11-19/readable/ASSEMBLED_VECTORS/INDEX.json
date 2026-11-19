@@ -1,0 +1,251 @@
+{
+  "source": "../../raw/ASSEMBLED_VECTORS.json",
+  "payload_sha256": "d2a3a636678bf5d60a272513a395753acf7bba429bd6c13f82772c9b5b64e8f8",
+  "representation": "Exact JSON integer values retained. Ball tuples are serialized stored arithmetic data, not recomputed intervals. Concatenate V matrix row lists in this index order to recover V.",
+  "views": [
+    {
+      "path": "readable/ASSEMBLED_VECTORS/first.json",
+      "mapping_key": "first",
+      "sha256": "91465e7d35f797ac4fd32b77b5af23789469e7e197a1b3c24973c35844351824"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/second.json",
+      "mapping_key": "second",
+      "sha256": "0024088def70d50a53227e6b84c837d28c220ae6e0ab9cc26b81841ff1fc476f"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/Phi_g.json",
+      "mapping_key": "Phi_g",
+      "sha256": "99ffcf472c4274ff504bae0c420536174ede6ed1c55ff1f1f6bb894a28cfb1f2"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/mc_g.json",
+      "mapping_key": "mc_g",
+      "sha256": "c26a9e0e6cc48664b9906eefc31d3ce8d4ca00580c45fbcd7174d9ddb4599752"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-000-005.json",
+      "mapping_key": "V",
+      "row_start_inclusive": 0,
+      "row_end_inclusive": 5,
+      "sha256": "0d3794ef5f69f70cd937826fc8355e3cdad3895c3b9b86b3f47c0e493d3cef75"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-006-011.json",
+      "mapping_key": "V",
+      "row_start_inclusive": 6,
+      "row_end_inclusive": 11,
+      "sha256": "9172304178f9f703c91ba12f883fd19c154b3453697123fb676894134dc99330"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-012-017.json",
+      "mapping_key": "V",
+      "row_start_inclusive": 12,
+      "row_end_inclusive": 17,
+      "sha256": "95ec23a474060847793a0a562250c2d669bee2b2801a118940132eaf3e2e7400"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-018-023.json",
+      "mapping_key": "V",
+      "row_start_inclusive": 18,
+      "row_end_inclusive": 23,
+      "sha256": "928c39e8c8799f2104e404fdcb7be3409a711f958150983195e6b43a54b96f8e"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-024-029.json",
+      "mapping_key": "V",
+      "row_start_inclusive": 24,
+      "row_end_inclusive": 29,
+      "sha256": "62654e8154953ec10e38ef8047284bd112664861328fbaa1768876ed44de4fb7"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-030-035.json",
+      "mapping_key": "V",
+      "row_start_inclusive": 30,
+      "row_end_inclusive": 35,
+      "sha256": "c781263b285d69b20a11e5da14d22dded79fd3e550be8b273cd98426f9bc5d27"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-036-041.json",
+      "mapping_key": "V",
+      "row_start_inclusive": 36,
+      "row_end_inclusive": 41,
+      "sha256": "1b1a8ffe9bbb0a29085d6e330ec457d76e82b8f585032c2720a1a370c178cca0"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-042-047.json",
+      "mapping_key": "V",
+      "row_start_inclusive": 42,
+      "row_end_inclusive": 47,
+      "sha256": "d6a5132fc7badd8b7599346e18417cd4b70c03b3ffe06349be0ce5c06c40e64d"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-048-053.json",
+      "mapping_key": "V",
+      "row_start_inclusive": 48,
+      "row_end_inclusive": 53,
+      "sha256": "1c44529403c203ddbe4cedd478bd5fbceaaedda78a4898e1e758b8e5ae25e9ca"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-054-059.json",
+      "mapping_key": "V",
+      "row_start_inclusive": 54,
+      "row_end_inclusive": 59,
+      "sha256": "a700a5ecee62145598f5aa24c84efd9a5dd28e55500ca032bc5e159e600045dd"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-060-065.json",
+      "mapping_key": "V",
+      "row_start_inclusive": 60,
+      "row_end_inclusive": 65,
+      "sha256": "737c4e01e1ca67a868eb8e889be22a314e7246f1fd2a670b2c61169875c70390"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-066-071.json",
+      "mapping_key": "V",
+      "row_start_inclusive": 66,
+      "row_end_inclusive": 71,
+      "sha256": "709b16c8714c6c3401fc0181c807f4443e7f80976703a072ba9c2b68853ba0e0"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-072-077.json",
+      "mapping_key": "V",
+      "row_start_inclusive": 72,
+      "row_end_inclusive": 77,
+      "sha256": "2536160f182a9dc9815a0d10cae3e9b9b0d44d1c1f7b051fadaeb8b0ee7c0ece"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-078-083.json",
+      "mapping_key": "V",
+      "row_start_inclusive": 78,
+      "row_end_inclusive": 83,
+      "sha256": "9e87c3f1dd0d17622c1e401bb0fe3c2b4204a4c5c37f94db81df5f1d9e2917f3"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-084-089.json",
+      "mapping_key": "V",
+      "row_start_inclusive": 84,
+      "row_end_inclusive": 89,
+      "sha256": "71849190c5ca28ca614d5a1674ca8613dcf91b53988d74e8a0fab958bbd5ec70"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-090-095.json",
+      "mapping_key": "V",
+      "row_start_inclusive": 90,
+      "row_end_inclusive": 95,
+      "sha256": "6caa37e6eb71117a808bf327037cd338234ebd941703b3e1f4f713f94792aa0c"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-096-101.json",
+      "mapping_key": "V",
+      "row_start_inclusive": 96,
+      "row_end_inclusive": 101,
+      "sha256": "f306498de33d4980ed99d39d12722bfe463af5ec741dc17ed29f9c486dda6e98"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-102-107.json",
+      "mapping_key": "V",
+      "row_start_inclusive": 102,
+      "row_end_inclusive": 107,
+      "sha256": "6be2f760501c01156b5d06963210d84d3e101c9d911ca55f8665b3a49a87406b"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-108-113.json",
+      "mapping_key": "V",
+      "row_start_inclusive": 108,
+      "row_end_inclusive": 113,
+      "sha256": "7a82d5a186c8b77afd0721f702d1c47eadc81d5861e35a6dd21e548c603fde49"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-114-119.json",
+      "mapping_key": "V",
+      "row_start_inclusive": 114,
+      "row_end_inclusive": 119,
+      "sha256": "13fa2c25947a70dcc1958448abfadcb3835425938a4edc8cd97abb24220cc8f5"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-120-125.json",
+      "mapping_key": "V",
+      "row_start_inclusive": 120,
+      "row_end_inclusive": 125,
+      "sha256": "0a20d72d3044d9fee9271c867cad22b21f45f55e7eaa5c075570696a05957b2b"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-126-131.json",
+      "mapping_key": "V",
+      "row_start_inclusive": 126,
+      "row_end_inclusive": 131,
+      "sha256": "f29b0a8c105780488058fd9f8ba5be4c34eec9ccfeef30848a4d09ac6b443613"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-132-137.json",
+      "mapping_key": "V",
+      "row_start_inclusive": 132,
+      "row_end_inclusive": 137,
+      "sha256": "b5e5130c4c98846320f58e2ccf83973bcaac4e28a039854f543d6b3877a58506"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-138-143.json",
+      "mapping_key": "V",
+      "row_start_inclusive": 138,
+      "row_end_inclusive": 143,
+      "sha256": "2c7eec6f0d49de622cb8bcb54e6a796ab6269fa83a0ede81e6b3b1e582bc2201"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-144-149.json",
+      "mapping_key": "V",
+      "row_start_inclusive": 144,
+      "row_end_inclusive": 149,
+      "sha256": "46751bd24f0a9f620dac73615d19fa92a895e8001122018098e1a57ec579769e"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-150-155.json",
+      "mapping_key": "V",
+      "row_start_inclusive": 150,
+      "row_end_inclusive": 155,
+      "sha256": "f407efa53b0b3e10c62a9d93195d793b23c846e35a31b6a063e39a5a329d1ef6"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-156-161.json",
+      "mapping_key": "V",
+      "row_start_inclusive": 156,
+      "row_end_inclusive": 161,
+      "sha256": "5479446e076c55b0316c9fca164570c859892af5be3cbfa49dfb476c76f5f8f1"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-162-167.json",
+      "mapping_key": "V",
+      "row_start_inclusive": 162,
+      "row_end_inclusive": 167,
+      "sha256": "296d7de1cdcfdcc58f06c88bb10259225ef78648a34d9ce4aa8784521e6ae1cc"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-168-173.json",
+      "mapping_key": "V",
+      "row_start_inclusive": 168,
+      "row_end_inclusive": 173,
+      "sha256": "02975fd8ad145b6b037f690bf85bac84c387cce25a38ea981f7a251bb5f52fc1"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-174-179.json",
+      "mapping_key": "V",
+      "row_start_inclusive": 174,
+      "row_end_inclusive": 179,
+      "sha256": "2aa72dc7c92b57130237403e189156d1695ba371ca4f585c35d55d22fd0ee356"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-180-185.json",
+      "mapping_key": "V",
+      "row_start_inclusive": 180,
+      "row_end_inclusive": 185,
+      "sha256": "a0b84af27472d83e02914cbe1c339662ada493fc54ea2cb59970ac256f69bfe7"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-186-190.json",
+      "mapping_key": "V",
+      "row_start_inclusive": 186,
+      "row_end_inclusive": 190,
+      "sha256": "7d4003f2b3d0efd3c7e9b58fed86d52194ad515c0a4363e3eb80008a329b7540"
+    }
+  ]
+}

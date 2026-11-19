@@ -1,0 +1,538 @@
+{
+  "repository": "Waschtl904/objekt-x-programm",
+  "branch": "handoff/ritz108-review-2026-11-19",
+  "base_commit": "a98703b90f7ff620656870932c61060e8b340d42",
+  "target_directory": "handoffs/ritz108-review-2026-11-19",
+  "status": "PREPARED_NOT_PUBLISHED_PENDING_EXPLICIT_UPLOAD_APPROVAL",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 46,
+      "sha256": "ece797f716e9be49128549fe7e26f19cb04bd65dd20bcb3ae3b07910c38542c4",
+      "role": "new preservation rule scoped to this handoff folder"
+    },
+    {
+      "path": "ASSET_BINDINGS.json",
+      "bytes": 7943,
+      "sha256": "c43915ccc5326a519f44ab02ae5b700fb5f07921453d79b05bcfaef19adc3847",
+      "role": "unchanged original run artifact",
+      "origin": {
+        "source_set": "repeat package 2026-11-19",
+        "source_path": "ASSET_BINDINGS.json"
+      }
+    },
+    {
+      "path": "DECOMPRESSION_MAP.json",
+      "bytes": 603,
+      "sha256": "4debbcb3a06406a2bdc8a24646ef34d3ab7e08e1bc6bd5ac704d3982b8760db3",
+      "role": "new byte and lossless-view verification metadata"
+    },
+    {
+      "path": "DEPENDENCIES_MANIFEST.json",
+      "bytes": 61134,
+      "sha256": "52afa409ca2841cb91dd14f1f49b955c4868ea173aa557181495ba48ece7e250",
+      "role": "unchanged original run artifact",
+      "origin": {
+        "source_set": "repeat package 2026-11-19",
+        "source_path": "DEPENDENCIES_MANIFEST.json"
+      }
+    },
+    {
+      "path": "ERGEBNIS.json",
+      "bytes": 1999,
+      "sha256": "777fb7320a6ab16c8cd0726289e3f323b60a11f6a0e4a974f20103adad337905",
+      "role": "unchanged original run artifact",
+      "origin": {
+        "source_set": "repeat package 2026-11-19",
+        "source_path": "ERGEBNIS.json"
+      }
+    },
+    {
+      "path": "ERGEBNIS.txt",
+      "bytes": 2731,
+      "sha256": "e060b466bed74fb42c706d22059c1c3c55c4828b8c01d915db0cb84318a52d32",
+      "role": "unchanged original run artifact",
+      "origin": {
+        "source_set": "repeat package 2026-11-19",
+        "source_path": "ERGEBNIS.txt"
+      }
+    },
+    {
+      "path": "FILE_LIST.txt",
+      "bytes": 4897,
+      "sha256": "dec48c6cb770c170ee5faafee7f356267af0417f1c362030cc3218a18fb182e2",
+      "role": "complete publication target list"
+    },
+    {
+      "path": "INPUT_IDENTITIES.json",
+      "bytes": 446,
+      "sha256": "c65f7f7e976538e2ea56ecbddb40c59b64a029ef8009948beed5b5c12bc64bf7",
+      "role": "unchanged original run artifact",
+      "origin": {
+        "source_set": "repeat package 2026-11-19",
+        "source_path": "INPUT_IDENTITIES.json"
+      }
+    },
+    {
+      "path": "LAUNCH.json",
+      "bytes": 201,
+      "sha256": "b2ab46e9e6a3f80cfb74bfcc6c17765c06d858f65d6b1ca34b1eaf66f8634e9e",
+      "role": "unchanged original run artifact",
+      "origin": {
+        "source_set": "repeat package 2026-11-19",
+        "source_path": "LAUNCH.json"
+      }
+    },
+    {
+      "path": "MANIFEST.json",
+      "bytes": 3561,
+      "sha256": "28d3935efd8533588aca4f0a162f9108e18914d93073e6354eec65aeaeca97c7",
+      "role": "unchanged original run artifact",
+      "origin": {
+        "source_set": "repeat package 2026-11-19",
+        "source_path": "MANIFEST.json"
+      }
+    },
+    {
+      "path": "ONLY_CHANGE.diff",
+      "bytes": 1656,
+      "sha256": "c318d348148133ac8d2c0a4f5508e9168cc5ed206d4b7431c6e9c1169d1aab9b",
+      "role": "unchanged original run artifact",
+      "origin": {
+        "source_set": "repeat package 2026-11-19",
+        "source_path": "ONLY_CHANGE.diff"
+      }
+    },
+    {
+      "path": "PROCESS_END.json",
+      "bytes": 375,
+      "sha256": "ca3d2f9f2c6996e9ddfdc8631157961f68fea029f10e724c600a799fb15d94fc",
+      "role": "unchanged original run artifact",
+      "origin": {
+        "source_set": "repeat package 2026-11-19",
+        "source_path": "PROCESS_END.json"
+      }
+    },
+    {
+      "path": "README.md",
+      "bytes": 6848,
+      "sha256": "38834edc11272bff8a7b1d83cdf684dac1d10f60773609ba3be2882bfc6c28c9",
+      "role": "new navigation and scope document; no new mathematical conclusion"
+    },
+    {
+      "path": "REPEAT_AUTHORIZATION.json",
+      "bytes": 662,
+      "sha256": "94d3cec2797a5ce42f9278ba827c40a8267ac136a0416f2af4c315bce64b2d4e",
+      "role": "unchanged original run artifact",
+      "origin": {
+        "source_set": "repeat package 2026-11-19",
+        "source_path": "REPEAT_AUTHORIZATION.json"
+      }
+    },
+    {
+      "path": "RUN_BINDINGS.json",
+      "bytes": 10119,
+      "sha256": "4999538fe0a7fb0d2451254d1ece76132d49928119ec7976d051f2748fa88ba9",
+      "role": "unchanged original run artifact",
+      "origin": {
+        "source_set": "repeat package 2026-11-19",
+        "source_path": "RUN_BINDINGS.json"
+      }
+    },
+    {
+      "path": "SAFETY_SCAN.json",
+      "bytes": 12532,
+      "sha256": "640d3f7490e3ecf55ad63d524b90704c53b4124000f199649491bf57a89a2691",
+      "role": "new bounded prepublication content-screen report"
+    },
+    {
+      "path": "START.json",
+      "bytes": 363,
+      "sha256": "2c5331579d8f605621b4ef9b51da85cba6f0d97e824a038ce58e328f05654d5d",
+      "role": "unchanged original run artifact",
+      "origin": {
+        "source_set": "repeat package 2026-11-19",
+        "source_path": "START.json"
+      }
+    },
+    {
+      "path": "assets/common.py",
+      "bytes": 5032,
+      "sha256": "037580c8edec75e42aa599e21ff2a073f1308f6ec5746c77f81695ed0169a8eb",
+      "role": "unchanged original run artifact",
+      "origin": {
+        "source_set": "repeat package 2026-11-19",
+        "source_path": "assets/common.py"
+      }
+    },
+    {
+      "path": "assets/historical_pairs.binding.json",
+      "bytes": 169,
+      "sha256": "3151300f11de2aa0c0ecd05445b520147892179b088c812859715364a668a983",
+      "role": "unchanged original run artifact",
+      "origin": {
+        "source_set": "repeat package 2026-11-19",
+        "source_path": "assets/historical_pairs.binding.json"
+      }
+    },
+    {
+      "path": "assets/model_cache.py",
+      "bytes": 1874,
+      "sha256": "ec22013fc8f87015b412f2482350a2091a78d412e5d95267c6bbe75cb1af7cd0",
+      "role": "unchanged original run artifact",
+      "origin": {
+        "source_set": "repeat package 2026-11-19",
+        "source_path": "assets/model_cache.py"
+      }
+    },
+    {
+      "path": "assets/old_fields.py",
+      "bytes": 11188,
+      "sha256": "e154b4642474813cfcfd6660acd0b5dbd5c80026590917bd94a8bfb74072a984",
+      "role": "unchanged original run artifact",
+      "origin": {
+        "source_set": "repeat package 2026-11-19",
+        "source_path": "assets/old_fields.py"
+      }
+    },
+    {
+      "path": "assets/residuals.py",
+      "bytes": 7324,
+      "sha256": "e4670f3f10ca3e358f82d206b572d4d8c426b04791917e03bf4f04abededd23a",
+      "role": "unchanged original run artifact",
+      "origin": {
+        "source_set": "repeat package 2026-11-19",
+        "source_path": "assets/residuals.py"
+      }
+    },
+    {
+      "path": "comparison/2026-11-18/SINGLE_RUN.log",
+      "bytes": 1234,
+      "sha256": "6729e12f37528993561a96f604a72c7ce37c107b1ac7bfbee94b63f10d2eb19d",
+      "role": "unchanged original comparison artifact",
+      "origin": {
+        "source_set": "aborted attempt 2026-11-18",
+        "source_path": "SINGLE_RUN.log"
+      }
+    },
+    {
+      "path": "comparison/2026-11-18/START.json",
+      "bytes": 376,
+      "sha256": "597eb146cf4a3d9762e1dfbccf25def960d55a7032d1e532a3e0b86e717b4b9e",
+      "role": "unchanged original comparison artifact",
+      "origin": {
+        "source_set": "aborted attempt 2026-11-18",
+        "source_path": "single_run/START.json"
+      }
+    },
+    {
+      "path": "comparison/2026-11-18/single_measurement.py",
+      "bytes": 20108,
+      "sha256": "ac13be5d0a1f12aff383c1e3dcf2ef65dd459eff53cf9b49c03185efd72e741d",
+      "role": "unchanged original comparison artifact",
+      "origin": {
+        "source_set": "aborted attempt 2026-11-18",
+        "source_path": "single_measurement.py"
+      }
+    },
+    {
+      "path": "launch_once.py",
+      "bytes": 1485,
+      "sha256": "c77585c529eb8cd4f6a2827d830886d3f14ea24ea4ddf0f3f1f9926fcdc1d7a0",
+      "role": "unchanged original run artifact",
+      "origin": {
+        "source_set": "repeat package 2026-11-19",
+        "source_path": "launch_once.py"
+      }
+    },
+    {
+      "path": "package_finished_repeat.py",
+      "bytes": 9338,
+      "sha256": "b312759236333b66e88b9905b6b02fc089da5dcb52f89fa87dbd1cec84d4a07f",
+      "role": "unchanged original run artifact",
+      "origin": {
+        "source_set": "repeat package 2026-11-19",
+        "source_path": "package_finished_repeat.py"
+      }
+    },
+    {
+      "path": "raw/ASSEMBLED_VECTORS.json",
+      "bytes": 22037151,
+      "sha256": "e84733cdb9ad36e25a190b369d23b5391b5891c082d90c9cfdcbae1c131b1acc",
+      "role": "exact gzip decompression; original compressed bytes retained"
+    },
+    {
+      "path": "raw/ASSEMBLED_VECTORS.json.gz",
+      "bytes": 10905448,
+      "sha256": "ddf6de4b49f69759dc92947873563be6b4ad9ee7f62420801cea65c413251e35",
+      "role": "unchanged original run artifact",
+      "origin": {
+        "source_set": "repeat package 2026-11-19",
+        "source_path": "raw/ASSEMBLED_VECTORS.json.gz"
+      }
+    },
+    {
+      "path": "raw/RESULT.json",
+      "bytes": 1139,
+      "sha256": "fb4d3aae1666d8c3a0a42e3c7bebc1b28c06150c248e6925649ed46b3962008e",
+      "role": "unchanged original run artifact",
+      "origin": {
+        "source_set": "repeat package 2026-11-19",
+        "source_path": "raw/RESULT.json"
+      }
+    },
+    {
+      "path": "raw/SINGLE_RUN.log",
+      "bytes": 2052,
+      "sha256": "0ffab320340dc44289c2541431bc18fb11082df62688ad74cdcc35d1966c815c",
+      "role": "unchanged original run artifact",
+      "origin": {
+        "source_set": "repeat package 2026-11-19",
+        "source_path": "raw/SINGLE_RUN.log"
+      }
+    },
+    {
+      "path": "raw/START.json",
+      "bytes": 377,
+      "sha256": "a4c248fde8f8727f3d341002fc676e4cc77afabae8a710016517d0ec5066b378",
+      "role": "unchanged original run artifact",
+      "origin": {
+        "source_set": "repeat package 2026-11-19",
+        "source_path": "raw/START.json"
+      }
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/INDEX.json",
+      "bytes": 9109,
+      "sha256": "f91bf5002f1efe8d7fd003549d7c6b69e855256fbba786220b46796aad7b1f02",
+      "role": "new navigation index for existing raw data"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/Phi_g.json",
+      "bytes": 422707,
+      "sha256": "99ffcf472c4274ff504bae0c420536174ede6ed1c55ff1f1f6bb894a28cfb1f2",
+      "role": "derived lossless JSON view; no arithmetic or rounding"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-000-005.json",
+      "bytes": 721586,
+      "sha256": "0d3794ef5f69f70cd937826fc8355e3cdad3895c3b9b86b3f47c0e493d3cef75",
+      "role": "derived lossless row view; indices are zero based; no arithmetic or rounding"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-006-011.json",
+      "bytes": 721554,
+      "sha256": "9172304178f9f703c91ba12f883fd19c154b3453697123fb676894134dc99330",
+      "role": "derived lossless row view; indices are zero based; no arithmetic or rounding"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-012-017.json",
+      "bytes": 721585,
+      "sha256": "95ec23a474060847793a0a562250c2d669bee2b2801a118940132eaf3e2e7400",
+      "role": "derived lossless row view; indices are zero based; no arithmetic or rounding"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-018-023.json",
+      "bytes": 721572,
+      "sha256": "928c39e8c8799f2104e404fdcb7be3409a711f958150983195e6b43a54b96f8e",
+      "role": "derived lossless row view; indices are zero based; no arithmetic or rounding"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-024-029.json",
+      "bytes": 721583,
+      "sha256": "62654e8154953ec10e38ef8047284bd112664861328fbaa1768876ed44de4fb7",
+      "role": "derived lossless row view; indices are zero based; no arithmetic or rounding"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-030-035.json",
+      "bytes": 721568,
+      "sha256": "c781263b285d69b20a11e5da14d22dded79fd3e550be8b273cd98426f9bc5d27",
+      "role": "derived lossless row view; indices are zero based; no arithmetic or rounding"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-036-041.json",
+      "bytes": 721614,
+      "sha256": "1b1a8ffe9bbb0a29085d6e330ec457d76e82b8f585032c2720a1a370c178cca0",
+      "role": "derived lossless row view; indices are zero based; no arithmetic or rounding"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-042-047.json",
+      "bytes": 721601,
+      "sha256": "d6a5132fc7badd8b7599346e18417cd4b70c03b3ffe06349be0ce5c06c40e64d",
+      "role": "derived lossless row view; indices are zero based; no arithmetic or rounding"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-048-053.json",
+      "bytes": 721573,
+      "sha256": "1c44529403c203ddbe4cedd478bd5fbceaaedda78a4898e1e758b8e5ae25e9ca",
+      "role": "derived lossless row view; indices are zero based; no arithmetic or rounding"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-054-059.json",
+      "bytes": 721559,
+      "sha256": "a700a5ecee62145598f5aa24c84efd9a5dd28e55500ca032bc5e159e600045dd",
+      "role": "derived lossless row view; indices are zero based; no arithmetic or rounding"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-060-065.json",
+      "bytes": 721598,
+      "sha256": "737c4e01e1ca67a868eb8e889be22a314e7246f1fd2a670b2c61169875c70390",
+      "role": "derived lossless row view; indices are zero based; no arithmetic or rounding"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-066-071.json",
+      "bytes": 721603,
+      "sha256": "709b16c8714c6c3401fc0181c807f4443e7f80976703a072ba9c2b68853ba0e0",
+      "role": "derived lossless row view; indices are zero based; no arithmetic or rounding"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-072-077.json",
+      "bytes": 721588,
+      "sha256": "2536160f182a9dc9815a0d10cae3e9b9b0d44d1c1f7b051fadaeb8b0ee7c0ece",
+      "role": "derived lossless row view; indices are zero based; no arithmetic or rounding"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-078-083.json",
+      "bytes": 721600,
+      "sha256": "9e87c3f1dd0d17622c1e401bb0fe3c2b4204a4c5c37f94db81df5f1d9e2917f3",
+      "role": "derived lossless row view; indices are zero based; no arithmetic or rounding"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-084-089.json",
+      "bytes": 721573,
+      "sha256": "71849190c5ca28ca614d5a1674ca8613dcf91b53988d74e8a0fab958bbd5ec70",
+      "role": "derived lossless row view; indices are zero based; no arithmetic or rounding"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-090-095.json",
+      "bytes": 721557,
+      "sha256": "6caa37e6eb71117a808bf327037cd338234ebd941703b3e1f4f713f94792aa0c",
+      "role": "derived lossless row view; indices are zero based; no arithmetic or rounding"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-096-101.json",
+      "bytes": 721608,
+      "sha256": "f306498de33d4980ed99d39d12722bfe463af5ec741dc17ed29f9c486dda6e98",
+      "role": "derived lossless row view; indices are zero based; no arithmetic or rounding"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-102-107.json",
+      "bytes": 721588,
+      "sha256": "6be2f760501c01156b5d06963210d84d3e101c9d911ca55f8665b3a49a87406b",
+      "role": "derived lossless row view; indices are zero based; no arithmetic or rounding"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-108-113.json",
+      "bytes": 721596,
+      "sha256": "7a82d5a186c8b77afd0721f702d1c47eadc81d5861e35a6dd21e548c603fde49",
+      "role": "derived lossless row view; indices are zero based; no arithmetic or rounding"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-114-119.json",
+      "bytes": 721585,
+      "sha256": "13fa2c25947a70dcc1958448abfadcb3835425938a4edc8cd97abb24220cc8f5",
+      "role": "derived lossless row view; indices are zero based; no arithmetic or rounding"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-120-125.json",
+      "bytes": 721599,
+      "sha256": "0a20d72d3044d9fee9271c867cad22b21f45f55e7eaa5c075570696a05957b2b",
+      "role": "derived lossless row view; indices are zero based; no arithmetic or rounding"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-126-131.json",
+      "bytes": 721584,
+      "sha256": "f29b0a8c105780488058fd9f8ba5be4c34eec9ccfeef30848a4d09ac6b443613",
+      "role": "derived lossless row view; indices are zero based; no arithmetic or rounding"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-132-137.json",
+      "bytes": 721581,
+      "sha256": "b5e5130c4c98846320f58e2ccf83973bcaac4e28a039854f543d6b3877a58506",
+      "role": "derived lossless row view; indices are zero based; no arithmetic or rounding"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-138-143.json",
+      "bytes": 721585,
+      "sha256": "2c7eec6f0d49de622cb8bcb54e6a796ab6269fa83a0ede81e6b3b1e582bc2201",
+      "role": "derived lossless row view; indices are zero based; no arithmetic or rounding"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-144-149.json",
+      "bytes": 721585,
+      "sha256": "46751bd24f0a9f620dac73615d19fa92a895e8001122018098e1a57ec579769e",
+      "role": "derived lossless row view; indices are zero based; no arithmetic or rounding"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-150-155.json",
+      "bytes": 721587,
+      "sha256": "f407efa53b0b3e10c62a9d93195d793b23c846e35a31b6a063e39a5a329d1ef6",
+      "role": "derived lossless row view; indices are zero based; no arithmetic or rounding"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-156-161.json",
+      "bytes": 721599,
+      "sha256": "5479446e076c55b0316c9fca164570c859892af5be3cbfa49dfb476c76f5f8f1",
+      "role": "derived lossless row view; indices are zero based; no arithmetic or rounding"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-162-167.json",
+      "bytes": 721614,
+      "sha256": "296d7de1cdcfdcc58f06c88bb10259225ef78648a34d9ce4aa8784521e6ae1cc",
+      "role": "derived lossless row view; indices are zero based; no arithmetic or rounding"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-168-173.json",
+      "bytes": 721604,
+      "sha256": "02975fd8ad145b6b037f690bf85bac84c387cce25a38ea981f7a251bb5f52fc1",
+      "role": "derived lossless row view; indices are zero based; no arithmetic or rounding"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-174-179.json",
+      "bytes": 721591,
+      "sha256": "2aa72dc7c92b57130237403e189156d1695ba371ca4f585c35d55d22fd0ee356",
+      "role": "derived lossless row view; indices are zero based; no arithmetic or rounding"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-180-185.json",
+      "bytes": 721589,
+      "sha256": "a0b84af27472d83e02914cbe1c339662ada493fc54ea2cb59970ac256f69bfe7",
+      "role": "derived lossless row view; indices are zero based; no arithmetic or rounding"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/V.rows-186-190.json",
+      "bytes": 601337,
+      "sha256": "7d4003f2b3d0efd3c7e9b58fed86d52194ad515c0a4363e3eb80008a329b7540",
+      "role": "derived lossless row view; indices are zero based; no arithmetic or rounding"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/first.json",
+      "bytes": 121501,
+      "sha256": "91465e7d35f797ac4fd32b77b5af23789469e7e197a1b3c24973c35844351824",
+      "role": "derived lossless JSON view; no arithmetic or rounding"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/mc_g.json",
+      "bytes": 2166,
+      "sha256": "c26a9e0e6cc48664b9906eefc31d3ce8d4ca00580c45fbcd7174d9ddb4599752",
+      "role": "derived lossless JSON view; no arithmetic or rounding"
+    },
+    {
+      "path": "readable/ASSEMBLED_VECTORS/second.json",
+      "bytes": 121608,
+      "sha256": "0024088def70d50a53227e6b84c837d28c220ae6e0ab9cc26b81841ff1fc476f",
+      "role": "derived lossless JSON view; no arithmetic or rounding"
+    },
+    {
+      "path": "single_measurement.py",
+      "bytes": 20111,
+      "sha256": "fd94add7aca79b34a68a332e70223e1cf3985dff703a836641629a0532fbc768",
+      "role": "unchanged original run artifact",
+      "origin": {
+        "source_set": "repeat package 2026-11-19",
+        "source_path": "single_measurement.py"
+      }
+    }
+  ],
+  "self_hash": "Recorded in external approval candidate, not recursively in this file."
+}

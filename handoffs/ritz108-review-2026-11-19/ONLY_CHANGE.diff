@@ -1,0 +1,19 @@
+--- original/single_measurement.py
++++ repeat/single_measurement.py
+@@ -30,14 +30,14 @@
+ def number(x,n=24):return x.mid().str(n,radius=False)
+ def radius(x):return x.rad().str(8,radius=False)
+ def deadline():
+-    if time.monotonic()-t0>1800:raise RuntimeError('Fixed 1800-second decision budget exhausted; no rerun')
++    if time.monotonic()-t0>14400:raise RuntimeError('Fixed 14400-second decision budget exhausted; no rerun')
+ ROOT=HERE.parent.parent
+ DIRECTION=ROOT/'work/abnahme_20261110/direction/Objekt-X-GPT2-Richtungsnachweis-Neue-Inversmajorante-2026-11-01'
+ BANKDIR=ROOT/'work/abnahme_20261110/budget_work/vorabtest/eingang'
+ NATIVEPATH=ROOT/'work/abnahme_20261110/review_20261110/original_20261109/budget/carrier_recombination/SHARP_FORCE_SOLUTION_NATIVE.json.gz'
+ OUT=HERE/'single_run';OUT.mkdir(exist_ok=True)
+ assert not (OUT/'START.json').exists(),'This measurement is single-use'
+-spec={'precision_bits':3328,'maximum_seconds':1800,'x_gauss_nodes':192,'regular_x_subpanels':4,'endpoint_dyadic_panels':120,'correlation_gauss_nodes':96,'gamma_degree':360,'bank_dimension':108,'control_max_component_difference':'1e-12','control_dual_error_norm':'1e-6','rigorous':False,'new_precision_runs_allowed':0}
++spec={'precision_bits':3328,'maximum_seconds':14400,'x_gauss_nodes':192,'regular_x_subpanels':4,'endpoint_dyadic_panels':120,'correlation_gauss_nodes':96,'gamma_degree':360,'bank_dimension':108,'control_max_component_difference':'1e-12','control_dual_error_norm':'1e-6','rigorous':False,'new_precision_runs_allowed':0}
+ (OUT/'START.json').write_text(json.dumps(spec,indent=2)+'\n')
+ t0=time.monotonic()
+ inp=BoundInputs()
