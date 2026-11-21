@@ -1,0 +1,17 @@
+[
+  {
+    "name": "lauf/QUELLEN_NATIVE.json.gz",
+    "bytes": 9316739,
+    "matched_SHARP_input": "cac088af25f2f1fd3766b7a7517e3990e01c010f48e2e33c77bcfab8b7693a94"
+  },
+  {
+    "name": "lauf/KRAFT_UND_LOESUNG_NATIVE.json.gz",
+    "bytes": 696299,
+    "matched_SHARP_input": "054d61c3a8e19d679e521de30c83c29c0903a7e4b6ae447b3af5a4a55500bd5b"
+  },
+  {
+    "name": "lauf/VERWENDETE_PRIMITIVE_NATIVE.json.gz",
+    "bytes": 161614617,
+    "matched_SHARP_input": "1f2faaad525b2b9cdb06632acb9d784c336f6b4580eff9171b774e05fa6de56f"
+  }
+]

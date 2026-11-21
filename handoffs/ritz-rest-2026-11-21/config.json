@@ -1,0 +1,8 @@
+{
+  "bank": "inputs/COMMON_BANK_109.json.gz",
+  "first": "inputs/FIRST_COLUMN_COORDINATES.json",
+  "second": "inputs/SECOND_SCALAR_RESULT.json",
+  "vec": "inputs/ASSEMBLED_VECTORS.json.gz",
+  "direct": "inputs/DIRECT_BLOCK_INPUTS.json",
+  "projection": "inputs/FIXED_PROJECTION_PRICE.json"
+}

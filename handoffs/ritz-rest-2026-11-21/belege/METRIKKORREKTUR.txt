@@ -1,0 +1,206 @@
+Objekt X — GPT1: vollständige Schurmetrik statt lokaler T-Metrik
+Gezielte Ergänzung zur GPT2-Lieferung vom 1. November; 2. November 2026
+
+1. Übernommene Verträge und tatsächlich neue Prüfung
+
+H1–H4 werden im historischen reference/L1-BEWEIS-2026-10-24.txt, §0,
+ausgeschrieben; eine Kopie liegt in evidence/. H3 enthält insbesondere
+die unterschiedlichen Objekte U8, K, D, P, die ganze Kraftcap 10 und die
+LOKALE Form L>=21/5 W_X. Es enthält keine Identifikation der lokalen Form
+L mit dem vollständigen Schurkomplement nach Kern-/Fo-Elimination.
+
+Die neue Kernform As, ihre ganze Kopplung B0, der gewichtete hohe Boden
+1.9549 und die zugehörige Formordnung wurden im vorgelegten Paket gelesen,
+algebraisch geprüft und rational reproduziert. Für d=19/10, t=1.9549-d und
+c=eB²/t trägt die physische Differenz den positiven Block
+ [[cI, B-B0],[(B-B0)*,tI]], denn ||B-B0||<=eB und ct=eB².
+Gup>=B0 B0* sowie die zusätzliche Monotoniereserve werden rational geprüft.
+Ls ist in der C-Kongruenz strikt positiv. Auf den übernommenen Formdomänen
+gilt deshalb weiterhin Aeff1<=As<=A8, Q1<=Qs<=A9 und C1<=Cs<=A_E.
+Keine starke Wirkung A9 V wird dabei benötigt.
+
+Der physische Hilfstest benutzt definitionsgemäß Us=As^{-1}, daher ist
+sein Kernrest exakt null. Die Funktionmodelle für diese Antwort und ihre
+Abweichungen werden separat bezahlt. Der neue gemeinsame Preis am Test
+und die rohe ganze Restfunktion sind mit den unveränderten xG-, P0-, Y-,
+B- und Quellbindungen geprüft. Die drei nativen Nachrechnungen liefern
+exakt dieselben rationalen Intervalle wie die Originaldateien.
+
+2. Unterscheidung der zwei Formen auf T
+
+Nach Elimination des Kerns von Qold und danach Fo ist der tatsächliche
+alte Schurrest
+ H_* = D_T-a* Knew^{-1} a.
+Seine Inverse ist NICHT R_L. Die gültige historische Inverserneuerung
+benutzt S>=beta_old L und das ganze Residualzertifikat
+ R* R_L R <= c beta_old E,
+mit c<=1/250, beta_old=20209999981781/182190000000000, sowie
+ P>=X_ans E^{-1}X_ans* in der gebundenen neuen K-Geometrie.
+Die Erhöhung von K lässt E wachsen; die alten Residualbelege bleiben
+dabei zulässig. Knew und P stammen aus derselben gebundenen Geometrie.
+
+Die Variations-/Woodbury-Abschätzung gibt mit
+ 1/(1-sqrt(c)) <= 11/10 und (11/10)/beta_old < 10
+die ganze Operatorordnung
+
+ H_*^{-1} <= 10 R_L +(11/10) J P J*.                 (1)
+
+Diese folgt unmittelbar aus dem übernommenen Inversvertrag; sie ist
+keine Übertragung einer hohen Konstante auf eine ganze Inverse.
+
+Ein konkreter Gegencheck zur von GPT2 verwendeten Identifikation:
+Für die vorhandene erste J-Spalte, also den festen Koeffizienten e_0,
+sei a0 ihre modellierte Fo-Kopplung. Setze da=du+dd, die schon bezahlte
+gemeinsame 96er Form-/Quellenabweichung, G_F und G_J die gebundenen
+Fehlermetriken, und
+ d_j = da sqrt(tr(Knew^{-1}G_F) (G_J)jj).
+Die physische obere Schranke
+
+ H_*[J_j] <= (H0_model)jj,upper +da(G_J)jj
+        +2 ||a0_j||_(Knew^{-1}) d_j +d_j²             (2)
+
+ist konservativ; der zusätzliche nichtnegative eta*q-Abzug wird für
+diese Oberseite weggelassen. a0 wird hier als gerichtetes Intervall
+verwendet. Für j=0 ergibt (2) <2.735486<3. Der übernommene ganze
+Basisvertrag J*W_X J>=I liefert ||J_0||_W²>=1. Damit kann H_*>=21/5 W_X
+nicht gelten. Die lokale Schranke L>=21/5 W_X wird nicht beanstandet.
+
+3. Ganze Qold-Restenergie bei verschwindendem Kernrest
+
+Für einen Rest r=(0,r_F,r_T) liefert die exakte Blockinverse
+
+ ||r||²_(Qold dual)
+ = ||r_F||²_(Knew^{-1})
+   +<r_T-a*Knew^{-1}r_F, H_*^{-1}(r_T-a*Knew^{-1}r_F)>.
+
+Seien f>=||r_F||_(Knew^{-1}), t>=||r_T||_(R_L),
+ p>=||P^{1/2}J*(r_T-a*Knew^{-1}r_F)||.
+Die vorhandene GANZE Fo-Kraftcap 10 wirkt in R_L. Aus (1) folgt daher
+
+ ||r||²_(Qold dual) <= f²+10(t+10f)²+(11/10)p².      (3)
+
+Die zusätzliche endliche J-P-Position darf nicht verschwinden. Auch
+der lokale T-Anteil erhält in (3) seinen tatsächlich gültigen Preis.
+
+4. Gemeinsamer physischer Preis der benötigten J-P-Paarungen
+
+Setze k0=Knew^{-1}a_model, mit ausdrücklich eingefrorenem rationalem
+Mittelpunkt a_model. Für die 109er Bank des neuen Tests sei
+ T_P=(-k0;I84;0_13) und der feste Testvektor tvec=(y,z,-1).
+Für die 108er Altbank ist T_P=(-k0;I84;0_12).
+Die gemeinsame physische Fehlerform erfüllt -E<=Delta M<=E.
+
+Für jede feste Bank T und positive Metrik P gilt
+
+ ||P^{1/2}T* Delta M tvec||²
+ <=tr(P T*E T) (tvec*E tvec).                        (4)
+
+Beweis: Delta M=E^{1/2} C E^{1/2} mit ||C||<=1 auf dem Träger von E.
+Die Operatornorm wird durch die entsprechende HS-Norm majorisiert.
+Nullräume werden auf ihren Träger beschränkt; keine Diagonalzugabe ist
+nötig. (4) erhält die gemeinsamen Vorzeichen bis zur Matrixbildung.
+
+Der Unterschied zwischen physischem k=Knew^{-1}a und k0 bleibt zu bezahlen.
+Die historische Matrixmajorante liefert
+ ||(k-k_model)P^{1/2}||_HS <= d_k,phys.
+Der neue Mittelpunkteinsatz erhält zusätzlich
+ d_k,round = sqrt(tr P) ||Knew^{-1}(a_interval-a_model)||_HS.
+Mit d_k=d_k,phys+d_k,round und dem GANZEN physischen f folgt
+
+ p <= ||P^{1/2}T_P* r_model||
+       +sqrt(tr(P T_P*E T_P) (tvec*E tvec))
+       +d_k sqrt(tr Knew) f.                        (5)
+
+Damit sind auch alle Produkte der Kopplungsabweichung mit dem schon
+gestörten Fo-Rest bezahlt. Ein reiner Modellrest wird nicht eingesetzt.
+Knew ist strikt positiv und wird an den alten Kraftvertrag gebunden.
+
+5. Anwendung auf die neue 109er Restbank
+
+E ist COMMON_FULL_LEDGER.json; die Fehlerpreise werden einmal benutzt.
+Der natürliche 84er Test in (5) ist nur eine Paarung der vorhandenen
+Restbank, keine neue Antwort. Die nachgerechneten Werte liegen bei
+ p_model=4.994609e-16, p_E=1.628840e-6 und insgesamt
+ p<0.000107, einschließlich der konservativen k-Abweichung.
+
+Aus den vollständig geprüften 618 Modellzellen samt Endstreifen und
+WHOLE_PHYSICAL_TRANSPORT ergibt sich
+ t=sqrt(5/21)*sqrt(E_model)+E_T,phys<0.000342.
+Hier bleibt 5/21 genau in seinem gültigen Bereich R_L.
+Der ganze Fo-Preis ist f<0.000000081. Mit (3):
+
+ f²+10(t+10f)²+(11/10)p² <0.0000012.                 (6)
+
+6. Korrektur des für E benötigten gemeinsamen Zwölfervertrags
+
+Die ursprüngliche Zahl theta<1/400 stammt aus derselben fehlerhaften
+Qold/R_L-Identifikation. Sie wird für diesen neuen Schluss nicht einfach
+als weitere Voraussetzung stehen gelassen. Es genügt, den betroffenen
+Restpreis mit vorhandenen Daten zu ersetzen.
+
+Beibehalten werden die schon bezahlte endliche Unterform F_VB>=Cg und
+die exakt rationalen B,Y. Ihre Identität mit JOINT_TAIL_GEOMETRY_V2 wird
+direkt geprüft. Die vorhandenen zwölf ganzen Funktionspreise n_i,alt
+bleiben gültige Obergrenzen für den LOKALEN R_L-Rest: ihre Formeln sind
+Summen dieses Preises und weiterer nichtnegativer Preise. Als Qold-Norm
+werden sie nicht übernommen.
+
+Für jeden der zwölf festen Tests t_i=(-Y_i;B_i) benutzt die neue Buchung
+die ganze vorhandene gemeinsame Fehlerform
+ E_old=E_source,V2 +diag(E_D,0_12)+e_arithmetic I108.
+e_arithmetic enthält Matrixradien und inverse Rundung. Klo bleibt in
+dieser Residualrechnung fest: Für die ersten 96 Restzeilen ist keine
+zweiseitige physische Klo-Abweichung erforderlich.
+
+Mit denselben Formeln (4),(5) werden f_i und p_i bestimmt. Dann
+
+ n_i²=f_i²+10(n_i,alt+10f_i)²+(11/10)p_i².
+ theta_neu=sum_ij |(Cg^{-1})ij| n_i n_j <1/40.        (7)
+
+Die Summation wird mit exakter rationaler Inversion von Cg wiederholt;
+alle zwölf Richtungen und sämtliche Kreuzterme sind enthalten.
+Numerische Anzeige: theta_neu<0.024655760375. Dies ist ein konservativer
+Preis, keine Untergrenze des tatsächlichen gemeinsamen Restgrams.
+
+Im festen V1B-Wechsel von C1 ist die obere linke Form Q1>=Qold,
+die untere rechte Form F_VB>=Cg, und der ganze Kreuzgram ist durch
+theta_neu Cg kontrolliert. Bilineare Cauchy ergibt damit
+
+ C_s>=C1>=(1-sqrt(theta_neu))diag(Qold,Cg)
+        >(21/25)diag(Qold,Cg),                       (8)
+
+denn 1/40<(4/25)². Der Faktor 25/21 wirkt auf die GANZE korrigierte
+Restenergie. Der alte Faktor 20/19 wird nicht verwendet.
+
+7. Unveränderter Variationsschluss und rationale Entscheidung
+
+Der Hilfstest hat exakt verschwindenden Kernrest. Deshalb bleibt der
+äußere Rest im alten V1-Wechsel exakt s=B* rho_outer-Y* rho_shell.
+Sein ganzer Preis <0.0071 folgt aus derselben 109er Fehlerform; er braucht
+keinen erneuten Gamma- oder Quellenpreis.
+Der bezahlte physische Variationswert bleibt L_hi=4.372725.
+Aus Formordnung, vollständiger Variationsidentität und (6),(8):
+
+ I_f <= <f,C_s^{-1}f>
+     <= L_hi+(25/21)(0.0000012+0.0071²)
+      =367314061/84000000
+      <109321245857487369/25000000000000000 <= D.
+
+Der Abstand ist exakt 33281757234749/525000000000000000>0.
+Das ist ausschließlich der bedingte positive Richtungsbefund für f=Zell_12.
+
+8. Nachrechnung und Aussagegrenzen
+
+check_corrected_direction.py wiederholt (3),(5),(7),(8) und den strikten
+Schluss rational aus den gerichteten Eingängen. Native Quellen in source/
+rekombinieren die endlichen Matrixpreise mit python-flint 0.9.0.
+Die Quell-/Domänenverträge H1–H4 sind übernommen; ihre globale externe
+Begutachtung wird nicht behauptet. Die 618 neuen Integrationszellen werden
+gespeichert wiederverwendet und nicht pauschal neu integriert.
+
+Der Fehler hat einen konkreten historischen Bezug. Andere abgeschlossene
+Rechnungen, die theta<1/400 oder 20/19 gerade aus diesem Belegpfad benötigen,
+werden hier nicht erneut bestätigt. Der reparierte gemeinsame Vertrag (7)
+und der neue Richtungsnachweis sind die hier behandelten Schlüsse. Es folgt
+kein negativer Befund über die tatsächliche Inversenergie aus einer vormals
+zu engen oder nun gröberen Fehlerobergrenze.
