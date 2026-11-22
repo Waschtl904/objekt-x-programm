@@ -15,7 +15,13 @@ an X, einschließlich der vollständigen geeigneten Testklasse, bleiben erhalten
 Weil-Positivität und die vollständige Konstruktion von Objekt X bleiben offen.
 Die projektintern hergeleiteten Ergebnisse sind zur externen Prüfung offen.
 
-## Aktueller Teilstand vom 11. November 2026
+## Forschungsnotizen vom 22. November 2026
+
+Die [Übersicht mit fünf Forschungsnotizen](research/lokale-gramformen-2026-11-22/README.md) führt zu den lokalen Gram-Darstellungen der konkreten Prim-/Gamma-Form. Die Hauptnotiz behandelt die Kanäle 2, 3 und 4 und eine isometrische Fortsetzung auf dünnen Trägern mit unendlich vielen wirksamen Primkanälen. Die globale Konstruktion auf der vollständigen geeigneten Testklasse bleibt offen.
+
+Der [Ritz-Prüfstand vom 21. November](handoffs/ritz-rest-2026-11-21/README.md) enthält den festen Zeugen, seine Datenbindungen und die offenen physischen Abschätzungen für die zweite Restenergie und den Kreuzterm.
+
+## Teilstand vom 11. November 2026
 
 Der [gebundene Forschungsstand vom 5.–11. November](research/x-c1/november-integration-2026-11-11/README.md)
 dokumentiert ein projektintern reproduziertes positives Budget und die
