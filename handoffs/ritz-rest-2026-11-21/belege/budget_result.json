@@ -1,0 +1,8 @@
+{
+  "primitive_vertices": 256,
+  "cross_endpoints_per_vertex": 2,
+  "strict_vertex_det_floor": "0.000000000208",
+  "minimum_directed_vertex_det_rational": "1040759172460536229655120462932799015504091908210801257/5000000000000000000000000000000000000000000000000000000000000000",
+  "minimum_directed_vertex_det_display": 2.0815183449210726e-10,
+  "scope": "Conditional finite budget implication only; measured physical rest entries are not inputs."
+}

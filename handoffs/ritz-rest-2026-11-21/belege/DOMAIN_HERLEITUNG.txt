@@ -1,0 +1,500 @@
+Objekt X — vollständiger A9-Boden und ausdrückliche lokale Fortsetzung
+13. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+0. Ergebnis und genau verbleibende Eingaben
+
+Für die unten angegebene konkrete Prim-/Gamma-Form werden die benötigte
+Formdichte, die vollständige Kern-/Schalenzerlegung und die tatsächlich
+benutzten Operatordomänenaussagen hier eigenständig begründet. Der
+Abschluss A8->A9 liefert dann, in beiden Paritäten und damit auf ihrem
+orthogonalen direkten Summenraum, die ausdrückliche physische Schranke
+
+               q_b[u] >= 10^(-207) ||u||_L2(dx)^2,       (0.1)
+               b=log(3).
+
+Die Zahl ist eine bewusst grobe UNTERgrenze. Sie beschreibt nicht die
+tatsächliche kleinste Eigenzahl. Sie gilt auf dem ganzen Formraum,
+nicht nur auf T oder nach einer Schurelimination.
+
+Zusätzlich wird ein vollständiges positives Intervall rechts von b
+hergeleitet. Setze als exakte reelle Zahl
+
+               epsilon_* = exp(-10^215) > 0.
+
+Für jeden Horizont t in [b,b+epsilon_*] gilt auf dem vollständigen
+Zwei-Mellin-Formraum
+
+               q_t[u] >= 10^(-421) ||u||_L2(dx)^2.       (0.2)
+
+Der neu aktive Primkanal 9 ist eingeschlossen. epsilon_* wird nirgends
+als Gleitkommazahl ausgewertet; ein numerischer Unterlauf zu null wäre
+kein Intervallnachweis. Die Breite ist praktisch unbrauchbar klein.
+(0.2) ist weder A9->A10/A11 noch eine kofinale Fortsetzung.
+
+Verbleibende gebundene Eingaben:
+
+ H0: Die arithmetische Ausgangsform stimmt auf den Mellin-Nullquellen
+     mit der angegebenen Nichtpolform überein, mit den unten genannten
+     Normierungen und Primgewichten. Diese arithmetische Identität wird
+     hier nicht neu aus der expliziten Weil-Formel hergeleitet.
+ H1: Die alte vollständige A8-Form besitzt den bereits zertifizierten
+     physischen Boden c8=12/10^30.
+ H2: Die gerichteten vollständigen Integrationen und Fehlernachweise
+     des globalen Schurpakets sind gültig. Insbesondere ist K12_neu
+     eine Untergrenze des wirklichen alten-eliminierten Zwölferblocks,
+     und dessen wirkliche reduzierte Schurform auf T ist >10^(-6) W_X.
+     Diese Folgerung aus der vollständigen Residualmajorante wird mit
+     den gebundenen Skalaren nochmals rational nachgerechnet.
+ H3: Die bisherigen festen Funktionen sind diejenigen der mitgelieferten
+     Definitionen: vier momentkorrigierte physische Polynome z, Y=Q S
+     mit exakt W_X-isometrischem Q und dem festen rationalen S.
+
+H0–H3 werden nicht durch Stichproben oder durch (0.1) voraussetzungslos
+bewiesen. Die analytischen Beweise dieses Textes sind zur Gegenprüfung
+offen; der Python-Prüfer ist kein formaler Beweisassistent. Für die
+konkrete Form sind Domänendichte, Schnittverträglichkeit und die unten
+aufgeführten Operatoranwendungen jetzt ausgeführt und nicht bloß eine
+weitere unaufgeschlüsselte Annahme.
+
+1. Konkrete Form und ihre vollständige Domäne
+
+Alle Funktionen werden auf R durch null fortgesetzt. Skalarprodukte
+sind antilinear im ersten Argument. Die Fouriertransformation ist unitär
+mit exp(-i xi x)/sqrt(2 pi). Setze
+
+ k(v)=exp(-v/2)/(1-exp(-2v)), v>0,
+ E[u,v]=int_0^infinity k(h)<tau_h u-u,tau_h v-v> dh,
+ G={u in L2(R): E[u]<infinity}.
+
+Für festen endlichen Horizont t ist
+
+ q_t^np[u,v]=E[u,v]-kappa<u,v>-<u,S_t v>,
+ kappa=log(8 pi)+EulerGamma+pi/2,
+ S_t=sum_(q=p^j <= exp(2t)) (log(p)/sqrt(q))
+                                  (tau_log(q)+tau_-log(q)),          (1.1)
+
+in Formpaarungen auf [-t,t] zu lesen. Translationen werden nach der
+Nullfortsetzung komprimiert. Ein Kanal mit log(q)=2t hat nur Randkontakt
+und eine verschwindende komprimierte L2-Wirkung. S_t und kappa I sind
+beschränkt und selbstadjungiert. Die Gamma-Form ist geschlossen: der
+Translationsdifferenzoperator in den gewichteten L2-Produktraum ist
+abgeschlossen. Damit ist q_t^np geschlossen und unterbeschränkt.
+
+Mit alpha_n=2n+1/2 folgt aus der positiven geometrischen Kernelreihe,
+Plancherel und Tonelli auf der GESAMTEN Domäne
+
+ E[u]=int psi(xi)|u_hat(xi)|^2 dxi,
+ psi(xi)=2 sum_(n>=0) xi^2/[alpha_n(alpha_n^2+xi^2)].     (1.2)
+
+Die Reihe ist auf kompakten xi-Mengen gleichmäßig konvergent. Für r>0
+gilt summandenweise psi(r xi)<=max(1,r^2)psi(xi).
+
+Sei F_t der Gamma-Formabschluss der tatsächlichen H1_0(-t,t)-Quellen
+mit beiden Mellinmomenten E_+(u)=int exp(x/2)u(x)dx=0 und E_-(u)=0.
+Dann gilt exakt
+
+ F_t={u in G: supp(u) subset [-t,t], E_+(u)=E_-(u)=0}.    (1.3)
+
+Beweis der schwierigen Dichterichtung: U_r u(x)=r^(-1/2)u(x/r), r<1,
+schrumpft den Träger. Aus (1.2) sind U_r für r nahe 1 gleichmäßig auf
+G beschränkt. Auf Funktionen mit glatter kompakter Fouriertransformierter
+konvergieren sie in G stark gegen I; deren Dichte im gewichteten L2-Raum
+und die uniforme Beschränktheit übertragen dies auf jedes u in G.
+Die beiden Momentfehler gehen wegen des gemeinsamen kompakten Trägers
+gegen null. Zwei feste glatte Innenfunktionen mit invertierbarer
+Momentmatrix korrigieren sie exakt, mit gegen null gehenden Koeffizienten.
+Eine solche Matrix erhält man aus zwei kleinen verschobenen positiven
+Bumps: ihre beiden Exponentialmomentquotienten sind verschieden.
+In einer festen Parität genügt eine Korrekturfunktion: ein gerader
+positiver Bump bzw. x mal ein gerader positiver Bump.
+Anschließend falte mit einem glatten geraden Mollifier mit so kleinem
+Träger, dass die Funktion noch strikt im Inneren bleibt. Nullmomente
+bleiben erhalten, da E_±(u*rho)=E_±(u)E_±(rho). Die Fouriermultiplikatoren
+des normierten nichtnegativen Mollifiers haben Betrag <=1 und gehen
+punktweise gegen 1; Dominanz in (1.2) liefert Formkonvergenz.
+So entstehen glatte kompakte Nullmomentquellen. Umgekehrt sind Träger
+und Momente L2-abgeschlossen. H1_0-Quellen liegen in G, denn ihre
+Translationsdifferenzen erfüllen min(h^2||u'||^2,4||u||^2). Damit ist
+(1.3) genau der ursprüngliche Abschluss, kein vergrößerter Ersatzraum.
+
+Reflexion kommutiert mit der Form. In Parität p ist das einzige
+nichtautomatische Moment <m,u>=0 mit m(x)=cosh(x/2) für p=0 und
+m(x)=sinh(x/2) für p=1. Gerade und ungerade Räume sind auch q-orthogonal.
+
+2. Schneiden erhält die Formdomäne — direkter Beweis ohne Dichtezirkel
+
+Es seien 0<a<b endlich, X=L2((a,b),2dx), und Sigma_p s die reine
+rechte/linke Schale mit Parität p. Der Gamma-Kern vom Kern zur Schale
+lautet auf den positiven Halbintervallen
+
+       k(y-x)+(-1)^p k(y+x), 0<x<a<y<b.                 (2.1)
+
+Es gilt k(v)<=1+1/(2v). Der singuläre Teil 1/[2(y-x)] wird mit
+u=a-x, v=y-a zum halben Carleman-Kern. Sein Schurgewicht u^(-1/2)
+liefert Norm <=pi/2, denn
+
+ int_0^infinity v^(-1/2)/(u+v)dv=pi u^(-1/2).
+
+Die verbleibenden Kerne sind durch 1 und 1+1/(2a) beschränkt. Also
+
+ ||G_Gamma|| <= pi/2+(2+1/(2a))*sqrt(a(b-a)).             (2.2)
+
+Die gleichen Halbintervallfaktoren 2 in beiden L2-Normen heben sich auf.
+Auch für den unten bei epsilon abgeschnittenen Gamma-Kern gilt dieselbe
+Schranke: man dominiert seinen Absolutbetrag durch den positiven vollen
+Kernel, bevor Paritätsvorzeichen auftreten.
+
+Für u in G mit Träger [-b,b] schreibe f=1_core u, v=1_shell u. Beide
+sind zunächst nur L2. Für jedes epsilon>0 ist E_epsilon eine beschränkte
+Form, und exakt gilt
+
+ E_epsilon[f]+E_epsilon[v]
+   =E_epsilon[u]-2 Re E_epsilon[f,v]
+   <=E[u]+2 C ||f||||v|| <= E[u]+C||u||^2,               (2.3)
+
+mit C aus (2.2). Monotone Konvergenz der beiden nichtnegativen linken
+Terme zeigt DIREKT f,v in G. Umgekehrt liegt die Summe zweier solcher
+Stücke in G. (2.3) und die umgekehrte Dreiecksabschätzung liefern die
+Äquivalenz der positiven Graphnormen. Hier wird keine zuvor angenommene
+Formdichte geschnittener Funktionen benötigt.
+
+Setze mu=int_0^a m^2>0, lambda(s)=int_a^b m s und
+
+ Lambda s=Sigma_p s-(lambda(s)/mu)m 1_core,
+ W_X[s]=||Lambda s||^2=||s||_X^2+2|lambda(s)|^2/mu.
+
+Das feste m_core liegt in G (stärker: Abschnitt 3). Die Momentkorrektur
+ist ein formbeschränkter Rang-eins-Term. Aus (1.3),(2.3) folgt die
+vollständige topologische Formraumisomorphie
+
+ F_a direct-sum D_X -> F_b, (w,s) -> J_old w+Lambda s,
+ D_X={s in X: Sigma_p s in G}.                           (2.4)
+
+Die inverse Abbildung ist s=u|_(a,b),
+w=u|_core+lambda(s)m/mu. Die Summanden in (2.4) sind L2-orthogonal:
+||u||^2=||w||^2+W_X[s]. Insbesondere verschwinden keine Rand- oder
+Mellinrichtungen. Spurkopplungen ursprünglicher H1-Funktionen werden
+nicht zu zusätzlichen Bedingungen an ihren Formabschluss gemacht.
+
+Jeder feste endlichdimensionale Teilraum von D_X besitzt einen
+W_X-orthogonalen Projektor, der auch in der Formnorm beschränkt ist:
+seine endlich vielen Koeffizienten sind L2-stetig und seine Bildvektoren
+haben endliche Formnorm. Somit ist
+
+ D_X=(V+ran Y) direct-sum (T intersect D_X),
+ T=(V+ran Y)^(perp W_X),                                 (2.5)
+
+eine vollständige Formzerlegung. Die vier z-Schalenrestriktionen sind
+wegen ihrer verschiedenen höchsten Polynomgrade unabhängig. Q ist nach
+Definition eine exakte W_X-Isometrie in V-perp. Der neue exakte Test
+S*S>0 bestätigt zusätzlich die Unabhängigkeit aller acht Y=QS.
+Damit ist dim(V+ran Y)=12. T ist nicht der rohe Legendre-Tail ab Grad12.
+Die Unabhängigkeit der zwölf physischen Klassen modulo dem alten Raum
+folgt außerdem direkt aus H2: Hätte Fz mit z!=0 verschwindende Schale,
+läge Fz selbst im alten Formraum. Seine alte-eliminierte Energie wäre
+dann durch Wahl der alten Gegenquelle null. Dies widerspräche dem
+strikt positiven tatsächlichen Zwölferblock. Die alte Elimination
+benötigt hierfür nur H1, keine neue Gesamtpositivität.
+
+3. Starke Operatorwirkung auf den tatsächlich benutzten Funktionen
+
+Ein auf [-R,R] unterstütztes, stückweise Lipschitz-stetiges u mit
+|u|<=M, Stück-Lipschitzkonstante L und J Schnittstellen gehört zu
+Dom(H_Gamma). Für x außerhalb der Schnittstellen ist
+
+ H_Gamma u(x)=int_0^infinity k(h)[2u(x)-u(x+h)-u(x-h)]dh,
+ ||H_Gamma u|| <=(2L+20M)sqrt(2R+2)+4M sqrt(J)
+                                      +2sqrt(2)||u||_1. (3.1)
+
+Zur Prüfung der Aussage einschließlich Operatordomäne: Für 0<h<=1 ist
+||tau_h u-u||^2 <=(2R+2)L^2 h^2+4JM^2h. Das zeigt u in G.
+Sei d(x)=min(1,dist(x,F)), wobei F alle Schnittstellen enthält. Für
+h<d(x) ist die zweite Differenz höchstens 2Lh, sonst höchstens 4M.
+Mit k(h)<=1+1/(2h), int_1^infinity k<4 erhält man auf [-R-1,R+1]
+
+ |H_Gamma,epsilon u(x)| <=2L+20M+2M log(1/d(x)).
+
+Die gemeinsame L2-Norm der logarithmischen Spitzen ist <=2sqrt(J),
+weil int_R log_+^2(1/|x-c|)dx=4. Außerhalb dieses Intervalls dominiert
+2 exp(-(|x|-R)/2)||u||_1, mit L2-Norm <2sqrt(2)||u||_1.
+Dominierte Konvergenz gibt daher H_Gamma,epsilon u -> f in L2.
+Für jedes v in G gilt <H_Gamma,epsilon u,v>=E_epsilon[u,v]; der
+ausgelassene gemischte Formrest geht durch Cauchy-Schwarz gegen null.
+Also E[u,v]=<f,v> für ALLE v in G. Genau dies ist das Operator-
+domänenkriterium, über eine formale punktweise Formel hinaus.
+
+Beschränkte selbstadjungierte Zusätze erhalten diese Inklusion. Für eine
+dichte abgeschlossene Formrestriktion auf einen Hilbert-Unterraum H
+gilt für u in H mit dieser Eigenschaft Q_H u=Pi_H Q^np u.
+Eine allgemeine Invarianz von Dom(Q^np) unter beliebigen Projektionen
+wird nicht behauptet. Lambda r muss für allgemeines r nur in der
+Formdomäne liegen. In den gemischten Paarungen wirkt Q auf die FESTEN
+Polynome/Liftungen. Beim logarithmischen alten Antwortterm des globalen
+Modells bleibt die dortige schwache Adjunkteninterpretation erforderlich;
+wir erklären diesen Term nicht nachträglich für stückweise Lipschitz.
+
+Die feste Funktion m_core und sämtliche 96 verwendeten Quellen sind
+stückweise glatt. (3.1) rechtfertigt deshalb ihre starken Anwendungen.
+Die Kopplungsfunktionale auf beliebigen Restvektoren besitzen dadurch
+L2-Repräsentanten. Positive geschlossene Hilfsformen S besitzen die
+benutzten Variationsinversen; S>=beta L erlaubt den inversen Vergleich
+auf dem Formdualraum bei D(S) subset D(L). Eine Gleichheit dieser
+Domänen oder starke Operatordomänenzugehörigkeit aller Restvektoren
+wird nicht gebraucht.
+
+Ergänzend folgt Kompaktheit für jeden festen endlichen Träger direkt
+aus (1.2): Für |xi|>e^2 ist psi(xi)>=(log|xi|-2)/2. Dies folgt auch
+unmittelbar aus k(h)>=exp(-1/2)/(2h) für h<=1 und partieller Integration
+von int_1^R cos(v)/v dv, dessen Betrag <=2 ist. Daher ist der Fourier-
+Außenteil einer Gamma-Graphnormkugel <=2E[u]/(log L-2). Der auf einen
+festen Frequenzbereich eingeschränkte Fourieroperator vom festen
+Träger ist Hilbert-Schmidt. Kleine Außenteile und endliche Frequenz-
+kompaktheit ergeben die kompakte L2-Einbettung. Die folgende explizite
+Schranke benutzt allerdings die vollständigen Schurergänzungen und
+benötigt keine bloß qualitative Folgerung aus Kompaktheit.
+
+4. Unabhängig nachgerechnete grobe Normen für den A8->A9-Anschluss
+
+Es gilt a=3log2/2, b=log3, h=b-a. Positive rationale Reihen bestätigen
+1.03<a<1.05, 1.09<b<1.1, 1/20<h<3/50. Ferner cosh(.55)<6/5 und
+sinh(.55)<1. In beiden Paritäten sind mu>9/100 und nu<1/10:
+ungerade folgt mu>=a^3/12>.09, gerade schon mu>=a; für nu genügt
+h(6/5)^2<.1. Somit
+
+ ||lambda/mu||_(X-dual)^2=nu/(2mu^2)<(5/2)^2.            (4.1)
+
+kappa<6: Die alternierende arctan-Reihe gibt pi<10/3, die positive
+log-Reihe log(80/3)<10/3, und EulerGamma<1 folgt aus dem elementaren
+Summen-/Integralvergleich. Alle Primgewichte sind <1; dies wird für
+p=2,3,5,7 mit rationalen Logeinschließungen geprüft. Am A9-Endpunkt
+ist daher der beschränkte Zusatz <18; die noch gröbere Konstante20
+gilt auch mit Kanal9. Aus (2.2) folgt ||G_Gamma||<3 und mit sechs
+Primkanälen ||G||<15. Die Konstanten werden bewusst nicht optimiert.
+
+Für m_core darf in (3.1) M=L=2, R<2, J<=4, ||m_core||_1<5 und
+||m_core||_2<3 eingesetzt werden. Mit sqrt(6)<3, sqrt(2)<3/2 gilt
+
+ ||Q^np m_core|| <(4+40)*3+16+15+20*3=223<300.          (4.2)
+
+Der vollständige alte Quelloperator
+
+ g(s)=Pi_a[G s-(lambda(s)/mu)Q_a^np m_core]
+
+hat somit auf ganz (X,W_X) Norm <15+(5/2)*300<1000. Die alte
+Momentkorrektur ist hier ausdrücklich enthalten.
+
+Für F=(z1,...,z4,Lambda Y1,...,Lambda Y8) gilt
+
+                  ||F||<16,    ||Q_b^np F||<10^11.      (4.3)
+
+Details: S ist exakt rational; je Spalte ist (S*S)_jj<4 geprüft.
+Weil Q eine W_X-Isometrie ist, hat Y_j X-Norm <2 und Grad<=95.
+In der X-orthonormalen Legendrebasis ist daher die Koeffizientennorm<2.
+Aus sum_(n=0)^95(2n+1)=96^2, |P_n|<=1 und |P_n'|<=n(n+1)/2 folgen
+|Y_j|<1000 und |Y_j'|<2*10^8, unter Benutzung h>1/20. Die Kernkorrektur
+kostet nach (4.1) höchstens 5m, also weder eine größere Amplitude noch
+eine größere Stückableitung. ||Lambda Y_j||<4 folgt aus
+W_X<= (1+nu/mu)||.||_X^2.
+
+Die vier physischen z haben Grade 2,4,6,8 bzw.3,5,7,9 und Form
+[sqrt(2d+1)P_d(x/b)-c_d sqrt(2p+1)P_p(x/b)]/sqrt(2b).
+Im geraden Fall ist |c_d|<=2 durch M_0>=1. Im ungeraden Fall liefert
+M_1=int_0^1 y sinh(by/2)dy>=b/6>1/6 zusammen mit Cauchy-Schwarz
+|c_d|<4. Daher ||z_j||<5. Die Amplituden und Stückableitungen dieser
+niedrigen Polynome erfüllen ebenfalls die vorigen groben Grenzen.
+Alle zwölf Quellen haben höchstens vier Schnittstellen und ||F_j||_1<10.
+(3.1) plus der Zusatz20 gibt für jede Spalte ||Q_b^np F_j||<2*10^10.
+Die Hilbert-Schmidt-Abschätzung ergibt
+||F||^2<4*25+8*16<16^2 und ||Q_b^np F||^2<12*(2*10^10)^2<10^22.
+
+5. Neue rationale Zwölferprüfung und Boden des GANZEN A9-Raums
+
+Der neue exakte LDL-Test auf den aus dem versiegelten Antwortpaket
+ausgelesenen rationalen Matrizen besteht in beiden Paritäten:
+
+                    K12_neu > 10^(-16) I12.             (5.1)
+
+Es bestehen 12 positive Pivots je Parität. Die Definition der Matrix
+wird nicht geändert; insbesondere wird sie nicht in eine vermeintlich
+orthonormale physische Basis umgedeutet. Die acht S-Gramtests bestehen
+zusätzlich mit je8 Pivots. Historische Zertifikate bleiben unverändert.
+
+Sei A der vollständige alte Operator auf K_a, g_F=Pi_a Q_b^np F.
+H1 und (4.3) liefern ||A^-1||<=1/c8<10^29 und ||g_F||<10^11.
+Bezeichne die WIRKLICHE alte-eliminierte Form durch C_actual. Ihre
+Zwölfermatrix K_actual erfüllt K_actual>=K12_neu; aus H2 folgt
+Schur_F(C_actual)[r]>10^(-6) W_X[r].
+Die letzte Zahl folgt bereits aus den ursprünglichen Gesamtpreisen
+1/250 und71/10000; die nochmals verbesserten Preise werden hierfür
+nicht benötigt. Der Prüfer setzt diese Skalare und M_upper<uD direkt
+in (21/5)[eta+(1-cap)(1-u)beta] ein.
+
+Die WIRKLICHE gemischte Kopplung C:T->C^12 erfüllt
+
+ C(r)=q_b[F,Lambda r]-g_F* A^-1 g(r),
+ ||C|| <10^11+10^11*10^29*1000 <10^44.                 (5.2)
+
+Diese grobe Grenze benötigt keine Abschätzung der neuen Inversmajorante
+auf allen Quellen. Sie verwendet die echte alte Inverse.
+
+Jedes u in F_b hat nach (2.4),(2.5) eindeutig die Darstellung
+u=J_old w+Fz+Lambda r. Die vier z sind dabei die physischen Vertreter.
+Definiere die beiden tatsächlichen Ergänzungskoordinaten
+
+ v=w+A^-1(g_F z+g r),
+ z'=z+K_actual^-1 C r.
+
+Beide vollständigen Quadratergänzungen sind auf der Formdomäne zulässig.
+Es folgt, mit k=10^(-16), s=10^(-6),
+
+ q_b[u]>=c8||v||^2+k|z'|^2+s||r||_W^2.                (5.3)
+
+Zurück in der physischen L2-Norm ist
+
+ u=J_old v+(F-J_old A^-1g_F)z+(Lambda-J_old A^-1g)r.
+
+Aus (4.3),(5.1),(5.2) ergeben sich
+
+ ||F-J_old A^-1g_F|| <2*10^40,
+ ||Lambda-J_old A^-1g|| <2*10^32,
+ ||K_actual^-1 C|| <10^60.
+
+Nach Einsetzen von z=z'-K_actual^-1 C r folgt
+
+ ||u|| < ||v||+2*10^40|z'|+3*10^100||r||_W.
+
+Gewichtetes Cauchy-Schwarz und (5.3) geben nun die explizite Rechnung
+
+ ||u||^2 <= [1/c8+4*10^80/k+9*10^200/s] q_b[u]
+          = [10^30/12+4*10^96+9*10^206]q_b[u]
+          < 10^207 q_b[u].                              (5.4)
+
+Das beweist (0.1). Anders als der reduzierte Schurboden ist (5.4) eine
+Aussage in der ursprünglichen physischen L2-Norm auf allen Koordinaten.
+Ein Gegenbeispiel im Prüfer zeigt ausdrücklich, warum der reduzierte
+Boden ohne Bezahlung der Ergänzungsantworten kein solcher Boden wäre.
+
+6. Eine neue vollständige Schale rechts von A9
+
+Setze jetzt a_neu=b=log3 und t=b+h mit 0<h<=epsilon_*. Die gesamte
+Analyse von Abschnitten1–3 gilt mit diesen Endpunkten. Die alte Form
+ist jetzt q_b mit c=10^(-207), nicht die alte A8-Form.
+Weil epsilon_*<1/100 und b+1/100<1.11<log11/2, sind die aktiven
+Primzahlenpotenzen genau 2,3,4,5,7,8,9. Wir bezahlen ALLE sieben
+Translationspaare mit Norm<14. Kanal9 wird nicht weggelassen oder
+aus einem alten Nullbeitrag bei h=0 fortgeschrieben.
+
+Für den reinen Schalenvektor f=Sigma_p s setze N=||s||_X^2=||f||^2.
+Der neue Selbstboden folgt direkt aus den Nullwerten außerhalb der
+Schale, ohne neue Matrixintegrationen oder Legendreabschneidung:
+Für x in einer der beiden Schalen und h<=v<=1 liegen x+v und x-v
+außerhalb beider Schalen, weil b>1. In der nichtnegativen Doppelintegral-
+darstellung der Gamma-Energie liefern diese Außenpaare
+
+ E[f] >= 2 int_h^1 k(v)dv * N
+      >= exp(-1/2) log(1/h) N
+       > (1/2)log(1/h)N.                                (6.1)
+
+Dabei ist E[u]=(1/2)int_R int_R k(|x-y|)|u(x)-u(y)|^2 dxdy.
+Außen-/Innenpaare werden nach dem Faktor1/2 genau einmal gezählt.
+Auch wenn die reine Prim-Selbstwirkung günstiger wäre, genügt die volle
+Normschranke, also q_t^np[f]>[(1/2)log(1/h)-20]N.
+
+Die neue Momentfunktion hat mu_b>9/100, nu<=4h. Somit
+
+ |lambda(s)/mu_b|^2 <=(2h/mu_b^2)N<4N,
+                N<=W_X[s]<(1+4h/mu_b)N<2N.             (6.2)
+
+Die feste Funktion m 1_(-b,b) erfüllt (4.2) auch für den erweiterten
+Nichtpoloperator, denn dessen beschränkter Zusatz ist <20. Insbesondere
+||Q_t^np m_core||<300 und |q_t^np[m_core]|<900.
+Beim Ausmultiplizieren der Liftung kosten deshalb alle Momentterme
+zusammen höchstens
+
+        [2*2*300+2^2*900]N=4800N.
+
+Folglich gilt auf der GESAMTEN neuen Schalendomäne
+
+       q_t[Lambda s]>[(1/2)log(1/h)-5000]N.              (6.3)
+
+Aus (2.2), b<1.1, h<.01 folgt ||G_Gamma||<3. Die sieben Primkanäle
+kosten <14. Mit (6.2) und (4.2) hat der vollständige neue alte-Quell-
+operator deshalb Norm <3+14+2*300<1000 von X nach K_b. In W_X ist
+dies ebenfalls eine zulässige Grenze. Die vollständige alte Antwort
+kostet daher <=10^6/c * N. Die echte neue Schurform erfüllt
+
+ S_neu[s]>[(1/2)log(1/h)-5000-10^6/c]N.                 (6.4)
+
+Für h<=exp(-10^215), c=10^(-207), ist die eckige Klammer mindestens
+
+                     5*10^214-5000-10^213 >1.
+
+Somit S_neu>=N>W_X/2 auf dem ganzen neuen Quotienten. Dies ist eine
+neue Schale mit eigener Metrik. Die Zahl1/2 ist KEIN Beweis des zuvor
+offenen Tailbodens1/20 auf dem alten T mit dessen festem Vergleich.
+
+Mit der orthogonalen Liftzerlegung u=J_old w+Lambda s und
+v=w+A_b^-1 g_neu(s) erhält man q_t[u]>=c||v||^2+W_X[s]/2.
+Andererseits ist
+
+ ||u||^2=||w||^2+W_X[s]
+ <=2||v||^2+(1+2*10^6/c^2)W_X[s]
+ <=max(2/c,2+4*10^6/c^2) q_t[u]
+ <(5*10^6/c^2)q_t[u]<10^421 q_t[u].                    (6.5)
+
+Das beweist (0.2) für h>0; h=0 folgt aus (0.1).
+Allgemeiner liefert derselbe Beweis bei einem gegebenen physischen
+Boden 0<c<=1 am Endpunkt b die lokale Regel
+
+ 0<h<=exp(-10^8/c)  =>  q_(b+h) >= [c^2/(5*10^6)] ||.||^2.
+
+Sie gilt in genau dem hier kontrollierten Primfenster rechts von b.
+Die h-abhängige logarithmische Selbstenergie und die h-unabhängige
+Kopplungsmajorante werden also in der richtigen Richtung verglichen.
+Es wird nicht behauptet, dass die Kern-/Schalenkopplung in L2-Norm
+gegen null geht. Bereits zwei angrenzende gleichbreite Indikatoren
+haben für den Kernel1/[2(x+y)] den normierten Kreuzwert log2,
+unabhängig von ihrer Breite. Schmalheit allein liefert keine kleine
+Kopplungsnorm; sie liefert hier die wachsende positive Selbstenergie.
+
+7. Prüfumfang und nächster sinnvoller Anschluss
+
+Der exakte Standardbibliotheksprüfer liest die rationalen Original-
+Zwölfermatrizen, die festen S-Koeffizienten und die gebundenen
+Schurrest-Skalare. Er prüft 24 neue Zwölferpivots, zusätzlich unabhängig
+24 ganzzahlige führende Hauptminoren mit Bareiss-Elimination,
+16 S-Grampivots,
+sämtliche hier verwendeten rationalen Normpreise und positive
+Log-/Exponentialreihenreste. Originalarchiv und ursprüngliche S-Datei
+wurden mittels SHA256 und vollständigem Feldabgleich angebunden.
+Synthetische Gegenkontrollen verwerfen ausgelassene Kopplungen,
+den falschen unmittelbaren Normschluss aus einem Schurboden, falsche
+Momentprojektion und das Weglassen eines neuen negativen Kanalbeitrags.
+Sie ergänzen die allgemeine Herleitung und beweisen diese nicht.
+
+Die großen globalen Integrationen werden übernommen, nicht neu erzeugt.
+Die arithmetische Identität H0, der alte A8-Nachweis H1 und die globale
+Zertifikatskette H2 bleiben explizite Herkunftseingaben. Die Domänen-
+und Zerlegungssätze sind für das konkrete Modell hier begründet;
+eine externe mathematische Begutachtung bleibt offen.
+
+Die neue lokale Fortsetzung ist ein Existenz- und Stabilitätsresultat
+mit ausdrücklicher Breite. Es ist kein brauchbarer Ersatz für eine
+gerichtete gemeinsame A9-Inversenergie bei einem makroskopischen
+nächsten Horizont. Wiederholung des Arguments kann zu aufsummierbar
+kleinen Schritten führen; ein Erreichen beliebig großer Horizonte
+folgt nicht. Genau diese quantitative Erneuerung bleibt zu entwickeln.
+
+Der separate alte Tailboden1/20, weitere benannte Horizontübergänge,
+Objekt X und RH bleiben offen. GitHub wurde nicht verändert.
+
+Literaturabgleich (kein zusätzliches numerisches Zertifikat):
+Laptev–Weth, Spectral properties of the logarithmic Laplacian,
+Analysis and Mathematical Physics11 (2021),133,
+https://doi.org/10.1007/s13324-021-00527-y
+frei zugängliche Fassung: https://d-nb.info/1244023663/34
+Die dort behandelte logarithmische Formregularität und kompakte
+Einbettung entsprechen dem funktionalanalytischen Hintergrund. Der
+hier verwendete Gamma-Kern, seine Momente und Primverschiebungen
+werden durch die eigenen Beweise oben behandelt; sie werden nicht
+mit dem reinen logarithmischen Laplaceoperator gleichgesetzt.

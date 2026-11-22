@@ -1,0 +1,260 @@
+OBJEKT X — GPT1: VOLLSTÄNDIGE ERSTE RESTSPALTE
+11. November 2026
+Interne Autorenableitung unter den übernommenen H1–H4; externe Prüfung offen.
+
+ERGEBNIS UND METHODENENTSCHEIDUNG
+
+Die vollständige erste feste Restspalte ist mit vorhandenen Daten ausreichend
+kontrollierbar. Die folgende neue rationale Nachrechnung liefert
+
+  Rbar_11 = ||eta_bar1||²_(S_R^-1) < 0.000003523
+                                      < 0.000006051814.
+
+Der rechte Wert ist die bereits zertifizierte erste Budgetkapazität. Der neue
+Wert ist eine obere Schranke des ganzen physischen ersten Restes unter den
+gleichen geerbten Verträgen, kein Modellwert und kein gemessener tatsächlicher
+Rest. Er umfasst die F/T/P/S-Anteile. Der Zweiraumnachweis bleibt offen.
+
+Entscheidend sind zwei miteinander verbundene Schritte:
+1. Den dominanten S-Preis von sigma0 direkt aus der vorhandenen 109er-Bank
+   einschließen, mit primitiven Direktintervallradien und sämtlichen übrigen
+   physischen Fehlerpositionen.
+2. eta_bar1 = sigma0 + (1-lambda_bar1)s0 und
+   ||s0||²_(S_R^-1) = tau verwenden. Für tau liegt bereits ein ganzer Energie-
+   beleg vor. Dadurch braucht dieser erste-Spalten-Schluss keinen neuen
+   vollständigen T-Gram von t1 und keinen neuen P-Arbeitsblock.
+
+Die Methodenfrage zur ERSTEN Spalte ist damit positiv beantwortet. Eine
+quantitativ begründete Erzeugung der vollständigen zweiten Spalte folgt daraus
+noch nicht. Abschluss dieses Arbeitsblocks: RESTMACHBARKEIT_OFFEN.
+
+1. GEPRÜFTER DATENSTAND
+
+GPT2s tatsächlich gelieferte statische Datenkarte und Prüfakte wurden gelesen.
+Das ZIP hat 45.356 Byte und SHA256
+49dbdfb08418a66fa7d3815a2f26cd96f4694bf3ef131fe97630ecb3d8337e8c.
+Die separat gelieferten TXT-/JSON-Dateien sind bytegleich mit den jeweiligen
+Archivmitgliedern. Die Quellen S1–S9 sind mit dem hier vorhandenen Original-
+bestand abgeglichen. Die technische Dateiübertragung ist damit geklärt.
+
+Verwendeter Abnahmestand:
+Objekt-X-Gezielte-Abnahme-und-Budgetnachschaerfung-2026-11-10.zip
+30.905.746 Byte; SHA256
+19769a8e1e66aa6fa80116022f813c3dde1965e5c54b18d374580ef7fb5bb056.
+Eingebettetes Original vom 9. November:
+bb969c4a364d8c44d1d5ac4d931636e1ca74c4da1fa4a93d198c8a7806424c90.
+
+Die neue Rechnung liest aus diesem Bestand ausschließlich die gemeinsame
+109er-Bank, ihre feste Antwortspalte, die ursprünglichen Direktintervallradien,
+die gespeicherten B/Y/Gp-Metrikdaten und lambda_bar. Die verwendeten Dateien
+einschließlich der maßgeblichen Herleitungen sind in INPUT_BINDINGS.json
+mit SHA256 gebunden. Das Prüfprogramm kontrolliert diese Bindungen.
+
+Die alten vollständigen F/T/P-Preise und H1–H4 bleiben übernommene physische
+Verträge. Ihre historischen Integrations- und Domänenbeweise wurden hier
+nicht neu erzeugt. Die neue Leistung ist die endliche S-Kontraktion samt
+Fehlertransport und der nachfolgende vollständige erste-Spalten-Schluss.
+
+2. DIE GANZE RESTIDENTITÄT VERMEIDET EINE NEUE t1-AUSWERTUNG
+
+Nach ANALYTISCHE_BRUECKE.txt §4 ist s0=S_R[w,.] und sigma0=t1-s0.
+Für epsilon=1-lambda_bar1 gilt daher exakt
+
+ eta_bar1 = epsilon*t1 + lambda_bar1*sigma0
+          = sigma0 + epsilon*s0.                            (1)
+
+S_R ist hier die positive Vergleichs-Schurform nach der Kernelimination,
+nicht die noch zu beweisende neue physische Schurpositivität. Für die feste
+Antwort w gilt nach demselben Vergleich
+
+ ||s0||²_(S_R^-1) = <w,S_R w> = tau.                        (2)
+
+Die Matrixbank liefert mit t=(w,-1), e=letztem Einheitsvektor
+ tau=(t+e)^T M_phys (t+e).
+Schon die alte gültige gesamte Bankhülle ergibt
+ 0<tau<3.638749077305945<4.
+Dieser einzelne obere Energiepreis wird verwendet; das abgeschlossene
+Budgethindernis wird nicht erneut bearbeitet.
+
+Der feste rationale Koeffizient erfüllt
+ 0<epsilon=1.140510470814879429756688376...e-14.
+Er wird mit der GANZEN Energie aus (2) bezahlt:
+
+ ||eta_bar1||_(S_R^-1)
+ <= ||sigma0||_(S_R^-1) + |epsilon| sqrt(tau)
+ <  ||sigma0||_(S_R^-1) + 2 epsilon.                    (3)
+
+Damit wird der kleine Faktor ausdrücklich nicht allein als Fehlerpreis
+verwendet. Die Kontrolle von t1 selbst wäre über
+ ||t1|| <= ||sigma0||+sqrt(tau)
+ebenfalls vorhanden. Benötigt wird hier die stärkere direkte Darstellung (1).
+Ein signierter sigma0/s0-Kreuzterm wird durch die gültige Dreiecksungleichung
+bezahlt. Eine unzulässige Rang-eins-Fehlergramannahme wird nicht eingesetzt.
+
+3. S-VERBESSERUNG MIT DER GESAMTEN PHYSISCHEN BANKBUCHUNG
+
+Sei L_S=(-Y;I12;0), Q=Cg^-1. Dann
+ A_S sigma0=-L_S^T M_phys t,
+ Cg=B^T Gp B,
+ Q=B^-1 Gp^-1 B^-T.
+Die gespeicherten Inversen werden nur multipliziert. Ihre beidseitigen
+Inversidentitäten und die Positivität der kleinen Gp-Metrik sind exakt rational
+geprüft. Es wird keine neue Inverse berechnet.
+
+Schreibe M_phys=M_model+Delta_rest+Delta_D. Aus der ursprünglichen additiven
+Fehlerbuchung und der Direktterm-Rekonstruktion des Abnahmepakets gilt
+
+ -E_rest <= Delta_rest <= E_rest,
+ E_rest=E_original-diag(old_row_majorant).
+
+Nur der alte arithmetische Direktintervall-Charge wird ersetzt. Die übrigen
+34 Fehlerpositionen, insbesondere B/B0, Quellen, Bare-/P0-, direkte physische
+Formfehler, Arithmetik und Exportrundung bleiben erhalten. Die Zulässigkeit
+dieser Subtraktion folgt aus der additiven Herkunft, nicht aus einer isolierten
+Positivitätsprobe der Differenzmatrix.
+
+Der bewährte gemeinsame Transport ergibt
+
+ ||Q^(1/2)L_S^T Delta_rest t||²
+ <= tr(Q L_S^T E_rest L_S) (t^T E_rest t).                (4)
+
+Hier sind die direkt kontrahierten Werte ungefähr
+ tr(Q L_S^T E_rest L_S) = 0.148679019018147449...,
+ t^T E_rest t          = 0.000011831186274126710736... .
+
+Für die symmetrisierte direkte Radienmatrix r setze
+ u_i=sum_j r_ij |t_j|, v_a=sum_i |(L_S)_ia| u_i.
+Dann gilt ohne Annahme unabhängiger Fehler
+
+ ||Q^(1/2)L_S^T Delta_D t||² <= sum_ab |Q_ab| v_a v_b.   (5)
+
+Das ist eine direkte Kontraktion der gespeicherten Intervallradien. Die
+globale alte Zeilensummen-Diagonalform wird hier nicht nochmals bezahlt.
+Das Modellzentrum und die feste Antwort bleiben unverändert.
+
+Gerichtete Normobergrenzen aus dem rationalen Prüfprogramm:
+ Modell:                       2.570264e-15
+ übrige Fehler samt Rundung:    0.001326291509835
+ primitive Direktintervalle:    1.300194e-9
+ Summe:                        0.001326292810031
+
+Die nicht gerundete sichere Summe steht in RESULT.json. Als einfache
+rationale Hülle wird verwendet:
+
+ ||A_S sigma0||_(Cg^-1) < 0.001326293.                  (6)
+
+Der alte dokumentierte Wert 0.0071 war eine zu grobe Obergrenze. Seine
+Verkleinerung behauptet keine Verkleinerung des tatsächlichen Restes durch
+eine neue Antwort, sondern eine schärfere Auswertung derselben gebundenen
+Fehlermenge für dieselbe Antwort.
+
+4. VOLLSTÄNDIGE F/T/P/S-ZUSAMMENFÜHRUNG
+
+METRIKKORREKTUR.txt §§3–5 liefert für das GANZE alte sigma0 weiterhin
+ f<0.000000081,
+ t_raw<0.000342,
+ p<0.000107.
+Der vollständige T-Preis ist t_raw+10f=0.00034281.
+In p ist auch die physische kappa-Brücke mit dem ganzen gestörten F-Rest
+enthalten. Alle alten Schalen-/Endstreifen- und Transportpreise bleiben
+im übernommenen Beleg eingeschlossen.
+
+Die drei Anteile erfüllen gemeinsam
+ f²+10(t_raw+10f)²+(11/10)p² < 0.0000012.
+Der lokale Faktor 5/21 wird dabei nicht auf die ganze Inverse übertragen.
+Mit der korrigierten vollständigen Vergleichsmetrik folgt aus (6)
+
+ ||sigma0||²_(S_R^-1)
+ <= (25/21) [F_sigma+10T_sigma+(11/10)P_sigma+S_sigma]
+ <  (25/21) [0.0000012+0.001326293²]
+ = 2959053121849/840000000000000000
+ = 0.000003522682287915476190476190476... .              (7)
+
+Die Kernkomponente des Restes verschwindet exakt; deshalb ist diese ganze
+Cs-Dualenergie identisch mit der hier benötigten S_R-Dualenergie.
+Es wird kein zusätzlicher alter Pauschalfehlerpreis addiert und keiner
+der vier physischen Restanteile weggelassen.
+
+Mit (3), rational nach oben eingeschlossenen Quadratwurzeln und (7):
+
+ Rbar_11 < 0.000003522682288001101 < 0.000003523.         (8)
+
+Dies ist bereits die Kontrolle der FESTEN Projektion Rbar. Der alte
+Projektionsüberpreis tau*(lambda-lambda_bar)*(lambda-lambda_bar)^T wird
+nicht nochmals addiert. Aus R<=Rbar folgt auch dieselbe erste Diagonal-
+obergrenze für den exakt projizierten Rest R.
+
+5. WAS (8) FÜR DIE GEMEINSAME ZWEISPALTENFORM BEDEUTET
+
+Ein kleiner erster Diagonaleintrag allein schließt den Zweiraum nicht.
+Sei Dcap=diag(c1,c2), c1=0.000006051814, c2=0.1.
+Für den tatsächlichen gemeinsamen positiven Restgram Rbar gilt jedoch
+die folgende konkrete ausreichende Matrixbedingung:
+
+ Rbar_11/c1 + Rbar_22/c2 <= 1  =>  Rbar <= Dcap.         (9)
+
+Beweis: Dcap^-1/2 Rbar Dcap^-1/2 ist positiv; seine größte Eigenzahl ist
+höchstens seine Spur. Damit sind in (9) sämtliche möglichen Mischterme
+des tatsächlichen Grams mitbezahlt. Eine diagonale Restmatrix wird nicht
+unterstellt und eine isolierte Skalarprüfung nicht als Matrixordnung
+ausgegeben.
+
+Mit der einfachen ersten Hülle aus (8) genügte somit
+
+ ||eta_bar2||²_(S_R^-1)
+ <= 0.1*(1-0.000003523/0.000006051814)
+ = 1264407/30259070
+ = 0.04178604960430046263814452989... .                 (10)
+
+Beispielsweise wäre eine vollständig belegte Obergrenze 0.0417 ausreichend.
+Dieser Wert ist NICHT erreicht und seine Erreichbarkeit ist nicht bewiesen.
+(9)–(10) sind hinreichend; ihr Scheitern wäre kein Ausschluss einer besseren
+gemeinsamen Formabschätzung oder der physischen Positivität.
+
+Die präzise nächste offene analytische Aussage betrifft die GANZE zweite
+Kombination eta_bar2=t2-lambda_bar2*s0 in (10), oder eine direkt passende
+gemeinsame Restoberform. Dafür fehlen weiterhin die vollständigen neuen
+q-Schalen-/Bare-/P0-/Außenbelege samt gemeinsamen physischen Fehlertransporten.
+Die reine q-Kernlösung und ihre arithmetischen Radien liefern diese Aussage
+nicht. Es wird hier keine quantitative Modellreserve dieser zweiten Spalte
+und deshalb kein physischer Erzeugungsauftrag behauptet.
+
+6. ABGRENZUNG GEGENÜBER GPT2s DATENKARTE
+
+GPT2s fehlender neuer T-Gram bleibt als Befund über diesen vorgesehenen
+Funktionsauswertungsweg korrekt. Er ist für den jetzt benutzten Abschluss
+der ersten Spalte nicht erforderlich: (1)–(3) ersetzen ihn durch die bereits
+gebundene GANZE Energie tau. Auch die nicht beigefügten numerischen P-/kappa-
+Arbeitsmatrizen verhindern diesen ersten Schluss nicht, weil der alte ganze
+P-Preis für sigma0 unverändert übernommen wird.
+
+Die von GPT2 dokumentierten abweichenden Byte-Hashes dreier nativer Dateien
+bleiben eine getrennte Herkunftslücke für deren spätere Wiederverwendung.
+Diese Dateien wurden im vorliegenden Schluss weder gleichgesetzt noch als
+neue Eingänge benutzt. Eine bloße Verpackungsabweichung ist weiterhin nicht
+nachgewiesen. Für einen späteren q-Auftrag wäre diese Bindung vorher zu klären.
+
+Das überwundene Exportbudgethindernis bleibt geschlossen. Die neue erste
+Restkontrolle ersetzt die bisher offene erste-Spalten-Machbarkeit; sie hebt
+keine Aussage zum vollständigen zweiten Rest auf. Punkt 4 bleibt offen.
+
+7. REPRODUKTION UND STOPP
+
+Das neue Prüfpaket enthält HERLEITUNG.txt, check_first_rest_column.py,
+INPUT_BINDINGS.json, RESULT.json, REPLAY.log und MANIFEST.json.
+Benötigt wird der bereits übertragene entpackte Abnahmestand vom 10. November.
+Mit installiertem python-flint 0.9.0:
+
+ python check_first_rest_column.py --abnahme PFAD_ZUM_ABNAHMESTAND \
+   --bindings INPUT_BINDINGS.json --output RESULT_NEU.json
+
+Die Matrixoperationen sind rational; Quadratwurzelobergrenzen werden durch
+ganzzahlige Quadratwurzel und exakte rationale Nachprüfung erzeugt. Die
+physischen Verträge werden damit nicht nachträglich voraussetzungslos bewiesen.
+
+Neue Integrale: 0. Neue Inversionen: 0. Neue q-Auswertungen: 0.
+Neuer Hauptlauf: 0. Parameter-/Hilfskappenserie: 0.
+Keine Veröffentlichung und keine automatisch anschließende Rechnung.
+
+ERSTE_FESTE_RESTSPALTE_KONTROLLIERT
+RESTMACHBARKEIT_OFFEN

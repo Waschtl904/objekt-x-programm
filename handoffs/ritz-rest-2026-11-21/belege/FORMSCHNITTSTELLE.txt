@@ -1,0 +1,210 @@
+Objekt X — eine gemeinsame, korrigierte Formschnittstelle
+GPT1-Ableitung, 2. November 2026; bedingt unter H1–H4
+
+1. Physischer Raum und eine eindeutig festgelegte Quellenbank
+
+Hier a=log(3), b=log(11)/2, X=L²((a,b),2dx), m(x)=cosh(x/2),
+mu=int_0^a m² dx, lambda(s)=int_a^b m s dx.
+Lambda s=(-m lambda(s)/mu auf dem Kern, s auf der Schale), global gerade.
+W=I+(m tensor_X m)/(2mu), ||Lambda s||²=<s,Ws>_X.
+Die lokale Legendrebasis ell_j ist X-orthonormal; ihr Index ist kein
+globaler Paritätsindex. Alle so gelifteten Quellen sind global gerade.
+
+P12=span(ell_0,...,ell_11), Pi12 der EXAKTE W-orthogonale Projektor,
+N=I-Pi12, mathcal N=ran(N), D_Nform=mathcal N intersect D_X.
+D_X ist die Gamma-Formdomäne der nullfortgesetzten Schale. Die direkte
+Form heißt hier d_N[s,t]=q_b[Lambda s,Lambda t], nicht der Raum D_Nform.
+Die geerbte Definition Z ell_12 bedeutet die Kopplungsquelle von
+Lambda N ell_12. Wir schreiben zur Vermeidung einer doppelten Projektion
+Z_N s=q_b[.,Lambda s]|_E für s in mathcal N.
+E=J_ext H9 orthogonal_plus Lambda P12, mit physischer Form a_E.
+
+Setze p_j=lambda(ell_j), d0=2mu+4 sum_(j<12) p_j². Für j>=12 ist
+ n_j=N ell_j=ell_j-sum_(i<12)4 p_i p_j ell_i/d0.             (1)
+Diese Identität folgt aus dem Rang-eins-Gram von W (Sherman–Morrison).
+Sie stimmt für j=12 exakt mit evidence/sources/direct_form.py überein.
+Es gibt keine zusätzliche Normierung. Für den festen Zwölferblock
+ C: R12 -> mathcal N, C e_i=n_(12+i), 0<=i<12,
+gilt die gemeinsame Metrik
+ G_C=C*W C=I12+4 p_hi p_hi*/d0.                            (2)
+Die positive Rang-eins-Korrektur wird nicht auf null gesetzt. Die
+Momentkoeffizienten sind exakte reelle Zahlen; ihre rationalen Modelle
+benötigen gerichtete Fehler. Es wird keine Modellprojektion als N ausgegeben.
+
+2. Warum die Quelle und der Vergleich einheitlich zulässig sind
+
+evidence/domains/DOMAIN_HERLEITUNG.txt §§1–3 beweist für 0<a<b die
+vollständige Formzerlegung und die Beschränktheit der Schnittkopplung:
+Gamma-Carleman-Anteil, regulärer Kern, endlich viele Primverschiebungen
+sowie der Momentlift. Die dortigen speziellen Zahlen für a8,a9 werden
+NICHT auf a9,b11 übertragen. Die allgemeinen Formeln genügen hier.
+Insbesondere liegt jedes Lambda n_j als stückweise glatte Funktion im
+übernommenen Operatordomänenvertrag; für allgemeines s ist nur die
+Formdomäne nötig.
+
+Die alte-Raum-Quelle ist g(s)=Pi9[G_shell s-lambda(s) Q9^np m_core/mu].
+Sie ist L²-stetig auf X: G_shell ist beschränkt, lambda ist beschränkt,
+Q9^np m_core liegt in L². Die zwölf äußeren Quellenkoordinaten können
+schwach auf die festen Polynome gelegt werden:
+ d_j(s)=q_b[Lambda ell_j,Lambda s]
+       =<Q_b^np Lambda ell_j,Lambda s>.
+Auch diese Karte ist L²-stetig. Im nichtorthonormalen äußeren Koordinaten-
+system sind d_j rohe Kovektoren. Kein zusätzlicher W-Faktor darf in diese
+Paarungen eingefügt werden. Der E-Rieszvertreter verwendet den zugehörigen
+Gram. Somit definiert Z_N eine gemeinsame beschränkte Hilbertquellenkarte
+auf mathcal N; auf D_Nform ist sie identisch mit der physischen Formkopplung.
+Es wird weder A11^-1 noch A9 V als starke Wirkung gebraucht.
+
+Nach dem festgehaltenen P0-Wechsel verwenden wir ausschließlich
+ C_s=[[Q_s,h],[h*,Kp]] <= A_E.
+Die Kernänderung hängt von keiner Quelle ab: d=19/10, t=1.9549-d,
+c=eB²/t, G0=B0 B0*, Gup>=G0, und
+ Ls=F1+HB1/delta0+(7e-40-c)I-Gup/d,
+ A_s=[[Ls+G0/d,B0],[B0*,dI]].
+Der physische Defekt enthält [[cI,Bphys-B0],[(Bphys-B0)*,tI]]>=0.
+Die im korrigierten Paket geprüfte Monotoniereserve ergibt
+Aeff1<=A_s<=A8, Qold<=Q1<=Q_s<=A9 und C1<=C_s<=A_E.
+Die Formdomäne des Vergleichs darf größer sein als die physische.
+Es wird keine starke Wirkung auf inverse Kernantworten vorausgesetzt.
+
+Im unveränderten alten V1B-Wechsel belegt der REPARIERTE gemeinsame
+Zwölferrest theta_corr<1/40. Deshalb
+ C_s >= (21/25) diag(Qold,Cg)                              (3)
+in genau diesen Koordinaten. Dies ist eine uniforme Formordnung auf dem
+ganzen E-Vergleichsraum. Sie ist keine Folgerung aus dem positiven Wert
+einer einzelnen Richtung. Beleg: evidence/corrected/HERLEITUNG.txt §§6–7,
+hashgebundenes RESULT.json; 1/40<(4/25)².
+
+3. Eine lineare Antwort, vollständige Matrixidentität
+
+F=Z_N C hat zwölf Spalten. In P0-Koordinaten F=(g,k), k=d-P0*g.
+Die feste Schalentestkarte Psi96 und der äußere B-Wechsel bleiben erhalten.
+Wähle EINE rationale Koeffizientenkarte Ynew in Q^(96x12), Znew in
+Q^(12x12), c=B Znew. Keine spaltenweise wechselnden Operatoren.
+Ihre erste Spalte ist die unveränderte abgeschlossene Hilfsantwort;
+die übrigen Spalten werden nach der in GPT2_SCHNITTSTELLE festgelegten
+einmaligen endlichen Modellvorschrift gebunden. Definiere physisch
+ u8=U_s(g8-G_core Ynew-h8 B Znew), U_s=A_s^-1,
+ U=(u8,Psi96 Ynew,B Znew).
+U ist eine lineare Karte in den Formraum von C_s. Der Kernrest ist exakt
+null; Modelle von u8 brauchen weiterhin ihren physischen Transportpreis.
+
+V=F*U+U*F-U*C_s U, R=F-C_s U.
+Die Variationsidentität gilt als MATRIXIDENTITÄT, durch Polarisierung:
+ F*C_s^-1 F=V+R*C_s^-1 R.                                (4)
+Damit F*A_E^-1 F <= rechte Seite von (4). V ist kein notwendigerweise
+positiver Gram; sein gemeinsamer oberer Formabschluss muss zweiseitige
+Paarungsfehler bezahlen. Eine Summe einzelner Richtungswerte genügt nicht.
+
+Im festen V1B-Wechsel ist wegen R_core=0 der äußere Rest genau
+ s=B*R_outer-Y*R_shell.
+Y ist hier die ALTE unveränderte 96x12-Karte, nicht Ynew. Setze
+ r_F=F_o*R9, r_T=Lambda_T*R9 nach derselben gebundenen alten Elimination,
+ nu=r_T-a* Knew^-1 r_F, j=J84*nu.
+F_o und J84 sind die alten 12 bzw. 84 Schalenfunktionen, nicht C.
+Alle vier Abbildungen haben zwölf gemeinsame Spalten.
+
+Mit H_* = D_T-a*Knew^-1 a gilt für den ganzen Schurrest
+ H_*^-1 <= 10 R_L+(11/10)J84 P J84*,
+ R_L<=5/21 I nur auf dem exakten alten T. Daher
+ R9*Qold^-1 R9
+ <= r_F*Knew^-1 r_F +10 nu*R_L nu +(11/10)j*P j.          (5)
+Die Fo/T-Kreuzkopplung wird IN nu vor der Norm gebildet. Die endliche
+J-P-Energie ist zusätzlich, nicht durch 84 Modellmomente ersetzbar.
+
+Seien gerichtete RATIONALE gemeinsame Formhüllen vorhanden:
+ Dminus <= C*d_N C,             V <= Vplus,
+ r_F*Knew^-1 r_F <= Fplus,      nu*R_L nu <= Tplus,
+ j*P j <= Pplus,                s*Cg^-1 s <= Splus.        (6)
+Dann folgt auf R12 mit sämtlichen Mischtermen
+
+ C*S_N C >= H:=Dminus-Vplus
+                -(25/21)(Fplus+10Tplus+(11/10)Pplus+Splus). (H)
+
+Ein exakter rationaler LDL-Nachweis H>0 beweist S_N>0 auf ran(C).
+Für eine quantitative W-Aussage kann zusätzlich Gplus>=G_C und
+H-sigma Gplus>=0 mit rationalem sigma>0 geprüft werden.
+H nicht positiv bedeutet nur, dass diese hinreichende Hülle nicht schließt.
+Es ist kein negativer Zeuge für die wirkliche Schurform.
+
+4. Gemeinsame Fehlerrechnung statt zwölf separater Fehlerzahlen
+
+Geordnete Kernquellenbank: (G_F12,G_J84,h8 B12,g8,12), also 120 Spalten.
+D_aug enthält den physischen direkten 108er Antwortblock, die 108x12
+Quellenpaarungen und einen definitorisch verschwindenden letzten 12x12-
+Block. M=D_aug-U_aug, U_aug der GANZE Kerninversgram in U_s.
+Tans=(Ynew;Znew;-I12) ist 120x12. Dann exakt
+ V=-Tans* M Tans,
+ r_F=-TF* M Tans,    s=-TL* M Tans,
+ TF=(I12;0_108), TL=(-Y;I12;0_12).                       (7)
+Diese Darstellung behält die Vorzeichen aller Quellenkreuzterme.
+
+Benötigt wird -E<=M-Mhat<=E, E>=0, als EINE 120x120-Fehlerform.
+Der bestehende 108er Teil und die alten g12-Kreuzzeilen dürfen gebunden
+wiederverwendet werden. Die übrigen g13,...,g23-Kreuzzeilen und der
+gemeinsame g-g-Gram sind neue fehlende Belege, keine Nullen.
+Enthalten sein müssen: Quellen-/Gamma-/Basis-/Momentfehler, die Bphys/B0-
+Modellbrücke, niedrige lineare und quadratische Fehler, ganze hohe Grame,
+direkte Paarungsfehler, Projektion, Inverse und Koeffizientenrundung.
+Der alte pauschale Datenpreis und Delta_minus werden nicht zusätzlich
+auf eine frisch rekombinierte gemeinsame Matrix addiert.
+
+Vplus=-Tans* Mhat Tans+Tans*E Tans ist eine sichere Wahl.
+Für jede feste Auswahlkarte A und Metrik W0>=0 gilt als Matrixordnung
+ (A*DeltaM Tans)* W0 (A*DeltaM Tans)
+ <= tr(W0 A*E A) Tans*E Tans.                            (8)
+Beweis: DeltaM=E^(1/2) C_E E^(1/2), ||C_E||<=1 auf supp(E).
+Die Operatornorm wird durch die HS-Norm majorisiert. Nullräume bleiben
+Nullräume; keine künstliche Diagonalzugabe ist als unveränderte Metrik erlaubt.
+
+Für einen modellierten Restoperator H0 und Fehlergram E_H liefert
+jedes vorher gebundene rationale lambda>0 die gemeinsame obere Hülle
+ (H0+DeltaH)*W0(H0+DeltaH)
+ <= (1+lambda)H0*W0H0+(1+1/lambda)E_H.                  (9)
+Eintragsweise obere Endpunkte sind keine solche Matrixordnung.
+Positive gemeinsame Blockzertifikate dürfen die konservative (9) ersetzen.
+
+Für die J-P-Paarung setze k0=Knew^-1 a_model und
+TP=(-k0;I84;0_24). Das gemeinsame Modell ist -TP*Mhat Tans.
+Der DeltaM-Preis folgt aus (8). Separat ist die physische k-Brücke nötig:
+ ||(k-k0)P^(1/2)||_HS <= d_k einschließlich Mittelpunktrundung.
+Da ||r_F v||² <= tr(Knew) v*Fplus v, hat der zusätzliche Fehlergram
+die obere Form d_k² tr(Knew) Fplus. (9) bezahlt dessen Kreuzterme mit
+der ersten Abweichung. Ein schon gestörter r_F wird nicht durch einen
+Modellrest ersetzt. Diese Vorschrift erhält genau die Reparaturposition
+des abgeschlossenen Richtungstests.
+
+Für Tplus wird die GANZE kombinierte Funktion nu benötigt. Ein zulässiger
+größerer Weg ist Tplus=(5/21)Nplus mit nu*nu<=Nplus in W auf T. Besser
+ist ein direkter gemeinsamer R_L-Preis. Alte skalare Normbelege sind nur
+für ihre gebundene Spaltenkombination gültig. Gemeinsame Projektion,
+Randstreifen, innere Singularstellen und sämtliche physischen Transport-
+fehler bleiben erforderlich. Die bisherige 618er Geometrie kann nur bei
+passenden Zweigen wiederverwendet werden; die skalaren Zellwerte liefern
+keine neuen Kreuzintegrale. Fehlender Beleg ist genau nu*R_L nu, nicht
+eine abstrakt unbewiesene starke Wirkung auf V.
+
+5. Anschluss an das GANZE gerade Komplement — noch offen
+
+mathcal N=ran(C) orthogonal_W mathcal T24,
+mathcal T24=(span(ell_0,...,ell_23))^(perp W).
+Diese Zerlegung ist exakt, denn P12+ran(C)=P24. Der endliche W-Projektor
+ist formstetig (Domain-Herleitung §2). Sie gilt auf der ganzen Formdomäne;
+es wird keine unbewiesene Dichte einer abgeschnittenen Quellenbank benötigt.
+
+Eine konkret ausreichende Anschlussurkunde wäre EINE gemeinsame
+Unterform der wirklichen S_N in dieser Zerlegung:
+ S_N >= [[H,J_tail],[J_tail*,T_tail]],
+ H>0,  T_tail>=tau W_tail, tau>0,
+ J_tail*H^-1 J_tail <= chi W_tail, 0<=chi<tau.           (10)
+Dann folgt durch die vollständige Quadratergänzung Positivität auf dem
+ganzen mathcal N; zusammen mit a_E>0 folgt der ganze gerade Anschluss.
+J_tail ist eine gebundene bilineare Karte dieser gemeinsamen Unterform.
+Ein Modell für die tatsächliche Mischkopplung benötigt eine zusätzliche
+zweiseitige gemeinsame Fehlerform, bevor (10) benutzt werden darf.
+
+Der hohe Boden 1.9549 gehört zum ALTEN inneren A8-Hochraum. Er ist KEIN
+tau für den neuen äußeren Tail mathcal T24. Auch zwölf positive Eigenwerte
+von H ersetzen (10) nicht. Die vorliegenden Daten liefern noch keine
+ganze äußere S_N-Tailunterform samt dieser Mischkopplung. Genau dieser
+Nachweis bleibt nach einem möglichen endlichen Erfolg zusätzlich offen.
