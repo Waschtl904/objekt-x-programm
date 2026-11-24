@@ -1,0 +1,12 @@
+{
+  "scope": "FIXED_ODD_WITNESS_UNDER_INHERITED_FORM_AND_SOURCE_CONTRACTS",
+  "model_X_squared_upper": "0.00000000000216639714",
+  "remaining_physical_dual_upper": "0.00000000000000010537",
+  "whole_dual_norm_upper": "0.000000735707426",
+  "whole_RL_energy_upper": "0.00000000000054126542",
+  "full_inverse_energy_upper": "0.000005206741644265",
+  "positive_margin_lower": "0.000000074034790876",
+  "external_review": "OPEN",
+  "whole_quotient_certified": false,
+  "U11_constructed": false
+}

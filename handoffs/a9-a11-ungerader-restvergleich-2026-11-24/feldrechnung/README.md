@@ -1,5 +1,7 @@
 # A9 → A11 · Feldrechnung am festen ungeraden Zeugen
 
+**Nachtrag vom 24. November.** Die beiden Randintervalle und der physische Quellenanschluss sind inzwischen für diesen festen Zeugen projektintern eingeschlossen. Die folgende Teilrechnung dokumentiert den Ausgangsstand am Commit `00806f8`. [Vollständiger fester Zeugenvergleich](FESTER_UNGERADER_ZEUGE.md) · [Gerichtete Endpunkte](ZEUGE.json)
+
 24. November 2026. Projektinterne Teilrechnung. Externe Gegenprüfung offen.
 
 Der feste Zeuge braucht eine obere Schranke von $8{,}1\cdot10^{-9}$ für die vollständige Energie seiner Restquelle. Das entspricht einer Dualnorm von höchstens $9\cdot10^{-5}$. Die folgende Rechnung erfasst den Innenbereich des gemeinsamen ungeraden Feldmodells, beide äußersten Ränder und zwei Fehlerbeiträge. Offen bleiben zwei Übergangsstreifen des Modells und die vollständige Übertragung auf die physische Quelle. Damit bleibt auch der Zeugenvergleich offen. [Endliche Vorprüfung](../BEWEIS.md) · [Rationaler Block, Zeuge und Eingaben](../ERGEBNIS.json)
