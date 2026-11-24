@@ -1,0 +1,30 @@
+{
+  "status": "MODEL_QUADRATURE_DIAGNOSTIC",
+  "outer_edges": [
+    1.0397207708399179,
+    1.0654162437746626,
+    1.0811646007428017,
+    1.0986122886681098
+  ],
+  "estimates": [
+    {
+      "nodes": 24,
+      "panels": 19,
+      "raw_model_X_squared": 2.1034982516952552e-12,
+      "projected_model_Wdual_squared": 2.103497676720016e-12,
+      "projected_model_RL_upper_expression": 5.008327801714323e-13,
+      "norm_P_feature_mismatch": 4.215269920981066e-08,
+      "full_84_mismatch": 1.1173093176825107e-07
+    },
+    {
+      "nodes": 48,
+      "panels": 19,
+      "raw_model_X_squared": 2.0973308954406403e-12,
+      "projected_model_Wdual_squared": 2.0973304283487488e-12,
+      "projected_model_RL_upper_expression": 4.993643877020831e-13,
+      "norm_P_feature_mismatch": 2.456050135889811e-09,
+      "full_84_mismatch": 5.34342063785056e-10
+    }
+  ],
+  "samples": {}
+}
