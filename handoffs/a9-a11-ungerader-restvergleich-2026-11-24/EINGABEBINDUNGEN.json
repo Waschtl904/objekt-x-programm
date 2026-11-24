@@ -1,0 +1,74 @@
+{
+  "repository": "Waschtl904/objekt-x-programm",
+  "input_commit": "18dd92f89f889c1f506673fefee33e4544b22038",
+  "parity": "odd",
+  "python_flint": "0.9.0",
+  "arb_precision_bits": 1024,
+  "inputs": [
+    {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/INPUT_BINDINGS.json",
+      "url": "https://github.com/Waschtl904/objekt-x-programm/blob/18dd92f89f889c1f506673fefee33e4544b22038/research/x-c1/w9-partial-energy-2026-10-18/INPUT_BINDINGS.json",
+      "git_blob_sha1": "a57030f51a827598cc41b923b8cfd23410cfd0b2",
+      "sha256": "829b4884c64d23d90efc6382abe20f449d6229af8ccf8db4b85d12e5b7e03e28"
+    },
+    {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/common.py",
+      "url": "https://github.com/Waschtl904/objekt-x-programm/blob/18dd92f89f889c1f506673fefee33e4544b22038/research/x-c1/w9-partial-energy-2026-10-18/common.py",
+      "git_blob_sha1": "1a88b1d72daa3fe6aeccee0449ecc6998c466a6f",
+      "sha256": "037580c8edec75e42aa599e21ff2a073f1308f6ec5746c77f81695ed0169a8eb"
+    },
+    {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/weights.py",
+      "url": "https://github.com/Waschtl904/objekt-x-programm/blob/18dd92f89f889c1f506673fefee33e4544b22038/research/x-c1/w9-partial-energy-2026-10-18/weights.py",
+      "git_blob_sha1": "adc250e1a3cf0d842fea94806fdb6bfa5e3a6f95",
+      "sha256": "6f5e3e2eacda2345dc5d764fa221cbbd36b12eafb32d6cd10dcf0af0edf0bdcd"
+    },
+    {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/assemble.py",
+      "url": "https://github.com/Waschtl904/objekt-x-programm/blob/18dd92f89f889c1f506673fefee33e4544b22038/research/x-c1/w9-partial-energy-2026-10-18/assemble.py",
+      "git_blob_sha1": "aeadc048c4928bf739c70a1cbf49b8651cf73544",
+      "sha256": "aa6ad9a328ee62bb3e0aaeea36e5b50ee0f6e28ecee323e6a7093cd55cc570dc"
+    },
+    {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/K_P_odd.json",
+      "url": "https://github.com/Waschtl904/objekt-x-programm/blob/18dd92f89f889c1f506673fefee33e4544b22038/research/x-c1/w9-partial-energy-2026-10-18/expected/K_P_odd.json",
+      "git_blob_sha1": "76783a37e42c933701c2118dbb3d88a3de10b922",
+      "sha256": "85291b374fb3ee08d0512aa188d0ed541410bd33ffaead38f69b2659926db4f9"
+    },
+    {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/CANDIDATE_odd.json",
+      "url": "https://github.com/Waschtl904/objekt-x-programm/blob/18dd92f89f889c1f506673fefee33e4544b22038/research/x-c1/w9-partial-energy-2026-10-18/expected/CANDIDATE_odd.json",
+      "git_blob_sha1": "4e21fad9f0569fe1738e328e620f4da4075b7e76",
+      "sha256": "65a56b31fdcd18567ada8a6f1059c29f1cabf49b31908a1a070766d4a2ce066b"
+    },
+    {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/COMPARISON_odd.json",
+      "url": "https://github.com/Waschtl904/objekt-x-programm/blob/18dd92f89f889c1f506673fefee33e4544b22038/research/x-c1/w9-partial-energy-2026-10-18/expected/COMPARISON_odd.json",
+      "git_blob_sha1": "f1b97ac47f4be56f527d90b64e41836b45a25c71",
+      "sha256": "a61533b2b6e714287417167ed09f258a9eb4ac3b98595ee6b9eebe682fbef400"
+    },
+    {
+      "path": "research/x-c1/w9-majorant-preflight-2026-10-18/EXPECTED.json",
+      "url": "https://github.com/Waschtl904/objekt-x-programm/blob/18dd92f89f889c1f506673fefee33e4544b22038/research/x-c1/w9-majorant-preflight-2026-10-18/EXPECTED.json",
+      "git_blob_sha1": "f33aa356795b9280387aa00a80dacacefdaff29a",
+      "sha256": "c82568566b55baaea3bcb98a888d5708edabe72832f2c2b2aafc2e673aa96f13"
+    },
+    {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/PAIRS_odd.json.gz",
+      "url": "https://github.com/Waschtl904/objekt-x-programm/blob/18dd92f89f889c1f506673fefee33e4544b22038/research/x-c1/w9-partial-energy-2026-10-18/expected/PAIRS_odd.json.gz",
+      "git_blob_sha1": "9a884e55a220efdeb77122041feeb23fce5c27db",
+      "sha256": "85a6e0309caa2272ea2f763653d4382b21d9041f754158401563e5c5a41c9bd4"
+    }
+  ],
+  "historical_input_manifest": "https://github.com/Waschtl904/objekt-x-programm/blob/18dd92f89f889c1f506673fefee33e4544b22038/research/x-c1/w9-partial-energy-2026-10-18/INPUT_BINDINGS.json",
+  "published_result_files": {
+    "ERGEBNIS.json": {
+      "git_blob_sha1": "0cd7325cfed36fb357d6c44c0f2b7e14eeb491be",
+      "sha256": "2577a74a005ca4c8b4c825b2aa803b95efdfe90076bd2c440bfab063d11106e2"
+    },
+    "vorpruefung/ERGEBNIS.json": {
+      "git_blob_sha1": "f5b072a8b5fe5fbb6520e6ac6c9a05683f7d8fef",
+      "sha256": "6c4f1c84a553562e8ee01a6c4d5bbd33e2acd2d6c01f575f60beea9dec22320b"
+    }
+  }
+}
