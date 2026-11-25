@@ -1,0 +1,30 @@
+{
+  "status": "AUTHOR_DERIVED_CONDITIONAL_POSITIVE_FIXED_ODD_TWO_SPACE",
+  "residuals": {
+    "e": {
+      "raw_model_norm_squared_upper": "0.00000000000215548605",
+      "physical_T_dual_norm_upper": "0.000000732929532",
+      "whole_residual_energy_upper": "0.00000000000667944674"
+    },
+    "s": {
+      "raw_model_norm_squared_upper": "0.00000006108618343430",
+      "physical_T_dual_norm_upper": "0.000120605861079",
+      "whole_residual_energy_upper": "0.00000053240166456875"
+    }
+  },
+  "S_ee_lower": "0.000000097719170086",
+  "S_ss_lower": "0.0018569778671088",
+  "absolute_S_es_upper": "0.00001223973278951",
+  "determinant_lower": "0.0000000000316512772843",
+  "additional_high_coupling_sufficient": {
+    "e_upper": "3e-9",
+    "s_upper": "1e-4",
+    "proved": false
+  },
+  "high_block_inherited": true,
+  "two_space_plus_high_certified": false,
+  "full_quotient_certified": false,
+  "U11_constructed": false,
+  "point4_closed": false,
+  "external_review": "OPEN"
+}

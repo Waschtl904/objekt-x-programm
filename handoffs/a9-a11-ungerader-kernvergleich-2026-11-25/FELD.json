@@ -1,0 +1,26 @@
+{
+  "status": "MODEL_QUADRATURE_DIAGNOSTIC",
+  "outer_edges": [
+    1.0397207708399179,
+    1.0654162437746626,
+    1.0811646007428017,
+    1.0986122886681098
+  ],
+  "estimates": [
+    {
+      "nodes": 8,
+      "panels": 19,
+      "raw_model_X_squared": 4.4944069143716385e-08,
+      "projected_model_Wdual_squared": 4.3345257722120444e-08,
+      "projected_model_RL_upper_expression": 1.0320299457647726e-08
+    },
+    {
+      "nodes": 16,
+      "panels": 19,
+      "raw_model_X_squared": 6.097542546916477e-08,
+      "projected_model_Wdual_squared": 6.097402631764797e-08,
+      "projected_model_RL_upper_expression": 1.4517625313725708e-08
+    }
+  ],
+  "samples": {}
+}
