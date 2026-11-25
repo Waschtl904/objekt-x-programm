@@ -1,0 +1,25 @@
+{
+  "parent": "36d6fec7966a802ee6a2084a66a8224f48247093",
+  "scope": "odd fixed two-space plus Y_o, under inherited form and source contracts",
+  "estimates": {
+    "e": {
+      "reflected_tail_upper": "1.766810e-6",
+      "signed_norm_upper": "6.77e-7",
+      "old_residual_energy_upper": "6.67944674e-12",
+      "direct_remainder_upper": "5.2456104e-8",
+      "schur_price_upper": "1.23e-10"
+    },
+    "s": {
+      "reflected_tail_upper": ".000297270",
+      "signed_norm_upper": ".000114",
+      "old_residual_energy_upper": "5.3240166456875e-7",
+      "direct_remainder_upper": ".000008816611755",
+      "schur_price_upper": "9.1e-6"
+    }
+  },
+  "corrected_determinant_lower": "2.97146e-11",
+  "external_review": "OPEN",
+  "full_quotient_certified": false,
+  "physical_U11_constructed": false,
+  "point4_closed": false
+}
