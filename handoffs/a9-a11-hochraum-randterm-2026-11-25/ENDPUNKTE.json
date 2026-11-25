@@ -1,0 +1,64 @@
+{
+  "commit": "9a21e089f65fe69367439819bd02b56fcb9c6508",
+  "N": 4096,
+  "cases": {
+    "e": {
+      "norm": [
+        "1.000000000000000",
+        "1.000000000000001"
+      ],
+      "normalized_inner_jump": [
+        "-2.948092054251053",
+        "-2.948092054251052"
+      ],
+      "normalized_outer_value": [
+        "-0.000429084226163",
+        "-0.000429084226162"
+      ],
+      "inner_constant_log_norm": [
+        "0.000359874518341",
+        "0.000359874518342"
+      ],
+      "outer_constant_log_norm": [
+        "0.000000052378445",
+        "0.000000052378446"
+      ],
+      "variable_log_upper": "0.000000000077658",
+      "direct_after_inner_log_upper": "0.000000052456104",
+      "direct_tail_lower": "0.000359822062237",
+      "direct_tail_upper": "0.000359926974445",
+      "remaining_gate": "0.000033847",
+      "conditional_schur_price_upper": "0.000000002980937985"
+    },
+    "s": {
+      "norm": [
+        "9999.871371863025338",
+        "9999.871371863025339"
+      ],
+      "normalized_inner_jump": [
+        "6.031182244684915",
+        "6.031182244684916"
+      ],
+      "normalized_outer_value": [
+        "-0.072194322214130",
+        "-0.072194322214129"
+      ],
+      "inner_constant_log_norm": [
+        "0.000736228301353",
+        "0.000736228301354"
+      ],
+      "outer_constant_log_norm": [
+        "0.000008812783473",
+        "0.000008812783474"
+      ],
+      "variable_log_upper": "0.000000003828282",
+      "direct_after_inner_log_upper": "0.000008816611755",
+      "direct_tail_lower": "0.000727411689598",
+      "direct_tail_upper": "0.000745044913108",
+      "remaining_gate": "0.0054311",
+      "conditional_schur_price_upper": "0.000099808787575492"
+    }
+  },
+  "coupling_functionals_certified": false,
+  "point4_closed": false
+}
