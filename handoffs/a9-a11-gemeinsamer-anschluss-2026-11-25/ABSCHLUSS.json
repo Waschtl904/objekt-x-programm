@@ -1,0 +1,68 @@
+{
+  "status": "AUTHOR_DERIVED_CONDITIONAL_FULL_A9_TO_A11_SHIFTED_OLD_COMPARISON",
+  "proof_scope": "both parities, complete physical Hilbert spaces and form domains",
+  "input_math_sha256": "b4f76b9e9a4e290484962f8677d5761bd38438d1f6dd46a9a8a2f879e9857ad2",
+  "old_shift": "1e-250",
+  "initial_shell_floor": "1e-250",
+  "compare_low_entries": [
+    [
+      2,
+      2
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      6,
+      8
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      7,
+      9
+    ]
+  ],
+  "gamma_uniform_error_upper": "4.01e-70",
+  "parities": {
+    "even": {
+      "positive": true,
+      "dimension": 191,
+      "gershgorin_lower": "[1.00000000000000 +/- 3e-20]",
+      "finite_schur_floor_lower": "[9.65169704313541e-42 +/- 8.5e-59]",
+      "gram_trace": "[108.935436040617 +/- 1.99e-13]",
+      "joint_floor_display": "[4.30945343435326e-44 +/- 1.22e-59]",
+      "exact_finite_lower": "96516970431354e-55",
+      "exact_physical_lower": "393337423779e-55",
+      "exact_physical_above_1e_45": true,
+      "joint_above_1e_45": true,
+      "joint_above_1e_55": true
+    },
+    "odd": {
+      "positive": true,
+      "dimension": 191,
+      "gershgorin_lower": "[1.00000000000000 +/- 3e-20]",
+      "finite_schur_floor_lower": "[1.26598534858579e-38 +/- 3.82e-53]",
+      "gram_trace": "[109.075624333159 +/- 4.56e-13]",
+      "joint_floor_display": "[5.64629130886541e-41 +/- 2.22e-56]",
+      "exact_finite_lower": "126598534858579381e-55",
+      "exact_physical_lower": "515929388717782e-55",
+      "exact_physical_above_1e_45": true,
+      "joint_above_1e_45": true,
+      "joint_above_1e_55": true
+    }
+  },
+  "full_residual_comparison_floor": "1e-44",
+  "comparison_inverse_upper": "1e44 I_W",
+  "physical_U11": "1e44 I_phys",
+  "known_terminal_positivity_used": false,
+  "fixed_Qstar_full_quotient_certified": false,
+  "external_review": "OPEN"
+}

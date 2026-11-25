@@ -1,0 +1,155 @@
+{
+  "title": "A9 → A11, neue alte Majorante und physische Inversausgabe",
+  "base": "79e8ffd308bc9d382ad4b076d1a0bf33238268b8",
+  "input_classification": [
+    {
+      "role": "OLD_A9_CERTIFICATE",
+      "path": "research/x-c1/a9-domain-continuation-2026-10-13/PROOF.md",
+      "git_blob": "8e836457c6ab38c3e7e13e83d39d3ac9c02bedaa",
+      "fields": "physischer Boden und Formdomäne"
+    },
+    {
+      "role": "ANALYTIC_IDENTITY",
+      "path": "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/PROOF.md",
+      "git_blob": "8d8b9e494b60a469dab09fa62ffbe7f404449590",
+      "fields": "Momentkarte, Rohform und vollständiger Niedrig/Hoch-Gram"
+    },
+    {
+      "role": "ANALYTIC_IDENTITY",
+      "path": "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/generate_a8.py",
+      "git_blob": "0bfe43e823e2d3b58ee9ee7450f4c5656823ed48",
+      "fields": "allgemeine Rohintegrale und deren alte Implementierung; Endpunkt, Kanäle, Zellgrenzen und Gammafehler werden vor Anwendung ersetzt"
+    },
+    {
+      "role": "ANALYTIC_IDENTITY",
+      "path": "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/rational_bounds.py",
+      "git_blob": "a3cb5a94b8cabfce0d8992d4baba40f8b3a5bf8d",
+      "fields": "Import beim Laden des alten Generators, sein alter Gammawert wird in der neuen Auswertung nicht benutzt"
+    },
+    {
+      "role": "ANALYTIC_IDENTITY",
+      "path": "research/x-c1/a8-a9-global-closure-2026-10-13/packages/objekt-x-alte-hohe-reserve-2026-10-08/HERLEITUNG.txt",
+      "git_blob": "cdf476fd4ed40a95b783bd82f17714a60606b350",
+      "fields": "Legendre-Differentialabschätzung, hyperbolische Ableitung; alle hier verwendeten Konstanten neu geprüft"
+    },
+    {
+      "role": "ANALYTIC_IDENTITY",
+      "path": "research/x-c1/conditional-inverse-propagation-2026-10-15/PROOF.md",
+      "git_blob": "2feefa08ecf404218703f14fff83010d0c96f7ae",
+      "fields": "allgemeine Kongruenz und tatsächliches Hilbertresiduum"
+    },
+    {
+      "role": "ANALYTIC_IDENTITY",
+      "path": "research/x-c1/chambers-through-a11-2026-09-28/wall/PROOF.md",
+      "git_blob": "aaf741b47268f52d622f61725bf8a8855656c223",
+      "fields": "nur allgemeiner Rohwandtransport und physische Domäne"
+    },
+    {
+      "role": "INHERITED_HYPOTHESIS",
+      "path": "research/x-c1/a9-a11-certificate-calibration-2026-10-15/WORK_ORDER.md",
+      "git_blob": "4cbdc5a1f72ff3a33225c1558b66e4c0098c5dcb",
+      "fields": "Definition der eingefrorenen N12-Regel, exakte Metriken und Schnittstellen"
+    },
+    {
+      "role": "DIRECTED_CERTIFICATE",
+      "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-kp-budgets/expected/BUDGET_BOUNDS.json",
+      "git_blob": "f9f3be6012a7ff018387ebcf3a1635af2787b9f9",
+      "fields": "Referenz für den früheren Modellfehler des Hochraum-Nebenbelegs; kein Eingang der Ganzraum-Matrix"
+    }
+  ],
+  "bound_response_inputs": [
+    {
+      "file": "FROZEN_RESPONSE12.json",
+      "sha256": "132959da5d34c0c89471ee15f7c34d8b4a42ad48c641b6c4db5181113d11426a",
+      "fields": "parities.even.X, parities.odd.X; exakt ausgelesen in ANTWORT.json"
+    },
+    {
+      "file": "FUNCTIONS12.json",
+      "sha256": "7c13f08ad85084379249c4a08b7c8bda0813eaea72939ba385cb3756b2801b3c",
+      "fields": "geerbte Ganzfunktionsverträge von D, F, physischer Momentprojektion und Fehler unter 1; für den Ganzraum genügt die Normschranke; keine Zielgrößen"
+    }
+  ],
+  "new_raw_data": {
+    "endpoint": "log(11)/2",
+    "active_prime_powers": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      9
+    ],
+    "cutoff": 383,
+    "complete_source": "rohdaten.py / gamma_neu.py, fresh full Gram",
+    "sha256_math": "b4f76b9e9a4e290484962f8677d5761bd38438d1f6dd46a9a8a2f879e9857ad2",
+    "target_terminal_inputs": []
+  },
+  "certificate": {
+    "physical_space": {
+      "status": "AUTHOR_DERIVED_UNDER_INHERITED_FORM_CONTRACTS",
+      "statement": "Physischer alter Momentraum plus neue Schale mit W. J ist isometrisch. Siehe Vor der Abnahme festgelegte Regel.",
+      "proof": "README.md"
+    },
+    "form_domain": {
+      "status": "AUTHOR_DERIVED_UNDER_INHERITED_FORM_CONTRACTS",
+      "statement": "Vollständiger geschlossener Gammaformraum mit physischen Mellinbedingungen. Die Momentkarte behält alle Grade.",
+      "proof": "README.md"
+    },
+    "form_identity": {
+      "status": "AUTHOR_DERIVED_UNDER_INHERITED_FORM_CONTRACTS",
+      "statement": "Q=D_H+V_0+q_0-K-S. Alle sieben strikten Kanäle, tatsächlicher Gammafehler und beide Paritäten.",
+      "proof": "README.md"
+    },
+    "old_inverse_bound": {
+      "status": "AUTHOR_DERIVED_UNDER_INHERITED_FORM_CONTRACTS",
+      "statement": "U=(A9-10^-250 I)^-1, Konstruktion durch normkonvergente alte Reihe mit explizitem Rest.",
+      "proof": "README.md"
+    },
+    "response_rule": {
+      "status": "AUTHOR_DERIVED_UNDER_INHERITED_FORM_CONTRACTS",
+      "statement": "N12-MIDPOINT-INVERSE-60-v1 übernommen. ANTWORT.json enthält die beiden rationalen X-Matrizen. Die neue alte Majorante wird aus dem alten Boden festgelegt.",
+      "proof": "README.md"
+    },
+    "residual": {
+      "status": "AUTHOR_DERIVED_UNDER_INHERITED_FORM_CONTRACTS",
+      "statement": "R=C-A9 P als vollständige Hilbertabbildung. Der gemeinsame Variationsvergleich eliminiert beliebige alte Quellen. Seine Aussage ist die ganze Operatorungleichung.",
+      "proof": "README.md"
+    },
+    "comparison_form": {
+      "status": "AUTHOR_DERIVED_UNDER_INHERITED_FORM_CONTRACTS",
+      "statement": "Die vor dem Vorzeichentest definierte U-penalisierte Blockform hat nach unabhängiger Integration einen physischen Boden über 10^-44. Infimum ergibt den Schalenvergleich.",
+      "proof": "README.md"
+    },
+    "comparison_inverse": {
+      "status": "AUTHOR_DERIVED_UNDER_INHERITED_FORM_CONTRACTS",
+      "statement": "B11=10^-44 I_W und V11=10^44 I_W.",
+      "proof": "README.md"
+    },
+    "new_inverse_bound": {
+      "status": "AUTHOR_DERIVED_UNDER_INHERITED_FORM_CONTRACTS",
+      "statement": "U11=10^44 I_phys aus dem vollständigen physischen Boden. Zusätzlich explizite physische Blockmajorante aus dem Fortsetzungslemma.",
+      "proof": "README.md"
+    },
+    "exact_readout": {
+      "status": "AUTHOR_DERIVED_UNDER_INHERITED_FORM_CONTRACTS",
+      "statement": "Exakte Quadratsumme mit positiver Restform nach infimaler Elimination. Die Ausgangsform bleibt die volle arithmetische Wirkung.",
+      "proof": "README.md"
+    },
+    "transport": {
+      "status": "AUTHOR_DERIVED_UNDER_INHERITED_FORM_CONTRACTS",
+      "statement": "Physische Nullfortsetzung, alte/neue Momentkarte, isometrisches Intertwining auf den Quellenbildern und Cocycle. Rohcarrier nach allgemeinem Ein-Wand-Lemma.",
+      "proof": "README.md"
+    },
+    "next_interface": {
+      "status": "AUTHOR_DERIVED_UNDER_INHERITED_FORM_CONTRACTS",
+      "statement": "Ganze Hilbertquellen mit L2-Näherung. schnittstelle.py prüft Energie und gemischte Fehler. Konkreter Streifenmodul für den nächsten Kontakt im Beweis.",
+      "proof": "README.md"
+    },
+    "review_status": {
+      "status": "AUTHOR_DERIVED_EXTERNAL_REVIEW_OPEN",
+      "statement": "Autorenherleitung und durchgeführter Replay. Integralstichprobe mit separatem Algorithmus und ganzzahlige Matrixkontrolle. Unabhängige fachliche Prüfung, Registerabnahme und allgemeine Erneuerbarkeit offen.",
+      "proof": "README.md"
+    }
+  }
+}
